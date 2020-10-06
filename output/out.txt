@@ -1,0 +1,4 @@
+Error total de la red de 7 días es: 4076.555514526367
+Error total de la red de 15 días es: 2138.1449180603026
+Error total de la red de 30 días es: 2942.596813964844
+Error total de la red de 60 días es: 3031.6598785400392
