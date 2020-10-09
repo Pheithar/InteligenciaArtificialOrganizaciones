@@ -107,7 +107,44 @@
 
     \subsection{Análisis de resultados}
 
-\section{Parte 2: }
+    \newpage    
+    \section{Parte 2: Series temporales}
+    
+    \subsection{Descripción de las series temporales utilizadas}
+        
+        Podemos definir las series temporales como un una \textbf{sucesión de datos o muestras medidos en intervalos de tiempo regulares} de los cuales resulta especialmente interesante el factor de predicción de los valores en instantes de tiempo futuros. Dichas predicciones son posibles al detectar patrones o tendencias en los datos a lo largo del tiempo.
+        
+        \vspace{2mm}
+    
+        La pregunta que nos debemos hacer es si se corresponden los datos de contagios acumulados y muertes por territorios del  \textit{SARS-CoV-2} con una serie temporal de la que podamos realizar predicciones fiables. Para contestar a esta pregunta vamos a fijarnos en las variables de las que disponemos y la relación entre ambas. Como variable independiente nos encontramos con tiempo, mientras que el número de contagios (o muertes, según el caso) se identifica con la variable dependiente puesto que esta cifra depende en gran medida del la cifra medida en el instante de tiempo anterior. Por lo tanto \textbf{se trata de una serie temporal}.
+           
+        \vspace{2mm}
+        
+        Sin embargo, existen más características en las que nos podemos fijar. [2] 
+    \begin{itemize}
+    \item \textbf{Estacionalidad}: Se refiere a fluctuaciones periódicas. Un análisis en profundidad de los datos de la epidemia debería considerar este factor, no obstante, dado que la pandemia no lleva entre nosotros un periodo de tiempo lo suficientemente grande como para detectar un comportamiento estacional a lo largo de las distintas épocas del año no nos fijaremos en este parámetro.
+    \item \textbf{Estacionaridad}: No debe ser confundido con la estacional dado que hace referencia al mantenimiento de los valores estáticos tales como la media y varianza. El proceso de crecimiento descontrolado de una pandemia no puede ser considerado estacionario debido a la tendencia alcista y volátil de los datos.
+    \end{itemize}
+    
+    A continuación se muestra un ejemplo de una serie temporal estacional y estacionaria para comprobar cómo difiere de la serie temporal de los datos del \textit{COVID} mundiales.
+    
+        \begin{figure}[h]
+                \centering
+                \includegraphics[width=320px]{aa_tf_100383511_100383435/img/estacional.png}
+                \caption{Serie temporal estacional y estacionaria}
+                \label{fig:graf_exp1}
+            \end{figure}
+            
+            
+        \begin{figure}[h]
+                \centering
+                \includegraphics[width=320px]{aa_tf_100383511_100383435/img/covid-cases.png}
+                \caption{Casos mundiales de \textit{COVID}. [3]}
+                \label{fig:graf_exp1}
+            \end{figure}
+            
+
+
 
 \section{Contexto de la práctica}
 
