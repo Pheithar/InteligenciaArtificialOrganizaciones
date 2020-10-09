@@ -42,10 +42,11 @@ title_30 = "Predicción del modelo de 30 días"
 title_60 = "Predicción del modelo de 60 días"
 
 def addElement(listnp, element):
+    shape = listnp.shape
     a = list(listnp[0])
     a.pop(0)
     a.append(int(element))
-    return np.reshape(np.array(a), (1, 7))
+    return np.reshape(np.array(a), shape)
 
 def prediction(model, data):
 
@@ -62,10 +63,30 @@ def predictions_3(model, data):
 
     return (pred1[0], pred2[0], pred3[0])
 
-(spain_pred1, spain_pred2, spain_pred3) = predictions_3(model_7_days, spain_7_days)
 
-(brazil_pred1, brazil_pred2, brazil_pred3) = predictions_3(model_7_days, brazil_7_days)
+# Predicciones datos 7 días
+(spain_7_pred1, spain_7_pred2, spain_7_pred3) = predictions_3(model_7_days, spain_7_days)
 
+(brazil_7_pred1, brazil_7_pred2, brazil_7_pred3) = predictions_3(model_7_days, brazil_7_days)
+
+# Predicciones datos 15 días
+(spain_15_pred1, spain_15_pred2, spain_15_pred3) = predictions_3(model_15_days, spain_15_days)
+
+(brazil_15_pred1, brazil_15_pred2, brazil_15_pred3) = predictions_3(model_15_days, brazil_15_days)
+
+# Predicciones datos 30 días
+(spain_30_pred1, spain_30_pred2, spain_30_pred3) = predictions_3(model_30_days, spain_30_days)
+
+(brazil_30_pred1, brazil_30_pred2, brazil_30_pred3) = predictions_3(model_30_days, brazil_30_days)
+
+# Predicciones datos 60 días
+(spain_60_pred1, spain_60_pred2, spain_60_pred3) = predictions_3(model_60_days, spain_60_days)
+
+(brazil_60_pred1, brazil_60_pred2, brazil_60_pred3) = predictions_3(model_60_days, brazil_60_days)
+
+
+
+# Prints
 
 print(title)
 
@@ -80,10 +101,46 @@ print("Brasil día 3:", real_values_brazil[2])
 print()
 print(title_7)
 
-print("España predicción 1:", spain_pred1, "--- Error:", spain_pred1 - real_values_spain[0])
-print("España predicción 2:", spain_pred2, "--- Error:", spain_pred2 - real_values_spain[1])
-print("España predicción 3:", spain_pred3, "--- Error:", spain_pred3 - real_values_spain[2])
+print("España predicción 1:", spain_7_pred1, "--- Error:", spain_7_pred1 - real_values_spain[0])
+print("España predicción 2:", spain_7_pred2, "--- Error:", spain_7_pred2 - real_values_spain[1])
+print("España predicción 3:", spain_7_pred3, "--- Error:", spain_7_pred3 - real_values_spain[2])
 
-print("Brasil predicción 1:", brazil_pred1, "--- Error:", brazil_pred1 - real_values_brazil[0])
-print("Brasil predicción 2:", brazil_pred2, "--- Error:", brazil_pred2 - real_values_brazil[1])
-print("Brasil predicción 3:", brazil_pred3, "--- Error:", brazil_pred3 - real_values_brazil[2])
+print("Brasil predicción 1:", brazil_7_pred1, "--- Error:", brazil_7_pred1 - real_values_brazil[0])
+print("Brasil predicción 2:", brazil_7_pred2, "--- Error:", brazil_7_pred2 - real_values_brazil[1])
+print("Brasil predicción 3:", brazil_7_pred3, "--- Error:", brazil_7_pred3 - real_values_brazil[2])
+
+
+print()
+print(title_15)
+
+print("España predicción 1:", spain_15_pred1, "--- Error:", spain_15_pred1 - real_values_spain[0])
+print("España predicción 2:", spain_15_pred2, "--- Error:", spain_15_pred2 - real_values_spain[1])
+print("España predicción 3:", spain_15_pred3, "--- Error:", spain_15_pred3 - real_values_spain[2])
+
+print("Brasil predicción 1:", brazil_15_pred1, "--- Error:", brazil_15_pred1 - real_values_brazil[0])
+print("Brasil predicción 2:", brazil_15_pred2, "--- Error:", brazil_15_pred2 - real_values_brazil[1])
+print("Brasil predicción 3:", brazil_15_pred3, "--- Error:", brazil_15_pred3 - real_values_brazil[2])
+
+
+print()
+print(title_30)
+
+print("España predicción 1:", spain_30_pred1, "--- Error:", spain_30_pred1 - real_values_spain[0])
+print("España predicción 2:", spain_30_pred2, "--- Error:", spain_30_pred2 - real_values_spain[1])
+print("España predicción 3:", spain_30_pred3, "--- Error:", spain_30_pred3 - real_values_spain[2])
+
+print("Brasil predicción 1:", brazil_30_pred1, "--- Error:", brazil_30_pred1 - real_values_brazil[0])
+print("Brasil predicción 2:", brazil_30_pred2, "--- Error:", brazil_30_pred2 - real_values_brazil[1])
+print("Brasil predicción 3:", brazil_30_pred3, "--- Error:", brazil_30_pred3 - real_values_brazil[2])
+
+
+print()
+print(title_60)
+
+print("España predicción 1:", spain_60_pred1, "--- Error:", spain_60_pred1 - real_values_spain[0])
+print("España predicción 2:", spain_60_pred2, "--- Error:", spain_60_pred2 - real_values_spain[1])
+print("España predicción 3:", spain_60_pred3, "--- Error:", spain_60_pred3 - real_values_spain[2])
+
+print("Brasil predicción 1:", brazil_60_pred1, "--- Error:", brazil_60_pred1 - real_values_brazil[0])
+print("Brasil predicción 2:", brazil_60_pred2, "--- Error:", brazil_60_pred2 - real_values_brazil[1])
+print("Brasil predicción 3:", brazil_60_pred3, "--- Error:", brazil_60_pred3 - real_values_brazil[2])
