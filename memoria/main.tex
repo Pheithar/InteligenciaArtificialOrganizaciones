@@ -31,7 +31,7 @@
         \vspace{0.5cm}
         {\scshape\Large Inteligencia Artificial en las Organizaciones\par}
         \vspace{1.5cm}
-        {\scshape\Large Grupo 83\par}
+        {\scshape\Large Grupo 83-1\par}
         \vspace{1.5cm}
         {\Large\itshape Miguel Gutierrez Pérez\par}
         {\Large 100383537@alumnos.uc3m.es \par}
@@ -55,37 +55,53 @@
 \newpage
 
 \section{Introducción}
-    
-\section{Parte 1: Aproximación usando Weka}
+
+  El objetivo de la asignatura de Inteligencia Artificial en las Organizaciones es el poner en relieve el encaje de las diversas técnicas de IA en contextos reales. Con esta motivación en mente, parece evidente que es imprescindible lograr obtener soluciones a problemas apremiantes con el conjunto de técnicas disponibles. Por su parte, la \textbf{epidemia} del\textbf{ SARS-CoV-2 }supone un \textbf{reto} para la humanidad y constituye una oportunidad para demostrar el potencial de las nuevas herramientas de IA de las que disponemos para hacer frente a este nuevo desafio.
+
+  \vspace{3mm}
+
+  Uno de los \textbf{modelos computacionales} cuya aplicación resulta atractiva es el de las \textbf{Redes de Neuronas Artificiales}. La capacidad de aprender de grandes conjuntos de datos hacen de esta una opción perfecta para comprender y predecir los contagios causados por el virus.
+
+  \vspace{2mm}
+
+  Para comprender cómo cumplir con este objetivo debemos tener en cuenta cómo es posible que una red de neuronas aprenda. La respuesta se haya en su estructura. A nivel básico la estructura de una RNA supone un conjunto de entradas multiplicadas por unos pesos a modo de impulso nervioso al que se le puede aplicar determinadas funciones de activación. Dicha estructura de una neurona puede ser vista a continuación.
+
+  \begin{figure}[h]
+      \centering
+      \includegraphics[width=400px]{img/Neuron.png}
+      \caption{Estructura de una neurona}
+      \label{fig:graf_exp1}
+  \end{figure}
+
+  Por lo tanto, hemos trasladado el problema a la \textbf{selección de los pesos} precisos para realizar predicciones lo más exactas posibles. El modelo a emplear se tratará del \textbf{Perceptrón Multicapa}. Consecuentemente el trabajo realizado en esta práctica consiste en \textit{tratar los datos para la aplicación del modelo elegido}, \textit{realizar los experimentos oportunos para dar con una configuración de la red apropiada} y \textit{analizar los resultados} obtenidos haciendo una reflexión crítica del proceso seguido.
+
+\newpage
+
+
+\section{Parte 1: Regresión}
 
     \subsection{Planteamiento y desarrollo del problema a tratar}
-    
-    El objetivo de la asignatura de Inteligencia Artificial en las Organizaciones es el poner en relieve el encaje de las diversas técnicas de IA en contextos reales. Con esta motivación en mente, parece evidente que es imprescindible lograr obtener soluciones a problemas apremiantes con el conjunto de técnicas disponibles. Por su parte, la \textbf{epidemia} del\textbf{ SARS-CoV-2 }supone un \textbf{reto} para la humanidad y constituye una oportunidad para demostrar el potencial de las nuevas herramientas IA de las que disponemos para hacer frente a este nuevo reto.
+
+    En esta primera parte se pretende predecir la transmisión del virus \textit{COVID-19} partiendo de un conjunto de datos que se explicarán en la siguiente sección. Se trata pues de un problema de regresión que se va a llevar a cabo mediante una RNA, a la que se van a modificar sus parámetros hasta conseguir aquellos con los que se genere un modelo con menor error a la hora de predecir.
 
     \vspace{2mm}
-    
-    Uno de los \textbf{modelos computacionales} cuya \textbf{aplicación} resulta \textbf{atractiva} es el de las Redes de Neuronas Artificiales. La capacidad de aprender de grandes conjuntos de datos hacen de esta una opción perfecta para comprender y predecir los contagios causados por el virus. 
-    
-    Para comprender cómo cumplir con este objetivo debemos tener en cuenta cómo es posible que una red de neuronas aprenda. La respuesta se haya en su estructura. A nivel básico la estructura de una RNA supone un conjunto de entradas multiplicadas por unos pesos a modo de impulso nervioso al que se le puede aplicar determinadas funciones de activación. Dicha estructura de una neurona puede ser vista a continuación.    
-   
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=400px]{img/Neuron.png}
-        \caption{Estructura de una neurona}
-        \label{fig:graf_exp1}
-    \end{figure}
 
-    Por lo tanto, hemos trasladado el problema a la \textbf{selección de los pesos} precisos para realizar predicciones lo más exactas posibles. El modelo a emplear se tratará del \textbf{Perceptrón Multicapa}. Consecuentemente el trabajo realizado en esta práctica consiste en \textit{tratar los datos para la aplicación del modelo elegido}, \textit{realizar los experimentos oportunos para dar con una configuración de la red apropiada} y \textit{analizar los resultados} obtenidos haciendo una reflexión crítica del proceso seguido.
-        
-    \newpage
+    El objetivo es predecir con la mayor exactitud posible los valores en 1, 2 y 3 días a futuro en dos países: \textbf{España} y \textbf{Brasil}. Para ello, se entrena una red con todos los datos, y se aplica la predicción sobre estos dos.
+
+    \vspace{2mm}
+
+    Para realizar la predicción en 2 y 3 días a futuro, se toman como entrada, además de los valores reales, los valores que la red ha predicho anteriormente.
+
+
+
 
     \subsection{Tratamiento de datos}
 
-    Los datos que se han utilizado pertenecen al \textit{Novel Coronavirus (COVID-19) Cases Data} de la página \textit{The Humanitarian Data Exchange}, se trata de una recopilación de \textbf{datos epidemiológicos del COVID-19} desde el día 22 de enero de 2020.
+    Los datos que se han utilizado pertenecen al \textit{Novel Coronavirus (COVID-19) Cases Data} de la página \textit{The Humanitarian Data Exchange}[Referencia 4], se trata de una recopilación de \textbf{datos epidemiológicos del COVID-19} desde el día 22 de enero de 2020.
 
     \vspace{3mm}
 
-    En concreto, los datos de interés son los que se encuentran en el fichero diario de casos confirmados, este está compuesto de \textbf{266} provincias/estados de distintos países/regiones, de los cuales se recopila el \textbf{número de infectados totales} desde el 22 de enero hasta la fecha.  
+    En concreto, los datos de interés son los que se encuentran en el fichero de casos diarios confirmados, este está compuesto de \textbf{266} provincias/estados de distintos países/regiones, de los cuales se recopila el \textbf{número de infectados totales} desde el 22 de enero hasta la fecha.
 
     \vspace{1mm}
 
@@ -96,53 +112,237 @@
     El tratamiento de los datos que se ha llevado a cabo es el siguiente:
 
     \begin{itemize}
-        \item En primer lugar, se ha eliminado la comilla simple del nombre de un país del fichero, para evitar errores en \textit{Weka}.
-        \item Se han renombrado los atributos correspondientes a las fechas para que el fichero sea compatible con nuevos datos, para ello se renombra el día actual a \textit{Día 0} y el resto a \textit{Día -1}, \textit{Día -2},\dots
-        \item Por último, se convierte el fichero \textit{.csv} en \textit{.arff}.
+        \item En primer lugar, se ha eliminado la comilla simple del nombre de un país del fichero.
+        \item Se han renombrado los atributos correspondientes a las fechas de forma que el día actual se convierte en \textit{Día 0} y el resto en \textit{Día -1}, \textit{Día -2},\dots
     \end{itemize}
 
-    Además, se ha generado un nuevo fichero para abordar la generación de resultados sobre los territorios concretos en los que se focaliza la atención de la práctica, \textbf{Brasil} y \textbf{España}. Dicho fichero se obtiene borrando del fichero \textit{.arff} anterior las filas que no corresponden a estos países.
+
+
+
+    \subsection{Acercamiento con WEKA}
+
+      Para poder trabajar con la herramienta \textit{WEKA} se transforma el fichero de formato \textit{.csv} a \textit{.arff}. Como la configuración por defecto que ofrece \textit{WEKA} para el algoritmo del perceptrón multicapa no es adecuada para la resolución del problema, es necesario alterar sus parámetros. Los valores que admiten modificación son:
+
+      \begin{itemize}
+        \item Número de ciclos
+        \item Tasa de aprendizje
+        \item Número de capas ocultas
+      \end{itemize}
+
+      Para poder realizar varios experimentos con distintos modelos y configuraciones diferentes, se usa la herramienta \textit{Experimenter} de \textit{WEKA}.
+
+      \vspace{1mm}
+
+      Debido a la cantidad de tiempo requerido para realizar el entrenamiento y a distintos problemas como: errores al leer los datos, valores de error extremadamente altos en algunos experimentos, poca precisión de los modelos y falta de personalización de la red, se decide descartar este acercamiento por uno que permite resolver estos problemas de manera sencilla.
+
+
+
+
+    \subsection{Acercamiento con Python-Tensorflow}
+
+    La principal ventaja de la biblioteca \textit{Tensorflow} es la personalización de las redes. Esto permite la modificación de valores como la función de coste, la función de optimización, o el número de neuronas por cada capa de la red. Además, junto a la biblioteca de cálculo numérico \textit{numpy} permite que el entrenamiento de estas redes sea mucho más ágil.
+
+    \vspace{3mm}
+
+    Una de las facilidades que ofrece es la capacidad de crear redes neuronales de forma rápida, y poder entrenarla y realizar predicciones con apenas unas líneas de código.
+
+    \vspace{2mm}
+
+    Gracias a esta tecnología ha sido posible realizar distintos experimentos hasta que se ha encontrado la configuración de la red que es capaz de resolver el problema de la mejor manera.
+
+    \vspace{3mm}
+
+    Para realizar la lectura de los datos se ha hecho uso de la biblioteca \textit{pandas}, concretamente, la función de \textit{read\_csv}. Después, se ha transformado en una lista de \textit{numpy}, lo que ha facilitado su manejo dividiendo los datos e forma rápida y sencilla.
+
+    \vspace{4mm}
+
+    Se han creado 3 archivos de \textit{Python} con el propósito de resolver el problema:
+
+    \begin{enumerate}
+      \item \textbf{Perceptrón con 'K Fold'}[Anexo 1]
+
+        Este primer archivo usa una función de la bibioteca \textit{sklearn} que implementa el algoritmo '\textit{K Fold}'. Se ha decidido realizar la división de los datos en 10 partes.
+
+        \vspace{2mm}
+
+        El archivo genera y guarda los modelos para, posteriormente, poder usarlos en la predicción.
+
+      \item \textbf{Perceptrón con 'split percentage'}[Anexo 2]
+
+        El segundo archivo genera modelos entrenados usando la técnica de división de datos en conjunto de entrenamiento y de test. Estos modelos también se guardan para poder realizar predicciones con los mismos.
+
+      \item \textbf{Predicción usando los modelos generados}[Anexo 3]
+
+        El archivo realiza la predicción, usando los modelos cargados, con los dos países seleccionados (España y Brasil). Las predicciones se realizan, como se ha explicado antes, sobre el primer día usando los datos reales. Despúes, los datos reales, junto a este primer día predicho, se usan para realizar la predicción del segundo día. El mismo proceso se hace para realizar la tercera predicción.
+
+    \end{enumerate}
+
+
+
 
     \subsection{Configuración de experimentos con MLP}
 
+      Se han planteado 4 modelos en función de los días seleccionados para entrenar a la red: modelo con 7 días, modelo con 15 días, modelo con 30 días y modelo con 60 días.
+
+      \vspace{2mm}
+
+      Se ha elegido esta división, que corresponden con 1 semana, 2 semanas, 1 mes y 2 meses respectivamente, ya que se quiere comprobar cuánto tiempo es necesario conocer de antemano para preever la evolución de infectados por \textit{COVID-19} en una región.
+
+      \vspace{2mm}
+
+      Se han realizado distintos experimentos con cada modelo, dividiendo entre el algoritmo de '\textit{K Fold}' y '\textit{percentage split}' para encontrar aquel que genere los mejores resultados.
+
+      \vspace{3mm}
+
+      Los hiperparámetros comunes a todos los modelos son:
+
+      \begin{itemize}
+        \item \textbf{Número de capas ocultas}: son aquellas capas de una red neuronal que no son ni de entrada ni de salida. No se ha utilizado \textbf{ninguna} capa oculta, porque los resultados experimentales proporcionan mayor precisión si no se usan. Además, tanto la herramienta de \textit{WEKA} como los modelos generados con \textit{Tensorflow} coincidían en esta arquitectura.
+        \item \textbf{Tasa de aprendizaje}: es el factor por el que se multiplica el gradiente durante el entrenamiento de la red, generando el paso de gradiente, utilizado para actualizar los pesos. Se ha usado el valor que ofrece la biblioteca \textit{Tensorflow} por defecto en el optimizador, \textbf{0.001}.
+        \item \textbf{Número de ciclos}: es el número de veces que la red realiza el bucle de entrenamiento sobre todos los datos. Se han utilizado \textbf{500} ciclos porque a partir de este valor las mejoras de los modelos no eran significativas.
+        \item \textbf{Optimizador}: es la función encargada de encontrar el mínimo local de la función de coste y actualizar los pesos de la red en consecuencia. En este caso el elegido es \textbf{Adam} ya que es una versión del descenso del gradiente que genera mejores resultados.
+        \item \textbf{Función de coste}: es la función que indica el error de la red. En este caso se ha usado el \textbf{error medio absoluto}, dado que se trata de un problema de regresión. Otra posible opción habría sido el error cuadrático medio.
+        \item \textbf{Función de activación}: es la función de cada neurona que toma como entrada la suma de todas las salidas de la capa anterior y genera una salida no lineal para la siguiente capa. En los modelos se usa la función \textbf{ReLU} en las capas ocultas, y la función \textbf{linear} en las capas de salida, ya que se trata de un problema de regresión.
+
+      \end{itemize}
+
+
+      Los parámetros que se modifican entre los modelos son el algoritmo usado para generar el modelo, el número de entradas de la red, y el número de neuronas en la capa de entrada.
+
+      \begin{table}[h]
+        \centering
+      \begin{tabular}{|c|c|c|c|}
+      \hline
+      \rowcolor[HTML]{FFCE93}
+      \textbf{Algoritmo} & \textbf{Entradas red} & \textbf{Neuronas capa entrada} & \textbf{Error mejor experimento} \\ \hline
+      K Fold             & 7                     & 64                             & 4076.555                         \\ \hline
+      Split              & 7                     & 64                             & 1378.325                         \\ \hline
+      K Fold             & 15                    & 64                             & 2138.145                         \\ \hline
+      Split              & 15                    & 64                             & 2141.331                         \\ \hline
+      K Fold             & 30                    & 128                            & 2942.597                         \\ \hline
+      Split              & 30                    & 128                            & 10260.810                        \\ \hline
+      K Fold             & 60                    & 128                            & 3031.660                         \\ \hline
+      Split              & 60                    & 128                            & 8037.908                         \\ \hline
+    \end{tabular}
+      \end{table}
+
+    A pesar de que unos modelos puedan mostrar menor error, no tiene por qué ser ese modelo el mejor. Hasta que no se pruebe con casos reales no se podrá asegurar que uno es mejor que otro.
+
+      \vspace{2mm}
+
+    Aún así, según refleja la tabla, el error cometido con el algoritmo \textit{K Fold} es menor en todos los casos excepto en el que sólo hay 7 entradas en la red.
+
+
+
+
     \subsection{Análisis de resultados}
 
-    \newpage    
+    En primer lugar se van a analizar los resultado obtenidos acerca de la predicción de los contagiados en \textbf{España}, usando gráficas que permitan comparar los distintos modelos generados, en función a sus resultados y sus errores, y a continuación, se realizará el mismo proceso con los datos de \textbf{Brasil}.
+
+    \subsubsection{Resultados de España}
+
+    Las siguientes dos gráficas muestran las predicciones de los modelos respecto a los datos de España. Se ha decidido mostrar hasta 11 días atrás para poder observar la evolución de los datos con perspectiva.
+
+    \begin{center}
+        \includegraphics[width=450px]{img/pred_modelos_kFold_ES.png}
+    \end{center}
+
+    \begin{center}
+        \centering
+        \includegraphics[width=450px]{img/pred_modelos_split_ES.png}
+    \end{center}
+
+    Se puede observar gráficamente que los mejores modelos para este problema son el \textbf{Modelo 30 K Fold} y el \textbf{Modelo 15 Split}. A pesar de esto, los modelos de \textit{K fold} se acercan mucho más a los valores reales, y se puede atribuir la precisión del \textbf{Modelo 15 Split} al azar.
+
+    \vspace{3mm}
+
+    La siguiente gráfica muestra la evolución del error absoluto en función de los días predichos.
+
+    \begin{center}
+        \centering
+        \includegraphics[width=450px]{img/error_modelos_ES.png}
+    \end{center}
+
+    Esta gráfica demuestra que la previsión acertada del \textbf{Modelo 15 Split} es fruto del azar, porque en el primer día muestra un gran error, que corrige en el segundo día, y se vuelve a incrementar en el tercero. Si realmente fuera capaz de realizar previsiones acertadas, el error debería ser incrementeal a lo largo del tiempo.
+
+    \vspace{2mm}
+
+    Viendo los resultados de las dos gráficas, junto a la gráfica de error, se considera por tanto que los modelos que usan \textbf{K Fold} son mejores para este problema, concretamente, el mejor para el caso de España es el \textbf{K Fold con datos de 30 días}.
+
+
+
+    \subsubsection{Resultados de Brasil}
+
+    En el caso de Brasil se muestran, al igual que en el caso de España, hasta 11 días atrás ya que se observa mejor la evolución de los datos.
+
+    \begin{center}
+        \includegraphics[width=450px]{img/pred_modelos_kFold_BZ.png}
+    \end{center}
+
+    \begin{center}
+        \includegraphics[width=450px]{img/pred_modelos_split_BZ.png}
+    \end{center}
+
+    Gráficamente, se observa que los mejores modelos para este problema son el \textbf{Modelo 60 K Fold}, el \textbf{Modelo 30 K Fold} y el \textbf{Modelo 7 Split}. Al igual que en el caso de España, los modelos de \textit{K fold} se acercan mucho más a los valores reales, y se puede atribuir la precisión del \textbf{Modelo 7 Split} al azar.
+
+    \vspace{2mm}
+
+    Esto se puede demostrar a su vez porque el \textbf{Modelo 7 Split} en el caso de España generaba resultados malos y el \textbf{Modelo 15 Split} que daba buenos resultados, en este caso no los da.
+
+    \vspace{4mm}
+
+    La siguiente gráfica muestra la evolución del error absoluto en función de los días predichos.
+
+    \begin{center}
+        \includegraphics[width=450px]{img/error_modelos_BZ.png}
+    \end{center}
+
+    A pesar de que en esta gráfica el error de los modelos que usan \textit{split percentage} es proporcional según se aumenta el día a predecir, debido a los motivos discutidos en el apartado anterior (Resultados de España) y los motivos explicados en las gráficas anteriores, se ha decidido que para el caso de Brasil los mejores modelos sean el \textbf{Modelo 60 K Fold} y el \textbf{Modelo 30 K Fold}.
+
+    \vspace{2mm}
+
+    Dado que el \textbf{Modelo 30 K Fold} es el que mejores resultados produce como regla general, se considera que el mejor modelo para resolver el problema de predecir los contagiados de un país cualquiera es \textbf{K Fold con datos de 30 días}.
+
+
+
+
+
+    \newpage
     \section{Parte 2: Series temporales}
-    
+
     \subsection{Descripción de las series temporales utilizadas}
-        
+
         Podemos definir las series temporales como un una \textbf{sucesión de datos o muestras medidos en intervalos de tiempo regulares} de los cuales resulta especialmente interesante el factor de predicción de los valores en instantes de tiempo futuros. Dichas predicciones son posibles al detectar patrones o tendencias en los datos a lo largo del tiempo.
-        
+
         \vspace{2mm}
-    
+
         La pregunta que nos debemos hacer es si se corresponden los datos de contagios acumulados y muertes por territorios del  \textit{SARS-CoV-2} con una serie temporal de la que podamos realizar predicciones fiables. Para contestar a esta pregunta vamos a fijarnos en las variables de las que disponemos y la relación entre ambas. Como variable independiente nos encontramos con tiempo, mientras que el número de contagios (o muertes, según el caso) se identifica con la variable dependiente puesto que esta cifra depende en gran medida del la cifra medida en el instante de tiempo anterior. Por lo tanto \textbf{se trata de una serie temporal}.
-           
+
         \vspace{2mm}
-        
-        Sin embargo, existen más características en las que nos podemos fijar. [2] 
+
+        Sin embargo, existen más características en las que nos podemos fijar. [2]
     \begin{itemize}
     \item \textbf{Estacionalidad}: Se refiere a fluctuaciones periódicas. Un análisis en profundidad de los datos de la epidemia debería considerar este factor, no obstante, dado que la pandemia no lleva entre nosotros un periodo de tiempo lo suficientemente grande como para detectar un comportamiento estacional a lo largo de las distintas épocas del año no nos fijaremos en este parámetro.
     \item \textbf{Estacionaridad}: No debe ser confundido con la estacional dado que hace referencia al mantenimiento de los valores estáticos tales como la media y varianza. El proceso de crecimiento descontrolado de una pandemia no puede ser considerado estacionario debido a la tendencia alcista y volátil de los datos.
     \end{itemize}
-    
+
     A continuación se muestra un ejemplo de una serie temporal estacional y estacionaria para comprobar cómo difiere de la serie temporal de los datos del \textit{COVID} mundiales.
-    
+
         \begin{figure}[h]
                 \centering
                 \includegraphics[width=320px]{img/estacional.png}
                 \caption{Serie temporal estacional y estacionaria}
                 \label{fig:graf_exp1}
             \end{figure}
-            
-            
+
+
         \begin{figure}[h]
                 \centering
                 \includegraphics[width=320px]{img/covid-cases.png}
                 \caption{Casos mundiales de \textit{COVID}. [3]}
                 \label{fig:graf_exp1}
             \end{figure}
-            
+
 
 
 
@@ -151,7 +351,7 @@
 
  \section{Conclusiones}
 
-\clearpage 
+\clearpage
 
 \section{Referencias}
     \begin{itemize}
@@ -160,7 +360,23 @@
         \item [2.] The complete guide to time series. Consultado en Octobre 2020. Url: \\
         \href{https://towardsdatascience.com/the-complete-guide-to-time-series-analysis-and-forecasting-70d476bfe775}{https://towardsdatascience.com/the-complete-guide-to-time-series}
         \item [3.] COVID Data European Union. Consultado en Octubre 2020. Url: \\
-        \href{https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases}{https://www.ecdc.europa.eu}    
+        \href{https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases}{https://www.ecdc.europa.eu}
+        \item [4.] The Humanitarian Data Exchange. Consultado en Octubre 2020. Url: \\
+        \href{https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases}{https://data.humdata.org/dataset/novel-coronavirus}
     \end{itemize}
 \printindex
+
+
+
+  \section{Anexos}
+  \begin{itemize}
+    \item [1.] Perceptron Multicapa usando '\textit{K Fold}'\\
+    \textbf{\textit{perceptron\_kfold.py}}
+    \item [2.] Perceptron Multicapa usando '\textit{split percentage}'\\
+    \textbf{\textit{perceptron\_split.py}}
+    \item [3.] Programa para realizar la predicción de los modelos\\
+    \textbf{\textit{predict.py}}
+  \end{itemize}
+
+
 \end{document}
