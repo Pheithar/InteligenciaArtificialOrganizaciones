@@ -4,7 +4,11 @@
 \BOOKMARK [2][-]{subsection.2.2}{Tratamiento de datos}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Configuraci\363n de experimentos con MLP}{section.2}% 5
 \BOOKMARK [2][-]{subsection.2.4}{An\341lisis de resultados}{section.2}% 6
-\BOOKMARK [1][-]{section.3}{Parte 2: }{}% 7
-\BOOKMARK [1][-]{section.4}{Contexto de la pr\341ctica}{}% 8
-\BOOKMARK [1][-]{section.5}{Conclusiones}{}% 9
-\BOOKMARK [1][-]{section.6}{Referencias}{}% 10
+\BOOKMARK [1][-]{section.3}{Parte 2: Series temporales}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Descripci\363n de las series temporales utilizadas}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Proceso de entrenamiento}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Arquitecturas probadas}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Arquitectura seleccionada}{section.4}% 11
+\BOOKMARK [1][-]{section.5}{Contexto de la pr\341ctica}{}% 12
+\BOOKMARK [1][-]{section.6}{Conclusiones}{}% 13
+\BOOKMARK [1][-]{section.7}{Referencias}{}% 14

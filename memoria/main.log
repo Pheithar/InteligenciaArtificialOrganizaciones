@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  5 OCT 2020 18:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.5)  10 OCT 2020 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -409,6 +409,13 @@ LaTeX Warning: Unused global option(s):
 (./main.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
+
+
+LaTeX Warning: Label `fig:graf_exp1' multiply defined.
+
+
+LaTeX Warning: Label `fig:graf_exp1' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -511,7 +518,7 @@ LaTeX Info: Redefining \nameref on input line 25.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-<img/logo_uc3m.jpg, id=44, 149.8398pt x 48.18pt>
+<img/logo_uc3m.jpg, id=48, 149.8398pt x 48.18pt>
 File: img/logo_uc3m.jpg Graphic file (type jpg)
 <use img/logo_uc3m.jpg>
 Package pdftex.def Info: img/logo_uc3m.jpg  used on input line 29.
@@ -538,47 +545,67 @@ been already used, duplicate ignored
                    \relax 
 l.55 \newpage
               [1]
-<img/Neuron.png, id=69, 1003.75pt x 602.25pt>
+<img/Neuron.png, id=74, 1003.75pt x 602.25pt>
 File: img/Neuron.png Graphic file (type png)
 <use img/Neuron.png>
 Package pdftex.def Info: img/Neuron.png  used on input line 73.
 (pdftex.def)             Requested size: 401.50146pt x 240.9049pt.
- [2 <./img/Neuron.png (PNG copy)>] [3] [4
+ [2 <./img/Neuron.png (PNG copy)>] [3]
+<img/estacional.png, id=84, 1059.96pt x 321.2pt>
+File: img/estacional.png Graphic file (type png)
+<use img/estacional.png>
+Package pdftex.def Info: img/estacional.png  used on input line 133.
+(pdftex.def)             Requested size: 321.20117pt x 97.33116pt.
+<img/covid-cases.png, id=86, 1426.32875pt x 502.87875pt>
+File: img/covid-cases.png Graphic file (type png)
+<use img/covid-cases.png>
+Package pdftex.def Info: img/covid-cases.png  used on input line 141.
+(pdftex.def)             Requested size: 321.20117pt x 113.24258pt.
+ [4 <./img/estacional.png> <./img/covid-cases.png>] [5] [6] [7
 
 ]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
  (./main.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 125.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 125.
-
-(./main.aux
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 205.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 205.
+ (./main.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 125.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 125.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C00E5C01BF35C9337122FBCFE04C61CA;649.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 125.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 205.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 205.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: DA33BC065AA8F19F78044543C03036C6;766
+(rerunfilecheck)             After:  CDA48D3006BA448A9D1C51B7EE74B32C;973.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 205.
  ) 
 Here is how much of TeX's memory you used:
- 9018 strings out of 483121
- 138162 string characters out of 5964354
- 423508 words of memory out of 5000000
- 23865 multiletter control sequences out of 15000+600000
+ 9042 strings out of 483121
+ 138563 string characters out of 5964354
+ 429554 words of memory out of 5000000
+ 23877 multiletter control sequences out of 15000+600000
  538494 words of font info for 44 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 50i,6n,77p,602b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,9n,77p,688b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (5 pages, 189263 bytes).
+Output written on main.pdf (8 pages, 1091147 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
