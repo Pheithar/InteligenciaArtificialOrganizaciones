@@ -143,8 +143,47 @@
                 \label{fig:graf_exp1}
             \end{figure}
             
+\section{Proceso de entrenamiento}
+La red de neuronas generada seguirá el algoritmo de \textit{Multilayer Perceptron }para la predicción de series temporales en el apartado \textit{timeseriesForecasting} de \textit{Weka}. Por lo tanto, el siguiente paso consiste en la selección de los parámetros de la red que permitan encontrar la mejor predicción posible.
 
+    \subsection{Arquitecturas probadas}
 
+    En el caso de \textit{Multilayer Perceptron } existen multitud de parámetros de los cuales debemos considerar su variación y combinación para obtener una buena arquitectura de red. Algunos de ellos (\textit{hidden layers, learning rate y training time}) han sido descritos en la la sección Parte 1 de esta memoria y por tanto se obvia la explicación. Sin embargo, la aproximación con series temporales introduce un nuevo parámetro a explicar. La definición del mismo se da a continuación.
+
+    \begin{itemize}
+    \item \textbf{Lag Lenght}: Las variables \textit{lag} son el mecanismo por el cual se determina la \textbf{relación entre las variables pasadas y las tratadas actualmente}. Una forma de pensar en este parámetro consiste en equipararlo a la longitud de la ventana de tiempo en la que se tiene en cuenta el valor de las variables pasadas. Por consiguiente, \textbf{un valor apropiado de este parámetro en el caso considerado es 7 días} dado que los estados suelen tener problemas en las notificaciones del fin de semana, siendo apropiado estudiar el efecto de la pandemia en porciones de una semana. Por lo tanto, se usarán 7 y 14 días para las pruebas.
+    \end{itemize}
+
+    Se concluye que es necesario realizar la siguiente aproximación a la arquitectura de la red mostrada en la tabla contigua, combinando adecuadamente valores lógicos de los parámetros propuestos.
+
+    \begin{table}[h]
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \rowcolor[HTML]{DAE8FC} 
+    \textbf{ID experimento} & \textbf{Lag Lenght} & \textbf{Hidden Layers} & \textbf{Learning Rate} & \textbf{Training Time} \\ \hline
+    1                       & 7                   & a                      & 0,1                    & 500                    \\ \hline
+    2                       & 7                   & a                      & 0,1                    & 5000                   \\ \hline
+    3                       & 7                   & a                      & 0,3                    & 500                    \\ \hline
+    4                       & 7                   & a                      & 0,3                    & 5000                   \\ \hline
+    5                       & 7                   & t                      & 0,3                    & 500                    \\ \hline
+    6                       & 7                   & t                      & 0,3                    & 5000                   \\ \hline
+    7                       & 7                   & t                      & 0,1                    & 500                    \\ \hline
+    8                       & 7                   & t                      & 0,1                    & 5000                   \\ \hline
+    9                       & 14                  & a                      & 0,1                    & 500                    \\ \hline
+    10                      & 14                  & a                      & 0,1                    & 5000                   \\ \hline
+    11                      & 14                  & a                      & 0,3                    & 500                    \\ \hline
+    12                      & 14                  & a                      & 0,3                    & 5000                   \\ \hline
+    13                      & 14                  & t                      & 0,3                    & 500                    \\ \hline
+    14                      & 14                  & t                      & 0,3                    & 5000                   \\ \hline
+    15                      & 14                  & t                      & 0,1                    & 500                    \\ \hline
+    16                      & 14                  & t                      & 0,1                    & 5000                   \\ \hline
+    \end{tabular}
+    \caption{Configuración de experimentos}
+    \end{table}
+
+    Finalmente, es interesante destacar que cada uno de los experimentos debe ser dividido a su vez en\textit{ 4 sub-experimentos} debido a que la herramienta de \textit{forecasting} permite tomas los datos de contagios y muertes de manera aislada o de manera cruzada. Es decir, para cada una de las configuraciones de los experimentos debemos realizar uno con los datos de confirmados acumulados aislados, uno con los datos de los muertos aislados y otros dos con las series cruzadas. Los resultados de los experimentos se tratan en el siguiente apartado.
+        
+    \subsection{Arquitectura seleccionada}
 
 \section{Contexto de la práctica}
 
