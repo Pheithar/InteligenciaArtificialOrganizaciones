@@ -11,7 +11,10 @@
 \contentsline {subsubsection}{\numberline {2.6.2}Resultados de Brasil}{7}{subsubsection.2.6.2}%
 \contentsline {section}{\numberline {3}Parte 2: Series temporales}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Descripción de las series temporales utilizadas}{9}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Contexto de la práctica}{10}{section.4}%
-\contentsline {section}{\numberline {5}Conclusiones}{10}{section.5}%
-\contentsline {section}{\numberline {6}Referencias}{11}{section.6}%
-\contentsline {section}{\numberline {7}Anexos}{12}{section.7}%
+\contentsline {section}{\numberline {4}Proceso de entrenamiento}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Arquitecturas probadas}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Arquitectura seleccionada}{11}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Contexto de la práctica}{11}{section.5}%
+\contentsline {section}{\numberline {6}Conclusiones}{11}{section.6}%
+\contentsline {section}{\numberline {7}Referencias}{12}{section.7}%
+\contentsline {section}{\numberline {8}Anexos}{13}{section.8}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  10 OCT 2020 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  10 OCT 2020 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -518,7 +518,7 @@ LaTeX Info: Redefining \nameref on input line 25.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-<img/logo_uc3m.jpg, id=68, 149.8398pt x 48.18pt>
+<img/logo_uc3m.jpg, id=80, 149.8398pt x 48.18pt>
 File: img/logo_uc3m.jpg Graphic file (type jpg)
 <use img/logo_uc3m.jpg>
 Package pdftex.def Info: img/logo_uc3m.jpg  used on input line 29.
@@ -545,104 +545,104 @@ been already used, duplicate ignored
                    \relax 
 l.55 \newpage
               [1]
-<img/Neuron.png, id=99, 1003.75pt x 602.25pt>
+<img/Neuron.png, id=114, 1003.75pt x 602.25pt>
 File: img/Neuron.png Graphic file (type png)
 <use img/Neuron.png>
 Package pdftex.def Info: img/Neuron.png  used on input line 71.
 (pdftex.def)             Requested size: 401.50146pt x 240.9049pt.
  [2 <./img/Neuron.png (PNG copy)>] [3] [4]
-<img/pred_modelos_kFold_ES.png, id=116, 911.405pt x 372.39125pt>
+<img/pred_modelos_kFold_ES.png, id=131, 911.405pt x 372.39125pt>
 File: img/pred_modelos_kFold_ES.png Graphic file (type png)
 <use img/pred_modelos_kFold_ES.png>
 Package pdftex.def Info: img/pred_modelos_kFold_ES.png  used on input line 247.
 
 (pdftex.def)             Requested size: 451.68915pt x 184.55869pt.
  [5]
-<img/pred_modelos_split_ES.png, id=123, 909.3975pt x 372.39125pt>
+<img/pred_modelos_split_ES.png, id=138, 909.3975pt x 372.39125pt>
 File: img/pred_modelos_split_ES.png Graphic file (type png)
 <use img/pred_modelos_split_ES.png>
 Package pdftex.def Info: img/pred_modelos_split_ES.png  used on input line 252.
 
 (pdftex.def)             Requested size: 451.68915pt x 184.96211pt.
-<img/error_modelos_ES.png, id=124, 813.0375pt x 372.39125pt>
+<img/error_modelos_ES.png, id=139, 813.0375pt x 372.39125pt>
 File: img/error_modelos_ES.png Graphic file (type png)
 <use img/error_modelos_ES.png>
 Package pdftex.def Info: img/error_modelos_ES.png  used on input line 263.
 (pdftex.def)             Requested size: 451.68915pt x 206.88414pt.
  [6 <./img/pred_modelos_kFold_ES.png> <./img/pred_modelos_split_ES.png> <./img/
 error_modelos_ES.png>]
-<img/pred_modelos_kFold_BZ.png, id=133, 912.40875pt x 372.39125pt>
+<img/pred_modelos_kFold_BZ.png, id=148, 912.40875pt x 372.39125pt>
 File: img/pred_modelos_kFold_BZ.png Graphic file (type png)
 <use img/pred_modelos_kFold_BZ.png>
 Package pdftex.def Info: img/pred_modelos_kFold_BZ.png  used on input line 279.
 
 (pdftex.def)             Requested size: 451.68915pt x 184.34843pt.
-<img/pred_modelos_split_BZ.png, id=134, 912.40875pt x 372.39125pt>
+<img/pred_modelos_split_BZ.png, id=149, 912.40875pt x 372.39125pt>
 File: img/pred_modelos_split_BZ.png Graphic file (type png)
 <use img/pred_modelos_split_BZ.png>
 Package pdftex.def Info: img/pred_modelos_split_BZ.png  used on input line 283.
 
 (pdftex.def)             Requested size: 451.68915pt x 184.34843pt.
-<img/error_modelos_BZ.png, id=135, 813.0375pt x 372.39125pt>
+<img/error_modelos_BZ.png, id=150, 813.0375pt x 372.39125pt>
 File: img/error_modelos_BZ.png Graphic file (type png)
 <use img/error_modelos_BZ.png>
 Package pdftex.def Info: img/error_modelos_BZ.png  used on input line 297.
 (pdftex.def)             Requested size: 451.68915pt x 206.88414pt.
  [7 <./img/pred_modelos_kFold_BZ.png> <./img/pred_modelos_split_BZ.png>]
 [8 <./img/error_modelos_BZ.png>]
-<img/estacional.png, id=147, 1059.96pt x 321.2pt>
+<img/estacional.png, id=163, 1059.96pt x 321.2pt>
 File: img/estacional.png Graphic file (type png)
 <use img/estacional.png>
-Package pdftex.def Info: img/estacional.png  used on input line 333.
+Package pdftex.def Info: img/estacional.png  used on input line 335.
 (pdftex.def)             Requested size: 321.20117pt x 97.33116pt.
-<img/covid-cases.png, id=148, 1426.32875pt x 502.87875pt>
+<img/covid-cases.png, id=164, 1426.32875pt x 502.87875pt>
 File: img/covid-cases.png Graphic file (type png)
 <use img/covid-cases.png>
-Package pdftex.def Info: img/covid-cases.png  used on input line 341.
+Package pdftex.def Info: img/covid-cases.png  used on input line 343.
 (pdftex.def)             Requested size: 321.20117pt x 113.24258pt.
- [9 <./img/estacional.png> <./img/covid-cases.png>] [10] [11
+ [9 <./img/estacional.png> <./img/covid-cases.png>] [10] [11] [12
 
 ]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
  (./main.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 382.
- [12
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 425.
+ [13
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 382.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 425.
  (./main.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 382.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 382.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 425.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 425.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7C3526581D3DAC3BA38FD2757472F5B7;1111.
+(rerunfilecheck)             Checksum: 1D2F0FC248A8E5BAA5430806FC82E8AA;1318.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 382.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 425.
  ) 
 Here is how much of TeX's memory you used:
- 9096 strings out of 483121
- 139853 string characters out of 5964354
- 427554 words of memory out of 5000000
- 23914 multiletter control sequences out of 15000+600000
+ 9104 strings out of 483121
+ 139955 string characters out of 5964354
+ 429554 words of memory out of 5000000
+ 23917 multiletter control sequences out of 15000+600000
  538853 words of font info for 45 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 50i,9n,77p,679b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,9n,77p,688b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (13 pages, 1249218 bytes).
+Output written on main.pdf (14 pages, 1256340 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 179 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 229 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 203 words of extra memory for PDF output out of 10000 (max. 10000000)
 
