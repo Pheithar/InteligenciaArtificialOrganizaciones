@@ -56,7 +56,7 @@
 
 \section{Introducción}
 
-  El objetivo de la asignatura de Inteligencia Artificial en las Organizaciones es el poner en relieve el encaje de las diversas técnicas de IA en contextos reales. Con esta motivación en mente, parece evidente que es imprescindible lograr obtener soluciones a problemas apremiantes con el conjunto de técnicas disponibles. Por su parte, la \textbf{epidemia} del\textbf{ SARS-CoV-2 }supone un \textbf{reto} para la humanidad y constituye una oportunidad para demostrar el potencial de las nuevas herramientas de IA de las que disponemos para hacer frente a este nuevo desafio.
+    El objetivo de la asignatura de Inteligencia Artificial en las Organizaciones es poner en relieve el encaje de las diversas técnicas de IA en contextos reales. Con esta motivación en mente, parece evidente que es imprescindible lograr obtener soluciones a problemas apremiantes con el conjunto de técnicas disponibles. Por su parte, la \textbf{epidemia} del\textbf{ SARS-CoV-2 }supone un \textbf{reto} para la humanidad, y constituye una oportunidad para demostrar el potencial de las nuevas herramientas de IA de las que disponemos para hacer frente a este nuevo desafío.
 
   \vspace{3mm}
 
@@ -78,7 +78,7 @@
 
   \vspace{5mm}
 
-   La práctica se divide en dos partes: la primera trata de resolver un problema de \textbf{regresión} utilizando el \textbf{Perceptrón Multicapa} y la segunda trata de realizar predecicciones utilizando \textbf{series temporales} con la herramienta \textit{Weka}.
+   La práctica se divide en dos partes: la primera trata de resolver un problema de \textbf{regresión} utilizando el \textbf{Perceptrón Multicapa}, y la segunda, de realizar predecicciones utilizando \textbf{series temporales} con la herramienta \textit{Weka}, y de nuevo, el \textbf{Perceptrón Multicapa}.
 
 \newpage
 
@@ -178,7 +178,7 @@
 
       \item \textbf{Predicción usando los modelos generados}[Anexo 3]
 
-        El archivo realiza la predicción, usando los modelos cargados, con los dos países seleccionados (España y Brasil). Las predicciones se realizan, como se ha explicado antes, sobre el primer día usando los datos reales. Despúes, los datos reales, junto a este primer día predicho, se usan para realizar la predicción del segundo día. El mismo proceso se hace para realizar la tercera predicción.
+        El archivo realiza la predicción, usando los modelos cargados, con los dos países seleccionados (España y Brasil). Las predicciones se realizan, como se ha explicado antes, sobre el primer día usando los datos reales. Después, los datos reales, junto a este primer día predicho, se usan para realizar la predicción del segundo día. El mismo proceso se hace para realizar la tercera predicción.
 
     \end{enumerate}
 
@@ -242,7 +242,7 @@
 
     \subsection{Análisis de resultados}
 
-    En primer lugar se van a analizar los resultado obtenidos acerca de la predicción de los contagiados en \textbf{España}, usando gráficas que permitan comparar los distintos modelos generados, en función a sus resultados y sus errores, y a continuación, se realizará el mismo proceso con los datos de \textbf{Brasil}.
+    En primer lugar se van a analizar los resultados obtenidos acerca de la predicción de los contagiados en \textbf{España}, usando gráficas que permitan comparar los distintos modelos generados, en función a sus resultados y sus errores, y a continuación, se realizará el mismo proceso con los datos de \textbf{Brasil}.
 
     \subsubsection{Resultados de España}
 
@@ -268,7 +268,7 @@
         \includegraphics[width=450px]{img/error_modelos_ES.png}
     \end{center}
 
-    Esta gráfica demuestra que la previsión acertada del \textbf{Modelo 15 Split} es fruto del azar, porque en el primer día muestra un gran error, que corrige en el segundo día, y se vuelve a incrementar en el tercero. Si realmente fuera capaz de realizar previsiones acertadas, el error debería ser incrementeal a lo largo del tiempo.
+    Esta gráfica demuestra que la previsión acertada del \textbf{Modelo 15 Split} es fruto del azar, porque en el primer día muestra un gran error, que corrige en el segundo día, y se vuelve a incrementar en el tercero. Si realmente fuera capaz de realizar previsiones acertadas, el error debería ser incremental a lo largo del tiempo.
 
     \vspace{2mm}
 
@@ -278,7 +278,7 @@
 
     \subsubsection{Resultados de Brasil}
 
-    En el caso de Brasil se muestran, al igual que en el caso de España, hasta 11 días atrás ya que se observa mejor la evolución de los datos.
+    En el caso de Brasil se muestran, al igual que en el caso de España, hasta 11 días atrás, ya que se observa mejor la evolución de los datos.
 
     \begin{center}
         \includegraphics[width=450px]{img/pred_modelos_kFold_BZ.png}
@@ -323,11 +323,12 @@
 
         \vspace{2mm}
 
-        La pregunta que nos debemos hacer es si se corresponden los datos de contagios acumulados y muertes por territorios del  \textit{SARS-CoV-2} con una serie temporal de la que podamos realizar predicciones fiables. Para contestar a esta pregunta vamos a fijarnos en las variables de las que disponemos y la relación entre ambas. Como variable independiente nos encontramos con tiempo, mientras que el número de contagios (o muertes, según el caso) se identifica con la variable dependiente puesto que esta cifra depende en gran medida del la cifra medida en el instante de tiempo anterior. Por lo tanto \textbf{se trata de una serie temporal}.
+        La pregunta que nos debemos hacer es si se corresponden los datos de contagios acumulados y muertes por territorios del  \textit{SARS-CoV-2} con una serie temporal de la que podamos realizar predicciones fiables. Para contestar a esta pregunta vamos a fijarnos en las variables de las que disponemos y la relación entre ambas. Como variable independiente nos encontramos con tiempo, mientras que el número de contagios (o fallecidos, según el caso) se identifica con la variable dependiente, puesto que esta cifra depende en gran medida del la cifra medida en el instante de tiempo anterior. Por lo tanto \textbf{se trata de una serie temporal}.
 
         \vspace{2mm}
 
         Sin embargo, existen más características en las que nos podemos fijar. [Referencia 2]
+        
     \begin{itemize}
     \item \textbf{Estacionalidad}: Se refiere a fluctuaciones periódicas. Un análisis en profundidad de los datos de la epidemia debería considerar este factor, no obstante, dado que la pandemia no lleva entre nosotros un periodo de tiempo lo suficientemente grande como para detectar un comportamiento estacional a lo largo de las distintas épocas del año no nos fijaremos en este parámetro.
     \item \textbf{Estacionaridad}: No debe ser confundido con la estacional dado que hace referencia al mantenimiento de los valores estáticos tales como la media y varianza. El proceso de crecimiento descontrolado de una pandemia no puede ser considerado estacionario debido a la tendencia alcista y volátil de los datos.
@@ -355,48 +356,140 @@
                 % \label{fig:graf_exp1}
             \end{figure}
 
-\section{Proceso de entrenamiento}
-La red de neuronas generada seguirá el algoritmo de \textit{Multilayer Perceptron }para la predicción de series temporales en el apartado \textit{timeseriesForecasting} de \textit{Weka}. Por lo tanto, el siguiente paso consiste en la selección de los parámetros de la red que permitan encontrar la mejor predicción posible.
-
-    \subsection{Arquitecturas probadas}
-
-    En el caso de \textit{Multilayer Perceptron } existen multitud de parámetros de los cuales debemos considerar su variación y combinación para obtener una buena arquitectura de red. Algunos de ellos (\textit{número de capas ocultas, tasa de aprendizaje y tiempo de entrenamiento}) han sido descritos en la la sección Parte 1 de esta memoria y por tanto se obvia la explicación. Sin embargo, la aproximación con series temporales introduce un nuevo parámetro a explicar. La definición del mismo se da a continuación.
-
-    \begin{itemize}
-    \item \textbf{Longitud de retraso (Lag Lenght)}: Las variables \textit{lag} son el mecanismo por el cual se determina la \textbf{relación entre las variables pasadas y las tratadas actualmente}. Una forma de pensar en este parámetro consiste en equipararlo a la longitud de la ventana de tiempo en la que se tiene en cuenta el valor de las variables pasadas. Por consiguiente, \textbf{un valor apropiado de este parámetro en el caso considerado es 7 días} dado que los estados suelen tener problemas en las notificaciones del fin de semana, siendo apropiado estudiar el efecto de la pandemia en porciones de una semana. Por lo tanto, se usarán 7 y 14 días para las pruebas.
-    \end{itemize}
-
-    Se concluye que es necesario realizar la siguiente aproximación a la arquitectura de la red mostrada en la tabla contigua, combinando adecuadamente valores lógicos de los parámetros propuestos.
-
-    \begin{table}[h]
-    \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    \rowcolor[HTML]{DAE8FC}
-    \textbf{ID} & \textbf{Longitud retraso} & \textbf{Cap ocultas} & \textbf{Tasa aprendizaje} & \textbf{Tiempo entrenamiento} \\ \hline
-    1                       & 7                   & a                      & 0,1                    & 500                    \\ \hline
-    2                       & 7                   & a                      & 0,1                    & 5000                   \\ \hline
-    3                       & 7                   & a                      & 0,3                    & 500                    \\ \hline
-    4                       & 7                   & a                      & 0,3                    & 5000                   \\ \hline
-    5                       & 7                   & t                      & 0,3                    & 500                    \\ \hline
-    6                       & 7                   & t                      & 0,3                    & 5000                   \\ \hline
-    7                       & 7                   & t                      & 0,1                    & 500                    \\ \hline
-    8                       & 7                   & t                      & 0,1                    & 5000                   \\ \hline
-    9                       & 14                  & a                      & 0,1                    & 500                    \\ \hline
-    10                      & 14                  & a                      & 0,1                    & 5000                   \\ \hline
-    11                      & 14                  & a                      & 0,3                    & 500                    \\ \hline
-    12                      & 14                  & a                      & 0,3                    & 5000                   \\ \hline
-    13                      & 14                  & t                      & 0,3                    & 500                    \\ \hline
-    14                      & 14                  & t                      & 0,3                    & 5000                   \\ \hline
-    15                      & 14                  & t                      & 0,1                    & 500                    \\ \hline
-    16                      & 14                  & t                      & 0,1                    & 5000                   \\ \hline
-    \end{tabular}
-    \end{table}
-
-    Finalmente, es interesante destacar que cada uno de los experimentos debe ser dividido a su vez en \textit{4 sub-experimentos} debido a que la herramienta de \textit{forecasting} permite tomas los datos de contagios y muertes de manera aislada o de manera cruzada. Es decir, para cada una de las configuraciones de los experimentos debemos realizar uno con los datos de confirmados acumulados aislados, uno con los datos de los muertos aislados y otros dos con las series cruzadas. Los resultados de los experimentos se tratan en el siguiente apartado.
-
-    \subsection{Arquitectura seleccionada}
-
-    \newpage
+    \subsection{Proceso de experimentación}
+    La red de neuronas generada seguirá el algoritmo de \textit{Multilayer Perceptron }para la predicción de series temporales en el apartado \textit{timeseriesForecasting} de \textit{Weka}. Por lo tanto, el siguiente paso consiste en la selección de los parámetros de la red que permitan encontrar la mejor predicción posible.
+    
+        \subsubsection{Arquitecturas probadas}
+    
+        En el caso de \textit{Multilayer Perceptron } existen multitud de parámetros de los cuales debemos considerar su variación y combinación para obtener una buena arquitectura de red. Algunos de ellos (\textit{número de capas ocultas, tasa de aprendizaje y tiempo de entrenamiento}) han sido descritos en la la sección Parte 1 de esta memoria y por tanto se obvia la explicación. Sin embargo, la aproximación con series temporales introduce un nuevo parámetro a explicar. La definición del mismo se da a continuación.
+    
+        \begin{itemize}
+        \item \textbf{Longitud de retraso (Lag Lenght)}: Las variables \textit{lag} son el mecanismo por el cual se determina la \textbf{relación entre las variables pasadas y las tratadas actualmente}. Una forma de pensar en este parámetro consiste en equipararlo a la longitud de la ventana de tiempo en la que se tiene en cuenta el valor de las variables pasadas. Por consiguiente, \textbf{un valor apropiado de este parámetro en el caso considerado es 7 días} dado que los estados suelen tener problemas en las notificaciones del fin de semana, siendo apropiado estudiar el efecto de la pandemia en porciones de una semana. Por lo tanto, se usarán 7 y 14 días para las pruebas.
+        \end{itemize}
+    
+        Se concluye que es necesario realizar la siguiente aproximación a la arquitectura de la red mostrada en la tabla contigua, combinando adecuadamente valores lógicos de los parámetros propuestos.
+    
+        \begin{table}[h]
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \rowcolor[HTML]{DAE8FC}
+        \textbf{ID} & \textbf{Longitud retraso} & \textbf{Cap ocultas} & \textbf{Tasa aprendizaje} & \textbf{Tiempo entrenamiento} \\ \hline
+        1                       & 7                   & a                      & 0,1                    & 500                    \\ \hline
+        2                       & 7                   & a                      & 0,1                    & 5000                   \\ \hline
+        3                       & 7                   & a                      & 0,3                    & 500                    \\ \hline
+        4                       & 7                   & a                      & 0,3                    & 5000                   \\ \hline
+        5                       & 7                   & t                      & 0,3                    & 500                    \\ \hline
+        6                       & 7                   & t                      & 0,3                    & 5000                   \\ \hline
+        7                       & 7                   & t                      & 0,1                    & 500                    \\ \hline
+        8                       & 7                   & t                      & 0,1                    & 5000                   \\ \hline
+        9                       & 14                  & a                      & 0,1                    & 500                    \\ \hline
+        10                      & 14                  & a                      & 0,1                    & 5000                   \\ \hline
+        11                      & 14                  & a                      & 0,3                    & 500                    \\ \hline
+        12                      & 14                  & a                      & 0,3                    & 5000                   \\ \hline
+        13                      & 14                  & t                      & 0,3                    & 500                    \\ \hline
+        14                      & 14                  & t                      & 0,3                    & 5000                   \\ \hline
+        15                      & 14                  & t                      & 0,1                    & 500                    \\ \hline
+        16                      & 14                  & t                      & 0,1                    & 5000                   \\ \hline
+        \end{tabular}
+        \end{table}
+    
+        Finalmente, es interesante destacar que cada uno de los experimentos debe ser dividido a su vez en \textit{4 sub-experimentos} debido a que la herramienta de \textit{forecasting} permite tomas los datos de contagios y muertes de manera aislada o de manera cruzada. Es decir, para cada una de las configuraciones de los experimentos debemos realizar uno con los datos de confirmados acumulados aislados, uno con los datos de los muertos aislados y otros dos con las series cruzadas. Los resultados de los experimentos se tratan en el siguiente apartado.
+    
+        \subsection{Análisis de resultados}
+            El análisis de los resultados se realizará por separado para cada país. Tal y como se pedía, los diferentes modelos \textbf{han precedido 15 días} de diferentes series: confirmados aislados, fallecidos aislados, confirmados cruzados y fallecidos cruzados. Al disponer de los datos reales para esos días será posible medir el error, para el cual se usará el error medio absoluto de los 15 días, y para medir el error general, el error medio absoluto de las cuatro predicciones. Empezaremos mostrando los resultados de todos los modelos para cada predicción, y finalmente se verá el error que cada modelo ha tenido de media. De esta manera, descubriremos que modelo ha funcionado mejor con cada predicción y cual ha predecido bien de manera regular. Por último, dada la gran cantidad de modelos, nos referiremos a ellos según los identificadores que se encuentran en la tabla anterior.
+            
+            \subsubsection{Resultados de España}
+            
+            \begin{center}
+                \centering
+                \includegraphics[width=450px]{img/pred_a_conf_ES.png}
+            \end{center}
+            
+            En la primera imagen, correspondiente a la \textbf{predicción aislada de casos confirmados}, vemos como a simple vista los modelos no generan demasiado bien. \textbf{El que mas se acerca es el modelo 10}. Sin embargo, todos los modelos presentan caídas y subidas de manera continuada, lo que es completamente erróneo, dado que los datos son acumulados.
+            
+            \begin{center}
+                \centering
+                \includegraphics[width=450px]{img/pred_a_fall_ES.png}
+            \end{center}
+            
+            A continuación, tenemos los datos de la \textbf{predicción aislada de fallecidos}. En esta ocasión, aunque tampoco son muy buenos, no son del todo malos, ya que el rango de valores en el que se mueven los modelos es bastante más pequeño, aunque tratándose de muertes, un número pequeño puede tener más importancia en la realidad. En este caso, \textbf{el modelo que parece acercarse mas a los valores reales es el modelo 6}. Una cosa curiosa que pasa en esta predicción es el modelo 11, cuya predicción no hace mas que decrecer, cosa de nuevo, totalmente errónea y sin ningún sentido.
+            
+            \begin{center}
+                \centering
+                \includegraphics[width=450px]{img/pred_c_conf_ES.png}
+            \end{center}
+            
+            Seguidamente, observamos los datos de la \textbf{predicción cruzada de casos confirmados}. En comparación con la aislada, aquí parece que casi todos los modelos están bastante cerca de los valores reales hasta el séptimo día, y después, ocurre un poco de todo. \textbf{Algunos se siguen manteniendo muy cerca, como los modelos 2, 8, 10, y 13.} Y por el otro lado, los modelos 14 y 16 empiezan a sobreestimar la cantidad casos rápidamente, mientras que los modelos 12 y 11 los subestiman de una manera ilógica.
+            
+            \begin{center}
+                \centering
+                \includegraphics[width=450px]{img/pred_c_fall_ES.png}
+            \end{center}
+            
+            Para terminar, tenemos las \textbf{predicciones cruzadas de fallecidos}. De manera similar a lo ocurrido en la última gráfica, los modelos en la primera semana parecen coincidir, y una vez empieza la siguiente semana, en este caso, hay seis modelos que indican valores mucho mas pequeños, hasta llegar incluso a valores absurdamente negativos. Por otro lado, los otros modelos se acercan bastante bien a los valores reales a simple vista, aunque, hay que tener en cuenta que los valores de fallecidos son más pequeños, así como que la representación de la gráfica es más ajustada, originando todo ello una visión a priori de mejores aproximaciones, aunque sigan difiriendo de los valores reales por bastante.
+        
+            \vspace{3mm}
+            
+            Una vez visto cada predicción por separado, vamos a observar y discutir, en términos de \textbf{errores absolutos}, como se comportan los modelos en general a la hora de predecir todos los casos, tal y como se muestra en la última imagen.
+            
+            \begin{center}
+                \centering
+                \includegraphics[width=450px]{img/eam_ES_parte2.png}
+            \end{center}
+            
+            
+            Ya que con las primeras gráficas es complicado ver rápidamente que modelo, de una manera general, aporta predicciones más exactas, con el error absoluto medio de todas las predicciones esto se ve mucho más claro.  Como vemos, el \textbf{modelo 10} es el que ha demostrado ser más regular, obteniendo así el menor error medio, como ya apuntaban las gráficas anteriores. Otros interesantes serían los modelos 6 y 8, que, a pesar de no tener malas cifras, su peor desempeño en la predicción aislada de confirmados hace que su media baje bastante.
+            
+            \subsubsection{Resultados de Brasil}
+            
+            \begin{center}
+                \centering
+                \includegraphics[width=450px]{img/pred_a_conf_BZ.png}
+            \end{center}
+            
+            De la misma manera, empezamos con la \textbf{predicción aislada de casos confirmados}. Como Brasil presenta dados muchos mas elevados que España, la representación de la gráfica hace que veamos los modelos muchos más parecidos a los datos reales, lo cual no es del todo así. Sin embargo, si que se ve una mejor tendencia que en el caso de España, y aunque se siguen viendo valles donde ocurre un descenso importante de casos, esto ocurre en mucha menor medida.
+            
+            \begin{center}
+                \centering
+                \includegraphics[width=450px]{img/pred_a_fall_BZ.png}
+            \end{center}
+                
+            Proseguimos con la \textbf{predicción aislada de fallecidos}, la cual se comporta de manera muy similar a la anterior. Tenemos que, a pesar de encontrarnos en cifras mucho mayores, en rango entre el que se mueven los modelos es bastante similar, y no están muy alejados de los valores de verdad. Además, la predicción de valores mas pequeños ocurre cada vez menos y menos. 
+        
+            \begin{center}
+                \centering
+                \includegraphics[width=450px]{img/pred_c_conf_BZ.png}
+            \end{center}
+            
+            Pasamos a la \textbf{predicción cruzada de casos confirmados}, donde encontramos ahora modelos (12 y 11 por ejemplo) que se comportan de una manera mas extraña que en los casos anteriores, con picos y valles que no deberían ocurrir dada la naturaleza de los datos. La buena noticia es que una gran parte de los modelos se mueve en torno a los valores reales, y a pesar de ser valores muy elevados, el rango de error tampoco es demasiado grandes de simple vista.
+            
+            \begin{center}
+                \centering
+                \includegraphics[width=450px]{img/pred_c_fall_BZ.png}
+            \end{center}
+                
+            Terminamos de nuevo con la \textbf{predicción cruzada de fallecidos}. Como pasaba con la predicción cruzada de confirmados, aumentan los modelos que no generan buenos resultados, e incluso datos que serían imposibles de reproducir. Aquí ya vemos como solo algunos \textbf{modelos como el 16 o el 4 consiguen modelos muy cercanos a los correctos}.
+            
+            \newpage
+            
+            Ya con el caso de España era complicado dilucidar que modelo o modelos eran mejores a base de las gráficas mostradas, así que ahora con valores muchos mas elevados y gráficas mas grandes, el uso del \textbf{error absoluto medio} es mas necesario que antes.
+            
+            \begin{center}
+                \centering
+                \includegraphics[width=425px]{img/eam_BZ_parte2.png}
+            \end{center}
+            
+            Se nos demuestra que \textbf{los modelos 7, 9 y 10 son los más regulares}, pues tienen el menor error. De nuevo, es interesante usar este método, pues de otra manera no sería sencillo ver que estos modelos destacan de entre los demás debido a los elevados valores de los datos. También es curioso por el hecho de que no porque un modelo se comporte de manera muy buena en un caso, lo vaya a hacer igual de bien en el resto, como pasa con el modelo 4.
+            
+            \vspace{2mm}
+            
+            En conclusión, nos encontramos que el \textbf{modelo 10}, que recordamos que es una \textbf{red configurada con 14 días de \textit{lag length}, una capa oculta con ‘a’ neuronas, 0,1 de tasa de aprendizaje y 5000 ciclos}, es el modelo que ha demostrado mejores resultados en ambos países, con errores bastante decentes, así que es el modelo que elegimos. También hay que comentar que en general los modelos con 14 días de \textit{lag length} y 0.1 de razón de aprendizaje funcionan mejor.
+            
+            \vspace{2mm}
+            
+            \textit{Para ver información más detallada de las gráficas y sus valores, consultar [Anexo 5]}
+    
+        \newpage
 
     \section{Contexto de la práctica}
 
@@ -428,7 +521,7 @@ La red de neuronas generada seguirá el algoritmo de \textit{Multilayer Perceptr
 
     \vspace{2mm}
 
-    En relación al enfoque de esta práctica, los resultados obtenidos pueden representar la tendencia a seguir de la evolución de la pandemia aunque hay que tener en cuenta que los modelos no son plenamente fiables, entre otras cosas, debido a que los datos tampoco lo son, ya que este tipo de algoritmos se rigen por el principio \textbf{GIGO} (\textit{Garbage In Garbage Out}).
+    En relación con el enfoque de esta práctica, los resultados obtenidos pueden representar la tendencia a seguir de la evolución de la pandemia aunque hay que tener en cuenta que los modelos no son plenamente fiables, entre otras cosas, debido a que los datos tampoco lo son, ya que este tipo de algoritmos se rigen por el principio \textbf{GIGO} (\textit{Garbage In Garbage Out}).
 
     \vspace{2mm}
 
@@ -468,8 +561,10 @@ La red de neuronas generada seguirá el algoritmo de \textit{Multilayer Perceptr
     \textbf{\textit{perceptron\_split.py}}
     \item [3.] Programa para realizar la predicción de los modelos\\
     \textbf{\textit{predict.py}}
-    \item [4.] Tabla de resultados de los experimentos\\
-    \textbf{\textit{valores\_reales\_vs\_predicciones\_\&\_errores\_absolutos.xlsx}}
+    \item [4.] Tabla de resultados de los experimentos de la primera parte\\
+    \textbf{\textit{valores\_reales\_vs\_predicciones\_\&\_errores\_absolutos\_parte1.xlsx}}
+    \item [5.] Tabla de resultados de los experimentos de la segunda parte\\
+    \textbf{\textit{valores\_reales\_vs\_predicciones\_\&\_errores\_absolutos\_parte2.xlsx}}
   \end{itemize}
 
 
