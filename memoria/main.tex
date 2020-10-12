@@ -69,15 +69,16 @@
   \begin{figure}[h]
       \centering
       \includegraphics[width=400px]{img/Neuron.png}
+      \captionsetup{labelformat=empty}
       \caption{Estructura de una neurona}
-      \label{fig:graf_exp1}
+      % \label{fig:graf_exp1}
   \end{figure}
 
   Por lo tanto, hemos trasladado el problema a la \textbf{selección de los pesos} precisos para realizar predicciones lo más exactas posibles. El modelo a emplear se tratará del \textbf{Perceptrón Multicapa}. Consecuentemente el trabajo realizado en esta práctica consiste en \textit{tratar los datos para la aplicación del modelo elegido}, \textit{realizar los experimentos oportunos para dar con una configuración de la red apropiada} y \textit{analizar los resultados} obtenidos haciendo una reflexión crítica del proceso seguido.
 
-  \vspace{3mm}
+  \vspace{5mm}
 
-   La práctica se divide en dos partes: la primera trata de resolver un problema de regresión utilizando el \textbf{Perceptrón Multicapa} y la segunda
+   La práctica se divide en dos partes: la primera trata de resolver un problema de \textbf{regresión} utilizando el \textbf{Perceptrón Multicapa} y la segunda trata de realizar predecicciones utilizando \textbf{series temporales} con la herramienta \textit{Weka}.
 
 \newpage
 
@@ -326,7 +327,7 @@
 
         \vspace{2mm}
 
-        Sin embargo, existen más características en las que nos podemos fijar. [2]
+        Sin embargo, existen más características en las que nos podemos fijar. [Referencia 2]
     \begin{itemize}
     \item \textbf{Estacionalidad}: Se refiere a fluctuaciones periódicas. Un análisis en profundidad de los datos de la epidemia debería considerar este factor, no obstante, dado que la pandemia no lleva entre nosotros un periodo de tiempo lo suficientemente grande como para detectar un comportamiento estacional a lo largo de las distintas épocas del año no nos fijaremos en este parámetro.
     \item \textbf{Estacionaridad}: No debe ser confundido con la estacional dado que hace referencia al mantenimiento de los valores estáticos tales como la media y varianza. El proceso de crecimiento descontrolado de una pandemia no puede ser considerado estacionario debido a la tendencia alcista y volátil de los datos.
@@ -337,16 +338,21 @@
         \begin{figure}[h]
                 \centering
                 \includegraphics[width=320px]{img/estacional.png}
+                \captionsetup{labelformat=empty}
                 \caption{Serie temporal estacional y estacionaria}
-                \label{fig:graf_exp1}
+                % \label{fig:graf_exp1}
             \end{figure}
+
+
+
 
 
         \begin{figure}[h]
                 \centering
                 \includegraphics[width=320px]{img/covid-cases.png}
-                \caption{Casos mundiales de \textit{COVID}. [3]}
-                \label{fig:graf_exp1}
+                \captionsetup{labelformat=empty}
+                \caption{Casos mundiales de \textit{COVID}. [Referencia 3]}
+                % \label{fig:graf_exp1}
             \end{figure}
 
 \section{Proceso de entrenamiento}
@@ -387,17 +393,50 @@ La red de neuronas generada seguirá el algoritmo de \textit{Multilayer Perceptr
     \caption{Configuración de experimentos}
     \end{table}
 
-    Finalmente, es interesante destacar que cada uno de los experimentos debe ser dividido a su vez en\textit{ 4 sub-experimentos} debido a que la herramienta de \textit{forecasting} permite tomas los datos de contagios y muertes de manera aislada o de manera cruzada. Es decir, para cada una de las configuraciones de los experimentos debemos realizar uno con los datos de confirmados acumulados aislados, uno con los datos de los muertos aislados y otros dos con las series cruzadas. Los resultados de los experimentos se tratan en el siguiente apartado.
+    Finalmente, es interesante destacar que cada uno de los experimentos debe ser dividido a su vez en \textit{4 sub-experimentos} debido a que la herramienta de \textit{forecasting} permite tomas los datos de contagios y muertes de manera aislada o de manera cruzada. Es decir, para cada una de las configuraciones de los experimentos debemos realizar uno con los datos de confirmados acumulados aislados, uno con los datos de los muertos aislados y otros dos con las series cruzadas. Los resultados de los experimentos se tratan en el siguiente apartado.
 
     \subsection{Arquitectura seleccionada}
 
-\section{Contexto de la práctica}
+    \newpage
+
+    \section{Contexto de la práctica}
+
+      La \textit{COVID-19} está asolando al mundo entero. Desde su surgimiento a finales de 2019 se han intentado encontrar diferentes técnicas que sean capaces de frenar su avance. Una de las técnicas con más futuro, y que mejores resultados ha logrado en otros campos similares, es la inteligencia artificial, y, más concretamente, el \textbf{aprendizaje automático}. Tal como comenta \textit{Markus Schmitt} en su artículo del 7 de Abril(nótese su fecha de publicación)[Referencia 5], se pueden usar las diferentes técnicas del aprendizaje automático para resolver los distintos problemas que plantea esta pandemia global, como puede ser \textbf{identificar la población de riesgo}, \textbf{predecir la propagación y origen de la enfermedad} o incluso \textbf{predecir pandemias futuras}, entre otras aplicaciones.
+
+      \vspace{1mm}
+
+      Uno de los principales problemas que se comentan, es la falta de datos necesarios para crear modelos realmente eficaces, ya que su comentario se remonta a los inicios de la pandemia. Pero ahora, 6 meses después, esa cantidad de datos es muchísimo mayor, lo que permite la generación de modelos de aprendizaje automático mucho más robustos y precisos, tal y como se ha mostrado en esta práctica.
+
+      \vspace{4mm}
+
+      Otra de las numerosas maneras en las que la tecnología puede ayudar es la simulación del pliegue de proteínas, esencial para comprender el virus y por tanto la búsqueda de la cura y la vacuna. Uno de los proyectos más interesantes que han surgido al respecto es \textit{folding@home} [Referencia 6], un proyecto de computación distribuida en que están implicados universidades como \textit{Stanford} o la \textit{Universidad de Washington} y empresas como \textit{Google} o \textit{NVIDIA} que buscan simular las dinámicas de las proteínas, incluyendo su pliegue, lo cual explica su nombre.
+
+      \vspace{2mm}
+
+      De manera breve, lo que ellos hacen es usar el poder de cálculo de todos los ordenadores que lo tengan instalado cuando no estén en uso para encontrar la cura de diversas enfermedades como el Coronavirus, pero también el Alzheimer o el Párkinson. Lo único que el usuario debe hacer es seleccionar la cura de la enfermedad a la que desea contribuir y el programa de manera automática aprovechará el tiempo IDLE del ordenador para realizar los cálculos que los científicos necesitan. A continuación se ofrece un  \href{https://www.youtube.com/watch?v=xqvAHnac79U}{\underline{link}} con una pequeña guía de instalación en formato vídeo del software necesario, realizado por uno de los autores de este documento.[Referencia 7]
 
 
 
+      \newpage
+
+    \section{Conclusiones}
+
+    Considerando todos los resultados obtenidos a lo largo de este documento, se puede afirmar que las Redes de Neuronas constituyen una buena aproximación a problemas del mundo real como en el caso de la pandemia actual. Los modelos que se generan usando estas técnicas permiten adelantarnos a los sucesos y realizar predicciones con mayor o menor exactitud. Esto es una herramienta muy potente, siempre que se posea de una cantidad de datos lo suficientemente grande.
+
+    \vspace{2mm}
+
+    Sin embargo, se requiere de mucho tiempo de computo para entrenar modelos eficaces y, además, actuan como \textit{cajas negras} y por tanto no tienen la capacidad de explicar sus soluciones. Esto resulta en procesos de prueba y error para encontrar mejores resultados.
+
+    \vspace{2mm}
+
+    En relación al enfoque de esta práctica, los resultados obtenidos pueden representar la tendencia a seguir de la evolución de la pandemia aunque hay que tener en cuenta que los modelos no son plenamente fiables, entre otras cosas, debido a que los datos tampoco lo son, ya que este tipo de algoritmos se rigen por el principio \textbf{GIGO} (\textit{Garbage In Garbage Out}).
+
+    \vspace{2mm}
+
+    Algunas posibles mejoras para este tipo de modelos sería realizando un estudio previo para los datos, para evitar errores, y conseguir información tomada de forma similar de todas las regiones. De esta forma se evitarían gran cantidad de problemas de los datos. Otra posibilidad para las redes neuronales sería utilizar técnicas de aumento de datos, de forma que se puedan usar más ejemplos distintos durante el entrenamiento.
 
 
- \section{Conclusiones}
+
 
 \clearpage
 
@@ -411,6 +450,12 @@ La red de neuronas generada seguirá el algoritmo de \textit{Multilayer Perceptr
         \href{https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases}{https://www.ecdc.europa.eu}
         \item [4.] The Humanitarian Data Exchange. Consultado en Octubre 2020. Url: \\
         \href{https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases}{https://data.humdata.org/dataset/novel-coronavirus}
+        \item [5.] How to fight COVID-19 with machine learning. Consultado en Octubre 2020. Url: \\
+        \href{https://towardsdatascience.com/fight-covid-19-with-machine-learning-1d1106192d84}{https://towardsdatascience.com/fight-covid-19-with-machine-learning}
+        \item [6.] Folding@home. Consultado en Octubre 2020. Url: \\
+        \href{https://foldingathome.org}{https://foldingathome.org}
+        \item [7.] Descubre cómo puedes ayudar a encontrar una CURA para el CORONAVIRUS desde tu salón. Consultado en Octubre 2020. Url: \\
+        \href{https://www.youtube.com/watch?v=xqvAHnac79U}{https://www.youtube.com/watch?v=xqvAHnac79U}
     \end{itemize}
 \printindex
 
