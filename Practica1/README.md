@@ -20,4 +20,4 @@ Explicación básica de carpetas y archivos:
 
 5. **tf**
 
-&nbsp;&nbsp;En esta carpeta se encuentran los archivos *py* para generar los modelos y predecir los modelos.
+&nbsp;&nbsp;En esta carpeta se encuentran los archivos *.py* para generar los modelos y predecir los modelos.
