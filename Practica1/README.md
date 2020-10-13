@@ -16,8 +16,8 @@ Explicación básica de carpetas y archivos:
 
 4. **output**
   
-&nbsp;&nbsp;En esta carpeta se encuentran los modelos generados con **tensorflow** y las salidas de los modelos(errores medios absolutos de cada modelo). La parte 2 no se han guardado modelos porque no era neceario reutilizarlos, y se han apuntado los datos de salida para su uso directamente dsde la herramienta.
+&nbsp;&nbsp;En esta carpeta se encuentran los modelos generados con **tensorflow** y las salidas de los modelos (errores medios absolutos de cada modelo). Para la parte 2 no se han guardado los modelos porque no era necesario reutilizarlos, y se han apuntado los datos de salida para su uso directamente desde la herramienta.
 
 5. **tf**
 
-&nbsp;&nbsp;En esta carpeta se encuentran los archivos *py* para generar los modelos y predecir los modelos.
+&nbsp;&nbsp;En esta carpeta se encuentran los archivos *.py* para generar los modelos y predecir los modelos.
