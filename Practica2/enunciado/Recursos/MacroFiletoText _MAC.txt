@@ -1,0 +1,17 @@
+Sub Archivos()
+
+'Crea un archivo .txt por cada linea del csv (MAC)
+    
+     For i = 1 To 500
+        Data = Range("A" & i).Value
+        FileName = "/Ruta/directorio/de/practica/" & i & ".txt"
+        Open FileName For Append As #1
+            Print #1, Data
+        Close #1
+        
+        Debug.Print i
+        
+    Next i
+
+End Sub
+

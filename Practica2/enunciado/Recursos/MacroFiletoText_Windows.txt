@@ -1,0 +1,15 @@
+Sub Archivos()
+
+'Crea un archivo .txt por cada linea del Excel
+'Llega hasta 500 filas; genera 500 documentos de texto en el directorio en el que se ejecute
+    
+    For i = 1 To 500 
+        Data = Range("A" & i).Value
+        Filename = i & ".txt"
+        Open Filename For Append As #1
+            Print #1, Data
+        Close #1
+    Next i
+
+
+End Sub
