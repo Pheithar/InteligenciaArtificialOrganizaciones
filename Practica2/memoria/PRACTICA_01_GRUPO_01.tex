@@ -1,0 +1,112 @@
+\documentclass[12pt,a4paper, xcolor=table]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{eurosym}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{afterpage}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage{subfig}
+\usepackage[table,xcdraw]{xcolor}
+
+
+\usepackage{imakeidx}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+\renewcommand*\contentsname{Índice: }
+
+\makeindex
+\let\olditemize\itemize
+\def\itemize{\olditemize\itemsep=0pt}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\begin{titlepage}
+        \centering
+        \includegraphics[width=0.75\textwidth]{img/logo_uc3m.jpg}\par\vspace{2cm}
+        {\huge\bfseries Práctica 2 \\ Análisis de las reseñas de Tripadvisor\par}
+        \vspace{0.5cm}
+        {\scshape\Large Inteligencia Artificial en las Organizaciones\par}
+        \vspace{1.5cm}
+        {\scshape\Large Grupo 83-1\par}
+        \vspace{1.5cm}
+        {\Large\itshape Miguel Gutiérrez Pérez\par}
+        {\Large 100383537@alumnos.uc3m.es \par}
+        \vspace{1cm}
+        {\Large\itshape Mario Lozano Cortés\par}
+        {\Large 100383511@alumnos.uc3m.es\par}
+        \vspace{1cm}
+        {\Large\itshape Alba Reinders Sánchez\par}
+        {\Large 100383444@alumnos.uc3m.es\par}
+        \vspace{1cm}
+        {\Large\itshape Alejandro Valverde Mahou\par}
+        {\Large 100383383@alumnos.uc3m.es\par}
+        \vspace{5mm}
+        {\large GitHub: \textbf{\textit{\href{https://github.com/Pheithar/InteligenciaArtificialOrganizaciones}{InteligenciaArtificialOrganizaciones}}}}
+        \vfill
+
+% Bottom of the page
+        {\large \today\par}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\section{Introducción}
+    La siguiente sección incluye 
+    
+\section{Parte 1: Clasificación}
+    \subsection{Análisis y preprocesado de datos}
+        Explicación de los pasos previos de lo que vimos en clase y división en cat
+    \subsection{Experimentación}
+        Generalidades de todos los experimentos. hacer hincapié en lo de las stopwords. Caso base
+        \subsubsection{Experimentación básica}
+        Tablas de cada uno de lo que hicimos esa tarde
+        
+        \subsubsection{Experimentación avanzada}
+        Combinación de los mejores resultados básicos
+        
+    \subsection{Comentario de los resultados obtenidos}
+    Mucho text
+
+\section{Parte 2: Clustering}
+ 10 modelos de K Medias variando n Clústeres, semillas y funciones de distancia
+
+Analizar al menos 1 (en detalle)
+
+clasificación sobre el modelo y sacar el árbol
+
+\section{Conclusiones}
+
+
+\clearpage 
+
+\section{Referencias}
+    \begin{itemize}
+        \item [1.] Introduction to Neurons in Neural Networks. Medium. Consultado en Octubre 2020. Url: \\
+        \href{https://medium.com/artificial-neural-networks/introduction-to-neurons-in-neural-networks-71828d040a65}{https://medium.com/artificial-neural-networks}
+    \end{itemize}
+\printindex
+
+
+
+  \section{Anexos}
+  \begin{itemize}
+    \item [1.] Perceptron Multicapa usando '\textit{K Fold}'\\
+    \textbf{\textit{perceptron\_kfold.py}}
+    \item [2.] Perceptron Multicapa usando '\textit{split percentage}'\\
+    \textbf{\textit{perceptron\_split.py}}
+    \item [3.] Programa para realizar la predicción de los modelos\\
+    \textbf{\textit{predict.py}}
+    \item [4.] Tabla de resultados de los experimentos de la primera parte\\
+    \textbf{\textit{valores\_reales\_vs\_predicciones\_\&\_errores\_absolutos\_parte1.xlsx}}
+    \item [5.] Tabla de resultados de los experimentos de la segunda parte\\
+    \textbf{\textit{valores\_reales\_vs\_predicciones\_\&\_errores\_absolutos\_parte2.xlsx}}
+  \end{itemize}
+
+
+\end{document}
