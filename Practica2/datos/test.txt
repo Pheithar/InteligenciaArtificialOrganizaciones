@@ -5,19 +5,19 @@ JRip -> 35.6%
 IBk -> 25.56%
 NaiveBayes -> 49.88%
 
-outputWordCounts
+outputWordCounts -> T/F
 
 
-stemmer
+stemmer -> LovinsStemmer y IterativeLovinsStemmer -> Mario
 
 
-freqTerminos
+freqTerminos -> 5, 10 -> Miguel
 
 
-TFTransform
+TFTransform, IDFTransform -> T/F -> Alba
 
 
-normDocLength
+normDocLength -> Normalize all data -> Mario
 
 
-tokenizer
+tokenizer -> ***** los otros
