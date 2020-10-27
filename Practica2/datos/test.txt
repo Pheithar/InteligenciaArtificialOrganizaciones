@@ -1,0 +1,23 @@
+Sin numeros, stopwords, resto por defecto
+J48 -> 38.84%
+RandomForest -> 51.48%
+JRip -> 35.6%
+IBk -> 25.56%
+NaiveBayes -> 49.88%
+
+outputWordCounts
+
+
+stemmer
+
+
+freqTerminos
+
+
+TFTransform
+
+
+normDocLength
+
+
+tokenizer
