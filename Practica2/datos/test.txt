@@ -10,6 +10,20 @@ outputWordCounts -> T/F
 
 stemmer -> LovinsStemmer y IterativeLovinsStemmer -> Mario
 
+	LovinsStemmer
+		J48 ->	38.88%
+		RandomForest ->	51.56%
+		JRip ->  34.92%
+		IBk ->	 26.12%
+		NaiveBayes -> 49.76%
+		
+	IterativeLovinsStemmer
+		J48 ->  38.44%
+		RandomForest ->	 51.68%
+		JRip ->	 34.96%
+		IBk ->  26.36%
+		NaiveBayes -> 48.76%
+
 
 freqTerminos -> 1250, 625, 250, 125, 25, 10, 5, 2 -> Miguel
 
@@ -18,6 +32,12 @@ TFTransform, IDFTransform -> T/F -> Alba
 
 
 normDocLength -> Normalize all data -> Mario
+
+	J48 -> 	 39.2%
+	RandomForest -> 51.68%
+	JRip ->  34.04%
+	IBk ->	20%
+	NaiveBayes ->	48.8%
 
 
 tokenizer -> ***** los otros
