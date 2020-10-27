@@ -1,12 +1,16 @@
 Sin numeros, stopwords, resto por defecto
-J48 -> 38.84%
-RandomForest -> 51.48%
-JRip -> 35.6%
-IBk -> 25.56%
-NaiveBayes -> 49.88%
+J48 -> 38.88%
+RandomForest -> 51.8%
+JRip -> 35.28%
+IBk -> 26.12%
+NaiveBayes -> 49.76%
 
-outputWordCounts -> T/F
-
+outputWordCounts -> T
+J48 -> 44.92%
+RandomForest -> 59.92%
+JRip -> 40.36%
+IBk -> 27.76%
+NaiveBayes -> 49.28%
 
 stemmer -> LovinsStemmer y IterativeLovinsStemmer -> Mario
 
