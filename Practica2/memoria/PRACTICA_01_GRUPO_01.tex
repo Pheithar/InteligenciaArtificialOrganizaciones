@@ -75,11 +75,34 @@
 
 \section{Parte 2: Clustering}
 
+En esta segunda parte se realiza un problema de \textit{clustering}. Para ello se parte de los datos obtenidos en la primera parte y se les aplica el algoritmo \textbf{\textit{K-Medias}} modificando sus parámetros tal y como se explica en la sección de \textit{Experimentación}. 
+
+\vspace{2mm}
+
+El proceso que se sigue es el siguiente:
+
+\begin{itemize}
+    \item Cargar el archivo \textit{.arff} con los datos generado en la parte anterior
+    \item Generar modelos a partir de estos datos con \textit{K-Medias} y compararlos
+    \item Analizar el mejor modelo
+    \item Ejecutar algoritmos de generación de reglas y árboles de decisión con el mejor modelo
+\end{itemize}
+
+
 \subsection{Experimentación}
 
+Los experimentos que se llevan a cabo son los que se muestran en la en la Figura X. Los parámetros que se modifican son la \textit{seed} (10, 20 y 30), el \textit{números de clústers} (2, 3, 4, 5 y 6) y el \textit{tipo de distancia} (Euclidea y Manhattan).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=400px]{img/experimentos.png}
+    \captionsetup{labelformat=empty}
+    \caption{Tabla de experimentos con \textit{K-Medias}}
+    % \label{Figura:graf_exp1}
+\end{figure}
+
+
 \subsection{Mejor resultado}
-
-
 
 
 
