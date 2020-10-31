@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  31 OCT 2020 13:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  31 OCT 2020 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -409,6 +409,19 @@ LaTeX Warning: Unused global option(s):
 (./PRACTICA_01_GRUPO_01.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
+
+
+LaTeX Warning: Label `fig:graf_exp1' multiply defined.
+
+
+LaTeX Warning: Label `fig:graf_exp1' multiply defined.
+
+
+LaTeX Warning: Label `fig:graf_exp1' multiply defined.
+
+
+LaTeX Warning: Label `fig:graf_exp1' multiply defined.
+
 )
 \openout1 = `PRACTICA_01_GRUPO_01.aux'.
 
@@ -428,8 +441,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count280
 \scratchdimen=\dimen169
@@ -512,7 +524,7 @@ LaTeX Info: Redefining \nameref on input line 24.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-<img/logo_uc3m.jpg, id=56, 149.8398pt x 48.18pt>
+<img/logo_uc3m.jpg, id=60, 149.8398pt x 48.18pt>
 File: img/logo_uc3m.jpg Graphic file (type jpg)
 <use img/logo_uc3m.jpg>
 Package pdftex.def Info: img/logo_uc3m.jpg  used on input line 28.
@@ -539,59 +551,92 @@ been already used, duplicate ignored
                    \relax 
 l.56 \newpage
               [1]
-<img/experimentos.png, id=86, 772.8875pt x 624.3325pt>
+<img/experimentos.png, id=91, 772.8875pt x 624.3325pt>
 File: img/experimentos.png Graphic file (type png)
 <use img/experimentos.png>
-Package pdftex.def Info: img/experimentos.png  used on input line 97.
+Package pdftex.def Info: img/experimentos.png  used on input line 101.
 (pdftex.def)             Requested size: 401.50146pt x 324.33087pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2] [3 <./img/experimentos.png>] [4
+[2]
+<img/Comparación errores.png, id=96, 740.7675pt x 458.71375pt>
+File: img/Comparación errores.png Graphic file (type png)
+<use img/Comparación errores.png>
+Package pdftex.def Info: img/Comparación errores.png  used on input line 124.
+(pdftex.def)             Requested size: 401.50146pt x 248.62566pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./img/experimentos.png>]
+<img/clusters_del_experimento_17.png, id=103, 602.25pt x 372.39125pt>
+File: img/clusters_del_experimento_17.png Graphic file (type png)
+<use img/clusters_del_experimento_17.png>
+Package pdftex.def Info: img/clusters_del_experimento_17.png  used on input lin
+e 140.
+(pdftex.def)             Requested size: 301.1261pt x 186.20084pt.
+<img/clusters_mejor_exp.png, id=104, 858.20625pt x 400.49625pt>
+File: img/clusters_mejor_exp.png Graphic file (type png)
+<use img/clusters_mejor_exp.png>
+Package pdftex.def Info: img/clusters_mejor_exp.png  used on input line 149.
+(pdftex.def)             Requested size: 301.1261pt x 140.52411pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./img/Comparación errores.png> <./img/clusters_del_experimento_17.png>]
+<img/clusters_class.png, id=113, 961.5925pt x 402.50375pt>
+File: img/clusters_class.png Graphic file (type png)
+<use img/clusters_class.png>
+Package pdftex.def Info: img/clusters_class.png  used on input line 172.
+(pdftex.def)             Requested size: 301.1261pt x 126.0462pt.
+
+[5 <./img/clusters_mejor_exp.png> <./img/clusters_class.png>] [6
 
 ]
 runsystem(makeindex PRACTICA_01_GRUPO_01.idx)...executed safely (allowed).
 
- (./PRACTICA_01_GRUPO_01.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
- [5
+
+(./PRACTICA_01_GRUPO_01.ind)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
+ [7
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
-
-(./PRACTICA_01_GRUPO_01.aux
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
+ (./PRACTICA_01_GRUPO_01.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 212.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 212.
 Package rerunfilecheck Info: File `PRACTICA_01_GRUPO_01.out' has not changed.
-(rerunfilecheck)             Checksum: 469221EBD02F4F57CFFCE3C1E151DFBD;844.
+(rerunfilecheck)             Checksum: D23942D9888BA6CE31E1482F130A44D3;903.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 212.
  ) 
 Here is how much of TeX's memory you used:
- 9027 strings out of 483121
- 138720 string characters out of 5964354
- 424500 words of memory out of 5000000
- 23869 multiletter control sequences out of 15000+600000
+ 9060 strings out of 483121
+ 139550 string characters out of 5964354
+ 424608 words of memory out of 5000000
+ 23891 multiletter control sequences out of 15000+600000
  539212 words of font info for 46 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 50i,6n,77p,325b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,6n,77p,384b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PRACTICA_01_GRUPO_01.pdf (6 pages, 205108 bytes).
+Output written on PRACTICA_01_GRUPO_01.pdf (8 pages, 255740 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 115 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 143 words of extra memory for PDF output out of 10000 (max. 10000000)
 
