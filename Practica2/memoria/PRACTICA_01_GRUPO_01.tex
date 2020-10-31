@@ -57,18 +57,158 @@
 \newpage
 
 \section{Introducción}
-    La siguiente sección incluye
+
+    La \textbf{Minería de Texto} es una técnica de minería de datos que busca extraer información útil y relevante de documentos de texto de diferentes fuentes diferentes, como puede ser páginas web, correos electrónicos, periódicos o redes sociales. Para ello se hace una identificación de patrones en los datos, como puede ser la repetición de palabras o conjuntos de palabras, estructuras sintácticas que se repiton a lo largo de los datos, etc.
+
+    \vspace{3mm}
+
+    Esta minería de texto tiene numerosas aplicaciones, y en esta práctica se van a desarrollar una clasificación en función a unas categorías predefinidas y un agrupamiento sin tener en cuenta estas categorías.
+
+    \vspace{2mm}
+
+    La colección de textos que se va a usar en la práctica consiste en un conjunto de reseñas de la página web \textit{Tripadvisor}, donde cada una tiene una clasificación de 1 a 5 estrellas.
+
+    \begin{figure}[!h]
+      \centering
+      \includegraphics[width=14cm]{img/tripadvisor-main.png}
+      \caption{Página de búsqueda de Tripadvisor}
+    \end{figure}
+
+    Las reseñas están en inglés, y en texto en plano, por lo tanto, para poder ser tratadas, tendran que pasar por un proceso de preparación de datos.
+
+    \begin{figure}[!h]
+      \centering
+      \includegraphics[width=10cm]{img/tripadvisor-review.png}
+      \caption{Ejemplode reseña de Tripadvisor en \textit{español}}
+    \end{figure}
+
+    En la práctica se plantean dos problemas, uno de \textbf{aprendizaje supervisado} (clasificación), donde el objetivo es determinar la puntuación que le da un usuario a un hotel, en base a lo que escribe en su reseña; y otro de \textbf{aprendizaje no supervisado} (agrupamiento), cuyo objetivo es agrupar las diferentes reseñas en función a su contenido, sin tener en cuenta su puntuación.
+
+    \vspace{3mm}
+
 
 \section{Parte 1: Clasificación}
     \subsection{Análisis y preprocesado de datos}
-        Explicación de los pasos previos de lo que vimos en clase y división en cat
-    \subsection{Experimentación}
-        Generalidades de todos los experimentos. hacer hincapié en lo de las stopwords. Caso base
-        \subsubsection{Experimentación básica}
-        Tablas de cada uno de lo que hicimos esa tarde
+        El primer paso que debe ser abordado en el desarrollo de esta práctica es el del procesado de los datos con el objetivo de \textbf{posibilitar la aplicación de minería de texto} gracias a la herramienta \textit{Weka}. Los datos sin tratar se encuentran contenidos en un archivo de formato \textit{csv} donde la primera columna se corresponde de con las reseñas en formato de texto y la segunda con el número de estrellas (valoración del 1 al 5) correspondientes a dicha reseña. De esta manera, la secuencia de operaciones lógicas a seguir para posibilitar el análisis con la herramienta propuesta son:
+
+        \begin{itemize}
+        \item Transformación del fichero desde el formato \textbf{\textit{csv}} al formato \textbf{\textit{arff}}
+        \item Procesamiento propio de las técnicas de minería de texto en la herramienta \textit{Weka}
+        \end{itemize}
+
+        \subsubsection{De .csv a .arff}
+
+          Como se ha comentado anteriormente el material proporcionado consta de un archivo en formato \textit{csv}. La mejor manera de convertirlo al formato \textit{arff} utilizado por \textit{Weka} es generar una estructura de directorios en función de la clasificación de la reseña para una vez dentro de cada uno de los directorios, encontrar un fichero por cada una de las reseñas. Dicha estructura se puede generar gracias a la herramienta de Macros contenida dentro del programa \textit{Excel}. Cabe destacar que esta estructura es óptima para el propósito seguido puesto que se proporciona un comando que en la opción \textit{CLI} de \textit{Weka} produce directamente un fichero \textit{arff} a partir de la estructura descrita.
+
+        \subsubsection{Procesamiento específico de minería de texto}
+          Una vez dentro de la herramienta \textit{Weka} se deben considerar técnicas de procesamiento específicas de la minería de texto, concretamente el filtro no supervisado \textbf{\textit{StringToWordVector}}, el cual permite convertir atributos basados en cadenas de caracteres en un conjunto numérico que representa la ocurrencia de las distintas palabras contenidas en el archivo seleccionado. Este filtro contiene \textbf{multitud de parámetros interesantes }que merece la pena reseñar de cara a la experimentación que se llevará a cabo para obtener el mejor modelo posible.
+
+          \begin{itemize}
+          \item \textbf{StopWords}: Formadas por palabras sin significado, es decir, aquellas que \textbf{no aportan información útil} al proceso de minería de texto que se pretende realizar. Se aporta una lista para la realización de la práctica, sin embargo \textbf{es importante reseñar que se añaden algunas más a ella para mejorar los resultados del análisis}. Algunas de las palabras añadidas incluyen números y palabras sin sentido consecuencia posiblemente de faltas de ortografía a la hora de escribir las reseñas.
+
+          \item \textbf{TFTransform}: Establece si la frecuencia de las palabras debe transformarse a $log(1+f_{ij})$ siendo $f_{ij}$ la frecuencia de la palabra i en el documento j.
+          \item \textbf{IDFTransform}: Establece su la frecuencia de palabras en un documento debe trasnformarse a $f_{ij} * log(\frac{numeroDocumentos}{numeroDocumentos\_con\_i})$ siendo $f_{ij}$ la frecuencia de la palabra i en el documento j.
+          \item \textbf{outputWordCounts}: Número exacto de ocurrencias de una palabra en vez de indicar únicamente presencia.
+          \item \textbf{stemmer}: Algoritmo de \textit{stemming} a usar. Conviene recordar que un algoritmo de \textit{stemming} trata de reducir las palabras a sus raíces.
+          \item \textbf{normalizeDocLength}: Establece si se normalizan las frecuencias de palabras de un documento.
+          \item \textbf{minTermFreq}: Determina el número mínimo de ocurrencias que debe tener una palabra para se tenida en cuenta.
+          \item \textbf{tokenizer}: Algoritmo de \textit{tokenizing} que se aplica. Conviene recordar que un algoritmo de \textit{tokeninzing} divide una secuencia de caracteres en tokens que pueden ser desde palabras a frases completas.
+
+          \end{itemize}
+
+      \subsection{Experimentación}
+        Para realizar los experimentos, se han realizado combinaciones de los distintos opciones que habilita la herramienta de \textit{Weka} con el filtro \textit{'StringToWordVector'}, para buscar la combinación que permita obtener los mejores resultados para este conjunto de datos. Este filtro, tal y como su nombre indica, transforma un atributo compuesto por texto, en un conjunto de atributos que representa la información de ese texto.
+
+      \subsubsection{Experimentación básica}
+        Los primeros experimentos que se han realizado consisten en modifcar exclusivamente una opción del filtro en cada uno de los experimentos, para comprobar cuales son los que generan los mejores resultados por separado. Los experimentos realizados son los siguientes:
+
+        \begin{itemize}
+          \item \textbf{Experimento 0}: Es el experimento base, respecto al que se van a comparar el resto.
+          \item \textbf{Experimento 1}: En este experimento se prueba las combinaciones que se pueden hacer entre la opción \textit{IDFTransform} y \textit{TFTransform}, por lo que está compuesto de 3 subexperimentos.
+          \begin{itemize}
+            \item \textbf{Experimento 1-1}: \textit{IDFTransform} \textbf{True} y \textit{TFTransform} \textbf{False}.
+            \item \textbf{Experimento 1-2}: \textit{IDFTransform} \textbf{False} y \textit{TFTransform} \textbf{True}.
+            \item \textbf{Experimento 1-3}: \textit{IDFTransform} \textbf{True} y \textit{TFTransform} \textbf{True}.
+          \end{itemize}
+          \item \textbf{Experimento 2}: Este experimento prueba a activar la opción \textit{outputWordCounts}
+          \item \textbf{Experimento 3}: En este experimento se prueba el uso de diferentes \textit{stemmer}, con dos subexperimentos.
+          \begin{itemize}
+            \item \textbf{Experimento 3-1}:Usando el \textit{LovinsStemmer}
+            \item \textbf{Experimento 3-2}:Usando el \textit{IterativeLovinsStemmer}
+          \end{itemize}
+          \item \textbf{Experimento 4}: En este experimento se prueba a cambiar el valor por defecto de la opción de \textit{minTermFreq}, que es 1. Tiene 7 subexperimentos.
+          \begin{itemize}
+            \item \textbf{Experimento 4-1}: El valor de \textit{minTermFreq} es 2
+            \item \textbf{Experimento 4-2}: El valor de \textit{minTermFreq} es 5
+            \item \textbf{Experimento 4-3}: El valor de \textit{minTermFreq} es 10
+            \item \textbf{Experimento 4-4}: El valor de \textit{minTermFreq} es 25
+            \item \textbf{Experimento 4-5}: El valor de \textit{minTermFreq} es 125
+            \item \textbf{Experimento 4-6}: El valor de \textit{minTermFreq} es 250
+            \item \textbf{Experimento 4-7}: El valor de \textit{minTermFreq} es 625
+          \end{itemize}
+          \item \textbf{Experimento 5}: Este experimento prueba la eficacia de la opción \textit{normalizeDocLength} sobre tod el conjunto de datos.
+
+        \end{itemize}
+
+        \begin{table}[h]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            \rowcolor[HTML]{DAE8FC}
+            \textbf{ID Experimento} & \textbf{J48} & \textbf{RandomForest} & \textbf{JRip} & \textbf{IBk} & \textbf{Naive Bayes} \\ \hline
+            0                       & 38.88\%                   & 51.80\%        & 35.28\%                    & 26.12\%         & 49.76\%            \\ \hline
+            1-1                     & 38.88\%                   & 52.64\%        & 33.32\%                    & 26.12\%         & 49.76\%            \\ \hline
+            1-2                     & 38.88\%                   & 52.04\%        & 35.64\%                    & 26.12\%         & 49.76\%            \\ \hline
+            1-3                     & 38.88\%                   & 51.84\%        & 33.76\%                    & 26.12\%         & 49.76\%            \\ \hline
+            2                       & 44.92\%                   & 59.92\%        & 40.36\%                    & 27.76\%         & 49.28\%            \\ \hline
+            3-1                     & 38.88\%                   & 51.56\%        & 34.92\%                    & 26.12\%         & 49.76\%            \\ \hline
+            3-2                     & 38.44\%                   & 51.68\%        & 34.96\%                    & 26.36\%         & 49.76\%            \\ \hline
+            4-1                     & 38.88\%                   & 51.56\%        & 33.32\%                    & 26.12\%         & 49.76\%            \\ \hline
+            4-2                     & 38.88\%                   & 51.56\%        & 33.32\%                    & 26.12\%         & 49.76\%            \\ \hline
+            4-3                     & 38.56\%                   & 52.32\%        & 34.16\%                    & 26.64\%         & 49.80\%            \\ \hline
+            4-4                     & 39.16\%                   & 52.44\%        & 36.20\%                    & 28.72\%         & 50.32\%            \\ \hline
+            4-5                     & 38.68\%                   & 49.16\%        & 34.96\%                    & 33.48\%         & 47.32\%            \\ \hline
+            4-6                     & 34.64\%                   & 34.64\%        & 40.96\%                    & 32.48\%         & 40.44\%            \\ \hline
+            4-7                     & 27.04\%                   & 27.04\%        & 25.80\%                    & 25.56\%         & 25.12\%            \\ \hline
+            5                       & 39.20\%                   & 51.68\%        & 34.04\%                    & 20.00\%         & 48.8\%            \\ \hline
+            \end{tabular}
+            \caption{Experimentos realizados}
+                \label{fig:graf_exp1}
+        \end{table}
+
 
         \subsubsection{Experimentación avanzada}
-        Combinación de los mejores resultados básicos
+
+        Como en los experimnentos básicos se prueba que los mejores resultados son siempr obtenidos con el algoritmo de \textbf{RandomForest}, en esta experimentación avanzada, tan solo se va a evaluar con él.
+
+        \vspace{3mm}
+
+        La experimentación avanzada consiste en realizar combinaciones entre las opciones del filtro que generan mejores resultados en el apartado anterior, para intentar encontrar una transformación que maximice el resultado obtenido.
+
+        \begin{itemize}
+          \item \textbf{Experimento 6}: En este útimo experimento se analizan los resultados que se obtienen al cambiar la opciónd e \textit{tokenizer}. Tiene 2 subexperimentos.
+          \begin{itemize}
+            \item \textbf{Experimento 6-1}: Se utiliza el \textit{tokenizer} de \textit{NGramTokenizer}
+            \item \textbf{Experimento 6-2}: Se utiliza el \textit{tokenizer} de \textit{AlphabeticTokenizer}
+          \end{itemize}
+          \item \textbf{Experimento 7}: Se prueba una combinación de \textit{IDFTransform}, \textit{TFTransform} y \textit{outputWordCounts}.
+          \item \textbf{Experimento 8}: Se seleccionan las siguientes opciones: \textit{IDFTransform}, \textit{TFTransform}, \textit{outputWordCounts}, como \textit{tokenizer} el \textit{NGramTokenizer} y un valor de \textit{minTermFreq} de 25.
+        \end{itemize}
+
+        \begin{table}[h]
+            \centering
+            \begin{tabular}{|c|c|}
+            \hline
+            \rowcolor[HTML]{DAE8FC}
+            \textbf{ID Experimento} & \textbf{RandomForest} \\ \hline
+            6-1                     & 52.12\%               \\ \hline
+            6-2                     & 51.40\%               \\ \hline
+            7                       & 59.00\%               \\ \hline
+            8                       & 60.28\%               \\ \hline
+            \end{tabular}
+            \caption{Experimentos avanzados}
+                \label{fig:graf_exp1}
+        \end{table}
 
     \subsection{Comentario de los resultados obtenidos}
     Mucho text

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  31 OCT 2020 11:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  31 OCT 2020 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,7 +512,7 @@ LaTeX Info: Redefining \nameref on input line 25.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-<img/logo_uc3m.jpg, id=48, 149.8398pt x 48.18pt>
+<img/logo_uc3m.jpg, id=64, 149.8398pt x 48.18pt>
 File: img/logo_uc3m.jpg Graphic file (type jpg)
 <use img/logo_uc3m.jpg>
 Package pdftex.def Info: img/logo_uc3m.jpg  used on input line 29.
@@ -538,53 +538,68 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.57 \newpage
-              [1] [2] [3
+              [1]
+<img/tripadvisor-main.png, id=96, 1291.82625pt x 727.71875pt>
+File: img/tripadvisor-main.png Graphic file (type png)
+<use img/tripadvisor-main.png>
+Package pdftex.def Info: img/tripadvisor-main.png  used on input line 73.
+(pdftex.def)             Requested size: 398.33858pt x 224.39124pt.
+<img/tripadvisor-review.png, id=98, 817.0525pt x 542.025pt>
+File: img/tripadvisor-review.png Graphic file (type png)
+<use img/tripadvisor-review.png>
+Package pdftex.def Info: img/tripadvisor-review.png  used on input line 81.
+(pdftex.def)             Requested size: 284.52756pt x 188.7522pt.
+ [2 <./img/tripadvisor-main.png> <./img/tripadvisor-review.png>] [3] [4]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5] [6] [7
 
 ]
 runsystem(makeindex PRACTICA_01_GRUPO_01.idx)...executed safely (allowed).
 
  (./PRACTICA_01_GRUPO_01.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
- [4
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 261.
+ [8
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
-
-(./PRACTICA_01_GRUPO_01.aux
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 261.
+ (./PRACTICA_01_GRUPO_01.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 261.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 261.
+Package rerunfilecheck Info: File `PRACTICA_01_GRUPO_01.out' has not changed.
+(rerunfilecheck)             Checksum: 25135A41572EA541BFF9B89376A126C9;1029.
 
 
-Package rerunfilecheck Warning: File `PRACTICA_01_GRUPO_01.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: Checksums for `PRACTICA_01_GRUPO_01.out':
-(rerunfilecheck)             Before: 4D2E8425E246B482910B918038D04B43;711
-(rerunfilecheck)             After:  469221EBD02F4F57CFFCE3C1E151DFBD;844.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 261.
  ) 
 Here is how much of TeX's memory you used:
- 9001 strings out of 483121
- 138319 string characters out of 5964354
- 422500 words of memory out of 5000000
- 23847 multiletter control sequences out of 15000+600000
- 539212 words of font info for 46 fonts, out of 8000000 for 9000
- 40 hyphenation exceptions out of 8191
- 50i,5n,48p,249b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PRACTICA_01_GRUPO_01.pdf (5 pages, 142931 bytes).
+ 9048 strings out of 481239
+ 139118 string characters out of 5920377
+ 438372 words of memory out of 5000000
+ 24123 multiletter control sequences out of 15000+600000
+ 539549 words of font info for 47 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 50i,10n,77p,788b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on PRACTICA_01_GRUPO_01.pdf (9 pages, 866587 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 182 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
