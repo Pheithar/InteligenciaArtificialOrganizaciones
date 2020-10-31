@@ -10,7 +10,8 @@
 \contentsline {subsection}{\numberline {2.3}Comentario de los resultados obtenidos}{6}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Parte 2: Clustering}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Experimentación}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Mejor resultado}{6}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Conclusiones}{6}{section.4}%
-\contentsline {section}{\numberline {5}Referencias}{7}{section.5}%
-\contentsline {section}{\numberline {6}Anexos}{8}{section.6}%
+\contentsline {subsection}{\numberline {3.2}Mejor modelo}{7}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Conclusiones}{9}{section.4}%
+\contentsline {section}{\numberline {5}Contexto de la práctica}{9}{section.5}%
+\contentsline {section}{\numberline {6}Referencias}{10}{section.6}%
+\contentsline {section}{\numberline {7}Anexos}{11}{section.7}%

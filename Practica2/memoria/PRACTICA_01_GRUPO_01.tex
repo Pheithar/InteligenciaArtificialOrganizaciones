@@ -9,7 +9,6 @@
 \usepackage{subfig}
 \usepackage[table,xcdraw]{xcolor}
 
-
 \usepackage{imakeidx}
 \newcommand\blankpage{%
     \null
@@ -215,21 +214,113 @@
 
 \section{Parte 2: Clustering}
 
+En la segunda parte de esta práctica se va a realizar una aproximación mediante \textbf{\textit{clustering}}, pero antes de esto, recordar que esta técnica consiste en agrupar instancias sin etiquetar de manera que las instancias pertenecientes aun mismo grupo sean más similares entre sí que con las de otro grupo diferente. 
+
+\vspace{2mm}
+
+En este caso, se agruparán las instancias procesadas que obtuvieron un mejor resultado en la primera parte de la práctica, esta agrupación se hará con el algoritmo \textbf{\textit{K-Medias}}, que se basa en el valor medio de las distancia de cada grupo para generar los grupos. 
+
+\vspace{1mm}
+
+Este proceso se vuelve a realizar en \textit{Weka}, y se compone de los siguientes pasos:
+
+\begin{itemize}
+    \item Cargar el archivo \textit{.arff} con los datos generado en la parte anterior.
+    \item Generar diferentes modelos a partir de estos datos con \textit{K-Medias} y compararlos.
+    \item Analizar el mejor modelo obtenido.
+    \item Ejecutar diversos algoritmos de generación de reglas y árboles de decisión con el mejor modelo obtenido.
+\end{itemize}
+
+
 \subsection{Experimentación}
 
-\subsection{Mejor resultado}
+Los experimentos que se llevan a cabo son los que se muestran en la en la Figura X. Los parámetros del algoritmo que se modifican son la \textit{seed} (10, 20 y 30), el \textit{números de clusters} (2, 3, 4, 5 y 6) y el \textit{tipo de distancia} (Euclidea y Manhattan).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=400px]{img/experimentos.png}
+    \caption{Tabla de experimentos con \textit{K-Medias}}
+    \label{fig:graf_exp1}
+\end{figure}
+
+
+Como se puede apreciar en la Figura X, se prueba para un mismo número de clusters las 3 seeds. Cabe destacar que los experimentos probados con distancia de \textit{Manhattan} cometen mucho más error que los que usan la \textit{Euclidea}. Por este motivo en la gráfica donde se comparan los errores no se añaden, ya que no son relevantes.
+
+\vspace{2mm}
+
+Los errores cometidos por los experimentos que usan distancia \textit{Euclidea} varían en el rango de 25160.25, siendo este el mejor, a 25704.73, siendo este el peor. De estos, los mejores resultados son los marcados en verde.
+
+\vspace{2mm}
+
+Este error representa la suma de las distancias medias a cada cluster, por ello cuanto menor sea el error menor serán estas distancias y como consecuencia las instancias estarán mejor agrupadas.
+
+\vspace{3mm}
+
+
+A continuación se muestra en la Figura X la gráfica comparativa de los errores para poder visualizar mejor los errores de cada experimento.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=400px]{img/Comparación errores.png}
+    \caption{Gráfica comparativa de los errores}
+    \label{fig:graf_exp1}
+\end{figure}
+
+Por lo tanto, se concluye con que el mejor resultado es el obtenido en el \textbf{Experimento 17}, así que en la siguiente sección se va a analizar en detalle este modelo.
+
+\newpage
+
+
+\subsection{Mejor modelo}
+
+El mejor modelo es el obtenido con el Experimento 17, se compone de \textbf{6 clusters} aunque según la gráfica de la Figura X, parece que deja 2 clusters vacíos. Mientras que el cluster 4 es el que tiene mayor número de elementos seguido del cluster 5. Por otro lado los clusters 2 y 3 tienen muchos menos elementos.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=300px]{img/clusters_del_experimento_17.png}
+    \caption{Gráfica clusters Experimento 17}
+    \label{fig:graf_exp1}
+\end{figure}
+
+Ya que con la Figura X no se puede afirmar que los clusters 0 y 1 estén vacíos, se van a visualizar los datos en la siguiente tabla de la Figura X.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=300px]{img/clusters_mejor_exp.png}
+    \caption{Tabla clusters Experimento 17}
+    \label{fig:graf_exp1}
+\end{figure}
+
+\newpage
+
+Una vez que se tienen los números concretos se observa que los cluster 0 y 1 no están vacíos pero poseen muy pocos elementos, 1 y 6 respectivamente. Por lo tanto, se llega a la conclusión de que estos elementos son \textit{outliers} y no aportan nada.
+
+\vspace{4mm}
+
+Tras este análisis del mejor modelo, se ejecutan los siguientes algoritmos de generación de reglas y árboles de decisión con este modelo para descibrir los clusters:
+
+\begin{itemize}
+    \item \textit{PART}
+    \item \textit{J48}
+    \item \textit{RandomForest}
+    \item \textit{JRip}
+\end{itemize}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=300px]{img/clusters_class.png}
+    \caption{Gráfica clusters-clase Experimento 17}
+    \label{fig:graf_exp1}
+\end{figure}
 
 
 
 
-
- 10 modelos de K Medias variando n Clústeres, semillas y funciones de distancia
-
-Analizar al menos 1 (en detalle)
-
-clasificación sobre el modelo y sacar el árbol
 
 \section{Conclusiones}
+
+\section{Contexto de la práctica}
 
 
 \clearpage
