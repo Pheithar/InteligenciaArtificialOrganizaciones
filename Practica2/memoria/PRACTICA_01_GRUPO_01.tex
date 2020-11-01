@@ -233,55 +233,60 @@
 
 \section{Parte 2: Clustering}
 
-En la segunda parte de esta práctica se va a realizar una aproximación mediante \textbf{\textit{clustering}}, pero antes de esto, recordar que esta técnica consiste en agrupar instancias sin etiquetar de manera que las instancias pertenecientes aun mismo grupo sean más similares entre sí que con las de otro grupo diferente. 
+En la segunda parte de esta práctica se va a realizar una aproximación mediante \textbf{\textit{clustering}}, pero antes de esto, recordar que esta técnica consiste en agrupar instancias sin etiquetar de manera que las pertenecientes a un mismo grupo sean más similares entre sí que con las del resto. 
 
 \vspace{2mm}
 
-En este caso, se agruparán las instancias procesadas que obtuvieron un mejor resultado en la primera parte de la práctica, esta agrupación se hará con el algoritmo \textbf{\textit{K-Medias}}, que se basa en el valor medio de las distancia de cada grupo para generar los grupos. 
+En este caso, se agruparán las instancias procesadas que obtuvieron un mejor resultado en la primera parte. Esta agrupación se hará con el algoritmo \textbf{\textit{K-Medias}}, que se basa en el valor medio de las distancias de cada grupo, aunque la primera agrupación ha de fijarse, en este caso, con una semilla. 
+
+\vspace{2mm}
+
+Por último, como el proceso de \textit{clustering} no muestra que le ha hecho agrupar a unas instancias con otras, para intentar entenderlo se aplicarán técnicas de \textit{\textbf{clasificación}}, tanto de árboles de decisión como de reglas, sobre los clusters.
+
+\vspace{2mm}
+
+Todo este proceso se vuelve a realizar en \textit{Weka} y, como resumen, se compone de los siguientes pasos:
 
 \vspace{1mm}
 
-Este proceso se vuelve a realizar en \textit{Weka}, y se compone de los siguientes pasos:
-
 \begin{itemize}
-    \item Cargar el archivo \textit{.arff} con los datos generado en la parte anterior.
-    \item Generar diferentes modelos a partir de estos datos con \textit{K-Medias} y compararlos.
-    \item Analizar el mejor modelo obtenido.
-    \item Ejecutar diversos algoritmos de generación de reglas y árboles de decisión con el mejor modelo obtenido.
+    \item Cargar el archivo \textit{.arff} con los mejores datos generados en la primera parte.
+    \item Generar diferentes modelos de \textit{clustering} con \textit{K-Medias} (ignorando el atributo \textit{class}).
+    \item Comparar los modelos y decidir cual funciona mejor.
+    \item Ejecutar diversos algoritmos de clasificación que expliquen como se ha formado.
 \end{itemize}
 
 
 \subsection{Experimentación}
 
-Los experimentos que se llevan a cabo son los que se muestran en la en la Figura X. Los parámetros del algoritmo que se modifican son la \textit{seed} (10, 20 y 30), el \textit{números de clusters} (2, 3, 4, 5 y 6) y el \textit{tipo de distancia} (Euclidea y Manhattan).
+Los experimentos que se llevan a cabo son los que se muestran en la en la Figura X. Los parámetros del algoritmo que se modifican son la \textit{seed} (10, 20 y 30), el \textit{números de clusters} (2, 3, 4, 5 y 6) y, el \textit{tipo de distancia} (Euclídea y Manhattan).
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=400px]{img/experimentos.png}
-    \caption{Tabla de experimentos con \textit{K-Medias}}
+    \caption{Experimentos con \textit{K-Medias}}
     \label{fig:graf_exp1}
 \end{figure}
 
 
-Como se puede apreciar en la Figura X, se prueba para un mismo número de clusters las 3 seeds. Cabe destacar que los experimentos probados con distancia de \textit{Manhattan} cometen mucho más error que los que usan la \textit{Euclidea}. Por este motivo en la gráfica donde se comparan los errores no se añaden, ya que no son relevantes.
+Como se puede apreciar en la Figura X, se prueba para un mismo número de clusters las 3 seeds. Cabe destacar que los experimentos probados con distancia \textit{Manhattan} cometen mucho más error que los que usan la \textit{Euclídea}. Por este motivo, en la gráfica donde se comparan los errores no se añaden, ya que no son relevantes.
 
 \vspace{2mm}
 
-Los errores cometidos por los experimentos que usan distancia \textit{Euclidea} varían en el rango de 25160.25, siendo este el mejor, a 25704.73, siendo este el peor. De estos, los mejores resultados son los marcados en verde.
+Los errores cometidos por los experimentos que usan distancia \textit{Euclídea} varían en el rango de 25160.25, siendo este el mejor, a 25704.73, siendo este el peor. De estos, los mejores resultados son los marcados en verde.
 
 \vspace{2mm}
 
-Este error representa la suma de las distancias medias a cada cluster, por ello cuanto menor sea el error menor serán estas distancias y como consecuencia las instancias estarán mejor agrupadas.
+Este error representa la suma de las distancias medias a cada cluster, por ello, cuanto menor sea el error, menor serán estas distancias, y, como consecuencia, las instancias estarán mejor agrupadas.
 
 \vspace{3mm}
 
-
-A continuación se muestra en la Figura X la gráfica comparativa de los errores para poder visualizar mejor los errores de cada experimento.
+A continuación se muestra en la Figura X la gráfica comparativa de los errores de los diferentes modelos para poder visualizarlos de una manera mas gráfica y visual.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=400px]{img/Comparación errores.png}
-    \caption{Gráfica comparativa de los errores}
+    \caption{Comparación de los errores}
     \label{fig:graf_exp1}
 \end{figure}
 
@@ -292,50 +297,68 @@ Por lo tanto, se concluye con que el mejor resultado es el obtenido en el \textb
 
 \subsection{Mejor modelo}
 
-El mejor modelo es el obtenido con el Experimento 17, se compone de \textbf{6 clusters} aunque según la gráfica de la Figura X, parece que deja 2 clusters vacíos. Mientras que el cluster 4 es el que tiene mayor número de elementos seguido del cluster 5. Por otro lado los clusters 2 y 3 tienen muchos menos elementos.
+El modelo del Experimento 17 se compone de \textbf{6 clusters}, aunque según la gráfica de la Figura X, parece que deja 2 clusters vacíos (debido a la escala del histograma), mientras que el cluster 4 es el que tiene mayor número de elementos, seguido del cluster 5. Por otro, lado los clusters 2 y 3 tienen muchos menos elementos.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=300px]{img/clusters_del_experimento_17.png}
-    \caption{Gráfica clusters Experimento 17}
+    \caption{Clusters del Experimento 17}
     \label{fig:graf_exp1}
 \end{figure}
 
-Ya que con la Figura X no se puede afirmar que los clusters 0 y 1 estén vacíos, se van a visualizar los datos en la siguiente tabla de la Figura X.
+Ya que con la Figura X no se puede afirmar que los clusters 0 y 1 estén vacíos, se van a visualizar los datos del experimento en la siguiente tabla de la Figura X.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=300px]{img/clusters_mejor_exp.png}
-    \caption{Tabla clusters Experimento 17}
+    \caption{Distribución de los datos en el Experimento 17}
     \label{fig:graf_exp1}
 \end{figure}
 
 \newpage
 
-Una vez que se tienen los números concretos se observa que los cluster 0 y 1 no están vacíos pero poseen muy pocos elementos, 1 y 6 respectivamente. Por lo tanto, se llega a la conclusión de que estos elementos son \textit{outliers} y no aportan nada.
+Con esta nueva información a la vista, se puede observar que los clusters 0 y 1 no están vacíos pero poseen muy pocos elementos, 1 y 6 respectivamente. Por lo tanto, se llega a la conclusión de que estos elementos son \textit{outliers} y no aportan nada.
 
 \vspace{4mm}
 
-Tras este análisis del mejor modelo, se ejecutan los siguientes algoritmos de generación de reglas y árboles de decisión con este modelo para descibrir los clusters:
-
-\begin{itemize}
-    \item \textit{PART}
-    \item \textit{J48}
-    \item \textit{RandomForest}
-    \item \textit{JRip}
-\end{itemize}
-
+Las instancias, inicialmente, tenian ya una clase asignada (\textit{excellent, fair, etc.}), las cuales se ignoraron para la agrupación. En la Figura X se muestra como han quedado repartidas en los diferentes clusters del modelo. Las clases \textit{excellent, very good, good, fair y, poor}, estan representadas por los colores azul oscuro, rosa anaranjado, rojo, gris azulado y azul claro, respectivamente.
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=300px]{img/clusters_class.png}
-    \caption{Gráfica clusters-clase Experimento 17}
-    \label{fig:graf_exp1}
+  \centering
+  \includegraphics[width=300px]{img/clusters_class.png}
+  \caption{Distribucion de las clases en los clusters del Experimento 17}
+  \label{fig:graf_exp1}
 \end{figure}
 
+\vspace{2mm}
 
+En el tercer cluster solo hay instancias previamente clasificadas como \textit{poor}, mientras que en el cuatro se encuentran instancias clasificadas con clases de calidad media-baja (desde \textit{good} hasta \textit{poor}). Después, los clusters 5 y 6 contienen instancias de todo tipo, aunque se aprecia una concentración en el quinto de instancias con clases de calidad alta (\textit{excellent, very good}), así como de instancias con clases de calidad media-baja en el sexto.  
 
+\vspace{2mm}
 
+Una explicación a esta mezcla de clases (aunque es pura especulación), podría ser, que a pesar de que las reviews estén clasificadas con una puntuación concreta, el vocabulario utilizado sería semejante en reviews con diferentes puntuaciones. Por ello, las reviews del cluster 3 tendrían un vocabulario mucho más negativo. Luego, los clusters 4 y 6 contendrían reviews con un vocabulario mas neutro, siendo mas negativas las del 4. Finalmente, las del cluster 5 la ocuparían reviews con un vocabulario mas positivo, aunque incluyendo puntuaciones negativas. 
+
+\vspace{2mm}
+
+Tras este análisis, se ejecutan varios algoritmos de clasificación con este modelo, de manera que se pueda entender como se ha realizado el agrupamiento. Los algoritmos probados con su precisión a la hora de explicar el modelo son los siguientes:
+
+\begin{itemize}
+    \item \textit{PART: 98.88\%}
+    \item \textit{J48: 97.36\%}
+    \item \textit{RandomForest: 100\%}
+    \item \textit{JRip: 90.28\%}
+\end{itemize}
+
+A pesar de que \textit{RandomForest} sea capaz de explicar de manera perfecta el modelo, no es posible saber como lo hace, por lo que no es útil para esta tarea. Si pasamos al siguiente mejor, \textit{PART}, recordar que es un algoritmo de reglas, y aunque sí que se puede ver como explica el modelo con reglas, resulta poco intuitivo visualmente. Por todo esto, (y porque el error al explicar es asumible), se ha elegido \textit{J48}, pues el árbol de decisión que muestra es visualizable y mas intuitivo. En la Figura X se puede apreciar un camino del arbol cuya clasificación es el quinto claster.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=500px, height=50px]{img/arbol_decision.png}
+  \caption{Árbol de decisión representado con prefuseTree [1]}
+  \label{fig:graf_exp1}
+\end{figure}
+
+Para cada instancia, el árbol empieza evaluando el valor del atributo \textit{table}, y según sea este, continúas por una rama distinta, \textit{calls} o \textit{buffets}. Según se va avanzando por el árbol se van sucediendo este tipo de comparaciones, hasta que se llega a una hoja del arbol, donde te muestra a que cluster pertenece la isntancia evaluada. 
 
 \section{Conclusiones}
 
