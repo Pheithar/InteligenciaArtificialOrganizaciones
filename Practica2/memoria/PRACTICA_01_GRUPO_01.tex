@@ -57,7 +57,7 @@
 
 \section{Introducción}
 
-    La \textbf{Minería de Texto} es una técnica de minería de datos que busca extraer información útil y relevante de documentos de texto de diferentes fuentes diferentes, como puede ser páginas web, correos electrónicos, periódicos o redes sociales. Para ello se hace una identificación de patrones en los datos, como puede ser la repetición de palabras o conjuntos de palabras, estructuras sintácticas que se repiton a lo largo de los datos, etc.
+    La \textbf{Minería de Texto} es una técnica de minería de datos que busca extraer información útil y relevante de documentos de texto de diferentes fuentes diferentes, como puede ser páginas web, correos electrónicos, periódicos o redes sociales. Para ello se hace una identificación de patrones en los datos, como puede ser la repetición de palabras o conjuntos de palabras, estructuras sintácticas que se repitan a lo largo de los datos, etc.
 
     \vspace{3mm}
 
@@ -78,7 +78,7 @@
     \begin{figure}[!h]
       \centering
       \includegraphics[width=10cm]{img/tripadvisor-review.png}
-      \caption{Ejemplode reseña de Tripadvisor en \textit{español}}
+      \caption{Ejemplo de reseña de Tripadvisor en \textit{español}}
     \end{figure}
 
     En la práctica se plantean dos problemas, uno de \textbf{aprendizaje supervisado} (clasificación), donde el objetivo es determinar la puntuación que le da un usuario a un hotel, en base a lo que escribe en su reseña; y otro de \textbf{aprendizaje no supervisado} (agrupamiento), cuyo objetivo es agrupar las diferentes reseñas en función a su contenido, sin tener en cuenta su puntuación.
@@ -88,19 +88,27 @@
 
 \section{Parte 1: Clasificación}
     \subsection{Análisis y preprocesado de datos}
-        El primer paso que debe ser abordado en el desarrollo de esta práctica es el del procesado de los datos con el objetivo de \textbf{posibilitar la aplicación de minería de texto} gracias a la herramienta \textit{Weka}. Los datos sin tratar se encuentran contenidos en un archivo de formato \textit{csv} donde la primera columna se corresponde de con las reseñas en formato de texto y la segunda con el número de estrellas (valoración del 1 al 5) correspondientes a dicha reseña. De esta manera, la secuencia de operaciones lógicas a seguir para posibilitar el análisis con la herramienta propuesta son:
+        El primer paso que debe ser abordado en el desarrollo de esta práctica es el del procesado de los datos con el objetivo de \textbf{posibilitar la aplicación de minería de texto} gracias a la herramienta \textit{Weka}. Los datos sin tratar se encuentran contenidos en un archivo de formato \textit{.csv} donde la primera columna se corresponde de con las reseñas en formato de texto y la segunda con el número de estrellas (valoración del 1 al 5) correspondientes a dicha reseña. De esta manera, la secuencia de operaciones lógicas a seguir para posibilitar el análisis con la herramienta propuesta son:
 
         \begin{itemize}
-        \item Transformación del fichero desde el formato \textbf{\textit{csv}} al formato \textbf{\textit{arff}}
+        \item Transformación del fichero desde el formato \textbf{\textit{.csv}} al formato \textbf{\textit{.arff}}
         \item Procesamiento propio de las técnicas de minería de texto en la herramienta \textit{Weka}
         \end{itemize}
 
         \subsubsection{De .csv a .arff}
 
-          Como se ha comentado anteriormente el material proporcionado consta de un archivo en formato \textit{csv}. La mejor manera de convertirlo al formato \textit{arff} utilizado por \textit{Weka} es generar una estructura de directorios en función de la clasificación de la reseña para una vez dentro de cada uno de los directorios, encontrar un fichero por cada una de las reseñas. Dicha estructura se puede generar gracias a la herramienta de Macros contenida dentro del programa \textit{Excel}. Cabe destacar que esta estructura es óptima para el propósito seguido puesto que se proporciona un comando que en la opción \textit{CLI} de \textit{Weka} produce directamente un fichero \textit{arff} a partir de la estructura descrita.
+          Como se ha comentado anteriormente, el material proporcionado consta de un archivo en formato \textit{.csv}. La mejor manera de convertirlo al formato \textit{.arff} utilizado por \textit{Weka} es generar una estructura de directorios en función de la clasificación de la reseña para una vez dentro de cada uno de los directorios, encontrar un fichero por cada una de las reseñas.
+
+          \vspace{1mm}
+
+          Dicha estructura se puede generar gracias a la herramienta de \textit{Macros} contenida dentro del programa \textit{Excel}. Cabe destacar que esta estructura es óptima para el propósito seguido puesto que se proporciona un comando que en la opción \textit{CLI} de \textit{Weka} produce directamente un fichero \textit{.arff} a partir de la estructura descrita.
 
         \subsubsection{Procesamiento específico de minería de texto}
-          Una vez dentro de la herramienta \textit{Weka} se deben considerar técnicas de procesamiento específicas de la minería de texto, concretamente el filtro no supervisado \textbf{\textit{StringToWordVector}}, el cual permite convertir atributos basados en cadenas de caracteres en un conjunto numérico que representa la ocurrencia de las distintas palabras contenidas en el archivo seleccionado. Este filtro contiene \textbf{multitud de parámetros interesantes }que merece la pena reseñar de cara a la experimentación que se llevará a cabo para obtener el mejor modelo posible.
+          Una vez dentro de la herramienta \textit{Weka} se deben considerar técnicas de procesamiento específicas de la minería de texto, concretamente el filtro no supervisado \textbf{\textit{StringToWordVector}}, el cual permite convertir atributos basados en cadenas de caracteres en un conjunto numérico que representa la ocurrencia de las distintas palabras contenidas en el archivo seleccionado.
+
+          \vspace{1mm}
+
+          Este filtro contiene \textbf{multitud de parámetros interesantes }que merece la pena reseñar de cara a la experimentación que se llevará a cabo para obtener el mejor modelo posible.
 
           \begin{itemize}
           \item \textbf{StopWords}: Formadas por palabras sin significado, es decir, aquellas que \textbf{no aportan información útil} al proceso de minería de texto que se pretende realizar. Se aporta una lista para la realización de la práctica, sin embargo \textbf{es importante reseñar que se añaden algunas más a ella para mejorar los resultados del análisis}. Algunas de las palabras añadidas incluyen números y palabras sin sentido consecuencia posiblemente de faltas de ortografía a la hora de escribir las reseñas.
@@ -116,10 +124,10 @@
           \end{itemize}
 
       \subsection{Experimentación}
-        Para realizar los experimentos, se han realizado combinaciones de los distintos opciones que habilita la herramienta de \textit{Weka} con el filtro \textit{StringToWordVector}, para buscar la combinación que permita obtener los mejores resultados para este conjunto de datos. Este filtro, tal y como su nombre indica, transforma un atributo compuesto por texto, en un conjunto de atributos que representa la información de ese texto.
+        Para llevar a cabo los experimentos se han realizado combinaciones de las distintas opciones que habilita la herramienta de \textit{Weka} con el filtro \textit{StringToWordVector}, para buscar la combinación que permita obtener los mejores resultados para este conjunto de datos. Este filtro, tal y como su nombre indica, transforma un atributo compuesto por texto, en un conjunto de atributos que representa la información de ese texto.
 
       \subsubsection{Experimentación básica}
-        Los primeros experimentos que se han realizado consisten en modifcar exclusivamente una opción del filtro en cada uno de los experimentos, para comprobar cuales son los que generan los mejores resultados por separado. Los experimentos realizados son los siguientes:
+        Los primeros experimentos que se han realizado consisten en modificar exclusivamente una opción del filtro en cada uno de los experimentos, para comprobar cuáles son los que generan los mejores resultados por separado. Los experimentos realizados son los siguientes:
 
         \begin{itemize}
           \item \textbf{Experimento 0}: Es el experimento base, respecto al que se van a comparar el resto.
@@ -129,34 +137,34 @@
             \item \textbf{Experimento 1-2}: \textit{IDFTransform} \textbf{False} y \textit{TFTransform} \textbf{True}.
             \item \textbf{Experimento 1-3}: \textit{IDFTransform} \textbf{True} y \textit{TFTransform} \textbf{True}.
           \end{itemize}
-          \item \textbf{Experimento 2}: Este experimento prueba a activar la opción \textit{outputWordCounts}
+          \item \textbf{Experimento 2}: Este experimento prueba a activar la opción \textit{outputWordCounts}.
           \item \textbf{Experimento 3}: En este experimento se prueba el uso de diferentes \textit{stemmer}, con dos subexperimentos.
           \begin{itemize}
-            \item \textbf{Experimento 3-1}:Usando el \textit{LovinsStemmer}
-            \item \textbf{Experimento 3-2}:Usando el \textit{IterativeLovinsStemmer}
+            \item \textbf{Experimento 3-1}: Usando el \textit{LovinsStemmer}.
+            \item \textbf{Experimento 3-2}: Usando el \textit{IterativeLovinsStemmer}.
           \end{itemize}
           \item \textbf{Experimento 4}: En este experimento se prueba a cambiar el valor por defecto de la opción de \textit{minTermFreq}, que es 1. Tiene 7 subexperimentos.
           \begin{itemize}
-            \item \textbf{Experimento 4-1}: El valor de \textit{minTermFreq} es 2
-            \item \textbf{Experimento 4-2}: El valor de \textit{minTermFreq} es 5
-            \item \textbf{Experimento 4-3}: El valor de \textit{minTermFreq} es 10
-            \item \textbf{Experimento 4-4}: El valor de \textit{minTermFreq} es 25
-            \item \textbf{Experimento 4-5}: El valor de \textit{minTermFreq} es 125
-            \item \textbf{Experimento 4-6}: El valor de \textit{minTermFreq} es 250
-            \item \textbf{Experimento 4-7}: El valor de \textit{minTermFreq} es 625
+            \item \textbf{Experimento 4-1}: El valor de \textit{minTermFreq} es 2.
+            \item \textbf{Experimento 4-2}: El valor de \textit{minTermFreq} es 5.
+            \item \textbf{Experimento 4-3}: El valor de \textit{minTermFreq} es 10.
+            \item \textbf{Experimento 4-4}: El valor de \textit{minTermFreq} es 25.
+            \item \textbf{Experimento 4-5}: El valor de \textit{minTermFreq} es 125.
+            \item \textbf{Experimento 4-6}: El valor de \textit{minTermFreq} es 250.
+            \item \textbf{Experimento 4-7}: El valor de \textit{minTermFreq} es 625.
           \end{itemize}
-          \item \textbf{Experimento 5}: Este experimento prueba la eficacia de la opción \textit{normalizeDocLength} sobre tod el conjunto de datos.
+          \item \textbf{Experimento 5}: Este experimento prueba la eficacia de la opción \textit{normalizeDocLength} sobre todo el conjunto de datos.
 
         \end{itemize}
 
         Para cada uno de los experimentos mostrados se deben ejecutar distintos algoritmos de clasificación con el objetivo de averiguar cuál de ellos funciona mejor dada la configuración elegida por el experimento. Los algoritmos de clasificación seleccionados por ser los más ampliamente extendidos son:
-    
+
         \begin{itemize}
-        \item J48
-        \item Random Forest
-        \item JRip
-        \item IBk
-        \item Naive Bayes
+        \item \textit{J48}
+        \item \textit{RandomForest}
+        \item \textit{JRip}
+        \item \textit{IBk}
+        \item \textit{Naive Bayes}
         \end{itemize}
 
         \begin{table}[h]
@@ -181,25 +189,29 @@
             4-7                     & 27.04\%                   & 27.04\%        & 25.80\%                    & 25.56\%         & 25.12\%            \\ \hline
             5                       & 39.20\%                   & 51.68\%        & 34.04\%                    & 20.00\%         & 48.8\%            \\ \hline
             \end{tabular}
-            \caption{Experimentos realizados}
+            \caption{Experimentos realizados en clasificación}
                 \label{fig:graf_exp1}
         \end{table}
 
-        La tabla 1 muestra la relación de experimentos realizados junto con los resultados en cada uno de los algoritmos de clasificación seleccionados. Un vistazo rápido a la misma permite averiguar que el algoritmo de clasificación más prometedor es \textbf{RandomForest}, por lo tanto a continuación se abre una nueva ventana en la experimentación, la cual tratará de afinar la configuración de los distintos parámetros propuestos en los experimentos para RandomForest.
+        La Tabla 1 muestra la relación de experimentos realizados junto con los resultados en cada uno de los algoritmos de clasificación seleccionados. Un vistazo rápido a la misma permite averiguar que el algoritmo de clasificación más prometedor es \textbf{\textit{RandomForest}}.
+
+        \vspace{2mm}
+
+        Por lo tanto, a continuación se abre una nueva ventana en la experimentación, la cual tratará de afinar la configuración de los distintos parámetros propuestos en los experimentos para \textit{RandomForest}.
 
         \subsubsection{Experimentación avanzada}
 
-        Como en los experimnentos básicos se prueba que los mejores resultados son siempre obtenidos con el algoritmo de \textbf{RandomForest}, en esta experimentación avanzada, tan solo se va a evaluar con él.
+        Como en los experimnentos básicos se prueba que los mejores resultados son siempre obtenidos con el algoritmo de \textbf{\textit{RandomForest}}, en esta experimentación avanzada, tan solo se va a evaluar con él.
 
         \vspace{3mm}
 
         La experimentación avanzada consiste en realizar combinaciones entre las opciones del filtro que generan mejores resultados en el apartado anterior, para intentar encontrar una transformación que maximice el resultado obtenido.
 
         \begin{itemize}
-          \item \textbf{Experimento 6}: En este útimo experimento se analizan los resultados que se obtienen al cambiar la opciónd e \textit{tokenizer}. Tiene 2 subexperimentos.
+          \item \textbf{Experimento 6}: En este útimo experimento se analizan los resultados que se obtienen al cambiar la opción de \textit{tokenizer}. Tiene 2 subexperimentos.
           \begin{itemize}
-            \item \textbf{Experimento 6-1}: Se utiliza el \textit{tokenizer} de \textit{NGramTokenizer}
-            \item \textbf{Experimento 6-2}: Se utiliza el \textit{tokenizer} de \textit{AlphabeticTokenizer}
+            \item \textbf{Experimento 6-1}: Se utiliza el \textit{tokenizer} de \textit{NGramTokenizer}.
+            \item \textbf{Experimento 6-2}: Se utiliza el \textit{tokenizer} de \textit{AlphabeticTokenizer}.
           \end{itemize}
           \item \textbf{Experimento 7}: Se prueba una combinación de \textit{IDFTransform}, \textit{TFTransform} y \textit{outputWordCounts}.
           \item \textbf{Experimento 8}: Se seleccionan las siguientes opciones: \textit{IDFTransform}, \textit{TFTransform}, \textit{outputWordCounts}, como \textit{tokenizer} el \textit{NGramTokenizer} y un valor de \textit{minTermFreq} de 25.
@@ -216,32 +228,36 @@
             7                       & 59.00\%               \\ \hline
             8                       & 60.28\%               \\ \hline
             \end{tabular}
-            \caption{Experimentos avanzados}
+            \caption{Experimentos avanzados en clasificación}
                 \label{fig:graf_exp1}
         \end{table}
 
-        La tabla 2 muestra los resultados obtenidos en la experimentación avanzada, siendo el experimento 8 el que obtiene los mejores resultados. La siguiente sección trata de dar sentido a los resultados obtenidos.
+        La Tabla 2 muestra los resultados obtenidos en la experimentación avanzada, siendo el experimento 8 el que obtiene los mejores resultados. La siguiente sección trata de dar sentido a estos resultados.
 
     \subsection{Comentario de los resultados obtenidos}
-    \textbf{ La sección experimentación básica permite descubrir qué algoritmo de clasificación tiene los mejores resultados} además de dar \textbf{indicaciones sobre qué configuración del filtro de minería de datos mejora} los mismos. Por lo tanto, la sección avanzada descubre cómo es posible mejorar el clasificador seleccionado a través de la afinación de parámetros del filtro, descubriendo, como era de esperar, que una combinación de los mejores parámetros del filtro permite añadir exactitud al clasificador sumando los efectos de las mejoras aplicadas. 
-    
+    \textbf{ La sección experimentación básica permite descubrir qué algoritmo de clasificación tiene los mejores resultados} además de dar \textbf{indicaciones sobre qué configuración del filtro de minería de datos mejora} los mismos.
+
+    \vspace{2mm}
+
+    Después, \textbf{la sección avanzada descubre cómo es posible mejorar el clasificador seleccionado} a través de la afinación de parámetros del filtro, descubriendo, como era de esperar, que una combinación de los mejores parámetros del filtro permite añadir exactitud al clasificador sumando los efectos de las mejoras aplicadas.
+
     \vspace{3mm}
-    
-    Así los resultados arrojados seleccionan al \textit{experimento 8} dado que \textbf{limita el ruido} en los datos incluyendo una\textbf{ frecuencia mínima de aparición} de términos, además, permite \textbf{aumentar la precisión} al establecer un algoritmo de \textit{tokeninzing} que unido al establecimiento de \textbf{métricas sobre la frecuencia y número de ocurrencias} de las palabras permite aumentar y mejorar la calidad de la información extraída de los datos, permitiendo así una generalización mayor, logrando de esta manera cumplir con el objetivo de clasificar las reseñas de \textit{Tripadvisor}.
+
+    Así los resultados arrojados seleccionan al \textit{experimento 8}, y que \textbf{limita el ruido} en los datos incluyendo una\textbf{ frecuencia mínima de aparición} de términos. Además, permite \textbf{aumentar la precisión} al establecer un algoritmo de \textit{tokeninzing}, que unido al establecimiento de \textbf{métricas sobre la frecuencia y número de ocurrencias} de las palabras permite aumentar y mejorar la calidad de la información extraída de los datos, permitiendo así una generalización mayor, logrando de esta manera cumplir con el objetivo de clasificar las reseñas de \textit{Tripadvisor}.
 
 \newpage
 
 \section{Parte 2: Clustering}
 
-En la segunda parte de esta práctica se va a realizar una aproximación mediante \textbf{\textit{clustering}}, pero antes de esto, recordar que esta técnica consiste en agrupar instancias sin etiquetar de manera que las pertenecientes a un mismo grupo sean más similares entre sí que con las del resto. 
+En la segunda parte de esta práctica se va a realizar una aproximación mediante \textbf{\textit{clustering}}, recordar que esta técnica consiste en agrupar instancias sin etiquetar de manera que las pertenecientes a un mismo grupo sean más similares entre sí que con las del resto.
 
 \vspace{2mm}
 
-En este caso, se agruparán las instancias procesadas que obtuvieron un mejor resultado en la primera parte. Esta agrupación se hará con el algoritmo \textbf{\textit{K-Medias}}, que se basa en el valor medio de las distancias de cada grupo, aunque la primera agrupación ha de fijarse, en este caso, con una semilla. 
+En este caso, se agruparán las instancias procesadas que obtuvieron un mejor resultado en la primera parte. Esta agrupación se hará con el algoritmo \textbf{\textit{K-Medias}}, que se basa en el valor medio de las distancias de cada grupo, aunque la primera agrupación ha de fijarse, en este caso, con una semilla.
 
 \vspace{2mm}
 
-Por último, como el proceso de \textit{clustering} no muestra que le ha hecho agrupar a unas instancias con otras, para intentar entenderlo se aplicarán técnicas de \textit{\textbf{clasificación}}, tanto de árboles de decisión como de reglas, sobre los clusters.
+Por último, como el proceso de \textit{clustering} no muestra qué le ha hecho agrupar a unas instancias con otras, para intentar entenderlo, se aplicarán sobre los \textit{clusters} técnicas de \textit{\textbf{clasificación}}, tanto de árboles de decisión como de reglas.
 
 \vspace{2mm}
 
@@ -252,24 +268,22 @@ Todo este proceso se vuelve a realizar en \textit{Weka} y, como resumen, se comp
 \begin{itemize}
     \item Cargar el archivo \textit{.arff} con los mejores datos generados en la primera parte.
     \item Generar diferentes modelos de \textit{clustering} con \textit{K-Medias} (ignorando el atributo \textit{class}).
-    \item Comparar los modelos y decidir cual funciona mejor.
+    \item Comparar los modelos y decidir cuál funciona mejor.
     \item Ejecutar diversos algoritmos de clasificación que expliquen como se ha formado.
 \end{itemize}
 
 
 \subsection{Experimentación}
 
-Los experimentos que se llevan a cabo son los que se muestran en la en la Figura X. Los parámetros del algoritmo que se modifican son la \textit{seed} (10, 20 y 30), el \textit{números de clusters} (2, 3, 4, 5 y 6) y, el \textit{tipo de distancia} (Euclídea y Manhattan).
+Los experimentos que se llevan a cabo son los que se muestran en la en la Figura 3. Los parámetros del algoritmo que se modifican son la \textit{seed} (10, 20 y 30), el \textit{números de clusters} (2, 3, 4, 5 y 6) y, el \textit{tipo de distancia} (Euclídea y Manhattan).
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=400px]{img/experimentos.png}
-    \caption{Experimentos con \textit{K-Medias}}
-    \label{fig:graf_exp1}
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=13cm]{img/experimentos.png}
+  \caption{Experimentos con \textit{K-Medias}}
 \end{figure}
 
-
-Como se puede apreciar en la Figura X, se prueba para un mismo número de clusters las 3 seeds. Cabe destacar que los experimentos probados con distancia \textit{Manhattan} cometen mucho más error que los que usan la \textit{Euclídea}. Por este motivo, en la gráfica donde se comparan los errores no se añaden, ya que no son relevantes.
+Como se puede apreciar en la Figura 3, se prueba para un mismo número de \textit{clusters} las 3 \textit{seeds}. Cabe destacar que los experimentos probados con distancia \textit{Manhattan} cometen mucho más error que los que usan la \textit{Euclídea}. Por este motivo, en la gráfica donde se comparan los errores no se añaden, ya que no son relevantes.
 
 \vspace{2mm}
 
@@ -281,66 +295,68 @@ Este error representa la suma de las distancias medias a cada cluster, por ello,
 
 \vspace{3mm}
 
-A continuación se muestra en la Figura X la gráfica comparativa de los errores de los diferentes modelos para poder visualizarlos de una manera mas gráfica y visual.
+A continuación se muestra en la Figura 4 la gráfica comparativa de los errores de los diferentes modelos para poder visualizarlos de una manera mas gráfica y visual.
 
-\begin{figure}[h]
+\begin{figure}[!h]
     \centering
-    \includegraphics[width=400px]{img/Comparación errores.png}
-    \caption{Comparación de los errores}
-    \label{fig:graf_exp1}
+    \includegraphics[width=14cm]{img/Comparación errores.png}
+    \caption{Comparación de los errores con \textit{K-Medias}}
 \end{figure}
 
 Por lo tanto, se concluye con que el mejor resultado es el obtenido en el \textbf{Experimento 17}, así que en la siguiente sección se va a analizar en detalle este modelo.
 
 \newpage
 
-
 \subsection{Mejor modelo}
 
-El modelo del Experimento 17 se compone de \textbf{6 clusters}, aunque según la gráfica de la Figura X, parece que deja 2 clusters vacíos (debido a la escala del histograma), mientras que el cluster 4 es el que tiene mayor número de elementos, seguido del cluster 5. Por otro, lado los clusters 2 y 3 tienen muchos menos elementos.
+El modelo del Experimento 17 se compone de \textbf{6 \textit{clusters}}, aunque según la gráfica de la Figura 5 parece que deja 2 \textit{clusters} vacíos (debido a la escala del histograma), mientras que el \textit{cluster} 4 es el que tiene mayor número de elementos, seguido del \textit{cluster} 5. Por otro, lado los clusters 2 y 3 tienen muchos menos elementos.
 
-\begin{figure}[h]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=300px]{img/clusters_del_experimento_17.png}
     \caption{Clusters del Experimento 17}
-    \label{fig:graf_exp1}
 \end{figure}
 
-Ya que con la Figura X no se puede afirmar que los clusters 0 y 1 estén vacíos, se van a visualizar los datos del experimento en la siguiente tabla de la Figura X.
+Ya que con la Figura 5 no se puede afirmar que los \textit{clusters} 0 y 1 estén vacíos, se van a visualizar los datos del experimento en la siguiente tabla de la Figura 6.
 
-\begin{figure}[h]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=300px]{img/clusters_mejor_exp.png}
     \caption{Distribución de los datos en el Experimento 17}
-    \label{fig:graf_exp1}
+\end{figure}
+
+
+Con esta nueva información a la vista, se puede observar que los \textit{clusters} 0 y 1 no están vacíos pero poseen muy pocos elementos, 1 y 6 respectivamente. Por lo tanto, se llega a la conclusión de que estos elementos son \textit{outliers} y no aportan nada.
+
+\vspace{4mm}
+
+Las instancias, inicialmente, tenían ya una clase asignada (\textit{excellent, fair, etc.}), las cuales se ignoraron para la agrupación. En la Figura 7 se muestra como han quedado repartidas en los diferentes \textit{clusters} del modelo.
+
+\vspace{2mm}
+
+Las clases \textit{excellent, very good, good, fair y poor}, están representadas por los colores azul oscuro, rosa anaranjado, rojo, gris azulado y azul claro, respectivamente.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=300px]{img/clusters_class.png}
+  \caption{Distribución de las clases en los \textit{clusters} del Experimento 17}
 \end{figure}
 
 \newpage
 
-Con esta nueva información a la vista, se puede observar que los clusters 0 y 1 no están vacíos pero poseen muy pocos elementos, 1 y 6 respectivamente. Por lo tanto, se llega a la conclusión de que estos elementos son \textit{outliers} y no aportan nada.
+En el \textbf{tercer \textit{cluster}} (empezando por la izquierda) sólo hay instancias previamente clasificadas como \textit{poor}, mientras que en el \textbf{cuarto} se encuentran instancias clasificadas con clases de calidad media-baja (desde \textit{good} hasta \textit{poor}). Después, los \textbf{\textit{clusters} 5 y 6} contienen instancias de todo tipo, aunque se aprecia una concentración en el quinto de instancias con clases de calidad alta (\textit{excellent, very good}), así como de instancias con clases de calidad media-baja en el sexto.
+
+\vspace{3mm}
+
+Una explicación a esta mezcla de clases (aunque es pura especulación), podría ser que a pesar de que las \textit{reviews} estén clasificadas con una puntuación concreta, el vocabulario utilizado sería semejante en \textit{reviews} con diferentes puntuaciones.
+
+ \vspace{1mm}
+
+Por ello, las \textit{reviews} del \textit{cluster} 3 tendrían un vocabulario mucho más negativo. Luego, los \textit{clusters} 4 y 6 contendrían \textit{reviews} con un vocabulario mas neutro, siendo más negativas las del 4. Finalmente, las del \textit{cluster} 5 la ocuparían \textit{reviews} con un vocabulario más positivo, aunque incluyendo puntuaciones negativas.
 
 \vspace{4mm}
 
-Las instancias, inicialmente, tenian ya una clase asignada (\textit{excellent, fair, etc.}), las cuales se ignoraron para la agrupación. En la Figura X se muestra como han quedado repartidas en los diferentes clusters del modelo. Las clases \textit{excellent, very good, good, fair y, poor}, estan representadas por los colores azul oscuro, rosa anaranjado, rojo, gris azulado y azul claro, respectivamente.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=300px]{img/clusters_class.png}
-  \caption{Distribucion de las clases en los clusters del Experimento 17}
-  \label{fig:graf_exp1}
-\end{figure}
-
-\vspace{2mm}
-
-En el tercer cluster solo hay instancias previamente clasificadas como \textit{poor}, mientras que en el cuatro se encuentran instancias clasificadas con clases de calidad media-baja (desde \textit{good} hasta \textit{poor}). Después, los clusters 5 y 6 contienen instancias de todo tipo, aunque se aprecia una concentración en el quinto de instancias con clases de calidad alta (\textit{excellent, very good}), así como de instancias con clases de calidad media-baja en el sexto.  
-
-\vspace{2mm}
-
-Una explicación a esta mezcla de clases (aunque es pura especulación), podría ser, que a pesar de que las reviews estén clasificadas con una puntuación concreta, el vocabulario utilizado sería semejante en reviews con diferentes puntuaciones. Por ello, las reviews del cluster 3 tendrían un vocabulario mucho más negativo. Luego, los clusters 4 y 6 contendrían reviews con un vocabulario mas neutro, siendo mas negativas las del 4. Finalmente, las del cluster 5 la ocuparían reviews con un vocabulario mas positivo, aunque incluyendo puntuaciones negativas. 
-
-\vspace{2mm}
-
-Tras este análisis, se ejecutan varios algoritmos de clasificación con este modelo, de manera que se pueda entender como se ha realizado el agrupamiento. Los algoritmos probados con su precisión a la hora de explicar el modelo son los siguientes:
+Tras este análisis, se ejecutan varios algoritmos de \textbf{clasificación} con este modelo, de manera que se pueda entender cómo se ha realizado el agrupamiento. Los algoritmos probados, con su precisión a la hora de explicar el modelo, son los siguientes:
 
 \begin{itemize}
     \item \textit{PART: 98.88\%}
@@ -349,16 +365,19 @@ Tras este análisis, se ejecutan varios algoritmos de clasificación con este mo
     \item \textit{JRip: 90.28\%}
 \end{itemize}
 
-A pesar de que \textit{RandomForest} sea capaz de explicar de manera perfecta el modelo, no es posible saber como lo hace, por lo que no es útil para esta tarea. Si pasamos al siguiente mejor, \textit{PART}, recordar que es un algoritmo de reglas, y aunque sí que se puede ver como explica el modelo con reglas, resulta poco intuitivo visualmente. Por todo esto, (y porque el error al explicar es asumible), se ha elegido \textit{J48}, pues el árbol de decisión que muestra es visualizable y mas intuitivo. En la Figura X se puede apreciar un camino del arbol cuya clasificación es el quinto claster.
+A pesar de que \textit{RandomForest} sea capaz de explicar de manera perfecta el modelo, no es posible saber cómo lo hace, por lo que no es útil para esta tarea. Si pasamos al siguiente mejor, \textit{PART}, recordar que es un algoritmo de reglas, y aunque sí que se puede ver cómo explica el modelo con reglas, resulta poco intuitivo visualmente.
 
-\begin{figure}[h]
+\vspace{2mm}
+
+Por todo esto, y porque el error al explicar es asumible, se ha elegido \textit{\textbf{J48}}, pues el árbol de decisión que muestra es visualizable y más intuitivo. En la Figura 8 se puede apreciar un camino del árbol cuya clasificación es el quinto \textit{cluster}.
+
+\begin{figure}[!h]
   \centering
   \includegraphics[width=500px, height=50px]{img/arbol_decision.png}
   \caption{Árbol de decisión representado con prefuseTree [1]}
-  \label{fig:graf_exp1}
 \end{figure}
 
-Para cada instancia, el árbol empieza evaluando el valor del atributo \textit{table}, y según sea este, continúas por una rama distinta, \textit{calls} o \textit{buffets}. Según se va avanzando por el árbol se van sucediendo este tipo de comparaciones, hasta que se llega a una hoja del arbol, donde te muestra a que cluster pertenece la isntancia evaluada. 
+Para cada instancia, el árbol empieza evaluando el valor del atributo \textit{table}, y según sea este, se continúa por una rama distinta, \textit{calls} o \textit{buffets}. Según se va avanzando por el árbol se van sucediendo este tipo de comparaciones, hasta que se llega a una hoja del árbol, donde muestra a qué \textit{cluster} pertenece la instancia evaluada.
 
 \section{Conclusiones}
 
