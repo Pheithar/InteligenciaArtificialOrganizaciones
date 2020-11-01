@@ -73,7 +73,7 @@
       \caption{Página de búsqueda de Tripadvisor}
     \end{figure}
 
-    Las reseñas están en inglés, y en texto en plano, por lo tanto, para poder ser tratadas, tendran que pasar por un proceso de preparación de datos.
+    Las reseñas están en inglés, y en texto en plano, por lo tanto, para poder ser tratadas, tendrán que pasar por un proceso de preparación de datos.
 
     \begin{figure}[!h]
       \centering
@@ -116,7 +116,7 @@
           \end{itemize}
 
       \subsection{Experimentación}
-        Para realizar los experimentos, se han realizado combinaciones de los distintos opciones que habilita la herramienta de \textit{Weka} con el filtro \textit{'StringToWordVector'}, para buscar la combinación que permita obtener los mejores resultados para este conjunto de datos. Este filtro, tal y como su nombre indica, transforma un atributo compuesto por texto, en un conjunto de atributos que representa la información de ese texto.
+        Para realizar los experimentos, se han realizado combinaciones de los distintos opciones que habilita la herramienta de \textit{Weka} con el filtro \textit{StringToWordVector}, para buscar la combinación que permita obtener los mejores resultados para este conjunto de datos. Este filtro, tal y como su nombre indica, transforma un atributo compuesto por texto, en un conjunto de atributos que representa la información de ese texto.
 
       \subsubsection{Experimentación básica}
         Los primeros experimentos que se han realizado consisten en modifcar exclusivamente una opción del filtro en cada uno de los experimentos, para comprobar cuales son los que generan los mejores resultados por separado. Los experimentos realizados son los siguientes:
@@ -149,6 +149,16 @@
 
         \end{itemize}
 
+        Para cada uno de los experimentos mostrados se deben ejecutar distintos algoritmos de clasificación con el objetivo de averiguar cuál de ellos funciona mejor dada la configuración elegida por el experimento. Los algoritmos de clasificación seleccionados por ser los más ampliamente extendidos son:
+    
+        \begin{itemize}
+        \item J48
+        \item Random Forest
+        \item JRip
+        \item IBk
+        \item Naive Bayes
+        \end{itemize}
+
         \begin{table}[h]
             \centering
             \begin{tabular}{|c|c|c|c|c|c|}
@@ -175,10 +185,11 @@
                 \label{fig:graf_exp1}
         \end{table}
 
+        La tabla 1 muestra la relación de experimentos realizados junto con los resultados en cada uno de los algoritmos de clasificación seleccionados. Un vistazo rápido a la misma permite averiguar que el algoritmo de clasificación más prometedor es \textbf{RandomForest}, por lo tanto a continuación se abre una nueva ventana en la experimentación, la cual tratará de afinar la configuración de los distintos parámetros propuestos en los experimentos para RandomForest.
 
         \subsubsection{Experimentación avanzada}
 
-        Como en los experimnentos básicos se prueba que los mejores resultados son siempr obtenidos con el algoritmo de \textbf{RandomForest}, en esta experimentación avanzada, tan solo se va a evaluar con él.
+        Como en los experimnentos básicos se prueba que los mejores resultados son siempre obtenidos con el algoritmo de \textbf{RandomForest}, en esta experimentación avanzada, tan solo se va a evaluar con él.
 
         \vspace{3mm}
 
@@ -209,8 +220,16 @@
                 \label{fig:graf_exp1}
         \end{table}
 
+        La tabla 2 muestra los resultados obtenidos en la experimentación avanzada, siendo el experimento 8 el que obtiene los mejores resultados. La siguiente sección trata de dar sentido a los resultados obtenidos.
+
     \subsection{Comentario de los resultados obtenidos}
-    Mucho text
+    \textbf{ La sección experimentación básica permite descubrir qué algoritmo de clasificación tiene los mejores resultados} además de dar \textbf{indicaciones sobre qué configuración del filtro de minería de datos mejora} los mismos. Por lo tanto, la sección avanzada descubre cómo es posible mejorar el clasificador seleccionado a través de la afinación de parámetros del filtro, descubriendo, como era de esperar, que una combinación de los mejores parámetros del filtro permite añadir exactitud al clasificador sumando los efectos de las mejoras aplicadas. 
+    
+    \vspace{3mm}
+    
+    Así los resultados arrojados seleccionan al \textit{experimento 8} dado que \textbf{limita el ruido} en los datos incluyendo una\textbf{ frecuencia mínima de aparición} de términos, además, permite \textbf{aumentar la precisión} al establecer un algoritmo de \textit{tokeninzing} que unido al establecimiento de \textbf{métricas sobre la frecuencia y número de ocurrencias} de las palabras permite aumentar y mejorar la calidad de la información extraída de los datos, permitiendo así una generalización mayor, logrando de esta manera cumplir con el objetivo de clasificar las reseñas de \textit{Tripadvisor}.
+
+\newpage
 
 \section{Parte 2: Clustering}
 
