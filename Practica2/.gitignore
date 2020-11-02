@@ -1,4 +1,3 @@
-
 *.aux
 *.idx
 *.ilg
@@ -6,3 +5,5 @@
 *.log
 *.out
 *.toc
+*.bbl
+*.blg
