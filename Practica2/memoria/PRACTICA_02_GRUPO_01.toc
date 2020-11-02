@@ -11,7 +11,5 @@
 \contentsline {section}{\numberline {3}Parte 2: Clustering}{7}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Experimentación}{7}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Mejor modelo}{9}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Conclusiones}{11}{section.4}%
-\contentsline {section}{\numberline {5}Contexto de la práctica}{11}{section.5}%
-\contentsline {section}{\numberline {6}Referencias}{12}{section.6}%
-\contentsline {section}{\numberline {7}Anexos}{13}{section.7}%
+\contentsline {section}{\numberline {4}Contexto de la práctica}{11}{section.4}%
+\contentsline {section}{\numberline {5}Conclusiones}{11}{section.5}%

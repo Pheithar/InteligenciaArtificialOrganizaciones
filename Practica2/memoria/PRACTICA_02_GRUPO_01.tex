@@ -8,6 +8,7 @@
 \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 \usepackage{subfig}
 \usepackage[table,xcdraw]{xcolor}
+\usepackage{cite}
 
 \usepackage{imakeidx}
 \newcommand\blankpage{%
@@ -326,7 +327,7 @@ Ya que con la Figura 5 no se puede afirmar que los \textit{clusters} 0 y 1 esté
 \end{figure}
 
 
-Con esta nueva información a la vista, se puede observar que los \textit{clusters} 0 y 1 no están vacíos pero poseen muy pocos elementos, 1 y 6 respectivamente. Por lo tanto, se llega a la conclusión de que estos elementos son \textit{outliers} y no aportan nada.
+Con esta nueva información a la vista, se puede observar que los \textit{clusters} 0 y 1 no están vacíos pero poseen muy pocos elementos, 1 y 6 respectivamente. Por lo tanto, se llega a la conclusión de que estos elementos son \textit{outliers} y no aportan nada\cite{outlier}.
 
 \vspace{4mm}
 
@@ -374,40 +375,63 @@ Por todo esto, y porque el error al explicar es asumible, se ha elegido \textit{
 \begin{figure}[!h]
   \centering
   \includegraphics[width=500px, height=50px]{img/arbol_decision.png}
-  \caption{Árbol de decisión representado con prefuseTree [1]}
+  \caption{Árbol de decisión representado con prefuseTree\cite{weka}}
 \end{figure}
 
 Para cada instancia, el árbol empieza evaluando el valor del atributo \textit{table}, y según sea este, se continúa por una rama distinta, \textit{calls} o \textit{buffets}. Según se va avanzando por el árbol se van sucediendo este tipo de comparaciones, hasta que se llega a una hoja del árbol, donde muestra a qué \textit{cluster} pertenece la instancia evaluada.
 
-\section{Conclusiones}
 
 \section{Contexto de la práctica}
+
+La minería de datos, y más en concreto, la \textit{Minería de Texto} es un área que está sufriendo una gran revolución, gracias a las redes neuronales, similar a la que sufrieron las redes convolucionales desde la aparición de las arquitecturas de \textit{Deep Learning}. Gracias a los avances en técnicas de \textbf{NLP} se han conseguido hazañas como la arquitectura de \textbf{GPT-3}\cite{gpt3}, que permite llevar a otro nivel las tareas que es capaz de resolver la minería de texto, como puede ser \textit{Búsqueda Semántica}, \textit{Generación de Código desde lenguaje natural} o \textit{Resumen de textos entendiendo el contenido} entre otros. Todos estos proyectos son accesibles desde la API de \textit{OpenAI}\cite{openai}.
+
+\vspace{3mm}
+
+Un caso particularmente llamativo es el de \textbf{AI Dungeon}, que en sus inicios usaba la arquitectura \textit{GPT-2}, y que se ha actualizado a \textit{GPT-3}. Su funcionamiento consiste en generar historias al estilo \textit{Dragones y Mazmorras}, donde el usuario puede introducir el texto que quiera para interactuar con la historia que le están contando, y esta se adecuará a las reacciones. El juego es capaz de generar contenido potencialemnte infinito, y permitir que los jugadores creen sus propias aventuras.
+
+\vspace{3mm}
+
+Dentro del contexto de la minería de opinión, las críticas de huéspedes se están convirtiendo en un factor importante que afecta a las personas a la hora de hacer sus reservas en hoteles, lo que afecta de forma muy directa a la industria hotelera.
+
+\vspace{2mm}
+
+Esto ha hecho que se generen nuevas herramientas para obtener información relevante sobre las reseñas de una manera rápida y sencilla. Un ejemplo de esto es \cite{sentiment}, donde se utiliza la herramienta de \textit{web scraping} \textbf{Octoparse} \cite{octoparse}, que es un \textit{web scraper} diseñado para personas sin experiencia previa en data mining. Con esta herramienta se extraen y se preparan los datos para su posterior análisis.
+
+\vspace{2mm}
+
+Este análisis tiene el objetivo de descubrir el sentimiento subyacente de cada reseña mediante la utilización de la librería de \textit{Python NLTK} \cite{nltk}, con la cual se asigna a la reseña un valor en cuanto a su negatividad, neutralidad y positividad, con lo que se puede concluir si la reseña es o no favorable.
+
+
+
+\section{Conclusiones}
+A lo largo del desarrollo de esta práctica se ha profundizado en la técnica de \textit{Minería de Texto}, la cual presenta un enfoque completamente diferenciado de otras técnicas de Inteligencia Artificial, ya que permite resolver problemas para los cuales no existe una alternativa eficiente a la par que viable.
+
+\vspace{3mm}
+
+Por todo ello, esta práctica resulta especialmente útil a la hora de adentrase en este área. Sin embargo, tambien acarrea unos retos que deben ser solventados antes de poder comprobar las utilidades reales de esta técnica.
+
+\vspace{2mm}
+
+Uno de los principales inconvenientes viene de la mano de la escasa planificación que se puede llevar a cabo debido al nivel altamente experimental del \textit{text mining}, resultando así una opción poco viable como primer acercamiento a técnicas de IA si se quiere evitar dar palos de ciego antes de conseguir un buen resultado.
+
+\newpage
+
+Otro obstáculo a superar consiste en el procesado de datos requerido para posibilitar la aplicación de esta técnica, habitualmente es necesario disponer de los datos a usar perfectamente estructurados para posibilitar su tratamiento. Además, estos datos deben ser muy extensos para asegurar el buen funcionamiento del algoritmo.
+
+\vspace{2mm}
+
+Pese a todo, el \textit{text mining} resulta una técnica especialmente útil en contraste a otras consideradas como de caja negra, puesto que resulta fácil extraer justificaciones y explicaciones sobre las decisiones tomadas.
+
+\vspace{3mm}
+
+En resumen, esta práctica demuestra cómo es posible abordar problemas para los cuales hasta ahora no se disponía de herramientas eficaces, planteando un enfoque completamente nuevo y eficaz a la hora de tratar con las colosales cantidades de texto e información generadas actualmente.
 
 
 \clearpage
 
-\section{Referencias}
-    \begin{itemize}
-        \item [1.] Introduction to Neurons in Neural Networks. Medium. Consultado en Octubre 2020. Url: \\
-        \href{https://medium.com/artificial-neural-networks/introduction-to-neurons-in-neural-networks-71828d040a65}{https://medium.com/artificial-neural-networks}
-    \end{itemize}
-\printindex
 
-
-
-  \section{Anexos}
-  \begin{itemize}
-    \item [1.] Perceptron Multicapa usando '\textit{K Fold}'\\
-    \textbf{\textit{perceptron\_kfold.py}}
-    \item [2.] Perceptron Multicapa usando '\textit{split percentage}'\\
-    \textbf{\textit{perceptron\_split.py}}
-    \item [3.] Programa para realizar la predicción de los modelos\\
-    \textbf{\textit{predict.py}}
-    \item [4.] Tabla de resultados de los experimentos de la primera parte\\
-    \textbf{\textit{valores\_reales\_vs\_predicciones\_\&\_errores\_absolutos\_parte1.xlsx}}
-    \item [5.] Tabla de resultados de los experimentos de la segunda parte\\
-    \textbf{\textit{valores\_reales\_vs\_predicciones\_\&\_errores\_absolutos\_parte2.xlsx}}
-  \end{itemize}
+\bibliographystyle{unsrt}
+\bibliography{bibliografia.bib}
 
 
 \end{document}

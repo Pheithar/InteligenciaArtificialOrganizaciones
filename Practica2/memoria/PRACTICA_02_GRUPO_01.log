@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  1 NOV 2020 16:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  2 NOV 2020 18:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**PRACTICA_01_GRUPO_01.tex
-(./PRACTICA_01_GRUPO_01.tex
+**PRACTICA_02_GRUPO_01.tex
+(./PRACTICA_02_GRUPO_01.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -301,6 +301,11 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
 (/usr/share/texlive/texmf-dist/tex/latex/imakeidx/imakeidx.sty
 Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchro
 nous mode
@@ -392,11 +397,11 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \colbreak@box=\box95
 \mc@col@check@num=\count278
 ))
-\PRACTICA_01_GRUPO_01@idxfile=\write3
-\openout3 = `PRACTICA_01_GRUPO_01.idx'.
+\PRACTICA_02_GRUPO_01@idxfile=\write3
+\openout3 = `PRACTICA_02_GRUPO_01.idx'.
 
 
-Writing index file PRACTICA_01_GRUPO_01.idx
+Writing index file PRACTICA_02_GRUPO_01.idx
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count279
@@ -406,7 +411,7 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 LaTeX Warning: Unused global option(s):
     [xcolor=table].
 
-(./PRACTICA_01_GRUPO_01.aux
+(./PRACTICA_02_GRUPO_01.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 
@@ -414,24 +419,24 @@ LaTeX Info: Redefining \% on input line 24.
 LaTeX Warning: Label `fig:graf_exp1' multiply defined.
 
 )
-\openout1 = `PRACTICA_01_GRUPO_01.aux'.
+\openout1 = `PRACTICA_02_GRUPO_01.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count280
@@ -454,8 +459,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \. on input line 24.
-LaTeX Info: Redefining \% on input line 24.
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -492,7 +497,7 @@ LaTeX Info: Redefining \% on input line 24.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box98
-Package hyperref Info: Link coloring OFF on input line 24.
+Package hyperref Info: Link coloring OFF on input line 25.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -504,26 +509,26 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count286
 )
-LaTeX Info: Redefining \ref on input line 24.
-LaTeX Info: Redefining \pageref on input line 24.
-LaTeX Info: Redefining \nameref on input line 24.
+LaTeX Info: Redefining \ref on input line 25.
+LaTeX Info: Redefining \pageref on input line 25.
+LaTeX Info: Redefining \nameref on input line 25.
 
-(./PRACTICA_01_GRUPO_01.out) (./PRACTICA_01_GRUPO_01.out)
+(./PRACTICA_02_GRUPO_01.out) (./PRACTICA_02_GRUPO_01.out)
 \@outlinefile=\write4
-\openout4 = `PRACTICA_01_GRUPO_01.out'.
+\openout4 = `PRACTICA_02_GRUPO_01.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-<img/logo_uc3m.jpg, id=68, 149.8398pt x 48.18pt>
+<img/logo_uc3m.jpg, id=60, 149.8398pt x 48.18pt>
 File: img/logo_uc3m.jpg Graphic file (type jpg)
 <use img/logo_uc3m.jpg>
-Package pdftex.def Info: img/logo_uc3m.jpg  used on input line 28.
+Package pdftex.def Info: img/logo_uc3m.jpg  used on input line 29.
 (pdftex.def)             Requested size: 362.77264pt x 116.66794pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/logo_uc3m.jpg>]
-(./PRACTICA_01_GRUPO_01.toc
+(./PRACTICA_02_GRUPO_01.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -534,103 +539,98 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 4.
 )
 \tf@toc=\write5
-\openout5 = `PRACTICA_01_GRUPO_01.toc'.
+\openout5 = `PRACTICA_02_GRUPO_01.toc'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.56 \newpage
+l.57 \newpage
               [1]
-<img/tripadvisor-main.png, id=101, 1291.82625pt x 727.71875pt>
+<img/tripadvisor-main.png, id=91, 1291.82625pt x 727.71875pt>
 File: img/tripadvisor-main.png Graphic file (type png)
 <use img/tripadvisor-main.png>
-Package pdftex.def Info: img/tripadvisor-main.png  used on input line 72.
+Package pdftex.def Info: img/tripadvisor-main.png  used on input line 73.
 (pdftex.def)             Requested size: 398.33858pt x 224.39124pt.
-<img/tripadvisor-review.png, id=103, 817.0525pt x 542.025pt>
+<img/tripadvisor-review.png, id=93, 817.0525pt x 542.025pt>
 File: img/tripadvisor-review.png Graphic file (type png)
 <use img/tripadvisor-review.png>
-Package pdftex.def Info: img/tripadvisor-review.png  used on input line 80.
+Package pdftex.def Info: img/tripadvisor-review.png  used on input line 81.
 (pdftex.def)             Requested size: 284.52756pt x 188.7522pt.
  [2 <./img/tripadvisor-main.png> <./img/tripadvisor-review.png>] [3] [4] [5] [6
 ]
-<img/experimentos.png, id=135, 772.8875pt x 624.3325pt>
+<img/experimentos.png, id=125, 772.8875pt x 624.3325pt>
 File: img/experimentos.png Graphic file (type png)
 <use img/experimentos.png>
-Package pdftex.def Info: img/experimentos.png  used on input line 282.
+Package pdftex.def Info: img/experimentos.png  used on input line 283.
 (pdftex.def)             Requested size: 369.88582pt x 298.79022pt.
  [7 <./img/experimentos.png>]
-<img/Comparación errores.png, id=141, 740.7675pt x 458.71375pt>
+<img/Comparación errores.png, id=131, 740.7675pt x 458.71375pt>
 File: img/Comparación errores.png Graphic file (type png)
 <use img/Comparación errores.png>
-Package pdftex.def Info: img/Comparación errores.png  used on input line 302.
+Package pdftex.def Info: img/Comparación errores.png  used on input line 303.
 (pdftex.def)             Requested size: 398.33858pt x 246.67282pt.
  [8 <./img/Comparación errores.png>]
-<img/clusters_del_experimento_17.png, id=148, 602.25pt x 372.39125pt>
+<img/clusters_del_experimento_17.png, id=138, 602.25pt x 372.39125pt>
 File: img/clusters_del_experimento_17.png Graphic file (type png)
 <use img/clusters_del_experimento_17.png>
 Package pdftex.def Info: img/clusters_del_experimento_17.png  used on input lin
-e 316.
+e 317.
 (pdftex.def)             Requested size: 301.1261pt x 186.20084pt.
-<img/clusters_mejor_exp.png, id=149, 858.20625pt x 400.49625pt>
+<img/clusters_mejor_exp.png, id=139, 858.20625pt x 400.49625pt>
 File: img/clusters_mejor_exp.png Graphic file (type png)
 <use img/clusters_mejor_exp.png>
-Package pdftex.def Info: img/clusters_mejor_exp.png  used on input line 324.
+Package pdftex.def Info: img/clusters_mejor_exp.png  used on input line 325.
 (pdftex.def)             Requested size: 301.1261pt x 140.52411pt.
-<img/clusters_class.png, id=150, 961.5925pt x 402.50375pt>
+<img/clusters_class.png, id=141, 961.5925pt x 402.50375pt>
 File: img/clusters_class.png Graphic file (type png)
 <use img/clusters_class.png>
-Package pdftex.def Info: img/clusters_class.png  used on input line 341.
+Package pdftex.def Info: img/clusters_class.png  used on input line 342.
 (pdftex.def)             Requested size: 301.1261pt x 126.0462pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [9 <./img/clusters_del_experimento_17.png> <./img/clusters_mejor_exp.png>]
-<img/arbol_decision.png, id=159, 1247.66125pt x 90.3375pt>
+<img/arbol_decision.png, id=150, 1247.66125pt x 90.3375pt>
 File: img/arbol_decision.png Graphic file (type png)
 <use img/arbol_decision.png>
-Package pdftex.def Info: img/arbol_decision.png  used on input line 376.
+Package pdftex.def Info: img/arbol_decision.png  used on input line 377.
 (pdftex.def)             Requested size: 501.87325pt x 50.18752pt.
 
-Overfull \hbox (18.17638pt too wide) in paragraph at lines 376--377
+Overfull \hbox (18.17638pt too wide) in paragraph at lines 377--378
  [][] 
  []
 
-[10 <./img/clusters_class.png> <./img/arbol_decision.png>] [11] [12
-
-]
-runsystem(makeindex PRACTICA_01_GRUPO_01.idx)...executed safely (allowed).
-
-
-(./PRACTICA_01_GRUPO_01.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 413.
+[10 <./img/clusters_class.png> <./img/arbol_decision.png>] [11] [12]
+(./PRACTICA_02_GRUPO_01.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 437.
  [13
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 413.
- (./PRACTICA_01_GRUPO_01.aux
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 437.
+ (./PRACTICA_02_GRUPO_01.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 413.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 413.
-Package rerunfilecheck Info: File `PRACTICA_01_GRUPO_01.out' has not changed.
-(rerunfilecheck)             Checksum: 1DD8A13340400191AD51BDC39CA38289;1088.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 437.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 437.
+Package rerunfilecheck Info: File `PRACTICA_02_GRUPO_01.out' has not changed.
+(rerunfilecheck)             Checksum: 1F57F460CFBC05018F4A6D94D5422B9C;999.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 413.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 437.
  ) 
 Here is how much of TeX's memory you used:
- 9098 strings out of 483121
- 140288 string characters out of 5964354
- 432609 words of memory out of 5000000
- 23912 multiletter control sequences out of 15000+600000
+ 9194 strings out of 483121
+ 141496 string characters out of 5964354
+ 433744 words of memory out of 5000000
+ 23999 multiletter control sequences out of 15000+600000
  539549 words of font info for 47 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 50i,10n,77p,668b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,10n,77p,794b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/akua21/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.60
 0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/
@@ -641,10 +641,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb>
-Output written on PRACTICA_01_GRUPO_01.pdf (14 pages, 995003 bytes).
+Output written on PRACTICA_02_GRUPO_01.pdf (14 pages, 998523 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 233 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

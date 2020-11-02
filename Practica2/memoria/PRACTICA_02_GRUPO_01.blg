@@ -1,0 +1,69 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: PRACTICA_02_GRUPO_01.aux
+The style file: unsrt.bst
+Database file #1: bibliografia.bib
+Warning--entry type for "outlier" isn't style-file defined
+--line 1 of file bibliografia.bib
+Warning--entry type for "weka" isn't style-file defined
+--line 9 of file bibliografia.bib
+Warning--entry type for "openai" isn't style-file defined
+--line 25 of file bibliografia.bib
+I was expecting a `,' or a `}'---line 33 of file bibliografia.bib
+ :   
+ :   author = {Nick Walton},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "sentiment" isn't style-file defined
+--line 39 of file bibliografia.bib
+Repeated entry---line 47 of file bibliografia.bib
+ : @online{sentiment
+ :                  ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "octoparse" isn't style-file defined
+--line 54 of file bibliografia.bib
+Warning--entry type for "nltk" isn't style-file defined
+--line 61 of file bibliografia.bib
+Warning--empty journal in gpt3
+You've used 7 entries,
+            1791 wiz_defined-function locations,
+            469 strings with 4541 characters,
+and the built_in function-call counts, 1235 in all, are:
+= -- 55
+> -- 119
+< -- 0
++ -- 44
+- -- 37
+* -- 68
+:= -- 220
+add.period$ -- 15
+call.type$ -- 7
+change.case$ -- 7
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 38
+empty$ -- 123
+format.name$ -- 37
+if$ -- 254
+int.to.chr$ -- 0
+int.to.str$ -- 7
+missing$ -- 1
+newline$ -- 32
+num.names$ -- 7
+pop$ -- 39
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 39
+stack$ -- 0
+substring$ -- 0
+swap$ -- 6
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 7
+width$ -- 8
+write$ -- 55
+(There were 2 error messages)
