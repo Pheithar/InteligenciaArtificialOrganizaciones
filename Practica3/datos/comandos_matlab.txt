@@ -1,0 +1,4 @@
+fuzzy
+fis = readfis('mi_borroso')
+archivo = load('pruebas_poblacion.txt')
+output = evalfis(fis, archivo)

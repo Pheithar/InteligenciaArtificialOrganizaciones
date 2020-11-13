@@ -1,0 +1,105 @@
+[System]
+Name='mi_borroso'
+Type='mamdani'
+Version=2.0
+NumInputs=7
+NumOutputs=1
+NumRules=13
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Incidencia_Acumulada_14'
+Range=[0 500]
+NumMFs=5
+MF1='Nueva_normalidad':'zmf',[15 25]
+MF2='Bajo':'gaussmf',[50 37]
+MF3='Medio':'gaussmf',[50 100]
+MF4='Alto':'gaussmf',[30 200]
+MF5='Muy_Alto':'smf',[200 250]
+
+[Input2]
+Name='Incidencia_Acumulada_7'
+Range=[0 250]
+NumMFs=5
+MF1='Nueva_normalidad':'zmf',[10 20]
+MF2='Bajo':'gaussmf',[5 17.5]
+MF3='Medio':'gaussmf',[15 50]
+MF4='Alto':'gaussmf',[25 100]
+MF5='Muy_Alto':'smf',[100 125]
+
+[Input3]
+Name='IA_14_65'
+Range=[0 250]
+NumMFs=5
+MF1='Nueva_Normalidad':'zmf',[15 35]
+MF2='Medio':'gaussmf',[30 75]
+MF3='Bajo':'gaussmf',[10 35]
+MF4='Alto':'gaussmf',[30 125]
+MF5='Muy_alto':'smf',[130 150]
+
+[Input4]
+Name='IA_7_65'
+Range=[0 250]
+NumMFs=5
+MF1='Nueva_normalidad':'zmf',[5 10]
+MF2='Bajo':'gaussmf',[10 17.5]
+MF3='Medio':'gaussmf',[12.5 37.5]
+MF4='Alto':'gaussmf',[12.5 62.5]
+MF5='Muy_alto':'smf',[65 75]
+
+[Input5]
+Name='PDIA'
+Range=[0 30]
+NumMFs=5
+MF1='Nueva_normalidad':'zmf',[4 6]
+MF2='Bajo':'gaussmf',[1.5 5.5]
+MF3='Medio':'gaussmf',[1.5 8.5]
+MF4='Alto':'gaussmf',[1.5 12.5]
+MF5='Muy_alto':'smf',[12.5 15]
+
+[Input6]
+Name='Ocupacion_UCI'
+Range=[0 30]
+NumMFs=5
+MF1='Nueva_normalidad':'zmf',[5 7]
+MF2='Bajo':'gaussmf',[2 7.5]
+MF3='Medio':'gaussmf',[2 12.5]
+MF4='Alto':'gaussmf',[4 20]
+MF5='Muy_alto':'smf',[20 25]
+
+[Input7]
+Name='Ocupacion_camas'
+Range=[0 20]
+NumMFs=5
+MF1='Nueva_normalidad':'zmf',[2 5]
+MF2='Bajo':'gaussmf',[1 3.5]
+MF3='Medio':'gaussmf',[2 7.5]
+MF4='Alto':'gaussmf',[2 12.5]
+MF5='Muy_alto':'smf',[12 15]
+
+[Output1]
+Name='Confinar'
+Range=[0 1]
+NumMFs=3
+MF1='No':'zmf',[0 0.5]
+MF2='Considerar':'gaussmf',[0.05 0.5]
+MF3='Si':'smf',[0.5 1]
+
+[Rules]
+5 5 5 5 5 5 5, 3 (1) : 2
+3 3 0 0 0 0 4, 3 (1) : 1
+4 4 4 4 4 4 4, 3 (1) : 1
+1 1 1 1 1 1 1, 1 (1) : 1
+2 4 0 0 0 0 0, 3 (1) : 1
+4 2 0 0 0 0 0, 1 (1) : 1
+0 0 3 4 0 0 0, 2 (1) : 1
+2 3 0 0 0 0 0, 2 (1) : 1
+3 3 0 0 0 4 0, 3 (1) : 1
+0 0 0 0 4 0 0, 2 (1) : 1
+0 0 0 0 0 2 2, 1 (1) : 1
+3 3 4 4 0 0 0, 3 (1) : 1
+3 3 0 0 0 1 1, 1 (1) : 1
