@@ -1,0 +1,5 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'PRACTICA_03_GRUPO_01.blg'
+[92] biber:322> INFO - === sáb nov 21, 2020, 18:55:20
+[123] Utils.pm:309> ERROR - Cannot find 'PRACTICA_03_GRUPO_01.bcf'!
+[124] Biber.pm:132> INFO - ERRORS: 1

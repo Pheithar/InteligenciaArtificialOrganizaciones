@@ -1,0 +1,101 @@
+\documentclass[12pt,a4paper, xcolor=table]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{eurosym}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{afterpage}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage{subfig}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{cite}
+
+\usepackage{imakeidx}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+\renewcommand*\contentsname{Índice: }
+
+\makeindex
+\let\olditemize\itemize
+\def\itemize{\olditemize\itemsep=0pt}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\begin{titlepage}
+        \centering
+        \includegraphics[width=0.75\textwidth]{img/logo_uc3m.jpg}\par\vspace{2cm}
+        {\huge\bfseries Práctica 3 \\ Sistemas Borrosos\par}
+        \vspace{0.5cm}
+        {\scshape\Large Inteligencia Artificial en las Organizaciones\par}
+        \vspace{1.5cm}
+        {\scshape\Large Grupo 83-1\par}
+        \vspace{1.5cm}
+        {\Large\itshape Miguel Gutiérrez Pérez\par}
+        {\Large 100383537@alumnos.uc3m.es \par}
+        \vspace{1cm}
+        {\Large\itshape Mario Lozano Cortés\par}
+        {\Large 100383511@alumnos.uc3m.es\par}
+        \vspace{1cm}
+        {\Large\itshape Alba Reinders Sánchez\par}
+        {\Large 100383444@alumnos.uc3m.es\par}
+        \vspace{1cm}
+        {\Large\itshape Alejandro Valverde Mahou\par}
+        {\Large 100383383@alumnos.uc3m.es\par}
+        \vspace{5mm}
+        {\large GitHub: \textbf{\textit{\href{https://github.com/Pheithar/InteligenciaArtificialOrganizaciones}{InteligenciaArtificialOrganizaciones}}}}
+        \vfill
+
+% Bottom of the page
+        {\large \today\par}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\section{Introducción}
+
+\section{Contexto de la práctica}
+
+
+\section{Sistema borroso: Confinamiento}
+
+\subsection{Variables de entrada}
+
+\subsection{Variable de salida}
+
+\subsection{Reglas}
+
+
+
+\section{Sistema borroso: Prueba PCR}
+
+\subsection{Variables de entrada}
+
+\subsection{Variable de salida}
+
+\subsection{Reglas}
+
+
+\section{Validación del sistema}
+
+  \subsection{Confinamiento}
+
+  \subsection{Prueba PCR}
+
+
+
+\section{Conclusiones}
+\cite{outlier}
+
+\clearpage
+
+
+\bibliographystyle{ieee}
+\bibliography{bibliografia.bib}
+
+
+\end{document}
