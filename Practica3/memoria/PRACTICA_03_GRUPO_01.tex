@@ -197,26 +197,24 @@ Se establece como variable de salida el hecho de confinar o no una población en
 Todas las reglas son del tipo \textit{AND} menos la primera que es del tipo \textit{OR}.
 
 \begin{center}
-  \begin{adjustwidth}{-1.3cm}{}
 \begin{tabular}{c|c|c|c|c|c|c|c|c|}
   \cline{2-9}
                                 & IA-14 & IA-7 & IA-14 65 & IA-7 65 & PDI & UCI & Camas & \textbf{Confinar} \\ \hline
 \multicolumn{1}{|c|}{Regla 1} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular}& Sí \\ \hline
 \multicolumn{1}{|c|}{Regla 2} & Medio & Medio & - & - & - & - & Alto & Si \\ \hline
 \multicolumn{1}{|c|}{Regla 3} & Alto & Alto & Alto & Alto & Alto & Alto & Alto & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 4} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & No \\ \hline
+\multicolumn{1}{|c|}{Regla 4} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & No \\ \hline
 \multicolumn{1}{|c|}{Regla 5} & Bajo & Alto & - & - & - & - & - & Sí \\ \hline
 \multicolumn{1}{|c|}{Regla 6} & Bajo & Medio & - & - & - & - & - & Considerar \\ \hline
 \multicolumn{1}{|c|}{Regla 7} & Medio & Medio & - & - & - & Alto & - & Sí \\ \hline
 \multicolumn{1}{|c|}{Regla 8} & - & - & - & - & - & Bajo & Bajo & No \\ \hline
 \multicolumn{1}{|c|}{Regla 9} & Medio & Medio & Alto & Alto & - & - & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 10} & Medio & Medio & - & - & - & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & No \\ \hline
+\multicolumn{1}{|c|}{Regla 10} & Medio & Medio & - & - & - & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & No \\ \hline
 \multicolumn{1}{|c|}{Regla 11} & Bajo & Bajo & Bajo & Bajo & Bajo & Bajo & Bajo & No \\ \hline
 \multicolumn{1}{|c|}{Regla 12} & Alto & Bajo & - & - & - & - & - & No \\ \hline
 \multicolumn{1}{|c|}{Regla 13} & - & - & Bajo & Alto & - & - & - & Considerar \\ \hline
 \multicolumn{1}{|c|}{Regla 14} & - & - & - & - & Alto & - & - & Considerar \\ \hline
 \end{tabular}
-\end{adjustwidth}
 \end{center}
 
 
@@ -313,7 +311,7 @@ Las entradas del sistema seleccionadas son:
 
 \subsection{Variable de salida}
 
-Como la decisión a tomar es si se debe realizar o no una prueba PCR, la salida del sistema es la certeza que se tiene de si se debe realizar la prueba o no al paciente. Sus valores son \textit{Sí} o \textit{No} (figura~\ref{realizarPCR}). Además,
+Como la decisión a tomar es si se debe realizar o no una prueba PCR, la salida del sistema es la certeza que se tiene de si se debe realizar la prueba o no al paciente. Sus valores son \textit{Sí} o \textit{No} (figura~\ref{realizarPCR}).
 
 \begin{figure}[!h]
     \centering
@@ -322,9 +320,11 @@ Como la decisión a tomar es si se debe realizar o no una prueba PCR, la salida 
     \label{realizarPCR}
 \end{figure}
 
+
+
 \subsection{Reglas}
 
-Todas las reglas son del tipo \textit{AND}.
+Todas las reglas son del tipo \textit{AND}. Para las 7 primeras reglas se ha tomado como referencia la información del \textit{Ministerio de Sanidad}\cite{paciente}, las siguientes son creadas bajo el criterio de los autores con el fin de completar la funcionalidad del sistema.
 
 \begin{center}
   \begin{adjustwidth}{-1.3cm}{}
