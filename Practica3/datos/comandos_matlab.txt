@@ -1,4 +1,5 @@
 fuzzy
-fis = readfis('mi_borroso')
-archivo = load('pruebas_poblacion.txt')
+fis = readfis('NOMBRE_ARCHIVO.fis')
+archivo = load('NOMBRE_ARCHIVOtxt')
 output = evalfis(fis, archivo)
+

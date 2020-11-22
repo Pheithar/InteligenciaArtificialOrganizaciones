@@ -1,0 +1,96 @@
+[System]
+Name='mi_borroso_pcr'
+Type='mamdani'
+Version=2.0
+NumInputs=8
+NumOutputs=1
+NumRules=14
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Dias_desde_primeros_sintomas'
+Range=[0 15]
+NumMFs=3
+MF1='Pocos':'zmf',[0 7]
+MF2='Medios':'gaussmf',[2 7.5]
+MF3='Muchos':'smf',[9 14]
+
+[Input2]
+Name='Prueba_rapida'
+Range=[0 1]
+NumMFs=2
+MF1='No':'zmf',[0 0.6]
+MF2='Si':'smf',[0.4 1]
+
+[Input3]
+Name='PCR'
+Range=[0 1]
+NumMFs=2
+MF1='No':'zmf',[0 0.6]
+MF2='Si':'smf',[0.4 1]
+
+[Input4]
+Name='UCI'
+Range=[0 1]
+NumMFs=2
+MF1='No':'zmf',[0 0.6]
+MF2='Si':'smf',[0.4 1]
+
+[Input5]
+Name='Sospecha_clinica'
+Range=[0 1]
+NumMFs=3
+MF1='Baja':'zmf',[0 0.5]
+MF2='Media':'gaussmf',[0.1 0.5]
+MF3='Alta':'smf',[0.5 1]
+
+[Input6]
+Name='Dias_desde_contacto_positivo'
+Range=[0 15]
+NumMFs=3
+MF1='Pocos':'zmf',[0 7]
+MF2='Medios':'gaussmf',[2 7.5]
+MF3='Muchos':'smf',[9 14]
+
+[Input7]
+Name='Sintomas'
+Range=[0 5]
+NumMFs=4
+MF1='Ninguno':'zmf',[0 0.5]
+MF2='Alguno':'gaussmf',[0.4 1]
+MF3='Varios':'gaussmf',[0.5 3]
+MF4='Todos':'smf',[4 5]
+
+[Input8]
+Name='Uso_mascarilla_con_no_convivientes'
+Range=[0 1]
+NumMFs=2
+MF1='No':'zmf',[0 0.6]
+MF2='Si':'smf',[0.4 1]
+
+[Output1]
+Name='Realizar_PCR'
+Range=[0 1]
+NumMFs=2
+MF1='No':'zmf',[0 0.6]
+MF2='Si':'smf',[0.4 1]
+
+[Rules]
+-1 0 0 0 0 0 0 0, 2 (1) : 1
+0 0 1 0 3 0 0 0, 2 (1) : 1
+0 1 0 0 3 0 0 0, 2 (1) : 1
+-1 1 0 0 0 0 0 0, 2 (1) : 1
+0 0 0 2 0 0 0 0, 2 (1) : 1
+0 0 0 0 0 3 1 0, 1 (1) : 1
+0 0 0 0 0 -3 1 2, 1 (1) : 1
+1 0 0 0 -3 0 0 0, 1 (1) : 1
+0 2 0 0 1 0 0 0, 2 (1) : 1
+0 0 0 0 0 -3 -1 1, 2 (1) : 1
+-1 0 0 0 0 0 4 0, 2 (1) : 1
+0 1 0 0 1 0 0 0, 1 (1) : 1
+0 1 0 0 0 0 3 0, 1 (1) : 1
+0 0 0 0 -3 0 2 0, 1 (1) : 1
