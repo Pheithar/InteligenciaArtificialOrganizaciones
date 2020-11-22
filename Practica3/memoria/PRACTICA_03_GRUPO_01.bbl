@@ -20,4 +20,15 @@ G.~d.~E. Ministerio~de Sanidad, ``Estrategia de detecciÓn precoz, vigilancia y
   \url{https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/COVID19_Estrategia_vigilancia_y_control_e_indicadores.pdf},
   Nov. 2020.
 
+\bibitem{fuzzytrain}
+H.~Lau, D.~Nakandala, and L.~Zhao, ``Development of a hybrid fuzzy genetic
+  algorithm model for solving transportation scheduling problem,'' {\em Journal
+  of Information Systems and Technology Management}, vol.~12, pp.~505--524,
+  2016.
+
+\bibitem{fuzzyfashion}
+W.~Wong, X.~Zeng, W.~Au, T.~Mok, and S.~Leung, ``A fashion mix-and-match expert
+  system for fashion retailers using fuzzy screening approach,'' {\em Expert
+  Syst. Appl.}, vol.~36, pp.~1750--1764, 03 2009.
+
 \end{thebibliography}

@@ -106,8 +106,25 @@ Un caso que puede resultar especialmente llamativo es el uso de la lógica difus
 
 \vspace{2mm}
 
+Otro caso que demuestra la gran utilidad de estos métodos es su uso en un sistema mixto, junto a algoritmos genéticos, para encontrar un equilibrio entre satisfacción de los clientes y obtención de beneficio en la planificación de horarios de trenes\cite{fuzzytrain}. En este caso se prueba el uso de un sistema borroso como solución de una parte de un problema más grande, y que se soluciona con algoritmos y métodos más potentes.
+
+\vspace{2mm}
+
+Los autores del documento plantearon un esquema general de resolución basado en algoritmos genéticos, sin embargo, se encontraron con el problema de encontrar una tasa de mutación y sobrecruzamiento adecuada. El problema consistía en que una tasa fija no era capaz de contrar la solución óptima al problema, necesitaban tasas variables que eran dificialmente aproximadas mediante una fórmula debido a la complejidad que exigiría la misma. Por ello, debido al grado de incertidumbre existente a la hora de determinar dichas tasas se planteó un sistema de lógica difusa que en función de la diversidad genética de la población considerada era capaz de encontrar valores apropiados para las mismas de forma que se permitió al algoritmo encontrar la solución óptima en el problema considerado. La figura~\ref{genetic_fuzzy} muestra en qué parte del algoritmo genético se realiza la implementación de lógica difusa.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=200px]{img/genetic_fuzzy.png}
+    \caption{Algoritmo que implementa lógica difusa\cite{fuzzytrain}}
+    \label{genetic_fuzzy}
+\end{figure}
 
 
+\vspace{3mm}
+
+En otro área de aplicación completamente distinto al anterior se encuentra este otro caso \cite{fuzzyfashion}. Este estudio, que se llevó a la práctica en una cadena de tiendas de ropa en Hong Kong, y era capaz de recomendar, entre una lista de posibilidades, los conjuntos que más combinen, entre parte de arriba y parte baja.
+
+\newpage
 
 \section{Sistema borroso: Confinamiento}
 De manera inicial se plantea el desarrollo de un sistema borroso que decida la conveniencia o no de confinar a una población en función de una serie de parámetros o variables de entrada al sistema que se detallarán en la subsiguiente sección.
