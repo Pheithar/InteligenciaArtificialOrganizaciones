@@ -9,6 +9,7 @@
 \usepackage{subfig}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{cite}
+\usepackage{url}
 
 \usepackage{imakeidx}
 \newcommand\blankpage{%
@@ -58,7 +59,53 @@
 
 \section{Introducción}
 
+Los sistemas borrosos hacen uso de la \textit{Lógica Difusa}, que es una técnica del área de la inteligencia artificial que permite la inclusión de conceptos humanos vagos para resolver problemas\cite{fuzzy}.
+
+\vspace{2mm}
+
+Es un tipo de lógica que reconoce más que valores de verdadero o falso, pues permiten decir el grado de verdad o falsedad de distintas variables, puediendo llegar a usar variables lingüísticas\cite{fuzzygame}.
+
+\vspace{3mm}
+
+Este tipo de sistemas expertos intenta abordar los problemas tal y como lo haría un humano: en términos relativos, y en grados de pertenencia. Estos conceptos vagos son los que usan normalmente los humanos a la hora de razonar.
+
+\vspace{3mm}
+
+Los dos problemas que se plantean están fuertemente relacionados con el \textit{COVID-19}. Se trata de crear dos sistemas borrosos capaces de decidir, por un lado \textbf{cuándo hay que confinar una población} y, por otro, \textbf{cuándo hay que realizar una prueba PCR a un paciente}. Estos problemas pueden ser solucionados a través de sistemas borrosos porque las variables involucradas, tanto de entrada como de salida, pueden ser transformadas en el grado de pertenencia a una clase concreta.
+
+\vspace{4mm}
+
+Es importante remarcar que los datos que se han usado para la resolución de la práctica, a falta de contactos con expertos, se han tomado de distintas fuentes del \textit{Ministerio de Sanidad}\cite{poblacion, paciente} de España. Para poder complementar los sistemas borrosos, ya que requerían de más información, se han interpretado estos valores por los autores. Por tanto, sería necesario realizar una revisión a través de expertos, ya sean médicos, virólogos o epidemiólogos que puedan confirmar o corregir los valores y franjas introducidas.
+
+\vspace{3mm}
+
+Sí es cierto que el criterio de realización de pruebas PCR, a pesar de que pueda llegar a ser distinto en cada país, está muy bien acotado y definido. Esto ha faciltado la realización de su sistema borroso.
+
+\vspace{2mm}
+
+No es así en el caso del sistema borroso para decidir si confinar o no una población, puesto que no está explicado ni expuesto correctamente en ningún documento público. A pesar de que el \textit{Ministerio de Sanidad}\cite{paciente} incluya unas directrices que informen de los rangos de valores para diferentes niveles de riesgo, no indica a partir de cuales de esos valores se ha de confinar.
+
+\vspace{4mm}
+
+Para resolver los problemas propuestos se utiliza la herramienta \textit{Fuzzy Logic Toolbox (FLT)} de MATLAB debido a que permite manejar fácilmente los principales aspectos cuando se quiere crear un sistema borroso.
+
+\newpage
+
 \section{Contexto de la práctica}
+
+La lógica difusa es muy útil cuando se desea representar y operar con conceptos que tengan imprecisión y sirve cuando hay ciertas partes del sistema a controlar que son desconocidas y no pueden medirse de forma fiable.
+
+\vspace{3mm}
+
+Los sistemas borrosos, al igual que numerosas técnicas de IA, puede ser aplicada sobre muchos tipos de problemas diferentes, como, por ejemplo, en diagnóstico médico, intercambio de acciones de bolsa, optimización de centrales de energía, e incluso el manejo automático de un helicóptero\cite{fuzzy}.
+
+\vspace{2mm}
+
+Un caso que puede resultar especialmente llamativo es el uso de la lógica difusa para controlar un NPC (\textit{Non-Playable Characters}) en un videojuego\cite{fuzzygame}. Este pequeño caso de estudio intentaba y conseguía demostrar la eficacia y simpleza que resulta la aplciación este tipo de soluciones a entornos dinámicos.
+
+\vspace{2mm}
+
+
 
 
 \section{Sistema borroso: Confinamiento}
@@ -73,11 +120,67 @@
 
 \section{Sistema borroso: Prueba PCR}
 
+Este segundo sistema basado en lógica borrosa debe decidir si dado un paciente, es o no candidato a que se le realice un prueba PCR. Para ello, se definen una serie de variables de entrada obtenidas en [], se ha decidido seleccionar aquellas que se cree que son más relevantes. Además, se establece la variable de salida y por último las reglas para la recomendación.
+
+
 \subsection{Variables de entrada}
+
+Las entradas del sistema seleccionadas son:
+
+\begin{itemize}
+  \item \textbf{Días desde primeros síntomas} (DDPS): representa el número de días que el paciente lleva con síntomas relacionados con el \textit{COVID-19}. Sus posibles valores son: \textit{Pocos}, \textit{Medios} y \textit{Muchos}.
+
+  \item \textbf{Prueba rápida}: si el paciente ha dado positivo o negativo en una prueba rápida, por lo tanto sus valores son solo \textit{Sí} o \textit{No}.
+
+  \item \textbf{PCR}: si el paciente ha dado positivo o negativo en una prueba PCR, al igual que en la variable anterior, sus valores son solo \textit{Sí} o \textit{No}.
+
+  \item \textbf{UCI}: si el paciente tiene que ser ingresado en la UCI, posibles valores: \textit{Sí} o \textit{No}.
+
+  \item \textbf{Sospecha clínica}: creencia del médico de si el paciente puede tener o no el \textit{COVID-19}. Toma valores de \textit{Baja}, \textit{Media} y \textit{Alta}.
+
+  \item \textbf{Días desde contacto positivo} (DDCP): representa el número de días desde que el paciente ha estado en contacto con una persona positiva de \textit{COVID-19}. Sus posibles valores son: \textit{Pocos}, \textit{Medios} y \textit{Muchos}.
+
+  \item \textbf{Síntomas}: indica el número de síntomas de \textit{COVID-19} que tiene el paciente. Puede tomar valores de \textit{Ninguno}, \textit{Alguno}, \textit{Varios} y \textit{Todos}.
+
+  \item \textbf{Uso mascarilla con no convivientes} (UMNC): si el paciente usa regularmente la mascarilla cuando se encuentra con personas con las que no convive, sus valores son solo \textit{Sí} o \textit{No}.
+
+\end{itemize}
+
+
 
 \subsection{Variable de salida}
 
+Realizar test PCR
+
+
 \subsection{Reglas}
+
+Todas las reglas son del tipo \textit{AND}.
+
+\begin{center}
+  \hspace{-13mm}
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c|}
+  \cline{2-10}
+                                & DDPS & \begin{tabular}[c]{@{}c@{}}Prueba\\ Rápida\end{tabular} & PCR & UCI & \begin{tabular}[c]{@{}c@{}}Sospecha\\ Clínica\end{tabular} & DDCP & Síntomas & UMNC & \begin{tabular}[c]{@{}c@{}}\textbf{Realizar}\\ \textbf{PCR}\end{tabular} \\ \hline
+\multicolumn{1}{|c|}{Regla 1} & \textit{Not} Pocos & - & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 2} & - & - & No & - & Alta & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 3} & - & No & - & - & Alta & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 4} & \textit{Not} Pocos & No & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 5} & - & - & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 6} & - & - & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 7} & - & - & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 8} & - & - & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 9} & - & - & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 10} & - & - & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 11} & - & - & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 12} & - & - & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 13} & - & - & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 14} & - & - & - & - & - & - & - & - & Sí \\ \hline
+\end{tabular}
+\end{center}
+
+
+
 
 
 \section{Validación del sistema}
@@ -89,12 +192,11 @@
 
 
 \section{Conclusiones}
-\cite{outlier}
 
 \clearpage
 
 
-\bibliographystyle{ieee}
+\bibliographystyle{ieeetr}
 \bibliography{bibliografia.bib}
 
 

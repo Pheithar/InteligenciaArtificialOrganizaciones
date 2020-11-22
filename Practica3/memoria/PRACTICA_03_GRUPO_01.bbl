@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{fuzzy}
+H.~Singh, M.~Gupta, T.~Meitzler, Z.-G. Hou, K.~Garg, A.~Solo, and L.~Zadeh,
+  ``Real-life applications of fuzzy logic,'' {\em Advances in Fuzzy Systems},
+  vol.~2013, 08 2013.
+
+\bibitem{fuzzygame}
+U.~Köse, ``Developing a fuzzy logic based game system,'' {\em Computer
+  Technology and Application}, vol.~3, pp.~510--517, 01 2012.
+
+\bibitem{poblacion}
+G.~d.~E. Ministerio~de Sanidad, ``Estrategia nacional para la covid 19.''
+  \url{https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/COVID19_Estrategia_vigilancia_y_control_e_indicadores.pdf},
+  Nov. 2020.
+
+\bibitem{paciente}
+G.~d.~E. Ministerio~de Sanidad, ``Estrategia de detecciÓn precoz, vigilancia y
+  control de covid-19.''
+  \url{https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/COVID19_Estrategia_vigilancia_y_control_e_indicadores.pdf},
+  Nov. 2020.
+
+\end{thebibliography}
