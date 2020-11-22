@@ -1,20 +1,20 @@
 # Fdb version 3
-["bibtex PRACTICA_03_GRUPO_01"] 1606042760 "PRACTICA_03_GRUPO_01.aux" "PRACTICA_03_GRUPO_01.bbl" "PRACTICA_03_GRUPO_01" 1606042762
+["bibtex PRACTICA_03_GRUPO_01"] 1606043474 "PRACTICA_03_GRUPO_01.aux" "PRACTICA_03_GRUPO_01.bbl" "PRACTICA_03_GRUPO_01" 1606043476
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/ieeetr.bst" 1292289607 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "PRACTICA_03_GRUPO_01.aux" 1606042762 5034 1132ba096bb5fc5e5574f4c7c7336717 "pdflatex"
+  "PRACTICA_03_GRUPO_01.aux" 1606043475 5888 6bd082e596aef26f7cf82c0601da7d53 "pdflatex"
   "bibliografia.bib" 1606036443 1279 14ef9f42d7bebfaab30be467e20f3412 ""
   (generated)
   "PRACTICA_03_GRUPO_01.bbl"
   "PRACTICA_03_GRUPO_01.blg"
-["makeindex PRACTICA_03_GRUPO_01.idx"] 1606042759 "PRACTICA_03_GRUPO_01.idx" "PRACTICA_03_GRUPO_01.ind" "PRACTICA_03_GRUPO_01" 1606042762
-  "PRACTICA_03_GRUPO_01.idx" 1606042761 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex PRACTICA_03_GRUPO_01.idx"] 1606043472 "PRACTICA_03_GRUPO_01.idx" "PRACTICA_03_GRUPO_01.ind" "PRACTICA_03_GRUPO_01" 1606043476
+  "PRACTICA_03_GRUPO_01.idx" 1606043475 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "PRACTICA_03_GRUPO_01.ind"
   "PRACTICA_03_GRUPO_01.ilg"
-["pdflatex"] 1606042761 "/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.tex" "/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.pdf" "PRACTICA_03_GRUPO_01" 1606042762
+["pdflatex"] 1606043474 "/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.tex" "/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.pdf" "PRACTICA_03_GRUPO_01" 1606043476
   "/etc/texmf/web2c/texmf.cnf" 1604582287 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.aux" 1606042762 5034 1132ba096bb5fc5e5574f4c7c7336717 ""
-  "/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.tex" 1606042754 18656 545df83b627f5f33c7ca40f79fec1b61 ""
+  "/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.aux" 1606043475 5888 6bd082e596aef26f7cf82c0601da7d53 ""
+  "/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.tex" 1606043472 19274 b592f46cfab489fac911f1c5b030dc24 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm" 1136768653 1532 9162035f4e7176612125649e348e2195 ""
@@ -105,12 +105,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1596975543 38841 5237427e4d3283e7b009b6a8b45dfdcd ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1604582406 4873311 71a69169e8f25b40365ee00977a83dfd ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1604582447 2443891 6ba85baec1891317d879df74dfa4bb0b ""
-  "PRACTICA_03_GRUPO_01.aux" 1606042762 5034 1132ba096bb5fc5e5574f4c7c7336717 "pdflatex"
-  "PRACTICA_03_GRUPO_01.bbl" 1606042761 956 b2c53cf14542e6f2ace3cf3d81d337a8 "bibtex PRACTICA_03_GRUPO_01"
-  "PRACTICA_03_GRUPO_01.ind" 1606042759 0 d41d8cd98f00b204e9800998ecf8427e "makeindex PRACTICA_03_GRUPO_01.idx"
-  "PRACTICA_03_GRUPO_01.out" 1606042762 853 542dffde70e908f7be98fba568603892 "pdflatex"
-  "PRACTICA_03_GRUPO_01.tex" 1606042754 18656 545df83b627f5f33c7ca40f79fec1b61 ""
-  "PRACTICA_03_GRUPO_01.toc" 1606042762 1127 d262b3be0258debe82441b1030a9547f "pdflatex"
+  "PRACTICA_03_GRUPO_01.aux" 1606043475 5888 6bd082e596aef26f7cf82c0601da7d53 "pdflatex"
+  "PRACTICA_03_GRUPO_01.bbl" 1606043474 956 b2c53cf14542e6f2ace3cf3d81d337a8 "bibtex PRACTICA_03_GRUPO_01"
+  "PRACTICA_03_GRUPO_01.ind" 1606043473 0 d41d8cd98f00b204e9800998ecf8427e "makeindex PRACTICA_03_GRUPO_01.idx"
+  "PRACTICA_03_GRUPO_01.out" 1606043475 853 542dffde70e908f7be98fba568603892 "pdflatex"
+  "PRACTICA_03_GRUPO_01.tex" 1606043472 19274 b592f46cfab489fac911f1c5b030dc24 ""
+  "PRACTICA_03_GRUPO_01.toc" 1606043475 1127 d262b3be0258debe82441b1030a9547f "pdflatex"
   "img/PCR.png" 1606041882 7947 b9e622f229edc9624d290b58fb842348 ""
   "img/PDIA.png" 1605993219 10714 8e45eef6e5170139973ee382b1265ef6 ""
   "img/UCI.png" 1606042748 7923 5a4a0e9ee972d390e26f48344bd891ab ""
@@ -129,11 +129,11 @@
   "img/sospecha_clinica.png" 1606041882 10064 4804f7bfa827bd3d4afca9bb622b2749 ""
   "img/uso_mascarilla.png" 1606041882 7910 d001df88a2f2fd9a1bb081ceca199e35 ""
   (generated)
+  "PRACTICA_03_GRUPO_01.pdf"
+  "/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.pdf"
   "PRACTICA_03_GRUPO_01.idx"
+  "PRACTICA_03_GRUPO_01.log"
+  "PRACTICA_03_GRUPO_01.out"
   "/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.log"
   "PRACTICA_03_GRUPO_01.aux"
-  "PRACTICA_03_GRUPO_01.pdf"
-  "PRACTICA_03_GRUPO_01.out"
-  "/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.pdf"
-  "PRACTICA_03_GRUPO_01.log"
   "PRACTICA_03_GRUPO_01.toc"
