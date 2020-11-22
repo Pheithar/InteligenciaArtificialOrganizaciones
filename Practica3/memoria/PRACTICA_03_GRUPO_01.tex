@@ -393,16 +393,29 @@ Todas las reglas son del tipo \textit{AND}. Para las 7 primeras reglas se ha tom
     \begin{tabular}{c|c|c|c|c|c|c|c|c|c|}
       \cline{2-10}
                                     & DDPS & \begin{tabular}[c]{@{}c@{}}Prueba\\ Rápida\end{tabular} & PCR & UCI & \begin{tabular}[c]{@{}c@{}}Sospecha\\ Clínica\end{tabular} & DDCP & Síntomas & UMNC & \begin{tabular}[c]{@{}c@{}}\textbf{Prob.}\\ \textbf{Realizar}\\ \textbf{PCR}\end{tabular} \\ \hline
-    \multicolumn{1}{|c|}{Regla 1} & 1.5 & 0.5 & 0.5 & 0 & 0.1 & - & - & - & - \\ \hline
-    \multicolumn{1}{|c|}{Regla 2} & 3.0 & 0.5 & 0.5 & 0 & 0.2 & - & - & - & - \\ \hline
-    \multicolumn{1}{|c|}{Regla 3} & 4.5 & 0.5 & 0.5 & 0 & 0.3 & - & - & - & - \\ \hline
-    \multicolumn{1}{|c|}{Regla 4} & 6.0 & 0 & 0.5 & 0 & - & 0.4 & - & - & - \\ \hline
-    \multicolumn{1}{|c|}{Regla 5} & 7.5 & 0.5 & 0 & 0 & - & 0.5 & - & - & - \\ \hline
-    \multicolumn{1}{|c|}{Regla 6} & 9.0 & 1.0 & 1.0 & 1.0 & 0.5 & - & - & - & - \\ \hline
-    \multicolumn{1}{|c|}{Regla 8} & 10.5 & 1.0 & 1.0 & 1.0 & 0.5 & - & - & - & - \\ \hline
-    \multicolumn{1}{|c|}{Regla 8} & 12.0 & 1.0 & 1.0 & 1.0 & 0.6 & - & - & - & - \\ \hline
-    \multicolumn{1}{|c|}{Regla 9} & 13.5 & 1.0 & 1.0 & 1.0 & 0.7 & - & - & - & - \\ \hline
-    \multicolumn{1}{|c|}{Regla 10} & 15.0 & 1.0 & 1.0 & 1.0 & 0.8 & - & - & - & - \\ \hline
+    \multicolumn{1}{|c|}{Prueba 1} & 1.5 & 0.5 & 0.5 & 0 & 0.1 & 1.5 & 0.5 & 0.1 & 0.5033 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 2} & 3 & 0.5 & 0.5 & 0 & 0.2 & 3 & 1 & 0.2 & 0.472 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 3} & 4.5 & 0.5 & 0.5 & 0 & 0.3 & 4.5 & 1.5 & 0.3 & 0.5633 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 4} & 6 & 0 & 0.5 & 0 & 0.4 & 0.6 & 2 & 0.4 & 0.7228 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 5} & 7.5 & 0.5 & 0 & 0 & 0.5 & 7,5 & 2.5 & 0.5 & 0.7807 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 6} & 9 & 0.5 & 1 & 0 & 0.5 & 9 & 3 & 0.6 & 0.7807 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 7} & 10.5 & 0.5 & 1 & 1 &0.6 & 10.5 & 3.5 & 0.7 & 0.7807 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 8} & 12 & 1 & 0.5 & 0 & 0.7 & 12 & 4 & 0.80 & 0.8279 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 9} & 13 & 1 & 0.5 & 1 & 0.8 & 13.5 & 4.5 & 0.9 & 0.8279 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 10} & 15 & 1 & 0.5 & 0 & 0.1 & 0.0 & 0.0 & 0.0 & 0.8279 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 11} & 10 & 0 & 0.5 & 0 & 0.1 & 0.0 & 0.0 & 0.0 & 0.7245 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 12} & 8 & 1 & 0.5 & 0 & 0.1 & 0.0 & 0.0 & 0.0 & 0.8279 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 13} & 4 & 1 & 0.5 & 0 & 0.1 & 0.0 & 0.0 & 0.0 & 0.7617 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 14} & 0 & 1 & 0.5 & 0 & 0 & 5 & 0 & 1 & 0.5 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 15} & 10 & 0.5 & 1 & 0 & 0.2 & 15 & 1 & 0.9 & 0.5 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 16} & 10 & 0.5 & 1 & 0 & 0.8 & 12 & 3 & 0.9 & 0.7807 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 17} & 2 & 0.5 & 0.5 & 1 & 0.5 & 6 & 3 & 0.8 & 0.5146 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 18} & 2 & 0.5 & 0.5 & 0 & 0.3 & 2 & 0 & 0.9 & 0.2947 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 19} & 15 & 1 & 1 & 0 & 0.2 & 7 & 1 & 0.75 & 0.5 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 20} & 7 & 0 & 0 & 0 & 0.4 & 9 & 2 & 0.6 & 0.7245 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 21} & 14 & 0.5 & 0 & 0 & 0.4 & 7 & 5 & 0.1 & 0.7807 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 22} & 2 & 1 & 0.5 & 1 & 0.9 & 3 & 0 & 0.8 & 0.5228 \\ \hline
+    \multicolumn{1}{|c|}{Prueba 23} & 7 & 0 & 0 & 0 & 0.6 & 14 & 1 & 0.2 & 0.5052 \\ \hline
     \end{tabular}
     \end{center}
   
