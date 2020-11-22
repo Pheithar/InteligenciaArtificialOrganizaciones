@@ -1,46 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: PRACTICA_03_GRUPO_01.aux
 The style file: ieeetr.bst
 Database file #1: bibliografia.bib
-You've used 4 entries,
+You've used 8 entries,
             1876 wiz_defined-function locations,
-            497 strings with 4127 characters,
-and the built_in function-call counts, 788 in all, are:
-= -- 68
-> -- 35
+            520 strings with 4852 characters,
+and the built_in function-call counts, 1763 in all, are:
+= -- 163
+> -- 71
 < -- 0
-+ -- 14
-- -- 10
-* -- 60
-:= -- 126
-add.period$ -- 4
-call.type$ -- 4
-change.case$ -- 4
++ -- 28
+- -- 20
+* -- 128
+:= -- 259
+add.period$ -- 8
+call.type$ -- 8
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 32
-empty$ -- 80
-format.name$ -- 10
-if$ -- 185
+cite$ -- 8
+duplicate$ -- 75
+empty$ -- 177
+format.name$ -- 20
+if$ -- 429
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 2
-newline$ -- 15
-num.names$ -- 4
-pop$ -- 15
+int.to.str$ -- 8
+missing$ -- 4
+newline$ -- 27
+num.names$ -- 8
+pop$ -- 30
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 25
+skip$ -- 65
 stack$ -- 0
-substring$ -- 28
-swap$ -- 10
+substring$ -- 92
+swap$ -- 30
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 6
-width$ -- 5
-write$ -- 37
+while$ -- 14
+width$ -- 9
+write$ -- 73
