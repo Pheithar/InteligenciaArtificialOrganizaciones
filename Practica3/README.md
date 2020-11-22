@@ -15,13 +15,6 @@ En esta carpeta se encuentran 2 carpetas respectivas a cada parte.
 &nbsp;**pruebas**
 &nbsp;&nbsp;En esta carpeta se encuentran las pruebas y resultados de las mismas. Utilizadas para validar el sistema. Ambas en formato .txt. 
 
-&nbsp;&nbsp;*stopwords.txt* se encuentran las stopwords utilizadas.
-&nbsp;&nbsp;*categories.arff* y *categories-vector.arff*, el primero contiene el conjuntos de reviews junto con su clase y el segundo es este mismo archivo pero aplicando la mejor configuración del filtro *stringToWordVector*.
-
-&nbsp;**parte2**
-
-&nbsp;&nbsp;En esta carpeta se encuentra el archivo *best_cluster.arff* con el mejor cluster obtenido y el archivo *j48_best_cluster.model* con el mejor modelo de clasificación.
-
 2. **enunciado**
 
 &nbsp;&nbsp;En esta carpeta se encuentra únicamente el enunciado de la práctica.
