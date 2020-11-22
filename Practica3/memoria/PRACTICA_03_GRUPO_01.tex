@@ -10,6 +10,7 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{cite}
 \usepackage{url}
+\usepackage{changepage}
 
 \usepackage{imakeidx}
 \newcommand\blankpage{%
@@ -83,7 +84,7 @@ Sí es cierto que el criterio de realización de pruebas PCR, a pesar de que pue
 
 \vspace{2mm}
 
-No es así en el caso del sistema borroso para decidir si confinar o no una población, puesto que no está explicado ni expuesto correctamente en ningún documento público. A pesar de que el \textit{Ministerio de Sanidad}\cite{paciente} incluya unas directrices que informen de los rangos de valores para diferentes niveles de riesgo, no indica a partir de cuales de esos valores se ha de confinar.
+No es así en el caso del sistema borroso para decidir si confinar o no una población, puesto que no está explicado ni expuesto correctamente en ningún documento público. A pesar de que el \textit{Ministerio de Sanidad}\cite{poblacion} incluya unas directrices que informen de los rangos de valores para diferentes niveles de riesgo, no indica a partir de cuales de esos valores se ha de confinar.
 
 \vspace{4mm}
 
@@ -160,7 +161,7 @@ Tras un estudio meticuloso de las variables relevantes en la tarea que se trata 
     
     \begin{figure}[!h]
       \centering
-      \includegraphics[width=300px]{img/UCI.png}
+      \includegraphics[width=300px]{img/camas_UCI.png}
       \caption{UCI}
     \end{figure}
 
@@ -175,6 +176,14 @@ Tras un estudio meticuloso de las variables relevantes en la tarea que se trata 
     \end{itemize}
 
 \subsection{Variable de salida}
+    
+Se establece como variable de salida el hecho de confinar o no una población en función de tres niveles diferenciados. \textit{No confinar, Considerar el confinamiento y Sí confinar}. Se hace hincapié en el sentido del valor \textit{Considerar el confinamiento} que indica a los responsables de confinar un territorio que sería recomendable hacerlo atendiendo únicamente a razones sanitarias, pero que existe capacidad de discusión de otro tipo de medidas que no perjudiquen en esa medida a los sectores productivos de la población.  La figura 7 muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=300px]{img/confinar.png}
+  \caption{Confinar}
+\end{figure}
 
 \subsection{Reglas}
 
@@ -205,7 +214,11 @@ Todas las reglas son del tipo \textit{AND} menos la primera que es del tipo \tex
 
 \section{Sistema borroso: Prueba PCR}
 
-Este segundo sistema basado en lógica borrosa debe decidir si dado un paciente, es o no candidato a que se le realice un prueba PCR. Para ello, se definen una serie de variables de entrada obtenidas en [], se ha decidido seleccionar aquellas que se cree que son más relevantes. Además, se establece la variable de salida y por último las reglas para la recomendación.
+Este segundo sistema basado en lógica borrosa debe decidir si dado un paciente, es o no candidato a que se le realice una prueba PCR. Para ello, se definen una serie de variables de entrada obtenidas del \textit{Ministerio de Sanidad}\cite{paciente}, se ha decidido seleccionar aquellas que se cree que son más relevantes. Además, se establece la variable de salida y por último las reglas para la toma de decisiones.
+
+\vspace{2mm}
+
+Un sistema que consiga resolver este problema de forma eficaz sería de gran ayuda en los centros médicos, ya que aliviaría la carga de trabajo de los médicos y sería de utilidad a la hora de tomar decisiones sobre clasos inconcluyentes.
 
 
 \subsection{Variables de entrada}
@@ -215,19 +228,67 @@ Las entradas del sistema seleccionadas son:
 \begin{itemize}
   \item \textbf{Días desde primeros síntomas} (DDPS): representa el número de días que el paciente lleva con síntomas relacionados con el \textit{COVID-19}. Sus posibles valores son: \textit{Pocos}, \textit{Medios} y \textit{Muchos}.
 
+  \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/dias_primeros_sintomas.png}
+      \caption{DDPS}
+  \end{figure}
+
   \item \textbf{Prueba rápida}: si el paciente ha dado positivo o negativo en una prueba rápida, por lo tanto sus valores son solo \textit{Sí} o \textit{No}.
+
+  \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/prueba_rapida.png}
+      \caption{Prueba rápida}
+  \end{figure}
 
   \item \textbf{PCR}: si el paciente ha dado positivo o negativo en una prueba PCR, al igual que en la variable anterior, sus valores son solo \textit{Sí} o \textit{No}.
 
+  \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/PCR.png}
+      \caption{PCR}
+  \end{figure}
+
   \item \textbf{UCI}: si el paciente tiene que ser ingresado en la UCI, posibles valores: \textit{Sí} o \textit{No}.
+
+  \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/UCI.png}
+      \caption{UCI}
+  \end{figure}
 
   \item \textbf{Sospecha clínica}: creencia del médico de si el paciente puede tener o no el \textit{COVID-19}. Toma valores de \textit{Baja}, \textit{Media} y \textit{Alta}.
 
+  \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/sospecha_clinica.png}
+      \caption{Sospecha clínica}
+  \end{figure}
+
   \item \textbf{Días desde contacto positivo} (DDCP): representa el número de días desde que el paciente ha estado en contacto con una persona positiva de \textit{COVID-19}. Sus posibles valores son: \textit{Pocos}, \textit{Medios} y \textit{Muchos}.
+
+  \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/dias_desde_cntcto_positivo.png}
+      \caption{DDCP}
+  \end{figure}
 
   \item \textbf{Síntomas}: indica el número de síntomas de \textit{COVID-19} que tiene el paciente. Puede tomar valores de \textit{Ninguno}, \textit{Alguno}, \textit{Varios} y \textit{Todos}.
 
+  \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/sintomas.png}
+      \caption{Síntomas}
+  \end{figure}
+
   \item \textbf{Uso mascarilla con no convivientes} (UMNC): si el paciente usa regularmente la mascarilla cuando se encuentra con personas con las que no convive, sus valores son solo \textit{Sí} o \textit{No}.
+
+  \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/uso_mascarilla.png}
+      \caption{UMNC}
+  \end{figure}
 
 \end{itemize}
 
@@ -243,7 +304,7 @@ Realizar test PCR
 Todas las reglas son del tipo \textit{AND}.
 
 \begin{center}
-  \hspace{-13mm}
+  \begin{adjustwidth}{-2cm}{}
 \begin{tabular}{c|c|c|c|c|c|c|c|c|c|}
   \cline{2-10}
                                 & DDPS & \begin{tabular}[c]{@{}c@{}}Prueba\\ Rápida\end{tabular} & PCR & UCI & \begin{tabular}[c]{@{}c@{}}Sospecha\\ Clínica\end{tabular} & DDCP & Síntomas & UMNC & \begin{tabular}[c]{@{}c@{}}\textbf{Realizar}\\ \textbf{PCR}\end{tabular} \\ \hline
@@ -251,17 +312,18 @@ Todas las reglas son del tipo \textit{AND}.
 \multicolumn{1}{|c|}{Regla 2} & - & - & No & - & Alta & - & - & - & Sí \\ \hline
 \multicolumn{1}{|c|}{Regla 3} & - & No & - & - & Alta & - & - & - & Sí \\ \hline
 \multicolumn{1}{|c|}{Regla 4} & \textit{Not} Pocos & No & - & - & - & - & - & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 5} & - & - & - & - & - & - & - & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 6} & - & - & - & - & - & - & - & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 7} & - & - & - & - & - & - & - & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 8} & - & - & - & - & - & - & - & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 9} & - & - & - & - & - & - & - & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 10} & - & - & - & - & - & - & - & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 11} & - & - & - & - & - & - & - & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 12} & - & - & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 5} & - & - & Sí & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 6} & - & - & - & - & - & Muchos & Ninguno & - & No \\ \hline
+\multicolumn{1}{|c|}{Regla 7} & - & - & - & - & - & \textit{Not} Mucho & Ninguno & Sí & No \\ \hline
+\multicolumn{1}{|c|}{Regla 8} & Pocos & - & - & - & \textit{Not} Alta & - & - & - & No \\ \hline
+\multicolumn{1}{|c|}{Regla 9} & - & Sí & - & - & Baja & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 10} & - & - & - & - & - & \textit{Not} Muchos & \textit{Not} Ninguno & No & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 11} & \textit{Not} Pocos & - & - & - & - & - & Todos & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 12} & - & No & - & - & - & - & - & - & Sí \\ \hline
 \multicolumn{1}{|c|}{Regla 13} & - & - & - & - & - & - & - & - & Sí \\ \hline
 \multicolumn{1}{|c|}{Regla 14} & - & - & - & - & - & - & - & - & Sí \\ \hline
 \end{tabular}
+\end{adjustwidth}
 \end{center}
 
 
