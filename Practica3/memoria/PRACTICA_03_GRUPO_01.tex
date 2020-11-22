@@ -84,7 +84,7 @@ Sí es cierto que el criterio de realización de pruebas PCR, a pesar de que pue
 
 \vspace{2mm}
 
-No es así en el caso del sistema borroso para decidir si confinar o no una población, puesto que no está explicado ni expuesto correctamente en ningún documento público. A pesar de que el \textit{Ministerio de Sanidad}\cite{poblacion} incluya unas directrices que informen de los rangos de valores para diferentes niveles de riesgo, no indica a partir de cuales de esos valores se ha de confinar.
+No es así en el caso del sistema borroso para decidir si confinar o no una población, puesto que no está explicado ni expuesto correctamente en ningún documento público. A pesar de que el \textit{Ministerio de Sanidad}\cite{poblacion} incluya unas directrices que informen de los rangos de valores para diferentes niveles de riesgo, no indica a partir de cuales de esos valores se tiene que confinar.
 
 \vspace{4mm}
 
@@ -104,17 +104,17 @@ Los sistemas borrosos, al igual que numerosas técnicas de IA, puede ser aplicad
 
 Un caso que puede resultar especialmente llamativo es el uso de la lógica difusa para controlar un NPC (\textit{Non-Playable Characters}) en un videojuego\cite{fuzzygame}. Este pequeño caso de estudio intentaba y conseguía demostrar la eficacia y simpleza que resulta la aplciación este tipo de soluciones a entornos dinámicos.
 
-\vspace{2mm}
+\vspace{3mm}
 
 Otro caso que demuestra la gran utilidad de estos métodos es su uso en un sistema mixto, junto a algoritmos genéticos, para encontrar un equilibrio entre satisfacción de los clientes y obtención de beneficio en la planificación de horarios de trenes\cite{fuzzytrain}. En este caso se prueba el uso de un sistema borroso como solución de una parte de un problema más grande, y que se soluciona con algoritmos y métodos más potentes.
 
-\vspace{2mm}
+\vspace{3mm}
 
-Los autores del documento plantearon un esquema general de resolución basado en algoritmos genéticos, sin embargo, se encontraron con el problema de encontrar una tasa de mutación y sobrecruzamiento adecuada. El problema consistía en que una tasa fija no era capaz de contrar la solución óptima al problema, necesitaban tasas variables que eran dificialmente aproximadas mediante una fórmula debido a la complejidad que exigiría la misma. Por ello, debido al grado de incertidumbre existente a la hora de determinar dichas tasas se planteó un sistema de lógica difusa que en función de la diversidad genética de la población considerada era capaz de encontrar valores apropiados para las mismas de forma que se permitió al algoritmo encontrar la solución óptima en el problema considerado. La figura~\ref{genetic_fuzzy} muestra en qué parte del algoritmo genético se realiza la implementación de lógica difusa.
+Los autores del documento plantearon un esquema general de resolución basado en algoritmos genéticos, sin embargo, se encontraron con el problema de encontrar una tasa de mutación y sobrecruzamiento adecuada. El problema consistía en que una tasa fija no era capaz de encontrar la solución óptima al problema, necesitaban tasas variables que eran difíciles de aproximar mediante una fórmula debido a la complejidad que exigiría la misma. Por ello, debido al grado de incertidumbre existente a la hora de determinar dichas tasas se planteó un sistema de lógica difusa que, en función de la diversidad genética de la población considerada, era capaz de encontrar valores apropiados para las mismas. Esto permitió que el algoritmo encontrara la solución óptima en el problema. La figura~\ref{genetic_fuzzy} muestra en qué parte del algoritmo genético se realiza la implementación de lógica difusa.
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=200px]{img/genetic_fuzzy.png}
+    \includegraphics[width=230px]{img/genetic_fuzzy.png}
     \caption{Algoritmo que implementa lógica difusa\cite{fuzzytrain}}
     \label{genetic_fuzzy}
 \end{figure}
@@ -122,19 +122,34 @@ Los autores del documento plantearon un esquema general de resolución basado en
 
 \vspace{3mm}
 
-En otro área de aplicación completamente distinto al anterior se encuentra este otro caso \cite{fuzzyfashion}. Este estudio, que se llevó a la práctica en una cadena de tiendas de ropa en Hong Kong, y era capaz de recomendar, entre una lista de posibilidades, los conjuntos que más combinen, entre parte de arriba y parte baja.
+En otro área de aplicación completamente distinto al anterior se encuentra este otro caso \cite{fuzzyfashion}. Este estudio, que se llevó a la práctica en una cadena de tiendas de ropa en Hong Kong (figura~\ref{fuzzy_shop}), era capaz de recomendar, de entre una lista de posibilidades, los artículos de ropa que mejor combinaban.
+
+\vspace{1mm}
+
+Normalmente, los diseñadores de moda toman estas decisiones sobre combinación de artículos de manera subjetiva basándose en sus conocimientos y utilizan términos lingüísticos como bueno, aceptable o malo. Por ello, utilizan la lógica difusa junto con el sistema experto para llevar a cabo esta tarea. Cabe destacar que utilizan métodos de detección para reducir el tamaño del problema, ya que presenta un gran número de posibles combinaciones para múltiples artículos.
+
+\vspace{2mm}
+
+Los resultados del estudio sobre casos reales demuestran que el sistema propuesto es eficaz para coordinar pares de prendas entre un conjunto dado y proporciona un nivel muy alto de precisión, muy similar a lo que hacen los diseñadores de moda.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=300px]{img/fuzzy_shop.png}
+    \caption{Implementación en una tienda real del sistema borroso\cite{fuzzyfashion}}
+    \label{fuzzy_shop}
+\end{figure}
 
 \newpage
 
 \section{Sistema borroso: Confinamiento}
-De manera inicial se plantea el desarrollo de un sistema borroso que decida la conveniencia o no de confinar a una población en función de una serie de parámetros o variables de entrada al sistema que se detallarán en la subsiguiente sección.
+De manera inicial se plantea el desarrollo de un sistema borroso que decida la conveniencia o no de confinar a una población en función de una serie de parámetros o variables de entrada. El sistema se detalla en mayor profundidad en las siguientes secciones.
 
 \subsection{Variables de entrada}
-Tras un estudio meticuloso de las variables relevantes en la tarea que se trata de resolver y mediante el apoyo en la información oficial proporcionada en el ámbito de la \textit{Estrategia Nacional para la COVID-19 del Gobierno del Reino de España} [3] se determinan como relevantes la siguiente relación de variables.
+Tras un estudio meticuloso de las variables relevantes en la tarea que se trata de resolver y, mediante el apoyo en la información oficial proporcionada en el ámbito de la \textit{Estrategia Nacional para la COVID-19 del Gobierno de España} \cite{poblacion}, se determinan como relevantes la siguiente relación de variables.
 
 \begin{itemize}
 
-    \item \textbf{Incidencia acumulada de casos diagnosticados en 14 días} (IA-14): Casos confirmados en 14 días *100.000 / número de habitantes. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{IA-14} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+    \item \textbf{Incidencia acumulada de casos diagnosticados en 14 días} (IA-14): Casos confirmados en 14 días por cada 100.000 habitantes. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio}, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{IA-14} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
 
     \begin{figure}[!h]
       \centering
@@ -143,8 +158,8 @@ Tras un estudio meticuloso de las variables relevantes en la tarea que se trata 
       \label{IA-14}
     \end{figure}
 
-    \item \textbf{Incidencia acumulada de casos diagnosticados en 7 días} (IA-7): Casos confirmados en 7 días *100.000 / número de habitantes. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{IA-7} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
-    
+    \item \textbf{Incidencia acumulada de casos diagnosticados en 7 días} (IA-7): Casos confirmados en 7 días por cada 100.000 habitantes. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio}, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{IA-7} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+
     \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/ia_ac_7.png}
@@ -152,8 +167,8 @@ Tras un estudio meticuloso de las variables relevantes en la tarea que se trata 
       \label{IA-7}
     \end{figure}
 
-    \item \textbf{Incidencia acumulada de casos diagnosticados en Incidencia acumulada de casos con 65 o más años diagnosticados en 14 días} (IA-14 65): Casos >= 65 años confirmados en 14 días *100.000 / número de habitantes >= 65 años. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{IA-14 65} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
-    
+    \item \textbf{Incidencia acumulada de casos diagnosticados en Incidencia acumulada de casos con 65 o más años diagnosticados en 14 días} (IA-14 65): Casos en población superior a 65 años confirmados en 14 días por cada 100.000 habitantes. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio}, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{IA-14 65} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+    \newpage
     \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/ia_65_14.png}
@@ -161,8 +176,8 @@ Tras un estudio meticuloso de las variables relevantes en la tarea que se trata 
       \label{IA-14 65}
     \end{figure}
 
-    \item \textbf{Incidencia acumulada de casos diagnosticados en Incidencia acumulada de casos con 65 o más años diagnosticados en 7 días} (IA-7 65): Casos >= 65 años confirmados en 7 días *100.000 / número de habitantes >= 65 años. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{IA-7 65} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
-    
+    \item \textbf{Incidencia acumulada de casos diagnosticados en Incidencia acumulada de casos con 65 o más años diagnosticados en 7 días} (IA-7 65): Casos en población superior a 65 años confirmados en 7 días por cada 100.000 habitantes. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio}, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{IA-7 65} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+
     \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/ia_65_7.png}
@@ -171,7 +186,7 @@ Tras un estudio meticuloso de las variables relevantes en la tarea que se trata 
     \end{figure}
 
     \item \textbf{Positividad global de las PDIA (Prueba Diagnóstica de Infección Activa) por semana} (PDIA): Número de pruebas con resultado positivo en 7 días *100 / Número de pruebas realizadas en 7 días. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{PDIA} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
-    
+
     \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/PDIA.png}
@@ -179,8 +194,8 @@ Tras un estudio meticuloso de las variables relevantes en la tarea que se trata 
       \label{PDIA}
     \end{figure}
 
-    \item \textbf{Ocupación de camas de cuidados críticos por casos de COVID-19} (UCI): Número de camas de cuidados críticos ocupadas por casos de COVID / Número de camas de cuidados críticos totales en funcionamiento. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{UCI} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
-    
+    \item \textbf{Ocupación de camas de cuidados críticos por casos de COVID-19} (UCI): Número de camas de cuidados críticos ocupadas por casos de COVID / Número de camas de cuidados críticos totales en funcionamiento. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio}, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{UCI} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+
     \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/camas_UCI.png}
@@ -188,8 +203,8 @@ Tras un estudio meticuloso de las variables relevantes en la tarea que se trata 
       \label{UCI}
     \end{figure}
 
-    \item \textbf{Ocupación de camas de hospitalización por casos de COVID-19} (Camas):  Número de camas de hospitalización ocupadas por casos de COVID / Número total de camas de hospitalización en funcionamiento. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{Camas} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
-    
+    \item \textbf{Ocupación de camas de hospitalización por casos de COVID-19} (Camas):  Número de camas de hospitalización ocupadas por casos de COVID / Número total de camas de hospitalización en funcionamiento. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio}, {\textit{Alto}} y {\textit{Muy Alto}}. La figura~\ref{Camas} muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+
     \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/ocupacion_camas.png}
@@ -211,9 +226,10 @@ Se establece como variable de salida el hecho de confinar o no una población en
 
 \subsection{Reglas}
 
-Todas las reglas son del tipo \textit{AND} menos la primera que es del tipo \textit{OR}.
+Todas las reglas son del tipo \textit{AND} menos la primera que es del tipo \textit{OR}. Pese a que las variables escogidas han sido selecionadas en conformidad a los criterios establecidos en la \textit{Estrategia Nacional para la COVID-19 del Gobierno del Reino de España} \cite{poblacion}, las reglas mostradas son de elaboración propia dado que el documento del gobierno no proporciona criterios relativos al confinamiento de los distintos territorios.
 
-\begin{center}
+\begin{figure}[!h]
+  \centering
 \begin{tabular}{c|c|c|c|c|c|c|c|c|}
   \cline{2-9}
                                 & IA-14 & IA-7 & IA-14 65 & IA-7 65 & PDI & UCI & Camas & \textbf{Confinar} \\ \hline
@@ -232,7 +248,8 @@ Todas las reglas son del tipo \textit{AND} menos la primera que es del tipo \tex
 \multicolumn{1}{|c|}{Regla 13} & - & - & Bajo & Alto & - & - & - & Considerar \\ \hline
 \multicolumn{1}{|c|}{Regla 14} & - & - & - & - & Alto & - & - & Considerar \\ \hline
 \end{tabular}
-\end{center}
+\caption{Reglas del Sistema Borroso del Confinamiento}
+\end{figure}
 
 
 
@@ -343,7 +360,7 @@ Como la decisión a tomar es si se debe realizar o no una prueba PCR, la salida 
 
 Todas las reglas son del tipo \textit{AND}. Para las 7 primeras reglas se ha tomado como referencia la información del \textit{Ministerio de Sanidad}\cite{paciente}, las siguientes son creadas bajo el criterio de los autores con el fin de completar la funcionalidad del sistema.
 
-\begin{center}
+\begin{figure}[!h]
   \begin{adjustwidth}{-1.3cm}{}
 \begin{tabular}{c|c|c|c|c|c|c|c|c|c|}
   \cline{2-10}
@@ -364,7 +381,8 @@ Todas las reglas son del tipo \textit{AND}. Para las 7 primeras reglas se ha tom
 \multicolumn{1}{|c|}{Regla 14} & - & - & - & - & \textit{Not} Alta & - & Alguno & - & No \\ \hline
 \end{tabular}
 \end{adjustwidth}
-\end{center}
+\caption{Reglas del Sistema Borroso del PCR}
+\end{figure}
 
 
 
@@ -372,9 +390,15 @@ Todas las reglas son del tipo \textit{AND}. Para las 7 primeras reglas se ha tom
 
 \section{Validación del sistema}
 
+Para la realización de las pruebas, inicialmente, se deseaba encontrar información real de diferentes localidades\cite{cant, cana} y pacientes. Por desgracia, no se encontraron suficientes datos que fueran representativos. Por ello, fue necesario probar los sitemas con casos elaborados por los autores, de forma que se intentaba comprobar la robustez de los sistemas.
+
+\vspace{3mm}
+
+Para la elección de las pruebas se ha optado en primera instancia por evaluar los sistemas con pruebas donde las variables pertenecen al mismo nivel. Más tarde, se ha probado a evaluar al sistema con mezcla de valores de distintos niveles, para comprobar el comportamiento de los sistemas con diferentes tipos de complejidad.
   \subsection{Confinamiento}
-    \begin{center}
-      \hspace{-13mm}
+
+    \begin{figure}[!h]
+      \centering
     \begin{tabular}{c|c|c|c|c|c|c|c|c|}
       \cline{2-9}
                                     & IA-14 & IA-7 & IA-14 65 & IA-7 65 & PDI & UCI & Camas & \textbf{Prob. Confinar} \\ \hline
@@ -389,12 +413,13 @@ Todas las reglas son del tipo \textit{AND}. Para las 7 primeras reglas se ha tom
     \multicolumn{1}{|c|}{Prueba 9} & 5 & 3 & 2 & 2 & 1 & 2 & 0 & 0.1458 \\ \hline
     \multicolumn{1}{|c|}{Prueba 10} & 20 & 9 & 15 & 9 & 3 & 4 & 2 & 0.2158 \\ \hline
     \end{tabular}
-    \end{center}
+    \caption{Pruebas Básica del Sistema Borroso del Confinamiento}
+  \end{figure}
 
     \vspace{2mm}
 
-    \begin{center}
-      \hspace{-13mm}
+    \begin{figure}[!h]
+      \centering
     \begin{tabular}{c|c|c|c|c|c|c|c|c|}
       \cline{2-9}
                                     & IA-14 & IA-7 & IA-14 65 & IA-7 65 & PDI & UCI & Camas & \textbf{Prob. Confinar} \\ \hline
@@ -402,11 +427,13 @@ Todas las reglas son del tipo \textit{AND}. Para las 7 primeras reglas se ha tom
     \multicolumn{1}{|c|}{Prueba 2} & 5 & 21 & 125 & 5 & 2 & 25 & 4 & 0.8164 \\ \hline
     \multicolumn{1}{|c|}{Prueba 3} & 200 & 25 & 75 & 20 & 4 & 13 & 16 & 0.6410 \\ \hline
     \end{tabular}
-    \end{center}
+    \caption{Pruebas Mixtas del Sistema Borroso del Confinamiento}
+  \end{figure}
 
   \subsection{Prueba PCR}
-    
-    \begin{center}
+
+    \begin{figure}[!h]
+      \centering
     \begin{tabular}{c|c|c|c|c|c|c|c|c|c|}
       \cline{2-10}
                                     & DDPS & \begin{tabular}[c]{@{}c@{}}Prueba\\ Rápida\end{tabular} & PCR & UCI & \begin{tabular}[c]{@{}c@{}}Sospecha\\ Clínica\end{tabular} & DDCP & Síntomas & UMNC & \begin{tabular}[c]{@{}c@{}}\textbf{Prob.}\\ \textbf{Realizar}\\ \textbf{PCR}\end{tabular} \\ \hline
@@ -434,32 +461,40 @@ Todas las reglas son del tipo \textit{AND}. Para las 7 primeras reglas se ha tom
     \multicolumn{1}{|c|}{Prueba 22} & 2 & 1 & 0.5 & 1 & 0.9 & 3 & 0 & 0.8 & 0.5228 \\ \hline
     \multicolumn{1}{|c|}{Prueba 23} & 7 & 0 & 0 & 0 & 0.6 & 14 & 1 & 0.2 & 0.5052 \\ \hline
     \end{tabular}
-    \end{center}
-  
+    \caption{Pruebas del Sistema Borroso del PCR}
+  \end{figure}
+
   \subsection{Analisis de los resultados}
+
+  Respecto a la primera serie de pruebas realizadas sobre el sistema que trata de determinar el confinamiento de un determinado territorio se observa que las pruebas básicas arrojan buenos resultados puesto que se mantiene cada nivel previsto en relación a los niveles en los que se encuentran las variables de entradada. Este hecho nos da una primera aproximación que nos permite determinar que no hay fallos graves o incongruencias entre las distintas reglas. Por su parte, y para asegurar que el sistema funciona de manera adecuada incluso cuando determinar el nivel de confinamiento no resulta una tarea clara, habiendo variables de entrada en unos niveles mientras que otras se encuentran en unos niveles diferentes, una prueba que se asemeja más a los casos reales. Se observa cómo elresultado obtenido sigue un criterio en todos los casos, por lo que se asegura que el sistema funciona de manera adecuada.
+
+  \vspace{2mm}
+
+  Finalmente en la segunda serie de pruebas se obtienen resultados similares al determinarse que la necesidad de una prueba PCR aumenta de forma gradual en los 10 primeros casos, los cuales estan construidos de manera que la gravedad se va incrementando.
+
 
 \section{Conclusiones}
 
-  A lo largo del desarrollo de esta práctica se ha profundizado en la técnica de \textit{Lógica Difusa}, la misma presenta un enfoque bien diferenciado de otras técnicas de Inteligencia Artificial, puesto que permite la resolución de problemas para los cuales no existe una alternativa eficiente que sea \textbf{capaz de trabajar con la incertidumbre humana}. Por todo ello, esta práctica resulta de utilidad si se pretende introducirse en ese mundo de manera sucinta. Sin embargo, también impone la resolución de unos retos que deben ser solucionados si se pretende afrontar aplicaciones reales. 
-  
+  A lo largo del desarrollo de esta práctica se ha profundizado en la técnica de \textit{Lógica Difusa}, la misma presenta un enfoque bien diferenciado de otras técnicas de Inteligencia Artificial, puesto que permite la resolución de problemas para los cuales no existe una alternativa eficiente que sea \textbf{capaz de trabajar con la incertidumbre humana}. Por todo ello, esta práctica resulta de utilidad si se pretende introducirse en ese mundo de manera sucinta. Sin embargo, también impone la resolución de unos retos que deben ser solucionados si se pretende afrontar aplicaciones reales.
+
   \vspace{2mm}
-  
+
   Entre las principales desventajas o retos que acarrea esta técnica está la \textbf{dificultad de establecer reglas} exactas así como los distintos intervalos de cada una de las variables para disponer de un sistema lo más fiel posible. Esto es así debido a las propias características de la lógica difusa, puesto que al ser capaz de trabajar con la incertidumbre humana pierde la capacidad de detectar patrones inadvertidos a los humanos como sí pueden encontrar, por ejemplo, las redes de neuronas.
-      
+
   \vspace{2mm}
-  
-  
-  Otra piedra en el camino a la hora de realizar una tarea de lógica difusa con éxito consiste en encontrar una \textbf{fuente fiable de conocimiento} para posibilitar la creación de reglas y casos de prueba, lo cual se pone de manifiesto en situaciones tan caóticas como la epidemia de \textit{SARS-CoV-2}. 
-  
+
+
+  Otra piedra en el camino a la hora de realizar una tarea de lógica difusa con éxito consiste en encontrar una \textbf{fuente fiable de conocimiento} para posibilitar la creación de reglas y casos de prueba, lo cual se pone de manifiesto en situaciones tan caóticas como la epidemia de \textit{SARS-CoV-2}.
+
   \vspace{2mm}
-  
+
   A pesar de sus múltiples desventajas,la lógica difusa es una técnica especialmente útil especialmente si se contrasta con otras técnicas conocidas como caja negra, es \textbf{extremadamente fácil obtener explicaciones} sobre los resultados en base a las reglas activadas.
-  
+
   \vspace{2mm}
-  
+
   A modo de conclusión se destaca la importancia de disponer de distintas herramientas de Inteligencia Artificial que permitan su aplicación en situaciones bien diferenciadas, permitiendo de esta manera seleccionar la técnica que mejor se adapte a lo que se pretende obtener en cada momento. Puesto que no existen técnicas universales la tarea de un ingeniero experto en Inteligencia Artificial debe ser la seleccionar el conjunto de técnicas que mejor funcione en cada momento.
-  
-\clearpage 
+
+\clearpage
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliografia.bib}

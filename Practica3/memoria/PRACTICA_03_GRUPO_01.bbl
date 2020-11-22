@@ -31,4 +31,14 @@ W.~Wong, X.~Zeng, W.~Au, T.~Mok, and S.~Leung, ``A fashion mix-and-match expert
   system for fashion retailers using fuzzy screening approach,'' {\em Expert
   Syst. Appl.}, vol.~36, pp.~1750--1764, 03 2009.
 
+\bibitem{cant}
+I.~C. de~Estadística, ``Situación epidemiológica del coronavirus (covid-19)
+  en cantabria.'' \url{https://www.icane.es/covid19/dashboard/incidence/home},
+  Nov. 2020.
+
+\bibitem{cana}
+G.~de~Canarias, ``Covid-19 canarias.''
+  \url{https://grafcan1.maps.arcgis.com/apps/opsdashboard/index.html#/156eddd4d6fa4ff1987468d1fd70efb6},
+  Nov. 2020.
+
 \end{thebibliography}

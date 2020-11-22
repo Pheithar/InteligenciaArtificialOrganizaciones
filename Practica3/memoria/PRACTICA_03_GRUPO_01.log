@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  22 NOV 2020 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  22 NOV 2020 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -551,191 +551,154 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.59 \newpage
-              [1]
-
-LaTeX Warning: Citation `fuzzy' on page 2 undefined on input line 63.
-
-
-LaTeX Warning: Citation `fuzzygame' on page 2 undefined on input line 67.
-
-
-LaTeX Warning: Citation `poblacion' on page 2 undefined on input line 79.
-
-
-LaTeX Warning: Citation `paciente' on page 2 undefined on input line 79.
-
-
-LaTeX Warning: Citation `poblacion' on page 2 undefined on input line 87.
-
-[2]
-
-LaTeX Warning: Citation `fuzzy' on page 3 undefined on input line 101.
-
-
-LaTeX Warning: Citation `fuzzygame' on page 3 undefined on input line 105.
-
-
-LaTeX Warning: Citation `fuzzytrain' on page 3 undefined on input line 109.
-
-<img/genetic_fuzzy.png, id=101, 618.31pt x 674.52pt>
+              [1] [2]
+<img/genetic_fuzzy.png, id=113, 618.31pt x 674.52pt>
 File: img/genetic_fuzzy.png Graphic file (type png)
 <use img/genetic_fuzzy.png>
 Package pdftex.def Info: img/genetic_fuzzy.png  used on input line 117.
-(pdftex.def)             Requested size: 200.75073pt x 219.00026pt.
-
-LaTeX Warning: Citation `fuzzytrain' on page 3 undefined on input line 118.
-
-
-LaTeX Warning: Citation `fuzzytrain' on page 3 undefined on input line 118.
-
-
-LaTeX Warning: Citation `fuzzyfashion' on page 3 undefined on input line 125.
-
-[3 <./img/genetic_fuzzy.png>] [4]
-<img/ia_ac_14.png, id=114, 1000.73875pt x 284.06125pt>
+(pdftex.def)             Requested size: 230.86334pt x 251.8534pt.
+ [3 <./img/genetic_fuzzy.png>]
+<img/fuzzy_shop.png, id=126, 751.80875pt x 563.10374pt>
+File: img/fuzzy_shop.png Graphic file (type png)
+<use img/fuzzy_shop.png>
+Package pdftex.def Info: img/fuzzy_shop.png  used on input line 137.
+(pdftex.def)             Requested size: 301.1261pt x 225.54683pt.
+ [4 <./img/fuzzy_shop.png (PNG copy)>]
+<img/ia_ac_14.png, id=137, 1000.73875pt x 284.06125pt>
 File: img/ia_ac_14.png Graphic file (type png)
 <use img/ia_ac_14.png>
-Package pdftex.def Info: img/ia_ac_14.png  used on input line 141.
+Package pdftex.def Info: img/ia_ac_14.png  used on input line 156.
 (pdftex.def)             Requested size: 301.1261pt x 85.47475pt.
-<img/ia_ac_7.png, id=116, 1011.78pt x 280.04625pt>
+<img/ia_ac_7.png, id=139, 1011.78pt x 280.04625pt>
 File: img/ia_ac_7.png Graphic file (type png)
 <use img/ia_ac_7.png>
-Package pdftex.def Info: img/ia_ac_7.png  used on input line 150.
+Package pdftex.def Info: img/ia_ac_7.png  used on input line 165.
 (pdftex.def)             Requested size: 301.1261pt x 83.3479pt.
-<img/ia_65_14.png, id=118, 1005.7575pt x 278.03876pt>
+ [5 <./img/ia_ac_14.png> <./img/ia_ac_7.png>]
+<img/ia_65_14.png, id=150, 1005.7575pt x 278.03876pt>
 File: img/ia_65_14.png Graphic file (type png)
 <use img/ia_65_14.png>
-Package pdftex.def Info: img/ia_65_14.png  used on input line 159.
+Package pdftex.def Info: img/ia_65_14.png  used on input line 174.
 (pdftex.def)             Requested size: 301.1261pt x 83.24255pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/ia_65_7.png, id=120, 1013.7875pt x 278.03876pt>
+<img/ia_65_7.png, id=152, 1013.7875pt x 278.03876pt>
 File: img/ia_65_7.png Graphic file (type png)
 <use img/ia_65_7.png>
-Package pdftex.def Info: img/ia_65_7.png  used on input line 168.
+Package pdftex.def Info: img/ia_65_7.png  used on input line 183.
 (pdftex.def)             Requested size: 301.1261pt x 82.58498pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5 <./img/ia_ac_14.png> <./img/ia_ac_7.png>]
-<img/PDIA.png, id=132, 1010.77625pt x 280.04625pt>
+<img/PDIA.png, id=154, 1010.77625pt x 280.04625pt>
 File: img/PDIA.png Graphic file (type png)
 <use img/PDIA.png>
-Package pdftex.def Info: img/PDIA.png  used on input line 177.
+Package pdftex.def Info: img/PDIA.png  used on input line 192.
 (pdftex.def)             Requested size: 301.1261pt x 83.4291pt.
-<img/camas_UCI.png, id=134, 1004.75375pt x 281.05pt>
+<img/camas_UCI.png, id=156, 1004.75375pt x 281.05pt>
 File: img/camas_UCI.png Graphic file (type png)
 <use img/camas_UCI.png>
-Package pdftex.def Info: img/camas_UCI.png  used on input line 186.
+Package pdftex.def Info: img/camas_UCI.png  used on input line 201.
 (pdftex.def)             Requested size: 301.1261pt x 84.22987pt.
-<img/ocupacion_camas.png, id=136, 1002.74625pt x 282.05376pt>
-File: img/ocupacion_camas.png Graphic file (type png)
-<use img/ocupacion_camas.png>
-Package pdftex.def Info: img/ocupacion_camas.png  used on input line 195.
-(pdftex.def)             Requested size: 301.1261pt x 84.70285pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./img/ia_65_14.png> <./img/ia_65_7.png> <./img/PDIA.png> <./img/camas_UCI.p
-ng>]
-<img/confinar.png, id=150, 1010.77625pt x 282.05376pt>
+<img/ocupacion_camas.png, id=158, 1002.74625pt x 282.05376pt>
+File: img/ocupacion_camas.png Graphic file (type png)
+<use img/ocupacion_camas.png>
+Package pdftex.def Info: img/ocupacion_camas.png  used on input line 210.
+(pdftex.def)             Requested size: 301.1261pt x 84.70285pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6 <./img/ia_65_14.png> <./img/ia_65_7.png> <./img/PDIA.png>]
+<img/confinar.png, id=172, 1010.77625pt x 282.05376pt>
 File: img/confinar.png Graphic file (type png)
 <use img/confinar.png>
-Package pdftex.def Info: img/confinar.png  used on input line 208.
+Package pdftex.def Info: img/confinar.png  used on input line 223.
 (pdftex.def)             Requested size: 301.1261pt x 84.02715pt.
 
 
-LaTeX Warning: Citation `paciente' on page 7 undefined on input line 241.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <./img/ocupacion_camas.png> <./img/confinar.png>]
-<img/dias_primeros_sintomas.png, id=159, 1001.7425pt x 282.05376pt>
+[7 <./img/camas_UCI.png> <./img/ocupacion_camas.png> <./img/confinar.png>]
+<img/dias_primeros_sintomas.png, id=185, 1001.7425pt x 282.05376pt>
 File: img/dias_primeros_sintomas.png Graphic file (type png)
 <use img/dias_primeros_sintomas.png>
-Package pdftex.def Info: img/dias_primeros_sintomas.png  used on input line 257
+Package pdftex.def Info: img/dias_primeros_sintomas.png  used on input line 274
 .
 (pdftex.def)             Requested size: 301.1261pt x 84.78462pt.
-<img/prueba_rapida.png, id=161, 1000.73875pt x 282.05376pt>
+<img/prueba_rapida.png, id=187, 1000.73875pt x 282.05376pt>
 File: img/prueba_rapida.png Graphic file (type png)
 <use img/prueba_rapida.png>
-Package pdftex.def Info: img/prueba_rapida.png  used on input line 266.
+Package pdftex.def Info: img/prueba_rapida.png  used on input line 283.
 (pdftex.def)             Requested size: 301.1261pt x 84.8707pt.
-<img/PCR.png, id=163, 997.7275pt x 284.06125pt>
-File: img/PCR.png Graphic file (type png)
-<use img/PCR.png>
-Package pdftex.def Info: img/PCR.png  used on input line 275.
-(pdftex.def)             Requested size: 301.1261pt x 85.73048pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/UCI.png, id=165, 1000.73875pt x 283.0575pt>
+<img/PCR.png, id=189, 997.7275pt x 284.06125pt>
+File: img/PCR.png Graphic file (type png)
+<use img/PCR.png>
+Package pdftex.def Info: img/PCR.png  used on input line 292.
+(pdftex.def)             Requested size: 301.1261pt x 85.73048pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/UCI.png, id=191, 1000.73875pt x 283.0575pt>
 File: img/UCI.png Graphic file (type png)
 <use img/UCI.png>
-Package pdftex.def Info: img/UCI.png  used on input line 284.
+Package pdftex.def Info: img/UCI.png  used on input line 301.
 (pdftex.def)             Requested size: 301.1261pt x 85.17271pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/sospecha_clinica.png, id=167, 994.71625pt x 280.04625pt>
+[8 <./img/dias_primeros_sintomas.png>]
+<img/sospecha_clinica.png, id=202, 994.71625pt x 280.04625pt>
 File: img/sospecha_clinica.png Graphic file (type png)
 <use img/sospecha_clinica.png>
-Package pdftex.def Info: img/sospecha_clinica.png  used on input line 293.
+Package pdftex.def Info: img/sospecha_clinica.png  used on input line 310.
 (pdftex.def)             Requested size: 301.1261pt x 84.7794pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/dias_desde_cntcto_positivo.png, id=169, 998.73125pt x 280.04625pt>
+<img/dias_desde_cntcto_positivo.png, id=204, 998.73125pt x 280.04625pt>
 File: img/dias_desde_cntcto_positivo.png Graphic file (type png)
 <use img/dias_desde_cntcto_positivo.png>
 Package pdftex.def Info: img/dias_desde_cntcto_positivo.png  used on input line
- 302.
+ 319.
 (pdftex.def)             Requested size: 301.1261pt x 84.43327pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/sintomas.png, id=171, 996.72375pt x 285.065pt>
+ [9 <./img/prueba_rapida.png> <./img/PCR.png> <./img/UCI.png> <./img/sospecha_c
+linica.png> <./img/dias_desde_cntcto_positivo.png>]
+<img/sintomas.png, id=217, 996.72375pt x 285.065pt>
 File: img/sintomas.png Graphic file (type png)
 <use img/sintomas.png>
-Package pdftex.def Info: img/sintomas.png  used on input line 311.
+Package pdftex.def Info: img/sintomas.png  used on input line 328.
 (pdftex.def)             Requested size: 301.1261pt x 86.12042pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8 <./img/dias_primeros_sintomas.png> <./img/prueba_rapida.png>]
-<img/uso_mascarilla.png, id=185, 995.72pt x 283.0575pt>
+<img/uso_mascarilla.png, id=219, 995.72pt x 283.0575pt>
 File: img/uso_mascarilla.png Graphic file (type png)
 <use img/uso_mascarilla.png>
-Package pdftex.def Info: img/uso_mascarilla.png  used on input line 320.
+Package pdftex.def Info: img/uso_mascarilla.png  used on input line 337.
 (pdftex.def)             Requested size: 301.1261pt x 85.60463pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[9 <./img/PCR.png> <./img/UCI.png> <./img/sospecha_clinica.png> <./img/dias_des
-de_cntcto_positivo.png> <./img/sintomas.png>]
-<img/realizar_pcr.png, id=198, 996.72375pt x 287.0725pt>
+<img/realizar_pcr.png, id=221, 996.72375pt x 287.0725pt>
 File: img/realizar_pcr.png Graphic file (type png)
 <use img/realizar_pcr.png>
-Package pdftex.def Info: img/realizar_pcr.png  used on input line 335.
+Package pdftex.def Info: img/realizar_pcr.png  used on input line 352.
 (pdftex.def)             Requested size: 301.1261pt x 86.7269pt.
 
-
-LaTeX Warning: Citation `paciente' on page 10 undefined on input line 344.
-
-
-Overfull \hbox (46.56569pt too wide) in paragraph at lines 348--366
+Overfull \hbox (46.56569pt too wide) in paragraph at lines 365--383
 [][] 
  []
 
-[10 <./img/uso_mascarilla.png> <./img/realizar_pcr.png>]
-Overfull \hbox (21.74693pt too wide) in paragraph at lines 410--437
- [] 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <./img/sintomas.png> <./img/uso_mascarilla.png> <./img/realizar_pcr.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (21.74693pt too wide) in paragraph at lines 437--464
+ [][] 
  []
 
-[11] [12] (./PRACTICA_03_GRUPO_01.bbl
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11] [12] [13] (./PRACTICA_03_GRUPO_01.bbl
 Underfull \hbox (badness 1609) in paragraph at lines 13--16
 []\OT1/cmr/m/n/12 G. d. E. Mi-nis-te-rio de Sa-ni-dad, ``Es-tra-te-gia na-cio-n
 al pa-ra la co-vid 19.'' []$\OT1/cmtt/m/n/12 https :
@@ -765,37 +728,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--22
 ilancia _ y _ control _ e _
  []
 
+
+Underfull \hbox (badness 4967) in paragraph at lines 40--43
+[]\OT1/cmr/m/n/12 G. de Ca-na-rias, ``Covid-19 ca-na-rias.'' []$\OT1/cmtt/m/n/1
+2 https : / / grafcan1 . maps . arcgis . com / apps /
+ []
+
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 468.
- [13
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 503.
+ [14
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 468.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 503.
  (./PRACTICA_03_GRUPO_01.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 468.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 468.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 503.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 503.
 Package rerunfilecheck Info: File `PRACTICA_03_GRUPO_01.out' has not changed.
 (rerunfilecheck)             Checksum: 2ECBFE35EC3927D040437920FE81B92B;929.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 468.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 503.
  ) 
 Here is how much of TeX's memory you used:
- 9334 strings out of 481239
- 143578 string characters out of 5920377
- 455776 words of memory out of 5000000
- 24360 multiletter control sequences out of 15000+600000
+ 9349 strings out of 481239
+ 143816 string characters out of 5920377
+ 469115 words of memory out of 5000000
+ 24365 multiletter control sequences out of 15000+600000
  539022 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,15n,77p,978b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,17n,77p,963b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/t
@@ -803,10 +769,10 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PRACTICA_03_GRUPO_01.pdf (14 pages, 385800 bytes).
+Output written on PRACTICA_03_GRUPO_01.pdf (15 pages, 875494 bytes).
 PDF statistics:
- 273 PDF objects out of 1000 (max. 8388607)
- 210 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
- 216 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 310 PDF objects out of 1000 (max. 8388607)
+ 243 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

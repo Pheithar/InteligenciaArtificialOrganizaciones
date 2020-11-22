@@ -3,36 +3,36 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: PRACTICA_03_GRUPO_01.aux
 The style file: ieeetr.bst
 Database file #1: bibliografia.bib
-You've used 6 entries,
+You've used 8 entries,
             1876 wiz_defined-function locations,
-            512 strings with 4546 characters,
-and the built_in function-call counts, 1509 in all, are:
-= -- 141
-> -- 63
+            520 strings with 4852 characters,
+and the built_in function-call counts, 1763 in all, are:
+= -- 163
+> -- 71
 < -- 0
-+ -- 24
-- -- 18
-* -- 114
-:= -- 223
-add.period$ -- 6
-call.type$ -- 6
-change.case$ -- 6
++ -- 28
+- -- 20
+* -- 128
+:= -- 259
+add.period$ -- 8
+call.type$ -- 8
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 67
-empty$ -- 141
-format.name$ -- 18
-if$ -- 365
+cite$ -- 8
+duplicate$ -- 75
+empty$ -- 177
+format.name$ -- 20
+if$ -- 429
 int.to.chr$ -- 0
-int.to.str$ -- 6
+int.to.str$ -- 8
 missing$ -- 4
-newline$ -- 21
-num.names$ -- 6
-pop$ -- 18
+newline$ -- 27
+num.names$ -- 8
+pop$ -- 30
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 57
+skip$ -- 65
 stack$ -- 0
 substring$ -- 92
 swap$ -- 30
@@ -41,6 +41,6 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 12
-width$ -- 7
-write$ -- 57
+while$ -- 14
+width$ -- 9
+write$ -- 73
