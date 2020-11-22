@@ -183,12 +183,15 @@ INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/mem
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/PDIA.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/PDIA.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/PDIA.png
-INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/UCI.png
-INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/UCI.png
-INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/UCI.png
+INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/camas_UCI.png
+INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/camas_UCI.png
+INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/camas_UCI.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ocupacion_camas.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ocupacion_camas.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ocupacion_camas.png
+INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/confinar.png
+INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/confinar.png
+INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/confinar.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/dias_primeros_sintomas.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/dias_primeros_sintomas.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/dias_primeros_sintomas.png
@@ -198,6 +201,7 @@ INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/mem
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/PCR.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/PCR.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/PCR.png
+INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/UCI.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/UCI.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/UCI.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/sospecha_clinica.png
