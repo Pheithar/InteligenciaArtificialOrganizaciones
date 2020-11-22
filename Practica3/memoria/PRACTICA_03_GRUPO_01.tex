@@ -109,13 +109,98 @@ Un caso que puede resultar especialmente llamativo es el uso de la lógica difus
 
 
 \section{Sistema borroso: Confinamiento}
+De manera inicial se plantea el desarrollo de un sistema borroso que decida la conveniencia o no de confinar a una población en función de una serie de parámetros o variables de entrada al sistema que se detallarán en la subsiguiente sección.
 
 \subsection{Variables de entrada}
+Tras un estudio meticuloso de las variables relevantes en la tarea que se trata de resolver y mediante el apoyo en la información oficial proporcionada en el ámbito de la \textit{Estrategia Nacional para la COVID-19 del Gobierno del Reino de España} [3] se determinan como relevantes la siguiente relación de variables.
+
+\begin{itemize}
+
+    \item \textbf{Incidencia acumulada de casos diagnosticados en 14 días} (IA-14): Casos confirmados en 14 días *100.000 / número de habitantes. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}.
+
+    \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/ia_ac_14.png}
+      \caption{IA-14}
+    \end{figure}
+
+    \item \textbf{Incidencia acumulada de casos diagnosticados en 7 días} (IA-7): Casos confirmados en 7 días *100.000 / número de habitantes. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura 1 muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+    
+    \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/ia_ac_7.png}
+      \caption{IA-7}
+    \end{figure}
+
+    \item \textbf{Incidencia acumulada de casos diagnosticados en Incidencia acumulada de casos con 65 o más años diagnosticados en 14 días} (IA-14 65): Casos >= 65 años confirmados en 14 días *100.000 / número de habitantes >= 65 años. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura 2 muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+    
+    \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/ia_65_14.png}
+      \caption{IA-14}
+    \end{figure}
+
+    \item \textbf{Incidencia acumulada de casos diagnosticados en Incidencia acumulada de casos con 65 o más años diagnosticados en 7 días} (IA-7 65): Casos >= 65 años confirmados en 7 días *100.000 / número de habitantes >= 65 años. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura 3 muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+    
+    \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/ia_65_7.png}
+      \caption{IA-7 65}
+    \end{figure}
+
+    \item \textbf{Positividad global de las PDIA (Prueba Diagnóstica de Infección Activa) por semana} (PDIA): Número de pruebas con resultado positivo en 7 días *100 / Número de pruebas realizadas en 7 días. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura 4 muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+    
+    \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/PDIA.png}
+      \caption{PDIA}
+    \end{figure}
+
+    \item \textbf{Ocupación de camas de cuidados críticos por casos de COVID-19} (UCI): Número de camas de cuidados críticos ocupadas por casos de COVID / Número de camas de cuidados críticos totales en funcionamiento. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura 5 muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+    
+    \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/UCI.png}
+      \caption{UCI}
+    \end{figure}
+
+    \item \textbf{Ocupación de camas de hospitalización por casos de COVID-19} (Camas):  Número de camas de hospitalización ocupadas por casos de COVID / Número total de camas de hospitalización en funcionamiento. Sus posibles valores son: \textit{Muy Bajo}, \textit{Bajo} \textit{Medio }, {\textit{Alto}} y {\textit{Muy Alto}}. La figura 6 muestra los intervalos de cada uno de los posibles valores de forma gráfica.
+    
+    \begin{figure}[!h]
+      \centering
+      \includegraphics[width=300px]{img/ocupacion_camas.png}
+      \caption{Camas}
+    \end{figure}
+
+    \end{itemize}
 
 \subsection{Variable de salida}
 
 \subsection{Reglas}
 
+Todas las reglas son del tipo \textit{AND} menos la primera que es del tipo \textit{OR}.
+
+\begin{center}
+  \hspace{-13mm}
+\begin{tabular}{c|c|c|c|c|c|c|c|c|}
+  \cline{2-9}
+                                & IA-14 & IA-7 & IA-14 65 & IA-7 65 & PDI & UCI & Camas & \textbf{Confinar} \\ \hline
+\multicolumn{1}{|c|}{Regla 1} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular}& Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 2} & Medio & Medio & - & - & - & - & Alto & Si \\ \hline
+\multicolumn{1}{|c|}{Regla 3} & Alto & Alto & Alto & Alto & Alto & Alto & Alto & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 4} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & No \\ \hline
+\multicolumn{1}{|c|}{Regla 5} & Bajo & Alto & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 6} & Bajo & Medio & - & - & - & - & - & Considerar \\ \hline
+\multicolumn{1}{|c|}{Regla 7} & Medio & Medio & - & - & - & Alto & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 8} & - & - & - & - & - & Bajo & Bajo & No \\ \hline
+\multicolumn{1}{|c|}{Regla 9} & Medio & Medio & Alto & Alto & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 10} & Medio & Medio & - & - & - & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & No \\ \hline
+\multicolumn{1}{|c|}{Regla 11} & Bajo & Bajo & Bajo & Bajo & Bajo & Bajo & Bajo & No \\ \hline
+\multicolumn{1}{|c|}{Regla 12} & Alto & Bajo & - & - & - & - & - & No \\ \hline
+\multicolumn{1}{|c|}{Regla 13} & - & - & Bajo & Alto & - & - & - & Considerar \\ \hline
+\multicolumn{1}{|c|}{Regla 14} & - & - & - & - & Alto & - & - & Considerar \\ \hline
+\end{tabular}
+\end{center}
 
 
 \section{Sistema borroso: Prueba PCR}
