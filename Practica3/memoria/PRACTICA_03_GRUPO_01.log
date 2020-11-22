@@ -491,126 +491,134 @@ File: img/ia_ac_14.png Graphic file (type png)
 <use img/ia_ac_14.png>
 Package pdftex.def Info: img/ia_ac_14.png  used on input line 124.
 (pdftex.def)             Requested size: 301.1261pt x 85.47475pt.
-<img/ia_ac_7.png, id=115, 1011.78pt x 280.04625pt>
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 129.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [3 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_ac_14.png>]
+<img/ia_ac_7.png, id=123, 1011.78pt x 280.04625pt>
 File: img/ia_ac_7.png Graphic file (type png)
 <use img/ia_ac_7.png>
-Package pdftex.def Info: img/ia_ac_7.png  used on input line 133.
+Package pdftex.def Info: img/ia_ac_7.png  used on input line 138.
 (pdftex.def)             Requested size: 301.1261pt x 83.3479pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<img/ia_65_14.png, id=117, 1005.7575pt x 278.03876pt>
+<img/ia_65_14.png, id=125, 1005.7575pt x 278.03876pt>
 File: img/ia_65_14.png Graphic file (type png)
 <use img/ia_65_14.png>
-Package pdftex.def Info: img/ia_65_14.png  used on input line 142.
+Package pdftex.def Info: img/ia_65_14.png  used on input line 152.
 (pdftex.def)             Requested size: 301.1261pt x 83.24255pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_ac_14.png>]
 <img/ia_65_7.png, id=127, 1013.7875pt x 278.03876pt>
 File: img/ia_65_7.png Graphic file (type png)
 <use img/ia_65_7.png>
-Package pdftex.def Info: img/ia_65_7.png  used on input line 151.
+Package pdftex.def Info: img/ia_65_7.png  used on input line 166.
 (pdftex.def)             Requested size: 301.1261pt x 82.58498pt.
-<img/PDIA.png, id=129, 1010.77625pt x 280.04625pt>
+ [4 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_ac_7.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_65_14.png>]
+<img/PDIA.png, id=137, 1010.77625pt x 280.04625pt>
 File: img/PDIA.png Graphic file (type png)
 <use img/PDIA.png>
-Package pdftex.def Info: img/PDIA.png  used on input line 160.
+Package pdftex.def Info: img/PDIA.png  used on input line 180.
 (pdftex.def)             Requested size: 301.1261pt x 83.4291pt.
-<img/camas_UCI.png, id=131, 1004.75375pt x 281.05pt>
+<img/camas_UCI.png, id=139, 1004.75375pt x 281.05pt>
 File: img/camas_UCI.png Graphic file (type png)
 <use img/camas_UCI.png>
-Package pdftex.def Info: img/camas_UCI.png  used on input line 169.
+Package pdftex.def Info: img/camas_UCI.png  used on input line 194.
 (pdftex.def)             Requested size: 301.1261pt x 84.22987pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_ac_7.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_65_14.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_65_7.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/PDIA.png>]
-<img/ocupacion_camas.png, id=144, 1002.74625pt x 282.05376pt>
+[5 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_65_7.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/PDIA.png>]
+<img/ocupacion_camas.png, id=149, 1002.74625pt x 282.05376pt>
 File: img/ocupacion_camas.png Graphic file (type png)
 <use img/ocupacion_camas.png>
-Package pdftex.def Info: img/ocupacion_camas.png  used on input line 178.
+Package pdftex.def Info: img/ocupacion_camas.png  used on input line 208.
 (pdftex.def)             Requested size: 301.1261pt x 84.70285pt.
-<img/confinar.png, id=145, 1010.77625pt x 282.05376pt>
+<img/confinar.png, id=150, 1010.77625pt x 282.05376pt>
 File: img/confinar.png Graphic file (type png)
 <use img/confinar.png>
-Package pdftex.def Info: img/confinar.png  used on input line 191.
+Package pdftex.def Info: img/confinar.png  used on input line 221.
 (pdftex.def)             Requested size: 301.1261pt x 84.02715pt.
 
-Overfull \hbox (135.07976pt too wide) in paragraph at lines 200--219
- [] 
- []
 
-[5 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/camas_UCI.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ocupacion_camas.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/confinar.png>]
-<img/dias_primeros_sintomas.png, id=158, 1001.7425pt x 282.05376pt>
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/camas_UCI.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ocupacion_camas.png>]
+<img/dias_primeros_sintomas.png, id=162, 1001.7425pt x 282.05376pt>
 File: img/dias_primeros_sintomas.png Graphic file (type png)
 <use img/dias_primeros_sintomas.png>
-Package pdftex.def Info: img/dias_primeros_sintomas.png  used on input line 240.
+Package pdftex.def Info: img/dias_primeros_sintomas.png  used on input line 270.
 (pdftex.def)             Requested size: 301.1261pt x 84.78462pt.
-<img/prueba_rapida.png, id=160, 1000.73875pt x 282.05376pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/prueba_rapida.png, id=164, 1000.73875pt x 282.05376pt>
 File: img/prueba_rapida.png Graphic file (type png)
 <use img/prueba_rapida.png>
-Package pdftex.def Info: img/prueba_rapida.png  used on input line 249.
+Package pdftex.def Info: img/prueba_rapida.png  used on input line 279.
 (pdftex.def)             Requested size: 301.1261pt x 84.8707pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/dias_primeros_sintomas.png>]
-<img/PCR.png, id=171, 997.7275pt x 284.06125pt>
+[7 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/confinar.png>]
+<img/PCR.png, id=175, 997.7275pt x 284.06125pt>
 File: img/PCR.png Graphic file (type png)
 <use img/PCR.png>
-Package pdftex.def Info: img/PCR.png  used on input line 258.
+Package pdftex.def Info: img/PCR.png  used on input line 288.
 (pdftex.def)             Requested size: 301.1261pt x 85.73048pt.
-<img/UCI.png, id=173, 1000.73875pt x 283.0575pt>
+<img/UCI.png, id=177, 1000.73875pt x 283.0575pt>
 File: img/UCI.png Graphic file (type png)
 <use img/UCI.png>
-Package pdftex.def Info: img/UCI.png  used on input line 267.
+Package pdftex.def Info: img/UCI.png  used on input line 297.
 (pdftex.def)             Requested size: 301.1261pt x 85.17271pt.
-<img/sospecha_clinica.png, id=175, 994.71625pt x 280.04625pt>
+<img/sospecha_clinica.png, id=179, 994.71625pt x 280.04625pt>
 File: img/sospecha_clinica.png Graphic file (type png)
 <use img/sospecha_clinica.png>
-Package pdftex.def Info: img/sospecha_clinica.png  used on input line 276.
+Package pdftex.def Info: img/sospecha_clinica.png  used on input line 306.
 (pdftex.def)             Requested size: 301.1261pt x 84.7794pt.
-<img/dias_desde_cntcto_positivo.png, id=177, 998.73125pt x 280.04625pt>
-File: img/dias_desde_cntcto_positivo.png Graphic file (type png)
-<use img/dias_desde_cntcto_positivo.png>
-Package pdftex.def Info: img/dias_desde_cntcto_positivo.png  used on input line 285.
-(pdftex.def)             Requested size: 301.1261pt x 84.43327pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/sintomas.png, id=179, 996.72375pt x 285.065pt>
+<img/dias_desde_cntcto_positivo.png, id=181, 998.73125pt x 280.04625pt>
+File: img/dias_desde_cntcto_positivo.png Graphic file (type png)
+<use img/dias_desde_cntcto_positivo.png>
+Package pdftex.def Info: img/dias_desde_cntcto_positivo.png  used on input line 315.
+(pdftex.def)             Requested size: 301.1261pt x 84.43327pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/sintomas.png, id=183, 996.72375pt x 285.065pt>
 File: img/sintomas.png Graphic file (type png)
 <use img/sintomas.png>
-Package pdftex.def Info: img/sintomas.png  used on input line 294.
+Package pdftex.def Info: img/sintomas.png  used on input line 324.
 (pdftex.def)             Requested size: 301.1261pt x 86.12042pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/uso_mascarilla.png, id=181, 995.72pt x 283.0575pt>
+<img/uso_mascarilla.png, id=185, 995.72pt x 283.0575pt>
 File: img/uso_mascarilla.png Graphic file (type png)
 <use img/uso_mascarilla.png>
-Package pdftex.def Info: img/uso_mascarilla.png  used on input line 303.
+Package pdftex.def Info: img/uso_mascarilla.png  used on input line 333.
 (pdftex.def)             Requested size: 301.1261pt x 85.60463pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/prueba_rapida.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/PCR.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/UCI.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/sospecha_clinica.png>]
-Overfull \hbox (43.72067pt too wide) in paragraph at lines 323--341
+[8 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/dias_primeros_sintomas.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/prueba_rapida.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/PCR.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/UCI.png>]
+<img/realizar_pcr.png, id=200, 996.72375pt x 287.0725pt>
+File: img/realizar_pcr.png Graphic file (type png)
+<use img/realizar_pcr.png>
+Package pdftex.def Info: img/realizar_pcr.png  used on input line 348.
+(pdftex.def)             Requested size: 301.1261pt x 86.7269pt.
+ [9 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/sospecha_clinica.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/dias_desde_cntcto_positivo.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/sintomas.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/uso_mascarilla.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/realizar_pcr.png>]
+Overfull \hbox (46.56569pt too wide) in paragraph at lines 361--379
 [][] 
  []
 
-[8 </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/dias_desde_cntcto_positivo.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/sintomas.png> </home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/uso_mascarilla.png>]
-Overfull \hbox (13.91368pt too wide) in paragraph at lines 385--399
+
+Overfull \hbox (13.91368pt too wide) in paragraph at lines 423--437
  [] 
  []
 
-[9] [10] (/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.bbl
+[10] [11] (/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.bbl
 Underfull \hbox (badness 1609) in paragraph at lines 13--16
 []\OT1/cmr/m/n/12 G. d. E. Mi-nis-te-rio de Sa-ni-dad, ``Es-tra-te-gia na-cio-nal pa-ra la co-vid 19.'' []$\OT1/cmtt/m/n/12 https :
  []
@@ -636,38 +644,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--22
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 430.
- [11
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 468.
+ [12
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 430.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 468.
  (/home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 430.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 430.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 468.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 468.
 Package rerunfilecheck Info: File `PRACTICA_03_GRUPO_01.out' has not changed.
 (rerunfilecheck)             Checksum: 2ECBFE35EC3927D040437920FE81B92B;929.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 430.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 468.
  ) 
 Here is how much of TeX's memory you used:
- 9476 strings out of 480906
- 147425 string characters out of 5910772
- 460586 words of memory out of 5000000
- 24841 multiletter control sequences out of 15000+600000
- 541772 words of font info for 51 fonts, out of 8000000 for 9000
+ 9502 strings out of 480906
+ 147977 string characters out of 5910772
+ 469631 words of memory out of 5000000
+ 24860 multiletter control sequences out of 15000+600000
+ 541878 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,15n,77p,753b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.pdf (12 pages, 298418 bytes).
+ 47i,15n,77p,753b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
+Output written on /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.pdf (13 pages, 314156 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 275 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
 

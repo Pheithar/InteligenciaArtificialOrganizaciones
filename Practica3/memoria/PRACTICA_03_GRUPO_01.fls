@@ -171,6 +171,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_ac_14.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_ac_14.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_ac_14.png
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_ac_7.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_ac_7.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/ia_ac_7.png
@@ -216,6 +219,9 @@ INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/mem
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/uso_mascarilla.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/uso_mascarilla.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/uso_mascarilla.png
+INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/realizar_pcr.png
+INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/realizar_pcr.png
+INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/img/realizar_pcr.png
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.bbl
 INPUT /home/gutiperez/Desktop/InteligenciaArtificialOrganizaciones/Practica3/memoria/PRACTICA_03_GRUPO_01.bbl
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
@@ -229,3 +235,4 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb

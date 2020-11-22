@@ -183,7 +183,7 @@ Tras un estudio meticuloso de las variables relevantes en la tarea que se trata 
     \end{itemize}
 
 \subsection{Variable de salida}
-    
+
 Se establece como variable de salida el hecho de confinar o no una población en función de tres niveles diferenciados. \textit{No confinar, Considerar el confinamiento y Sí confinar}. Se hace hincapié en el sentido del valor \textit{Considerar el confinamiento} que indica a los responsables de confinar un territorio que sería recomendable hacerlo atendiendo únicamente a razones sanitarias, pero que existe capacidad de discusión de otro tipo de medidas que no perjudiquen en esa medida a los sectores productivos de la población.  La figura 7 muestra los intervalos de cada uno de los posibles valores de forma gráfica.
 
 \begin{figure}[!h]
@@ -197,26 +197,26 @@ Se establece como variable de salida el hecho de confinar o no una población en
 Todas las reglas son del tipo \textit{AND} menos la primera que es del tipo \textit{OR}.
 
 \begin{center}
-  \hspace{-13mm}
 \begin{tabular}{c|c|c|c|c|c|c|c|c|}
   \cline{2-9}
                                 & IA-14 & IA-7 & IA-14 65 & IA-7 65 & PDI & UCI & Camas & \textbf{Confinar} \\ \hline
 \multicolumn{1}{|c|}{Regla 1} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular} & \begin{tabular}[c]{@{}c@{}}Muy\\ alto\end{tabular}& Sí \\ \hline
 \multicolumn{1}{|c|}{Regla 2} & Medio & Medio & - & - & - & - & Alto & Si \\ \hline
 \multicolumn{1}{|c|}{Regla 3} & Alto & Alto & Alto & Alto & Alto & Alto & Alto & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 4} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & No \\ \hline
+\multicolumn{1}{|c|}{Regla 4} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & No \\ \hline
 \multicolumn{1}{|c|}{Regla 5} & Bajo & Alto & - & - & - & - & - & Sí \\ \hline
 \multicolumn{1}{|c|}{Regla 6} & Bajo & Medio & - & - & - & - & - & Considerar \\ \hline
 \multicolumn{1}{|c|}{Regla 7} & Medio & Medio & - & - & - & Alto & - & Sí \\ \hline
 \multicolumn{1}{|c|}{Regla 8} & - & - & - & - & - & Bajo & Bajo & No \\ \hline
 \multicolumn{1}{|c|}{Regla 9} & Medio & Medio & Alto & Alto & - & - & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 10} & Medio & Medio & - & - & - & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ normalidad\end{tabular} & No \\ \hline
+\multicolumn{1}{|c|}{Regla 10} & Medio & Medio & - & - & - & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nueva\\ norm.\end{tabular} & No \\ \hline
 \multicolumn{1}{|c|}{Regla 11} & Bajo & Bajo & Bajo & Bajo & Bajo & Bajo & Bajo & No \\ \hline
 \multicolumn{1}{|c|}{Regla 12} & Alto & Bajo & - & - & - & - & - & No \\ \hline
 \multicolumn{1}{|c|}{Regla 13} & - & - & Bajo & Alto & - & - & - & Considerar \\ \hline
 \multicolumn{1}{|c|}{Regla 14} & - & - & - & - & Alto & - & - & Considerar \\ \hline
 \end{tabular}
 \end{center}
+
 
 
 \section{Sistema borroso: Prueba PCR}
@@ -233,7 +233,7 @@ Un sistema que consiga resolver este problema de forma eficaz sería de gran ayu
 Las entradas del sistema seleccionadas son:
 
 \begin{itemize}
-  \item \textbf{Días desde primeros síntomas} (DDPS) figura ~\ref{DDPS}: representa el número de días que el paciente lleva con síntomas relacionados con el \textit{COVID-19}. Sus posibles valores son: \textit{Pocos}, \textit{Medios} y \textit{Muchos}.
+  \item \textbf{Días desde primeros síntomas} (DDPS) figura~\ref{DDPS}: representa el número de días que el paciente lleva con síntomas relacionados con el \textit{COVID-19}. Sus posibles valores son: \textit{Pocos}, \textit{Medios} y \textit{Muchos}.
 
   \begin{figure}[!h]
       \centering
@@ -242,7 +242,7 @@ Las entradas del sistema seleccionadas son:
       \label{DDPS}
   \end{figure}
 
-  \item \textbf{Prueba rápida} figura ~\ref{PR}: si el paciente ha dado positivo o negativo en una prueba rápida, por lo tanto sus valores son solo \textit{Sí} o \textit{No}. Si al paciente no se le ha realizado ninguna prueba rápida se representará con un 0,5.
+  \item \textbf{Prueba rápida} figura~\ref{PR}: si el paciente ha dado positivo o negativo en una prueba rápida, por lo tanto sus valores son solo \textit{Sí} o \textit{No}. Si al paciente no se le ha realizado ninguna prueba rápida se representará con un 0,5.
 
   \begin{figure}[!h]
       \centering
@@ -251,7 +251,7 @@ Las entradas del sistema seleccionadas son:
       \label{PR}
   \end{figure}
 
-  \item \textbf{PCR} figura ~\ref{PCR}: si el paciente ha dado positivo o negativo en una prueba PCR, al igual que en la variable anterior, sus valores son solo \textit{Sí} o \textit{No}. Si al paciente no se le ha realizado ninguna PCR se representará con un 0,5.
+  \item \textbf{PCR} figura~\ref{PCR}: si el paciente ha dado positivo o negativo en una prueba PCR, al igual que en la variable anterior, sus valores son solo \textit{Sí} o \textit{No}. Si al paciente no se le ha realizado ninguna PCR se representará con un 0,5.
 
   \begin{figure}[!h]
       \centering
@@ -260,7 +260,7 @@ Las entradas del sistema seleccionadas son:
       \label{PCR}
   \end{figure}
 
-  \item \textbf{UCI} figura ~\ref{UCI}: si el paciente tiene que ser ingresado en la UCI, posibles valores: \textit{Sí} o \textit{No}.
+  \item \textbf{UCI} figura~\ref{UCI}: si el paciente tiene que ser ingresado en la UCI, posibles valores: \textit{Sí} o \textit{No}.
 
   \begin{figure}[!h]
       \centering
@@ -269,7 +269,7 @@ Las entradas del sistema seleccionadas son:
       \label{UCI}
   \end{figure}
 
-  \item \textbf{Sospecha clínica} figura ~\ref{SC}: creencia del médico de si el paciente puede tener o no el \textit{COVID-19}. Toma valores de \textit{Baja}, \textit{Media} y \textit{Alta}.
+  \item \textbf{Sospecha clínica} figura~\ref{SC}: creencia del médico de si el paciente puede tener o no el \textit{COVID-19}. Toma valores de \textit{Baja}, \textit{Media} y \textit{Alta}.
 
   \begin{figure}[!h]
       \centering
@@ -287,7 +287,7 @@ Las entradas del sistema seleccionadas son:
       \label{DDCP}
   \end{figure}
 
-  \item \textbf{Síntomas} figura ~\ref{Sintomas}: indica el número de síntomas de \textit{COVID-19} que tiene el paciente. Puede tomar valores de \textit{Ninguno}, \textit{Alguno}, \textit{Varios} y \textit{Todos}.
+  \item \textbf{Síntomas} figura~\ref{Sintomas}: indica el número de síntomas de \textit{COVID-19} que tiene el paciente. Puede tomar valores de \textit{Ninguno}, \textit{Alguno}, \textit{Varios} y \textit{Todos}.
 
   \begin{figure}[!h]
       \centering
@@ -296,7 +296,7 @@ Las entradas del sistema seleccionadas son:
       \label{Sintomas}
   \end{figure}
 
-  \item \textbf{Uso mascarilla con no convivientes} (UMNC) figura ~\ref{UMNC}: si el paciente usa regularmente la mascarilla cuando se encuentra con personas con las que no convive, sus valores son solo \textit{Sí} o \textit{No}.
+  \item \textbf{Uso mascarilla con no convivientes} (UMNC) figura~\ref{UMNC}: si el paciente usa regularmente la mascarilla cuando se encuentra con personas con las que no convive, sus valores son solo \textit{Sí} o \textit{No}.
 
   \begin{figure}[!h]
       \centering
@@ -311,15 +311,23 @@ Las entradas del sistema seleccionadas son:
 
 \subsection{Variable de salida}
 
-Realizar test PCR
+Como la decisión a tomar es si se debe realizar o no una prueba PCR, la salida del sistema es la certeza que se tiene de si se debe realizar la prueba o no al paciente. Sus valores son \textit{Sí} o \textit{No} (figura~\ref{realizarPCR}).
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=300px]{img/realizar_pcr.png}
+    \caption{Realizar PCR}
+    \label{realizarPCR}
+\end{figure}
+
 
 
 \subsection{Reglas}
 
-Todas las reglas son del tipo \textit{AND}.
+Todas las reglas son del tipo \textit{AND}. Para las 7 primeras reglas se ha tomado como referencia la información del \textit{Ministerio de Sanidad}\cite{paciente}, las siguientes son creadas bajo el criterio de los autores con el fin de completar la funcionalidad del sistema.
 
 \begin{center}
-  \begin{adjustwidth}{-1.4cm}{}
+  \begin{adjustwidth}{-1.3cm}{}
 \begin{tabular}{c|c|c|c|c|c|c|c|c|c|}
   \cline{2-10}
                                 & DDPS & \begin{tabular}[c]{@{}c@{}}Prueba\\ Rápida\end{tabular} & PCR & UCI & \begin{tabular}[c]{@{}c@{}}Sospecha\\ Clínica\end{tabular} & DDCP & Síntomas & UMNC & \begin{tabular}[c]{@{}c@{}}\textbf{Realizar}\\ \textbf{PCR}\end{tabular} \\ \hline
