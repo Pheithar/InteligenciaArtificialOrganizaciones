@@ -133,68 +133,76 @@ Un sistema que consiga resolver este problema de forma eficaz sería de gran ayu
 Las entradas del sistema seleccionadas son:
 
 \begin{itemize}
-  \item \textbf{Días desde primeros síntomas} (DDPS): representa el número de días que el paciente lleva con síntomas relacionados con el \textit{COVID-19}. Sus posibles valores son: \textit{Pocos}, \textit{Medios} y \textit{Muchos}.
+  \item \textbf{Días desde primeros síntomas} (DDPS) figura ~\ref{DDPS}: representa el número de días que el paciente lleva con síntomas relacionados con el \textit{COVID-19}. Sus posibles valores son: \textit{Pocos}, \textit{Medios} y \textit{Muchos}.
 
   \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/dias_primeros_sintomas.png}
       \caption{DDPS}
+      \label{DDPS}
   \end{figure}
 
-  \item \textbf{Prueba rápida}: si el paciente ha dado positivo o negativo en una prueba rápida, por lo tanto sus valores son solo \textit{Sí} o \textit{No}.
+  \item \textbf{Prueba rápida} figura ~\ref{PR}: si el paciente ha dado positivo o negativo en una prueba rápida, por lo tanto sus valores son solo \textit{Sí} o \textit{No}. Si al paciente no se le ha realizado ninguna prueba rápida se representará con un 0,5.
 
   \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/prueba_rapida.png}
       \caption{Prueba rápida}
+      \label{PR}
   \end{figure}
 
-  \item \textbf{PCR}: si el paciente ha dado positivo o negativo en una prueba PCR, al igual que en la variable anterior, sus valores son solo \textit{Sí} o \textit{No}.
+  \item \textbf{PCR} figura ~\ref{PCR}: si el paciente ha dado positivo o negativo en una prueba PCR, al igual que en la variable anterior, sus valores son solo \textit{Sí} o \textit{No}. Si al paciente no se le ha realizado ninguna PCR se representará con un 0,5.
 
   \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/PCR.png}
       \caption{PCR}
+      \label{PCR}
   \end{figure}
 
-  \item \textbf{UCI}: si el paciente tiene que ser ingresado en la UCI, posibles valores: \textit{Sí} o \textit{No}.
+  \item \textbf{UCI} figura ~\ref{UCI}: si el paciente tiene que ser ingresado en la UCI, posibles valores: \textit{Sí} o \textit{No}.
 
   \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/UCI.png}
       \caption{UCI}
+      \label{UCI}
   \end{figure}
 
-  \item \textbf{Sospecha clínica}: creencia del médico de si el paciente puede tener o no el \textit{COVID-19}. Toma valores de \textit{Baja}, \textit{Media} y \textit{Alta}.
+  \item \textbf{Sospecha clínica} figura ~\ref{SC}: creencia del médico de si el paciente puede tener o no el \textit{COVID-19}. Toma valores de \textit{Baja}, \textit{Media} y \textit{Alta}.
 
   \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/sospecha_clinica.png}
       \caption{Sospecha clínica}
+      \label{SC}
   \end{figure}
 
-  \item \textbf{Días desde contacto positivo} (DDCP): representa el número de días desde que el paciente ha estado en contacto con una persona positiva de \textit{COVID-19}. Sus posibles valores son: \textit{Pocos}, \textit{Medios} y \textit{Muchos}.
+  \item \textbf{Días desde contacto positivo} (DDCP) figura~\ref{DDCP}: representa el número de días desde que el paciente ha estado en contacto con una persona positiva de \textit{COVID-19}. Sus posibles valores son: \textit{Pocos}, \textit{Medios} y \textit{Muchos}.
 
   \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/dias_desde_cntcto_positivo.png}
       \caption{DDCP}
+      \label{DDCP}
   \end{figure}
 
-  \item \textbf{Síntomas}: indica el número de síntomas de \textit{COVID-19} que tiene el paciente. Puede tomar valores de \textit{Ninguno}, \textit{Alguno}, \textit{Varios} y \textit{Todos}.
+  \item \textbf{Síntomas} figura ~\ref{Sintomas}: indica el número de síntomas de \textit{COVID-19} que tiene el paciente. Puede tomar valores de \textit{Ninguno}, \textit{Alguno}, \textit{Varios} y \textit{Todos}.
 
   \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/sintomas.png}
       \caption{Síntomas}
+      \label{Sintomas}
   \end{figure}
 
-  \item \textbf{Uso mascarilla con no convivientes} (UMNC): si el paciente usa regularmente la mascarilla cuando se encuentra con personas con las que no convive, sus valores son solo \textit{Sí} o \textit{No}.
+  \item \textbf{Uso mascarilla con no convivientes} (UMNC) figura ~\ref{UMNC}: si el paciente usa regularmente la mascarilla cuando se encuentra con personas con las que no convive, sus valores son solo \textit{Sí} o \textit{No}.
 
   \begin{figure}[!h]
       \centering
       \includegraphics[width=300px]{img/uso_mascarilla.png}
       \caption{UMNC}
+      \label{UMNC}
   \end{figure}
 
 \end{itemize}
@@ -211,7 +219,7 @@ Realizar test PCR
 Todas las reglas son del tipo \textit{AND}.
 
 \begin{center}
-  \begin{adjustwidth}{-2cm}{}
+  \begin{adjustwidth}{-1.4cm}{}
 \begin{tabular}{c|c|c|c|c|c|c|c|c|c|}
   \cline{2-10}
                                 & DDPS & \begin{tabular}[c]{@{}c@{}}Prueba\\ Rápida\end{tabular} & PCR & UCI & \begin{tabular}[c]{@{}c@{}}Sospecha\\ Clínica\end{tabular} & DDCP & Síntomas & UMNC & \begin{tabular}[c]{@{}c@{}}\textbf{Realizar}\\ \textbf{PCR}\end{tabular} \\ \hline
@@ -226,9 +234,9 @@ Todas las reglas son del tipo \textit{AND}.
 \multicolumn{1}{|c|}{Regla 9} & - & Sí & - & - & Baja & - & - & - & Sí \\ \hline
 \multicolumn{1}{|c|}{Regla 10} & - & - & - & - & - & \textit{Not} Muchos & \textit{Not} Ninguno & No & Sí \\ \hline
 \multicolumn{1}{|c|}{Regla 11} & \textit{Not} Pocos & - & - & - & - & - & Todos & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 12} & - & No & - & - & - & - & - & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 13} & - & - & - & - & - & - & - & - & Sí \\ \hline
-\multicolumn{1}{|c|}{Regla 14} & - & - & - & - & - & - & - & - & Sí \\ \hline
+\multicolumn{1}{|c|}{Regla 12} & - & No & - & - & Baja & - & - & - & No \\ \hline
+\multicolumn{1}{|c|}{Regla 13} & - & No & - & - & - & - & Varios & - & No \\ \hline
+\multicolumn{1}{|c|}{Regla 14} & - & - & - & - & \textit{Not} Alta & - & Alguno & - & No \\ \hline
 \end{tabular}
 \end{adjustwidth}
 \end{center}
