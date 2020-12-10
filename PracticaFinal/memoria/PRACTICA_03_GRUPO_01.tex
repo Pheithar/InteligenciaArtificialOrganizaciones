@@ -82,6 +82,63 @@ A continuación se ofrece un\textbf{ esquema del funcionamiento de la tarea prop
 \newpage
 
 \section{Conceptos teóricos}
+A la hora de elegir un método de Minería de Textos se consideran diversas opciones tales como utilizar la herramienta Weka de la Universidad de Waitako, sin embargo, dado que esta herramienta ya ha sido utilizada a lo largo de la asignatura a la que se adscribe este trabajo y además presenta ciertas limitaciones en cuanto a la flexibilidad y capacidad de toma de decisiones de diseño en los modelos se decide aplicar Word Embedding en redes de neuronas con la biblioteca de código abierto Tensorflow. De esta manera se usará un método diferente al usado en clase, lo cual permite experimentar y aprender tecnologías nuevas. 
+
+\vspace{3mm}
+
+No obstante, antes de iniciar la codificación de algún modelo, dado que se trata de una técnica nueva es necesario tener claros los conceptos teóricos involucrados. Una red neuronal únicamente procesa números, lo que implica que es necesario realizar una transformación. Representar las palabras como vectores es importante, ya que los modelos de inteligencia artificial no ‘entienden’ las palabras, y no puede realizar cálculos ni aprendizaje sobre ellas. Por este motivo, es necesario realizar una vectorización, que no es más que transformar estas palabras en números, agrupados en forma de vector. A continuación se exponen las diferentes técnicas de vectorización consideradas.
+
+\subsection{Codificación con valor único}
+Una primera aproximación podría ser asignar un único número a cada una de las palabras consideradas en la vectorización. Así si por ejemplo, se tiene la frase "hace un espléndido día" se obtiene un vector como el que sigue:
+
+      \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|}
+        \hline
+        \rowcolor[HTML]{DAE8FC}
+        \textbf{Palabra} & \textbf{Valor} \\ \hline
+        hace                    & 1   \\ \hline
+        un                     & 2   \\ \hline
+        espléndido                     & 3  \\ \hline
+        día                       & 4   \\ \hline
+        \end{tabular}
+        \caption{Codificación con un único valor}
+            \label{fig:graf_exp1}
+    \end{table}
+    
+Este enfoque presenta una serie de consideraciones importantes:
+\begin{itemize}
+\item El valor de cada palabra se decide de manera arbitraria.
+\item No se obtiene una representación fiel de la distancia entre palabras, lo cual es un hecho que es importante en el desarrollo de esta práctica.
+\end{itemize}
+
+Por ello, se descarta el enfoque aquí propuesto por no ser eficiente en la tarea propuesta.
+
+\subsection{One-hot encoding}
+Al codificación one-hot consiste en convertir cada palabra en un vector con tantas posiciones como palabras tengamos, 1 en la posición que se corresponda a la palabra considerada y 0 en caso contrario. 
+
+\vspace{2mm}
+
+A continuación se muestra un ejemplo de la codificación con el pequeño set de palabras utilizado en la sección anterior.
+
+  \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \rowcolor[HTML]{DAE8FC}
+        \textbf{} &\textbf{hace} & \textbf{un} & \textbf{espléndido} & \textbf{día}  \\ \hline
+        \textbf{hace}                     & 1 & 0 & 0 & 0\\ \hline
+        \textbf{un}                       & 0 & 1 & 0 & 0\\ \hline
+        \textbf{espléndido}               & 0 & 0 & 1 & 0\\ \hline
+        \textbf{día}                      & 0 & 0 & 0 & 1\\ \hline
+        \end{tabular}
+        \caption{One-hot encoding}
+            \label{fig:graf_exp1}
+    \end{table}
+
+\vspace{2mm}
+   
+El principal problema de esta técnica de vectorización es que la distancia entre las palabras es la misma, lo cual impide de nuevo disponer de una representación realista de este hecho esencial en el enfoque que se propone.
 
 \section{Conclusiones}
 
