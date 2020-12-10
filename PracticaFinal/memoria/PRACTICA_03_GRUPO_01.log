@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.5)  10 DEC 2020 10:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.5)  10 DEC 2020 11:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -416,7 +416,10 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 LaTeX Warning: Unused global option(s):
     [xcolor=table].
 
-No file PRACTICA_03_GRUPO_01.aux.
+(./PRACTICA_03_GRUPO_01.aux
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
+)
 \openout1 = `PRACTICA_03_GRUPO_01.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -435,6 +438,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
+
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count282
@@ -510,21 +514,26 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 27.
 LaTeX Info: Redefining \pageref on input line 27.
 LaTeX Info: Redefining \nameref on input line 27.
+
+(./PRACTICA_03_GRUPO_01.out) (./PRACTICA_03_GRUPO_01.out)
 \@outlinefile=\write4
 \openout4 = `PRACTICA_03_GRUPO_01.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-<img/logo_uc3m.jpg, id=4, 149.8398pt x 48.18pt>
+<img/logo_uc3m.jpg, id=16, 149.8398pt x 48.18pt>
 File: img/logo_uc3m.jpg Graphic file (type jpg)
 <use img/logo_uc3m.jpg>
 Package pdftex.def Info: img/logo_uc3m.jpg  used on input line 31.
 (pdftex.def)             Requested size: 362.77264pt x 116.66794pt.
-
-[1
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/logo_uc3m.jpg>]
+(./PRACTICA_03_GRUPO_01.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
 \tf@toc=\write5
 \openout5 = `PRACTICA_03_GRUPO_01.toc'.
 
@@ -534,302 +543,43 @@ been already used, duplicate ignored
                    \relax 
 l.59 \newpage
               [1]
-
-LaTeX Warning: Citation `fuzzy' on page 2 undefined on input line 63.
-
-
-LaTeX Warning: Citation `fuzzygame' on page 2 undefined on input line 67.
-
-
-LaTeX Warning: Citation `poblacion' on page 2 undefined on input line 79.
-
-
-LaTeX Warning: Citation `paciente' on page 2 undefined on input line 79.
-
-
-LaTeX Warning: Citation `poblacion' on page 2 undefined on input line 87.
-
-[2]
-
-LaTeX Warning: Citation `fuzzy' on page 3 undefined on input line 101.
-
-
-LaTeX Warning: Citation `fuzzygame' on page 3 undefined on input line 105.
-
-
-LaTeX Warning: Citation `fuzzytrain' on page 3 undefined on input line 109.
-
-
-LaTeX Warning: Reference `genetic_fuzzy' on page 3 undefined on input line 113.
-
-
-<img/genetic_fuzzy.png, id=26, 618.31pt x 674.52pt>
-File: img/genetic_fuzzy.png Graphic file (type png)
-<use img/genetic_fuzzy.png>
-Package pdftex.def Info: img/genetic_fuzzy.png  used on input line 117.
-(pdftex.def)             Requested size: 230.86334pt x 251.8534pt.
-
-LaTeX Warning: Citation `fuzzytrain' on page 3 undefined on input line 118.
-
-
-LaTeX Warning: Citation `fuzzytrain' on page 3 undefined on input line 118.
-
-
-LaTeX Warning: Citation `fuzzyfashion' on page 3 undefined on input line 125.
-
-
-LaTeX Warning: Reference `fuzzy_shop' on page 3 undefined on input line 125.
-
-[3 <./img/genetic_fuzzy.png>]
-<img/fuzzy_shop.png, id=35, 751.80875pt x 563.10374pt>
-File: img/fuzzy_shop.png Graphic file (type png)
-<use img/fuzzy_shop.png>
-Package pdftex.def Info: img/fuzzy_shop.png  used on input line 137.
-(pdftex.def)             Requested size: 301.1261pt x 225.54683pt.
-
-
-LaTeX Warning: Citation `fuzzyfashion' on page 4 undefined on input line 138.
-
-
-LaTeX Warning: Citation `fuzzyfashion' on page 4 undefined on input line 138.
-
-[4 <./img/fuzzy_shop.png (PNG copy)>]
-
-LaTeX Warning: Citation `poblacion' on page 5 undefined on input line 148.
-
-
-LaTeX Warning: Reference `IA-14' on page 5 undefined on input line 152.
-
-<img/ia_ac_14.png, id=41, 1000.73875pt x 284.06125pt>
-File: img/ia_ac_14.png Graphic file (type png)
-<use img/ia_ac_14.png>
-Package pdftex.def Info: img/ia_ac_14.png  used on input line 156.
-(pdftex.def)             Requested size: 301.1261pt x 85.47475pt.
-
-LaTeX Warning: Reference `IA-7' on page 5 undefined on input line 161.
-
-<img/ia_ac_7.png, id=42, 1011.78pt x 280.04625pt>
-File: img/ia_ac_7.png Graphic file (type png)
-<use img/ia_ac_7.png>
-Package pdftex.def Info: img/ia_ac_7.png  used on input line 165.
-(pdftex.def)             Requested size: 301.1261pt x 83.3479pt.
-
-LaTeX Warning: Reference `IA-14 65' on page 5 undefined on input line 170.
-
-[5 <./img/ia_ac_14.png> <./img/ia_ac_7.png>]
-<img/ia_65_14.png, id=53, 1005.7575pt x 278.03876pt>
-File: img/ia_65_14.png Graphic file (type png)
-<use img/ia_65_14.png>
-Package pdftex.def Info: img/ia_65_14.png  used on input line 174.
-(pdftex.def)             Requested size: 301.1261pt x 83.24255pt.
-
-
-LaTeX Warning: Reference `IA-7 65' on page 6 undefined on input line 179.
-
-<img/ia_65_7.png, id=54, 1013.7875pt x 278.03876pt>
-File: img/ia_65_7.png Graphic file (type png)
-<use img/ia_65_7.png>
-Package pdftex.def Info: img/ia_65_7.png  used on input line 183.
-(pdftex.def)             Requested size: 301.1261pt x 82.58498pt.
-
-LaTeX Warning: Reference `PDIA' on page 6 undefined on input line 188.
-
-<img/PDIA.png, id=55, 1010.77625pt x 280.04625pt>
-File: img/PDIA.png Graphic file (type png)
-<use img/PDIA.png>
-Package pdftex.def Info: img/PDIA.png  used on input line 192.
-(pdftex.def)             Requested size: 301.1261pt x 83.4291pt.
-
-LaTeX Warning: Reference `cUCI' on page 6 undefined on input line 197.
-
-<img/camas_UCI.png, id=56, 1004.75375pt x 281.05pt>
-File: img/camas_UCI.png Graphic file (type png)
-<use img/camas_UCI.png>
-Package pdftex.def Info: img/camas_UCI.png  used on input line 201.
-(pdftex.def)             Requested size: 301.1261pt x 84.22987pt.
-
-LaTeX Warning: Reference `Camas' on page 6 undefined on input line 206.
-
-<img/ocupacion_camas.png, id=57, 1002.74625pt x 282.05376pt>
-File: img/ocupacion_camas.png Graphic file (type png)
-<use img/ocupacion_camas.png>
-Package pdftex.def Info: img/ocupacion_camas.png  used on input line 210.
-(pdftex.def)             Requested size: 301.1261pt x 84.70285pt.
-[6 <./img/ia_65_14.png> <./img/ia_65_7.png> <./img/PDIA.png> <./img/camas_UCI.p
-ng>]
-
-LaTeX Warning: Reference `Confinar' on page 7 undefined on input line 219.
-
-<img/confinar.png, id=71, 1010.77625pt x 282.05376pt>
-File: img/confinar.png Graphic file (type png)
-<use img/confinar.png>
-Package pdftex.def Info: img/confinar.png  used on input line 223.
-(pdftex.def)             Requested size: 301.1261pt x 84.02715pt.
-[7 <./img/ocupacion_camas.png> <./img/confinar.png>]
-
-LaTeX Warning: Citation `poblacion' on page 8 undefined on input line 230.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 234.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 234.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 234.
-[8]
-
-LaTeX Warning: Citation `paciente' on page 9 undefined on input line 259.
-
-
-LaTeX Warning: Reference `DDPS' on page 9 undefined on input line 271.
-
-<img/dias_primeros_sintomas.png, id=87, 1001.7425pt x 282.05376pt>
-File: img/dias_primeros_sintomas.png Graphic file (type png)
-<use img/dias_primeros_sintomas.png>
-Package pdftex.def Info: img/dias_primeros_sintomas.png  used on input line 275
-.
-(pdftex.def)             Requested size: 301.1261pt x 84.78462pt.
-
-LaTeX Warning: Reference `PR' on page 9 undefined on input line 280.
-
-<img/prueba_rapida.png, id=88, 1000.73875pt x 282.05376pt>
-File: img/prueba_rapida.png Graphic file (type png)
-<use img/prueba_rapida.png>
-Package pdftex.def Info: img/prueba_rapida.png  used on input line 284.
-(pdftex.def)             Requested size: 301.1261pt x 84.8707pt.
-
-LaTeX Warning: Reference `PCR' on page 9 undefined on input line 289.
-
-[9
-
- <./img/dias_primeros_sintomas.png> <./img/prueba_rapida.png>]
-<img/PCR.png, id=99, 997.7275pt x 284.06125pt>
-File: img/PCR.png Graphic file (type png)
-<use img/PCR.png>
-Package pdftex.def Info: img/PCR.png  used on input line 295.
-(pdftex.def)             Requested size: 301.1261pt x 85.73048pt.
-
-
-LaTeX Warning: Reference `UCI' on page 10 undefined on input line 300.
-
-<img/UCI.png, id=100, 1000.73875pt x 283.0575pt>
-File: img/UCI.png Graphic file (type png)
-<use img/UCI.png>
-Package pdftex.def Info: img/UCI.png  used on input line 304.
-(pdftex.def)             Requested size: 301.1261pt x 85.17271pt.
-
-LaTeX Warning: Reference `SC' on page 10 undefined on input line 309.
-
-<img/sospecha_clinica.png, id=101, 994.71625pt x 280.04625pt>
-File: img/sospecha_clinica.png Graphic file (type png)
-<use img/sospecha_clinica.png>
-Package pdftex.def Info: img/sospecha_clinica.png  used on input line 313.
-(pdftex.def)             Requested size: 301.1261pt x 84.7794pt.
-
-LaTeX Warning: Reference `DDCP' on page 10 undefined on input line 318.
-
-<img/dias_desde_cntcto_positivo.png, id=102, 998.73125pt x 280.04625pt>
-File: img/dias_desde_cntcto_positivo.png Graphic file (type png)
-<use img/dias_desde_cntcto_positivo.png>
-Package pdftex.def Info: img/dias_desde_cntcto_positivo.png  used on input line
- 322.
-(pdftex.def)             Requested size: 301.1261pt x 84.43327pt.
-
-LaTeX Warning: Reference `Sintomas' on page 10 undefined on input line 327.
-
-[10
-
- <./img/PCR.png> <./img/UCI.png> <./img/sospecha_clinica.png> <./img/dias_desde
-_cntcto_positivo.png>]
-<img/sintomas.png, id=115, 996.72375pt x 285.065pt>
-File: img/sintomas.png Graphic file (type png)
-<use img/sintomas.png>
-Package pdftex.def Info: img/sintomas.png  used on input line 333.
-(pdftex.def)             Requested size: 301.1261pt x 86.12042pt.
-
-
-LaTeX Warning: Reference `UMNC' on page 11 undefined on input line 338.
-
-<img/uso_mascarilla.png, id=116, 995.72pt x 283.0575pt>
-File: img/uso_mascarilla.png Graphic file (type png)
-<use img/uso_mascarilla.png>
-Package pdftex.def Info: img/uso_mascarilla.png  used on input line 342.
-(pdftex.def)             Requested size: 301.1261pt x 85.60463pt.
-
-LaTeX Warning: Reference `realizarPCR' on page 11 undefined on input line 353.
-
-<img/realizar_pcr.png, id=117, 996.72375pt x 287.0725pt>
-File: img/realizar_pcr.png Graphic file (type png)
-<use img/realizar_pcr.png>
-Package pdftex.def Info: img/realizar_pcr.png  used on input line 357.
-(pdftex.def)             Requested size: 301.1261pt x 86.7269pt.
-[11
-
- <./img/sintomas.png> <./img/uso_mascarilla.png> <./img/realizar_pcr.png>]
-
-LaTeX Warning: Citation `paciente' on page 12 undefined on input line 366.
-
-
-Overfull \hbox (43.72067pt too wide) in paragraph at lines 370--388
-[][] 
- []
-
-[12]
-
-LaTeX Warning: Citation `cant' on page 13 undefined on input line 397.
-
-
-LaTeX Warning: Citation `cana' on page 13 undefined on input line 397.
-
-[13]
-Overfull \hbox (21.74693pt too wide) in paragraph at lines 443--470
- [][] 
- []
-
-[14] [15] [16]
+<img/Animal Farm.png, id=36, 825.0825pt x 343.2825pt>
+File: img/Animal Farm.png Graphic file (type png)
+<use img/Animal Farm.png>
+Package pdftex.def Info: img/Animal Farm.png  used on input line 78.
+(pdftex.def)             Requested size: 451.68915pt x 187.93118pt.
+ [2 <./img/Animal Farm.png>] [3]
 No file PRACTICA_03_GRUPO_01.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 520.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 520.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
 (./PRACTICA_03_GRUPO_01.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 520.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 520.
-
-
-Package rerunfilecheck Warning: File `PRACTICA_03_GRUPO_01.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `PRACTICA_03_GRUPO_01.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  2ECBFE35EC3927D040437920FE81B92B;929.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 520.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
+Package rerunfilecheck Info: File `PRACTICA_03_GRUPO_01.out' has not changed.
+(rerunfilecheck)             Checksum: F31F69C95609EA786A1B4FE8F4FA7FDC;153.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 9300 strings out of 483121
- 143018 string characters out of 5964354
- 439143 words of memory out of 5000000
- 24091 multiletter control sequences out of 15000+600000
- 538853 words of font info for 45 fonts, out of 8000000 for 9000
+ 9107 strings out of 483121
+ 139870 string characters out of 5964354
+ 425247 words of memory out of 5000000
+ 23963 multiletter control sequences out of 15000+600000
+ 536068 words of font info for 36 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 50i,17n,77p,963b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,6n,77p,917b,374s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PRACTICA_03_GRUPO_01.pdf (17 pages, 860569 bytes).
+Output written on PRACTICA_03_GRUPO_01.pdf (4 pages, 540293 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 57 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
+ 35 words of extra memory for PDF output out of 10000 (max. 10000000)
 
