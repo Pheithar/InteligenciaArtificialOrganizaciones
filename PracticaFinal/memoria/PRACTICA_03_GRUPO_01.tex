@@ -125,7 +125,6 @@ A continuación se muestra un ejemplo de la codificación con el pequeño set de
         \centering
         \begin{tabular}{|c|c|c|c|c|}
         \hline
-        \rowcolor[HTML]{DAE8FC}
         \textbf{} &\textbf{hace} & \textbf{un} & \textbf{espléndido} & \textbf{día}  \\ \hline
         \textbf{hace}                     & 1 & 0 & 0 & 0\\ \hline
         \textbf{un}                       & 0 & 1 & 0 & 0\\ \hline
@@ -137,9 +136,31 @@ A continuación se muestra un ejemplo de la codificación con el pequeño set de
     \end{table}
 
 \vspace{2mm}
-   
+
 El principal problema de esta técnica de vectorización es que la distancia entre las palabras es la misma, lo cual impide de nuevo disponer de una representación realista de este hecho esencial en el enfoque que se propone.
 
+\subsection{Embedding}
+
+Está técnica sirve para representar aquellas \textbf{palabras que son semánticamente parecidas con una codificación similar}. Lo que hace esta técnica tan atractiva es que no es necesario especificar esta similitud de forma manual. Un \textit{embedding} es un vector denso de números reales, donde su longitud viene determinada por parámetro. En lugar de determinar los pesos a mano, se tratan como \textbf{parámetros que pueden ser entrenados}, como si de pesos de redes de neuronas densas se trataran. Por eso mismo, esta técnica funciona especialmente bien con las redes de neuronas, que incorpora la modificación de estos pesos a la fase de entrenamiento de la red.
+
+\vspace{2mm}
+
+La dimensionalidad del \textit{embedding} debe ser proporcional a la cantidad de datos disponibles, ya que cuanto más grande sea el vector, más detalles podrá obtener de cada palabra, pero requiere de más datos para ser entrenado. A continuación se muestra un ejemplo de la codificación con el pequeño set de palabras utilizado en la sección anterior.
+
+  \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{hace}                     & 2.32 & 7.35 \\ \hline
+        \textbf{un}                       & 0.89 & 4.23 \\ \hline
+        \textbf{espléndido}               & 0.75 & 8.65 \\ \hline
+        \textbf{día}                      & 2.65 & 3.00 \\ \hline
+        \end{tabular}
+        \caption{Embedding}
+            \label{fig:graf_exp1}
+    \end{table}
+
+Por lo tanto esta técnica resulta de gran utilidad a la hora de conseguir representar la distancia semántica entre las palabras que forman un texto. Siendo este hecho fundamental para la tarea se propuesta \textbf{se decide apostar por esta codificación para construir el modelo de text mining}.
 \section{Conclusiones}
 
 \clearpage
