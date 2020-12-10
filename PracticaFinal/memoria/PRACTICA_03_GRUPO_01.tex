@@ -1,0 +1,296 @@
+\documentclass[12pt,a4paper, xcolor=table]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{eurosym}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{afterpage}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage{subfig}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{changepage}
+
+\usepackage{imakeidx}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+\renewcommand*\contentsname{Índice: }
+
+\makeindex
+\let\olditemize\itemize
+\def\itemize{\olditemize\itemsep=0pt}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\begin{titlepage}
+        \centering
+        \includegraphics[width=0.75\textwidth]{img/logo_uc3m.jpg}\par\vspace{2cm}
+        {\huge\bfseries Práctica Final \\ Predicción del género de libros\par}
+        \vspace{0.5cm}
+        {\scshape\Large Inteligencia Artificial en las Organizaciones\par}
+        \vspace{1.5cm}
+        {\scshape\Large Grupo 83-1\par}
+        \vspace{1.5cm}
+        {\Large\itshape Miguel Gutiérrez Pérez\par}
+        {\Large 100383537@alumnos.uc3m.es \par}
+        \vspace{1cm}
+        {\Large\itshape Mario Lozano Cortés\par}
+        {\Large 100383511@alumnos.uc3m.es\par}
+        \vspace{1cm}
+        {\Large\itshape Alba Reinders Sánchez\par}
+        {\Large 100383444@alumnos.uc3m.es\par}
+        \vspace{1cm}
+        {\Large\itshape Alejandro Valverde Mahou\par}
+        {\Large 100383383@alumnos.uc3m.es\par}
+        \vspace{5mm}
+        {\large GitHub: \textbf{\textit{\href{https://github.com/Pheithar/InteligenciaArtificialOrganizaciones}{InteligenciaArtificialOrganizaciones}}}}
+        \vfill
+
+% Bottom of the page
+        {\large \today\par}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\section{Introducción}
+
+El objetivo de esta práctica consiste en abordar una clasificación sobre resúmenes de libros para determinar su género literario. Las razones que llevan a la elección de este problema tienen que ver con que actualmente cualquier persona con la dedicación suficiente puede escribir un libro sin la necesidad del patrocinio de una editorial, lo que conlleva una \textbf{explosión en el número de nuevos libros generados}. Por consiguiente, las librerías y bibliotecas necesitan catalogar una gran cantidad de escritos, lo cual, les lleva a necesitar de métodos de clasificación automática. Por ello, se plantea el uso de resúmenes y metadatos de los libros puesto que la tarea de clasificación \textbf{debe poder realizarse con el menor número de datos posible}, puesto que no todos los libros que llegan a estas entidades disponen de todos los datos completos.
+
+\vspace{3mm}
+
+La primera cuestión imprescindible que surge al conocer el problema propuesto es qué técnica de Inteligencia Artificial emplear. Dado que se realiza un análisis sobre diferentes textos, la opción evidente es la \textbf{Minería de Texto}, la cual es una técnica de minería de datos que busca extraer \textbf{información útil y relevante de documentos de texto} de diferentes fuentes diferentes, como puede ser páginas web,
+correos electrónicos, periódicos o redes sociales. Para ello, se hace una identificación de patrones en los datos, como puede ser la repetición de palabras o conjuntos de palabras, estructuras sintácticas que se repitan a lo largo de los datos, etc. Esta minería de texto tiene numerosas aplicaciones, y en esta práctica se van a desarrollar una clasificación en función de unas categorías que serán definidas gracias a la elección de un dataset apropiado.
+
+\vspace{3mm}
+
+A continuación se ofrece un\textbf{ esquema del funcionamiento de la tarea propuesta }en donde un libro sin catalogación llega a alguna a de estas entidades que necesitan catalogar su género a partir de la información más reducida posible (generalmente título y argumento). Inicialmente se plantea la distinción de un único género, sin embargo, \textbf{es bien sabido que un escrito no tiene por qué adscribirse a un único género} y por lo tanto se debe considerar como futura \textbf{ampliación} catalogar tantos como sea posible.
+
+\vspace{12mm}
+
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=450px]{img/Animal Farm.png}
+    \caption{Esquema de la tarea}
+    \end{figure}
+
+\newpage
+
+\section{Conjunto de datos}
+    En esta sección se describirá el \textbf{conjunto de datos} utilizado en su forma original, así como todos los cambios que se vayan a hacer como parte del \textbf{preprocesado} junto con las razones que han llevado a su realización.
+    
+    \subsection{Estructura original}
+    El conjunto de datos ha sido obtenido de \textbf{Kaggle} [INSERTAR], y dispone de un total de \textbf{54283 libros y 12 columna} con información sobre ellos. En la Figura X se puede apreciar visualmente la forma de las instancias de este conjunto de datos.
+    
+    \vspace{3mm}
+    
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=450px]{img/instancia_dataset_original.png}
+        \caption{Instancia del conjunto de datos original}
+    \end{figure}
+    
+    \vspace{3mm}
+    
+    A continuación se va a explicar el \textbf{contenido} de cada columna en mas detalle:
+    
+    \begin{itemize}
+        \item \textbf{Author(s):} Cadena de caracteres que indica el o los autores del libro. En caso de ser mas de uno, cada autor aparece separado por '$\mid$'.  
+        \item \textbf{Description:} Cadena de caracteres que indica el resumen o descripción del libro. 
+        \item \textbf{Edition:} Cadena de caracteres que indica la edición del libro. 
+        \item \textbf{Format:} Cadena de caracteres que indica el formato del libro, como por ejemplo \\
+        \textit{handcover} o \textit{paperback}.
+        \item \textbf{ISBN:} Valor numérico que indica el ISBN del libro. Debido a que se utiliza notación científica para su representación, no se puede leer ni usar correctamente, pues faltan números.
+        \item \textbf{No. Pages:} Valor numérico que indica el número de páginas que tiene el libro.
+        \item \textbf{Avg. Rating:} Valor numérico que indica la valoración media que los usuarios han dado al libro.
+        \item \textbf{No. Ratings:}  Valor numérico que indica al cantidad de valoraciones de usuario que ha recibido el libro.
+        \item \textbf{No. Reviews:} Valor numérico que indica la cantidad de críticas que ha recibido el libro.
+        \item \textbf{Title:} Cadena de caracteres que indica el título del libro.
+        \item \textbf{Genres:} Cadena de caracteres que indica los géneros a los que pertenece el libro. Los diferentes géneros aparecen separados por '$\mid$'.
+        \item \textbf{Cover Image:} Imagen que muestra la portada del libro. Se indica un enlace que lleva hasta dicha imagen, aunque por motivos de espacio no se ha incluido en la figura de arriba.
+    \end{itemize}
+    
+    \vspace{3mm}
+    
+    Inicialmente se consideró usar el conjunto de datos\textbf{ CMU Book Summary Dataset} [INSERTAR], pero la manera en la que estaban dispuestos los géneros, así como el resto de atributos, daba lugar a un \textbf{procesado más complejo} para obtener sus valores. Además, se consideró que los géneros que se utilizaban no eran muy acertados, como por ejemplo \textit{Speculative fiction} o \textit{Postmodernism}. Posteriormente se encontró el conjunto de datos que se ha descrito mas arriba, el cual tenía muchas mas instancias (54,283 frente a 16,559), proporcionaba mucha más información (tenía mas atributos), y, lo mas importante, era mucho mas sencillo obtener los valores de sus instancias.
+
+    \subsection{Preprocesado}
+        En toda tarea de minería de texto existe algún tipo de \textbf{preprocesado}, ya sea obtener solo los valores que se necesiten, eliminar instancias con errores, vectorizar el texto, etc. Esta vez no va a ser diferente, e incluso se puede afirmar que ha sido una \textbf{parte importante del trabajo}, y que ha ocupado una cantidad considerable de tiempo. A continuación se detallan todas las \textbf{modificaciones} que se han llevado a cabo:
+        
+        \begin{itemize}
+            \item \textbf{Selección de las columnas útiles:} De las 12 columnas que tiene el conjunto de datos seleccionado, solo son necesarias dos, \textit{description} y \textit{genres}, que contenían, respectivamente, el resumen o descripción del libro y los géneros que se le atribuyen. Por ello, solo solo se mantendrán dichas columnas eliminando el resto.
+            \item \textbf{Eliminación de instancias con descripciones en un lenguaje diferente al ingles:} Los resúmenes del conjunto de datos se encuentran escritos no solo en inglés, si no también en árabe, italiano, chino, coreano, japonés, portugués...Se ha decidido por razones evidentes, mantener solo aquellos libros cuyos resúmenes estén en ingles. Para la detección del idioma se ha utilizado la librería \textit{\textbf{langdetect}} [https://pypi.org/project/langdetect/] de \textit{Python}, y aquellas instancias donde se detectaba un idioma diferente al inglés se han borrado. Gracias a la gran cantidad de instancias que hay, la eliminación de las instancias no afecta de manera significativa.
+            \item \textbf{Corrección de formatos incorrectos:} Algunos de los resúmenes del conjunto de datos contenían errores de formato como saltos de línea (de diferentes tipos), tabulaciones o espacios en medio de los resúmenes, así que se sustituyeron por un único espacio en blanco.
+            \item \textbf{Eliminación de caracteres no útiles:} Se han eliminado de los resúmenes del conjunto de datos caracteres que no proporcionaban ningún tipo de información, como comillas, guiones, corchetes, paréntesis, puntos, exclamaciones, interrogaciones, etc.
+            \item \textbf{Eliminación de términos no útiles:} Se han eliminado de los resúmenes del conjunto de datos términos que no proporcionaban ningún tipo de información útil. Para ello se ha utilizado una lista de \textit{\textbf{stopwords}}, reutilizada de la segunda práctica de la asignatura, pero a la cual se han añadido términos que se han ido encontrado al realizar pruebas. Evidentemente, no se han incluido todos los términos sin información útil posibles, pero dada la gran cantidad de términos que puede haber, creemos que la cantidad de \textit{\textbf{stopwords}} obtenida es suficiente.
+            \item \textbf{Cambios requeridos por la aproximación usada:} La aproximación que se utilizada en este trabajo requiere que los resúmenes esté en minúsculas. Al contrario que ocurría en la segunda práctica, no es necesario dividir los resúmenes en términos, por lo que no se utilizara la cadena de caracteres que contiene el resumen de manera directa. 
+            \item \textbf{Eliminación de géneros no útiles:} Después de analizar un poco más a fondo los diferentes géneros que se usan, se ha observado la falta de un criterio claro para elegir que géneros usar, dando lugar a géneros de países, como \textit{spain}, al mismo tiempo que el género \textit{spanish literature}. También se encontraron géneros muy concretos y sin mucho sentido, como \textit{Amazon} o \textit{Apple}. Esto llevó a que fuera necesario revisar manualmente todos los géneros, los cuales eran en torno a 850, y eliminar aquello que se consideraron no útiles. Al finalizar esta revisión quedaron 625 géneros.
+        \end{itemize}
+    
+    \vspace{3mm}
+    
+    Una vez aplicado todo esto, los datos ya están preparados para su uso. Sin embargo, queda una última cosa. La cadena de caracteres que contiene los géneros se separara según el caracter '$|$' en los diferentes géneros para su posterior uso. Como en este trabajo se va explorar una clasificación \textbf{multi-clase} con el primer género, y una clasificación \textit{\textbf{multi-label}} con todos los géneros, para la primera solo se utilizará el primer género, y para la segunda se usarán todos.
+    
+\end{document}
+
+\section{Conceptos teóricos}
+A la hora de elegir un método de Minería de Textos se consideran diversas opciones tales como utilizar la herramienta \textit{Weka} de la \textit{Universidad de Waitako}, sin embargo, dado que esta herramienta ya ha sido utilizada a lo largo de la asignatura a la que se adscribe este trabajo y además presenta ciertas limitaciones en cuanto a la flexibilidad y capacidad de toma de decisiones de diseño en los modelos se decide aplicar \textbf{Word Embedding} en redes de neuronas con la \textbf{biblioteca de código abierto Tensorflow}. De esta manera se usará un método diferente al usado en clase, lo cual permite experimentar y aprender tecnologías nuevas. 
+
+\vspace{3mm}
+
+No obstante, antes de iniciar la codificación de algún modelo, dado que se trata de una técnica nueva es necesario tener claros los conceptos teóricos involucrados. Una red neuronal únicamente procesa números, lo que implica que es necesario realizar una transformación. Representar las palabras como vectores es importante, ya que los modelos de inteligencia artificial no ‘entienden’ las palabras, y no puede realizar cálculos ni aprendizaje sobre ellas. Por este motivo, es necesario realizar una \textbf{vectorización}, que no es más que transformar estas palabras en números, agrupados en forma de vector. A continuación se exponen las diferentes técnicas de vectorización consideradas.
+
+\subsection{Codificación con valor único}
+Una primera aproximación podría ser asignar un único número a cada una de las palabras consideradas en la vectorización. Así si por ejemplo, se tiene la frase "hace un espléndido día" se obtiene un vector como el que sigue:
+
+      \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|}
+        \hline
+        \rowcolor[HTML]{DAE8FC}
+        \textbf{Palabra} & \textbf{Valor} \\ \hline
+        hace                    & 1   \\ \hline
+        un                     & 2   \\ \hline
+        espléndido                     & 3  \\ \hline
+        día                       & 4   \\ \hline
+        \end{tabular}
+        \caption{Codificación con un único valor}
+            \label{fig:graf_exp1}
+    \end{table}
+    
+Este enfoque presenta una serie de consideraciones importantes:
+\begin{itemize}
+\item El valor de cada palabra se decide de manera arbitraria.
+\item No se obtiene una representación fiel de la distancia entre palabras, lo cual es un hecho que es importante en el desarrollo de esta práctica.
+\end{itemize}
+
+Por ello, se descarta el enfoque aquí propuesto por no ser eficiente en la tarea propuesta.
+
+\subsection{One-hot encoding}
+Al codificación one-hot consiste en convertir cada palabra en un vector con tantas posiciones como palabras tengamos, 1 en la posición que se corresponda a la palabra considerada y 0 en caso contrario. 
+
+\vspace{2mm}
+
+A continuación se muestra un ejemplo de la codificación con el pequeño set de palabras utilizado en la sección anterior.
+
+  \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{} &\textbf{hace} & \textbf{un} & \textbf{espléndido} & \textbf{día}  \\ \hline
+        \textbf{hace}                     & 1 & 0 & 0 & 0\\ \hline
+        \textbf{un}                       & 0 & 1 & 0 & 0\\ \hline
+        \textbf{espléndido}               & 0 & 0 & 1 & 0\\ \hline
+        \textbf{día}                      & 0 & 0 & 0 & 1\\ \hline
+        \end{tabular}
+        \caption{One-hot encoding}
+            \label{fig:graf_exp1}
+    \end{table}
+
+\vspace{2mm}
+
+El principal problema de esta técnica de vectorización es que la distancia entre las palabras es la misma, lo cual impide de nuevo disponer de una representación realista de este hecho esencial en el enfoque que se propone.
+
+\subsection{Embedding}
+
+Está técnica sirve para representar aquellas \textbf{palabras que son semánticamente parecidas con una codificación similar}. Lo que hace esta técnica tan atractiva es que no es necesario especificar esta similitud de forma manual. Un \textit{embedding} es un vector denso de números reales, donde su longitud viene determinada por parámetro. En lugar de determinar los pesos a mano, se tratan como \textbf{parámetros que pueden ser entrenados}, como si de pesos de redes de neuronas densas se trataran. Por eso mismo, esta técnica funciona especialmente bien con las redes de neuronas, que incorpora la modificación de estos pesos a la fase de entrenamiento de la red.
+
+\vspace{2mm}
+
+La dimensionalidad del \textit{embedding} debe ser proporcional a la cantidad de datos disponibles, ya que cuanto más grande sea el vector, más detalles podrá obtener de cada palabra, pero requiere de más datos para ser entrenado. A continuación se muestra un ejemplo de la codificación con el pequeño set de palabras utilizado en la sección anterior.
+
+  \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{hace}                     & 2.32 & 7.35 \\ \hline
+        \textbf{un}                       & 0.89 & 4.23 \\ \hline
+        \textbf{espléndido}               & 0.75 & 8.65 \\ \hline
+        \textbf{día}                      & 2.65 & 3.00 \\ \hline
+        \end{tabular}
+        \caption{Embedding}
+            \label{fig:graf_exp1}
+    \end{table}
+
+Por lo tanto esta técnica resulta de gran utilidad a la hora de conseguir representar la distancia semántica entre las palabras que forman un texto. Siendo este hecho fundamental para la tarea se propuesta \textbf{se decide apostar por esta codificación para construir el modelo de text mining}.
+
+\newpage
+
+\section{Clasificación}
+
+Normalmente un libro se encuadra en más de un género literario, por ello, de manera inicial se decide enfocar el problema en la clasificación de un solo género para posteriormente, poder realizar una ampliación del algoritmo que prediga todos los géneros posibles de un escrito.
+
+\subsection{Arquitectura del modelo}
+
+Una vez se cargan los datos preprocesados se realiza una aleatorización de los mismos para evitar posibles sesgos, se vectorizan las salidas y se dividen los datos en conjunto de  entrenamiento (70\%) y en conjunto de test (30\%). Los modelos considerados siguen todos la misma estructura de Red de Neuronas:
+
+\begin{itemize}
+\item \textbf{Capa de vectorización del texto}: Transforma cadenas de caracteres a índices de vocabulario, el vocabulario se crea a partir de la frecuencia de valores individuales. Se modifican los siguientes parámetros:
+\begin{itemize}
+\item \textbf{Número máximo de tokens}: Representa el tamaño del vocabulario a usar.
+\item \textbf{Longitud de la secuencia de salida}: número de índices de palabras que se pasa a la capa siguiente.
+\end{itemize}
+
+\item \textbf{Capa de \textit{embedding}}: A partir del vocabulario busca el vector de \textit{embedding} para cada índice de palabras. Estos vectores se aprenden según el modelo se entrena.
+
+\item \textbf{Capa de agrupación promedio global}: Devuelve un vector de salida de longitud fija para cada ejemplo haciendo la media sobre la dimensión de la secuencia. Se utiliza para permitir a la red usar los datos del \textit{embedding}.
+
+\item \textbf{Capa densa}: Neuronas completamente conectadas. Según el modelo puede tener una o varias capas y el número de neuronas puede variar por capas.
+
+\item \textbf{Capa de salida}: Capa densa que tiene tantas neuronas como géneros distintos haya.
+
+\end{itemize}
+
+De forma gráfica se puede presentar la estructura como se muestra en la figura 2.
+
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=150px]{img/Arquitectura.png}
+    \caption{Arquitectura del modelo}
+    \end{figure}
+
+
+\newpage
+
+
+\subsection{Clasificación de 1 género}
+
+La idea de usar un sólo género a la hora de clasificar un libro es útil si este es género es el principal del mismo, sin embargo, el dataset original no hace una diferenciación sobre esto y establece todos los géneros de un libro con la misma importancia. Por ello, se ha decidido guardar el primer género de cada libro, aunque esto \textbf{podría suponer un sesgo }sobre el modelo que se debe tener en cuenta. Por ejemplo, si un libro pertenece a los géneros Ciencia ficción, Aventura y Fantasía, al entrenar únicamente con el primer género puede que la salida la red lo clasifique como Fantasía y lo trate como un error al desconocer que también pertenece a este género. Por ello, es de suma importancia realizar la ampliación multigénero.
+
+\vspace{3mm}
+
+Al realizar las transformaciones oportunas seleccionando el primer género \textbf{se obtienen un total de 194 géneros diferentes}. Se trata por lo tanto de un problema de clasificación multiclase ya que se tienen 194 clases y cada instancia tiene una sola etiqueta. 
+
+\vspace{3mm}
+
+Para poder ser utilizadas por la red, las salidas se vectorizan usando \textit{one-hot encoding} para representar a estas clases, donde cada posición es un género distinto. Un 0 significa que no pertenece a ese género y un 1 que sí pertenece. Por lo tanto, la forma que tiene el vector de una salida cualquiera es: [0, 0, …, 0, 1, …, 0]. El cual tiene tamaño 194 y un solo 1.
+
+\vspace{3mm}
+
+Otro aspecto importante que hay que tener en cuenta al tratarse de un problema multiclase es la función de coste. Se usa \textbf{entropía cruzada categórica} (\textit{Categorical Cross-Entropy}) porque se desea entrenar a la red para sacar como salida la probabilidad para todas las clases sobre cada uno de los ejemplos. 
+
+\vspace{3mm}
+
+La figura 3 muestra un ejemplo de la codificación one-hot en la vectorización de los géneros de la novela 1984.
+
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=250px]{img/1984_Genres.png}
+    \caption{One-hot encoding de 1 género}
+    \end{figure}
+
+
+\section{Conclusiones}
+
+\clearpage
+
+\bibliographystyle{ieeetr}
+\bibliography{bibliografia.bib}
+
+
+\end{document}
