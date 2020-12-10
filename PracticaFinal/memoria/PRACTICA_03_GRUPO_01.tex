@@ -81,6 +81,63 @@ A continuación se ofrece un\textbf{ esquema del funcionamiento de la tarea prop
 
 \newpage
 
+\section{Conjunto de datos}
+    En esta sección se describirá el \textbf{conjunto de datos} utilizado en su forma original, así como todos los cambios que se vayan a hacer como parte del \textbf{preprocesado} junto con las razones que han llevado a su realización.
+    
+    \subsection{Estructura original}
+    El conjunto de datos ha sido obtenido de \textbf{Kaggle} [INSERTAR], y dispone de un total de \textbf{54283 libros y 12 columna} con información sobre ellos. En la Figura X se puede apreciar visualmente la forma de las instancias de este conjunto de datos.
+    
+    \vspace{3mm}
+    
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=450px]{img/instancia_dataset_original.png}
+        \caption{Instancia del conjunto de datos original}
+    \end{figure}
+    
+    \vspace{3mm}
+    
+    A continuación se va a explicar el \textbf{contenido} de cada columna en mas detalle:
+    
+    \begin{itemize}
+        \item \textbf{Author(s):} Cadena de caracteres que indica el o los autores del libro. En caso de ser mas de uno, cada autor aparece separado por '$\mid$'.  
+        \item \textbf{Description:} Cadena de caracteres que indica el resumen o descripción del libro. 
+        \item \textbf{Edition:} Cadena de caracteres que indica la edición del libro. 
+        \item \textbf{Format:} Cadena de caracteres que indica el formato del libro, como por ejemplo \\
+        \textit{handcover} o \textit{paperback}.
+        \item \textbf{ISBN:} Valor numérico que indica el ISBN del libro. Debido a que se utiliza notación científica para su representación, no se puede leer ni usar correctamente, pues faltan números.
+        \item \textbf{No. Pages:} Valor numérico que indica el número de páginas que tiene el libro.
+        \item \textbf{Avg. Rating:} Valor numérico que indica la valoración media que los usuarios han dado al libro.
+        \item \textbf{No. Ratings:}  Valor numérico que indica al cantidad de valoraciones de usuario que ha recibido el libro.
+        \item \textbf{No. Reviews:} Valor numérico que indica la cantidad de críticas que ha recibido el libro.
+        \item \textbf{Title:} Cadena de caracteres que indica el título del libro.
+        \item \textbf{Genres:} Cadena de caracteres que indica los géneros a los que pertenece el libro. Los diferentes géneros aparecen separados por '$\mid$'.
+        \item \textbf{Cover Image:} Imagen que muestra la portada del libro. Se indica un enlace que lleva hasta dicha imagen, aunque por motivos de espacio no se ha incluido en la figura de arriba.
+    \end{itemize}
+    
+    \vspace{3mm}
+    
+    Inicialmente se consideró usar el conjunto de datos\textbf{ CMU Book Summary Dataset} [INSERTAR], pero la manera en la que estaban dispuestos los géneros, así como el resto de atributos, daba lugar a un \textbf{procesado más complejo} para obtener sus valores. Además, se consideró que los géneros que se utilizaban no eran muy acertados, como por ejemplo \textit{Speculative fiction} o \textit{Postmodernism}. Posteriormente se encontró el conjunto de datos que se ha descrito mas arriba, el cual tenía muchas mas instancias (54,283 frente a 16,559), proporcionaba mucha más información (tenía mas atributos), y, lo mas importante, era mucho mas sencillo obtener los valores de sus instancias.
+
+    \subsection{Preprocesado}
+        En toda tarea de minería de texto existe algún tipo de \textbf{preprocesado}, ya sea obtener solo los valores que se necesiten, eliminar instancias con errores, vectorizar el texto, etc. Esta vez no va a ser diferente, e incluso se puede afirmar que ha sido una \textbf{parte importante del trabajo}, y que ha ocupado una cantidad considerable de tiempo. A continuación se detallan todas las \textbf{modificaciones} que se han llevado a cabo:
+        
+        \begin{itemize}
+            \item \textbf{Selección de las columnas útiles:} De las 12 columnas que tiene el conjunto de datos seleccionado, solo son necesarias dos, \textit{description} y \textit{genres}, que contenían, respectivamente, el resumen o descripción del libro y los géneros que se le atribuyen. Por ello, solo solo se mantendrán dichas columnas eliminando el resto.
+            \item \textbf{Eliminación de instancias con descripciones en un lenguaje diferente al ingles:} Los resúmenes del conjunto de datos se encuentran escritos no solo en inglés, si no también en árabe, italiano, chino, coreano, japonés, portugués...Se ha decidido por razones evidentes, mantener solo aquellos libros cuyos resúmenes estén en ingles. Para la detección del idioma se ha utilizado la librería \textit{\textbf{langdetect}} [https://pypi.org/project/langdetect/] de \textit{Python}, y aquellas instancias donde se detectaba un idioma diferente al inglés se han borrado. Gracias a la gran cantidad de instancias que hay, la eliminación de las instancias no afecta de manera significativa.
+            \item \textbf{Corrección de formatos incorrectos:} Algunos de los resúmenes del conjunto de datos contenían errores de formato como saltos de línea (de diferentes tipos), tabulaciones o espacios en medio de los resúmenes, así que se sustituyeron por un único espacio en blanco.
+            \item \textbf{Eliminación de caracteres no útiles:} Se han eliminado de los resúmenes del conjunto de datos caracteres que no proporcionaban ningún tipo de información, como comillas, guiones, corchetes, paréntesis, puntos, exclamaciones, interrogaciones, etc.
+            \item \textbf{Eliminación de términos no útiles:} Se han eliminado de los resúmenes del conjunto de datos términos que no proporcionaban ningún tipo de información útil. Para ello se ha utilizado una lista de \textit{\textbf{stopwords}}, reutilizada de la segunda práctica de la asignatura, pero a la cual se han añadido términos que se han ido encontrado al realizar pruebas. Evidentemente, no se han incluido todos los términos sin información útil posibles, pero dada la gran cantidad de términos que puede haber, creemos que la cantidad de \textit{\textbf{stopwords}} obtenida es suficiente.
+            \item \textbf{Cambios requeridos por la aproximación usada:} La aproximación que se utilizada en este trabajo requiere que los resúmenes esté en minúsculas. Al contrario que ocurría en la segunda práctica, no es necesario dividir los resúmenes en términos, por lo que no se utilizara la cadena de caracteres que contiene el resumen de manera directa. 
+            \item \textbf{Eliminación de géneros no útiles:} Después de analizar un poco más a fondo los diferentes géneros que se usan, se ha observado la falta de un criterio claro para elegir que géneros usar, dando lugar a géneros de países, como \textit{spain}, al mismo tiempo que el género \textit{spanish literature}. También se encontraron géneros muy concretos y sin mucho sentido, como \textit{Amazon} o \textit{Apple}. Esto llevó a que fuera necesario revisar manualmente todos los géneros, los cuales eran en torno a 850, y eliminar aquello que se consideraron no útiles. Al finalizar esta revisión quedaron 625 géneros.
+        \end{itemize}
+    
+    \vspace{3mm}
+    
+    Una vez aplicado todo esto, los datos ya están preparados para su uso. Sin embargo, queda una última cosa. La cadena de caracteres que contiene los géneros se separara según el caracter '$|$' en los diferentes géneros para su posterior uso. Como en este trabajo se va explorar una clasificación \textbf{multi-clase} con el primer género, y una clasificación \textit{\textbf{multi-label}} con todos los géneros, para la primera solo se utilizará el primer género, y para la segunda se usarán todos.
+    
+\end{document}
+
 \section{Conceptos teóricos}
 A la hora de elegir un método de Minería de Textos se consideran diversas opciones tales como utilizar la herramienta \textit{Weka} de la \textit{Universidad de Waitako}, sin embargo, dado que esta herramienta ya ha sido utilizada a lo largo de la asignatura a la que se adscribe este trabajo y además presenta ciertas limitaciones en cuanto a la flexibilidad y capacidad de toma de decisiones de diseño en los modelos se decide aplicar \textbf{Word Embedding} en redes de neuronas con la \textbf{biblioteca de código abierto Tensorflow}. De esta manera se usará un método diferente al usado en clase, lo cual permite experimentar y aprender tecnologías nuevas. 
 
