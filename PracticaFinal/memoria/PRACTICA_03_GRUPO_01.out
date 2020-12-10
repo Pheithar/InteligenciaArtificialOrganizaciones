@@ -3,4 +3,7 @@
 \BOOKMARK [2][-]{subsection.2.1}{Codificaci\363n con valor \372nico}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{One-hot encoding}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Embedding}{section.2}% 5
-\BOOKMARK [1][-]{section.3}{Conclusiones}{}% 6
+\BOOKMARK [1][-]{section.3}{Clasificaci\363n}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Arquitectura del modelo}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Clasificaci\363n de 1 g\351nero}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Conclusiones}{}% 9

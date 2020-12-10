@@ -82,11 +82,11 @@ A continuación se ofrece un\textbf{ esquema del funcionamiento de la tarea prop
 \newpage
 
 \section{Conceptos teóricos}
-A la hora de elegir un método de Minería de Textos se consideran diversas opciones tales como utilizar la herramienta Weka de la Universidad de Waitako, sin embargo, dado que esta herramienta ya ha sido utilizada a lo largo de la asignatura a la que se adscribe este trabajo y además presenta ciertas limitaciones en cuanto a la flexibilidad y capacidad de toma de decisiones de diseño en los modelos se decide aplicar Word Embedding en redes de neuronas con la biblioteca de código abierto Tensorflow. De esta manera se usará un método diferente al usado en clase, lo cual permite experimentar y aprender tecnologías nuevas. 
+A la hora de elegir un método de Minería de Textos se consideran diversas opciones tales como utilizar la herramienta \textit{Weka} de la \textit{Universidad de Waitako}, sin embargo, dado que esta herramienta ya ha sido utilizada a lo largo de la asignatura a la que se adscribe este trabajo y además presenta ciertas limitaciones en cuanto a la flexibilidad y capacidad de toma de decisiones de diseño en los modelos se decide aplicar \textbf{Word Embedding} en redes de neuronas con la \textbf{biblioteca de código abierto Tensorflow}. De esta manera se usará un método diferente al usado en clase, lo cual permite experimentar y aprender tecnologías nuevas. 
 
 \vspace{3mm}
 
-No obstante, antes de iniciar la codificación de algún modelo, dado que se trata de una técnica nueva es necesario tener claros los conceptos teóricos involucrados. Una red neuronal únicamente procesa números, lo que implica que es necesario realizar una transformación. Representar las palabras como vectores es importante, ya que los modelos de inteligencia artificial no ‘entienden’ las palabras, y no puede realizar cálculos ni aprendizaje sobre ellas. Por este motivo, es necesario realizar una vectorización, que no es más que transformar estas palabras en números, agrupados en forma de vector. A continuación se exponen las diferentes técnicas de vectorización consideradas.
+No obstante, antes de iniciar la codificación de algún modelo, dado que se trata de una técnica nueva es necesario tener claros los conceptos teóricos involucrados. Una red neuronal únicamente procesa números, lo que implica que es necesario realizar una transformación. Representar las palabras como vectores es importante, ya que los modelos de inteligencia artificial no ‘entienden’ las palabras, y no puede realizar cálculos ni aprendizaje sobre ellas. Por este motivo, es necesario realizar una \textbf{vectorización}, que no es más que transformar estas palabras en números, agrupados en forma de vector. A continuación se exponen las diferentes técnicas de vectorización consideradas.
 
 \subsection{Codificación con valor único}
 Una primera aproximación podría ser asignar un único número a cada una de las palabras consideradas en la vectorización. Así si por ejemplo, se tiene la frase "hace un espléndido día" se obtiene un vector como el que sigue:
@@ -161,6 +161,73 @@ La dimensionalidad del \textit{embedding} debe ser proporcional a la cantidad de
     \end{table}
 
 Por lo tanto esta técnica resulta de gran utilidad a la hora de conseguir representar la distancia semántica entre las palabras que forman un texto. Siendo este hecho fundamental para la tarea se propuesta \textbf{se decide apostar por esta codificación para construir el modelo de text mining}.
+
+\newpage
+
+\section{Clasificación}
+
+Normalmente un libro se encuadra en más de un género literario, por ello, de manera inicial se decide enfocar el problema en la clasificación de un solo género para posteriormente, poder realizar una ampliación del algoritmo que prediga todos los géneros posibles de un escrito.
+
+\subsection{Arquitectura del modelo}
+
+Una vez se cargan los datos preprocesados se realiza una aleatorización de los mismos para evitar posibles sesgos, se vectorizan las salidas y se dividen los datos en conjunto de  entrenamiento (70\%) y en conjunto de test (30\%). Los modelos considerados siguen todos la misma estructura de Red de Neuronas:
+
+\begin{itemize}
+\item \textbf{Capa de vectorización del texto}: Transforma cadenas de caracteres a índices de vocabulario, el vocabulario se crea a partir de la frecuencia de valores individuales. Se modifican los siguientes parámetros:
+\begin{itemize}
+\item \textbf{Número máximo de tokens}: Representa el tamaño del vocabulario a usar.
+\item \textbf{Longitud de la secuencia de salida}: número de índices de palabras que se pasa a la capa siguiente.
+\end{itemize}
+
+\item \textbf{Capa de \textit{embedding}}: A partir del vocabulario busca el vector de \textit{embedding} para cada índice de palabras. Estos vectores se aprenden según el modelo se entrena.
+
+\item \textbf{Capa de agrupación promedio global}: Devuelve un vector de salida de longitud fija para cada ejemplo haciendo la media sobre la dimensión de la secuencia. Se utiliza para permitir a la red usar los datos del \textit{embedding}.
+
+\item \textbf{Capa densa}: Neuronas completamente conectadas. Según el modelo puede tener una o varias capas y el número de neuronas puede variar por capas.
+
+\item \textbf{Capa de salida}: Capa densa que tiene tantas neuronas como géneros distintos haya.
+
+\end{itemize}
+
+De forma gráfica se puede presentar la estructura como se muestra en la figura 2.
+
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=150px]{img/Arquitectura.png}
+    \caption{Arquitectura del modelo}
+    \end{figure}
+
+
+\newpage
+
+
+\subsection{Clasificación de 1 género}
+
+La idea de usar un sólo género a la hora de clasificar un libro es útil si este es género es el principal del mismo, sin embargo, el dataset original no hace una diferenciación sobre esto y establece todos los géneros de un libro con la misma importancia. Por ello, se ha decidido guardar el primer género de cada libro, aunque esto \textbf{podría suponer un sesgo }sobre el modelo que se debe tener en cuenta. Por ejemplo, si un libro pertenece a los géneros Ciencia ficción, Aventura y Fantasía, al entrenar únicamente con el primer género puede que la salida la red lo clasifique como Fantasía y lo trate como un error al desconocer que también pertenece a este género. Por ello, es de suma importancia realizar la ampliación multigénero.
+
+\vspace{3mm}
+
+Al realizar las transformaciones oportunas seleccionando el primer género \textbf{se obtienen un total de 194 géneros diferentes}. Se trata por lo tanto de un problema de clasificación multiclase ya que se tienen 194 clases y cada instancia tiene una sola etiqueta. 
+
+\vspace{3mm}
+
+Para poder ser utilizadas por la red, las salidas se vectorizan usando \textit{one-hot encoding} para representar a estas clases, donde cada posición es un género distinto. Un 0 significa que no pertenece a ese género y un 1 que sí pertenece. Por lo tanto, la forma que tiene el vector de una salida cualquiera es: [0, 0, …, 0, 1, …, 0]. El cual tiene tamaño 194 y un solo 1.
+
+\vspace{3mm}
+
+Otro aspecto importante que hay que tener en cuenta al tratarse de un problema multiclase es la función de coste. Se usa \textbf{entropía cruzada categórica} (\textit{Categorical Cross-Entropy}) porque se desea entrenar a la red para sacar como salida la probabilidad para todas las clases sobre cada uno de los ejemplos. 
+
+\vspace{3mm}
+
+La figura 3 muestra un ejemplo de la codificación one-hot en la vectorización de los géneros de la novela 1984.
+
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=250px]{img/1984_Genres.png}
+    \caption{One-hot encoding de 1 género}
+    \end{figure}
+
+
 \section{Conclusiones}
 
 \clearpage
