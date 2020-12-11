@@ -317,7 +317,7 @@ Con el objetivo de obtener los mejores resultados, es neceario realizar una expe
   \item \textbf{Topology}: Topología de las capas densas de la red. En caso de que incluyan una capa de \textit{dropout}, se representa con una \textbf{D} acompañado de su valor.
 \end{itemize}
 
-Para los resultados obtenidos, el número de ciclos se optimiza para que tenga el valor óptimo para cada uno de los experimentos.
+Para los resultados obtenidos, el número de ciclos se calcula para que tenga el valor óptimo para cada uno de los experimentos para evitar el sobreaprendizaje.
 
 \vspace{2mm}
 
@@ -326,11 +326,17 @@ La métrica que se decide usar es \textit{Categorical Accuracy}, dado que se tie
 
 \subsection{Modelo 1 género}
 
-Este primer acercamiento se hace exclusivamente con el primer género de cada libro. A través de este acercamiento, se tiene \textbf{194 clases}, por tanto, la última capa de modelo posee \textbf{194 neuronas}.
+Este primer acercamiento se hace exclusivamente con el primer género de cada libro. A través de este acercamiento se tienen \textbf{194 clases}, por tanto, la última capa del modelo posee \textbf{194 neuronas}.
 
 \vspace{2mm}
 
-Los experimentos que se han realizado para este acercamiento son:
+Los experimentos que se han realizado para este acercamiento se han ido creando progresivamente según se buscaba mejorar los resultados. Se van modificando los hiperparámetros con el fin de conseguir el mayor \textit{accuracy} en test.
+
+\vspace{1mm}
+
+A continuación se muestra una tabla que resume esta experimentación y los resultados obtenidos, Figura X:
+
+\newpage
 
 \begin{figure}[!h]
     \centering
@@ -338,16 +344,37 @@ Los experimentos que se han realizado para este acercamiento son:
     \caption{Resumen experimentación y resultados del modelo 1 género}
 \end{figure}
 
-Como se
+Como se puede apreciar en la tabla de la Figura X, los resultados son bastante aceptables, con valores de \textit{accuracy} en test que se encuentran entre el \textbf{47\%} y \textbf{48\%}, siendo el \textbf{Exp. 9} el que mejores resultados genera con un \textbf{48,82\%}. Aun así, se puede ver que los resultados obtenidos no varían demasiado según los hiperparámetros. Los análisis que se pueden realizar sobre estos hiperparámetros son:
+
+\begin{itemize}
+  \item Aumentar la complejidad de la red genera mejores resultados.
+  \item Si se intenta disminuir el \textit{batch size}, el tiempo de computo crece exponencialmente, así que no se ha modificado. Se ha decidido no aumentarlo por encima de 32 porque, como dijo Yann LeCun, padre fundador de las redes convolucionales, \textit{'Training with large minibatches is bad for your health. More importantly, it's bad for your test error. Friends dont let friends use minibatches larger than 32'}(https://twitter.com/ylecun/status/989610208497360896?lang=es).
+  \item Usar \textit{ngrams} es útil. Se decide usar tamaño 5, aunque en la exploración del vocabulario, el tamaño máximo de \textit{ngram} es 4, y la gran mayoría de ellos mantiene el tamaño 1. Se usa para permitir \textit{ngrams} de cualquier tamaño.
+  \item Se prueban diferentes valores de \textit{sequence length}, y los mejores resultados se encuentran con valores de 150.
+  \item El tamaño del vocabulario que se ha probado que mejor funciona es 12000.
+  \item Aumentar el tamaño del \textit{embedding} mejora los resultados, pero también aumenta considerablemente el tiempo de ejecución. Por eso no se aumenta por encima de 128.
+\end{itemize}
+
+  A pesar de que los resultados son mejorables, se considera un buen acercamiento a este problema, asumiendo que es una simplificación del problema real. También hay que tener en cuenta que este problema tiene un gran sesgo que puede deberse a que tan solo se coge un único género, por lo que la red puede que esté clasificando un género del libro realmente, pero no es conocido por el modelo, y por tanto lo trata como un error.
+
+  \vspace{2mm}
+
+  Por ejemplo, si un libro pertenece a \textbf{Aventura} y \textbf{Ciencia ficción}, y el modelo lo clasifica como \textbf{Ciencia ficción}, se considerará un error.
+
 
 
 \subsection{Modelo multigénero}
 
-La experimentación que se lleva a cabo para este segundo acercamiento se hace con todos los géneros que puede llegar a tener un libro. Con esto se pretende.... Pero hay que tener en cuenta que se tiene \textbf{625 clases} por lo que la última capa del modelo tiene \textbf{625 neuronas}, lo que aumenta....
+La experimentación que se lleva a cabo para este segundo acercamiento se hace con todos los géneros que puede llegar a tener un libro. Con esto se pretende ampliar el problema, e intentar determinar todos los posibles géneros de un libro, acercándose más a un problema real. Pero hay que tener en cuenta que se tienen \textbf{625 clases} por lo que la última capa del modelo tiene \textbf{625 neuronas}, lo que aumenta la complejidad del acecamiento. Además como se trata de un problema multi-etiqueta, su dificultad es todavía mayor.
 
 \vspace{2mm}
 
-El proceso de creación de los experimentos se basa en ir modificando la configuración de los hiperparámetros ligeramente para encontrar aquella con la que se obtienen mejores resultados. Se van subiendo o bajando estos valores para intentar alcanzar una precisión en test lo más alta posible. En la Figura X se muestra una tabla resumen de todos los experimentos realizados junto con sus resultados:
+El proceso de creación de los experimentos se basa en ir modificando la configuración de los hiperparámetros ligeramente para encontrar aquella con la que se obtienen mejores resultados. Se van subiendo o bajando estos valores para intentar alcanzar un \textit{accuracy} en test lo más alto posible.
+
+\vspace{1mm}
+
+En la Figura X se muestra una tabla resumen de todos los experimentos realizados junto con sus resultados:
+
 
 \begin{figure}[!h]
     \centering
@@ -355,13 +382,28 @@ El proceso de creación de los experimentos se basa en ir modificando la configu
     \caption{Resumen experimentación y resultados del modelo multigénero}
 \end{figure}
 
-Los aspectos más relevantes que se pueden observar son: aumentar la complejidad de la topología no mejora los resultados, utilizar \textit{2 grams} es positivo 
+Las conclusiones a las que se llegan son:
+
+\begin{itemize}
+  \item Aumentar la complejidad de la topología no mejora los resultados.
+  \item Utilizar \textit{2 grams} es positivo y genera mejores resultados, aunque inspeccionando el vocabulario, se comprueba que no hay muchos \textit{ngrams} que sean de tamaño 2.
+  \item El tamaño de vocabulario de 10000 palabras es el más adecuado en este caso.
+  \item El tamaño del vector de \textit{embedding} de 16 posiciones es el que mejor funciona.
+  \item El número de índices que recibe la capa de \textit{embedding} se prueba con distintos valores pero se obtienen mejores resultados con 100.
+  \item El \textit{batch size} se modifica en los últimos experimentos consiguiendo una mejora de resultados con un tamaño de 16.
+\end{itemize}
+
+
+Por tanto se concluye con que el mejor experimento es el \textbf{Exp. 15}, con un \textit{accuracy} en test de \textbf{23,14\%}. Este valor no es especialmente alto pero, dada la complejidad del problema, se puede considerar como un éxito.
 
 
 
 
 
 \subsection{Caso de uso}
+
+
+
 
 
 

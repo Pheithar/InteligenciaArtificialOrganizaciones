@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  11 DEC 2020 16:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  11 DEC 2020 18:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -585,28 +585,56 @@ File: img/1984_Genres.png Graphic file (type png)
 Package pdftex.def Info: img/1984_Genres.png  used on input line 301.
 (pdftex.def)             Requested size: 250.93842pt x 79.7318pt.
  [9 <./img/1984_Genres.png>] [10]
+<img/one.png, id=157, 1280.785pt x 661.47125pt>
+File: img/one.png Graphic file (type png)
+<use img/one.png>
+Package pdftex.def Info: img/one.png  used on input line 343.
+(pdftex.def)             Requested size: 501.87683pt x 259.19403pt.
+
+Overfull \hbox (18.17996pt too wide) in paragraph at lines 343--344
+ [][] 
+ []
+
+
+Overfull \hbox (86.72604pt too wide) in paragraph at lines 351--352
+\OT1/cmr/m/it/12 friends use mi-ni-bat-ches lar-ger than 32'\OT1/cmr/m/n/12 (ht
+tps://twitter.com/ylecun/status/989610208497360896?lang=es). 
+ []
+
+[11 <./img/one.png>]
+<img/multi.png, id=164, 1329.96875pt x 664.4825pt>
+File: img/multi.png Graphic file (type png)
+<use img/multi.png>
+Package pdftex.def Info: img/multi.png  used on input line 381.
+(pdftex.def)             Requested size: 501.87683pt x 250.75189pt.
+
+Overfull \hbox (18.17996pt too wide) in paragraph at lines 381--382
+ [][] 
+ []
+
+[12 <./img/multi.png>] [13]
 No file PRACTICA_03_GRUPO_01.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 359.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 359.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 416.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 416.
 (./PRACTICA_03_GRUPO_01.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 359.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 359.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 416.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 416.
 Package rerunfilecheck Info: File `PRACTICA_03_GRUPO_01.out' has not changed.
 (rerunfilecheck)             Checksum: CD334D47EA97AF664E7D4A061A744990;1014.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 359.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 416.
  ) 
 Here is how much of TeX's memory you used:
- 9192 strings out of 483121
- 141166 string characters out of 5964354
+ 9209 strings out of 483121
+ 141394 string characters out of 5964354
  428325 words of memory out of 5000000
- 24011 multiletter control sequences out of 15000+600000
+ 24021 multiletter control sequences out of 15000+600000
  539549 words of font info for 47 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  50i,10n,77p,917b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -618,10 +646,10 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PRACTICA_03_GRUPO_01.pdf (11 pages, 662992 bytes).
+Output written on PRACTICA_03_GRUPO_01.pdf (14 pages, 871823 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 154 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 216 PDF objects out of 1000 (max. 8388607)
+ 177 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 164 words of extra memory for PDF output out of 10000 (max. 10000000)
 
