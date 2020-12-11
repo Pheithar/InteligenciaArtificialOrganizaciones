@@ -477,7 +477,7 @@ LaTeX Info: Redefining \% on input line 27.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
+* modes:
 * h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
 * v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
 * \paperwidth=597.50787pt
@@ -540,19 +540,19 @@ Package pdftex.def Info: img/logo_uc3m.jpg  used on input line 31.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 4.
+(Font)              <12> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 4.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 4.
+(Font)              <6> on input line 5.
 )
 \tf@toc=\write5
 \openout5 = `PRACTICA_03_GRUPO_01.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
-<to be read again> 
-                   \relax 
+<to be read again>
+                   \relax
 l.59 \newpage
               [1]
 <img/Animal Farm.png, id=101, 825.0825pt x 343.2825pt>
@@ -569,7 +569,7 @@ Package pdftex.def Info: img/instancia_dataset_original.png  used on input line
 (pdftex.def)             Requested size: 501.87683pt x 54.00305pt.
 
 Overfull \hbox (18.17996pt too wide) in paragraph at lines 94--95
- [][] 
+ [][]
  []
 
 [3 <./img/instancia_dataset_original.png>] [4] [5] [6] [7]
@@ -592,13 +592,13 @@ Package pdftex.def Info: img/one.png  used on input line 343.
 (pdftex.def)             Requested size: 501.87683pt x 259.19403pt.
 
 Overfull \hbox (18.17996pt too wide) in paragraph at lines 343--344
- [][] 
+ [][]
  []
 
 
 Overfull \hbox (86.72604pt too wide) in paragraph at lines 351--352
 \OT1/cmr/m/it/12 friends use mi-ni-bat-ches lar-ger than 32'\OT1/cmr/m/n/12 (ht
-tps://twitter.com/ylecun/status/989610208497360896?lang=es). 
+tps://twitter.com/ylecun/status/989610208497360896?lang=es).
  []
 
 [11 <./img/one.png>]
@@ -609,7 +609,7 @@ Package pdftex.def Info: img/multi.png  used on input line 381.
 (pdftex.def)             Requested size: 501.87683pt x 250.75189pt.
 
 Overfull \hbox (18.17996pt too wide) in paragraph at lines 381--382
- [][] 
+ [][]
  []
 
 [12 <./img/multi.png>] [13]
@@ -629,7 +629,7 @@ Package rerunfilecheck Info: File `PRACTICA_03_GRUPO_01.out' has not changed.
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 416.
- ) 
+ )
 Here is how much of TeX's memory you used:
  9209 strings out of 483121
  141394 string characters out of 5964354
@@ -652,4 +652,3 @@ PDF statistics:
  177 compressed objects within 2 object streams
  40 named destinations out of 1000 (max. 500000)
  164 words of extra memory for PDF output out of 10000 (max. 10000000)
-

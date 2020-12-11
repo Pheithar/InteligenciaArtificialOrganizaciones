@@ -81,6 +81,29 @@ A continuación se ofrece un \textbf{esquema del funcionamiento de la tarea prop
 
 \newpage
 
+\section{Contexto de la práctica}
+La minería de datos, y más en concreto, la Minería de Texto, tal y como se ha comentado en trabajos pasados, es un área que está sufriendo una gran revolución gracias a las redes neuronales. Esta revolución es similar a la que sufrieron las redes convolucionales desde la aparición de las arquitecturas de Deep Learning y permite enfoques novedosos como el desarrollado en esta práctica gracias a la técnica de \textit{embeddings}. 
+
+\vspace{3mm}
+
+La aplicación de \textit{embeddings} supone por lo tanto un punto de partida muy interesante para numerosas tareas de \textit{text-mining}, así, se encuentran \textit{paper} académicos que muestran las ventajas y mejora de resultados obtenidas por estas técnicas. En este contexto surge el estudio de Alex Dekhtyar y Vivian Fong sobre la catalogación de requisitos de software aplicando \textit{embeddings} y comparando los resultados con los obtenidos con otras técnicas como Naïve Bayes [Referencia]. El objetivo de dicho estudio era realizar clasificación sobre requisitos relacionados y no relacionados con asuntos de seguridad. Usando para ello las arquitecturas de\textit{ word embedding }\textit{word2vect dessarrollada}s por Google [Referencia] se puede obtener una representación semántica muy acertada de las palabras. La arquitectura propuesta es por lo tanto muy similar a una red neuronal convolucional de procesamiento de imágenes.
+
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=450px]{img/CNN Word2vect.png}
+    \caption{Esquema de la red utilizada}
+    \end{figure}
+
+\vspace{3mm}
+
+La arquitectura propuesta muestra un conjunto de convoluciones que hace posible aplicar numerosos filtros de varios tamaños de forma que se representan así los distintos n-gramas de cualquier frase. Posteriormente se aplican mapas de características y se acaba con una clasificación binaria de los requisitos.
+
+\vspace{3mm}
+
+Los resultados obtenidos por los autores demuestran que la inclusión de \textit{embeddings} hace que se mejore la precisión (\textit{precision}) sin sacrificar la sensibilidad (\textit{recall}), obteniendo un F1-Score del 7\%. \textbf{Por todo ello resulta muy interesante aplicar técnicas similares a las propuestas por los autores a la clasificación de géneros de libros propuesta en este documento}.
+
+\newpage
+
 \section{Conjunto de datos}
     En esta sección se describe el \textbf{conjunto de datos} utilizado en su forma original, así como todos los cambios que se hacen como parte del \textbf{preprocesado} junto con las razones que han llevado a su realización.
 
