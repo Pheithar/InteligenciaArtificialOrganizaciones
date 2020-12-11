@@ -1,0 +1,17 @@
+Referencia a nuestro anterior trabajo de text mining en el contexto.
+
+Referencia en el contexto 
+
+@inproceedings{dekhtyar2017re,
+  title={Re data challenge: Requirements identification with word2vec and tensorflow},
+  author={Dekhtyar, Alex and Fong, Vivian},
+  booktitle={2017 IEEE 25th International Requirements Engineering Conference (RE)},
+  pages={484--489},
+  year={2017},
+  organization={IEEE}
+}
+
+DEKHTYAR, Alex; FONG, Vivian. Re data challenge: Requirements identification with word2vec and tensorflow. En 2017 IEEE 25th International Requirements Engineering Conference (RE). IEEE, 2017. p. 484-489.
+
+
+REFERENCIA A GOOGLE word2vec https://code.google.com/archive/p/word2vec/
