@@ -1,16 +1,18 @@
 \BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
-\BOOKMARK [1][-]{section.2}{Conjunto de datos}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Estructura original}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Preprocesado}{section.2}% 4
-\BOOKMARK [1][-]{section.3}{Conceptos te\363ricos}{}% 5
-\BOOKMARK [2][-]{subsection.3.1}{Codificaci\363n con valor \372nico}{section.3}% 6
-\BOOKMARK [2][-]{subsection.3.2}{One-hot encoding}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.3}{Embedding}{section.3}% 8
-\BOOKMARK [1][-]{section.4}{Clasificaci\363n}{}% 9
-\BOOKMARK [2][-]{subsection.4.1}{Arquitectura del modelo}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.2}{Clasificaci\363n de 1 g\351nero}{section.4}% 11
-\BOOKMARK [1][-]{section.5}{Experimentaci\363n y an\341lisis}{}% 12
-\BOOKMARK [2][-]{subsection.5.1}{Modelo 1 g\351nero}{section.5}% 13
-\BOOKMARK [2][-]{subsection.5.2}{Modelo multig\351nero}{section.5}% 14
-\BOOKMARK [2][-]{subsection.5.3}{Caso de uso}{section.5}% 15
-\BOOKMARK [1][-]{section.6}{Conclusiones}{}% 16
+\BOOKMARK [1][-]{section.2}{Contexto de la pr\341ctica}{}% 2
+\BOOKMARK [1][-]{section.3}{Conjunto de datos}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Estructura original}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Preprocesado}{section.3}% 5
+\BOOKMARK [1][-]{section.4}{Conceptos te\363ricos}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{Codificaci\363n con valor \372nico}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{One-hot encoding}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.3}{Embedding}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{Clasificaci\363n}{}% 10
+\BOOKMARK [2][-]{subsection.5.1}{Arquitectura del modelo}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.2}{Clasificaci\363n de 1 g\351nero}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.3}{Clasificaci\363n multi-g\351nero}{section.5}% 13
+\BOOKMARK [1][-]{section.6}{Experimentaci\363n y an\341lisis}{}% 14
+\BOOKMARK [2][-]{subsection.6.1}{Modelo 1 g\351nero}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.2}{Modelo multi-g\351nero}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.3}{Caso de uso}{section.6}% 17
+\BOOKMARK [1][-]{section.7}{Conclusiones}{}% 18

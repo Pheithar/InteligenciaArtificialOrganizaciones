@@ -60,12 +60,12 @@
 
 \section{Introducción}
 
-El objetivo de esta práctica consiste en abordar una clasificación sobre resúmenes de libros para determinar su género literario. Las razones que llevan a la elección de este problema tienen que ver con que actualmente cualquier persona con la dedicación suficiente puede escribir un libro sin la necesidad del patrocinio de una editorial, lo que conlleva una \textbf{explosión en el número de nuevos libros generados}. Por consiguiente, las librerías y bibliotecas necesitan catalogar una gran cantidad de escritos, lo cual, les lleva a necesitar de métodos de clasificación automática. Por ello, se plantea el uso de resúmenes y metadatos de los libros puesto que la tarea de clasificación \textbf{debe poder realizarse con el menor número de datos posible}, puesto que no todos los libros que llegan a estas entidades disponen de todos los datos completos.
+El objetivo de esta práctica consiste en abordar una clasificación sobre resúmenes de libros para determinar su género literario. Las razones que llevan a la elección de este problema tienen que ver con que actualmente cualquier persona con la dedicación suficiente puede escribir un libro sin la necesidad del patrocinio de una editorial, lo que conlleva una \textbf{explosión en el número de nuevos libros generados}. Por consiguiente, las librerías y bibliotecas necesitan catalogar una gran cantidad de escritos, lo cual, les lleva a necesitar de métodos de clasificación automática. Por ello, se plantea el uso de resúmenes y meta-datos de los libros puesto que la tarea de clasificación \textbf{debe poder realizarse con el menor número de datos posible}, puesto que no todos los libros que llegan a estas entidades disponen de todos los datos completos.
 
 \vspace{3mm}
 
 La primera cuestión imprescindible que surge al conocer el problema propuesto es qué técnica de Inteligencia Artificial emplear. Dado que se realiza un análisis sobre diferentes textos, la opción evidente es la \textbf{Minería de Texto}, la cual es una técnica de minería de datos que busca extraer \textbf{información útil y relevante de documentos de texto} de diferentes fuentes diferentes, como puede ser páginas web,
-correos electrónicos, periódicos o redes sociales. Para ello, se hace una identificación de patrones en los datos, como puede ser la repetición de palabras o conjuntos de palabras, estructuras sintácticas que se repitan a lo largo de los datos, etc. Esta minería de texto tiene numerosas aplicaciones, y en esta práctica se va a desarrollar una clasificación en función de unas categorías que serán definidas gracias a la elección de un dataset apropiado.
+correos electrónicos, periódicos o redes sociales. Para ello, se hace una identificación de patrones en los datos, como puede ser la repetición de palabras o conjuntos de palabras, estructuras sintácticas que se repitan a lo largo de los datos, etc. Esta minería de texto tiene numerosas aplicaciones, y en esta práctica se va a desarrollar una clasificación en función de unas categorías que serán definidas gracias a la elección de un conjunto de datos apropiado.
 
 \vspace{3mm}
 
@@ -86,7 +86,7 @@ La minería de datos, y más en concreto, la Minería de Texto, tal y como se ha
 
 \vspace{3mm}
 
-La aplicación de \textit{embeddings} supone por lo tanto un punto de partida muy interesante para numerosas tareas de \textit{text-mining}, así, se encuentran \textit{paper} académicos que muestran las ventajas y mejora de resultados obtenidas por estas técnicas. En este contexto surge el estudio de Alex Dekhtyar y Vivian Fong sobre la catalogación de requisitos de software aplicando \textit{embeddings} y comparando los resultados con los obtenidos con otras técnicas como Naïve Bayes [Referencia]. El objetivo de dicho estudio era realizar clasificación sobre requisitos relacionados y no relacionados con asuntos de seguridad. Usando para ello las arquitecturas de\textit{ word embedding }\textit{word2vect dessarrollada}s por Google [Referencia] se puede obtener una representación semántica muy acertada de las palabras. La arquitectura propuesta es por lo tanto muy similar a una red neuronal convolucional de procesamiento de imágenes.
+La aplicación de \textit{embeddings} supone por lo tanto un punto de partida muy interesante para numerosas tareas de \textit{text-mining}, así, se encuentran \textit{paper} académicos que muestran las ventajas y mejora de resultados obtenidas por estas técnicas. En este contexto surge el estudio de Alex Dekhtyar y Vivian Fong sobre la catalogación de requisitos de software aplicando \textit{embeddings} y comparando los resultados con los obtenidos con otras técnicas como Naïve Bayes [Referencia]. El objetivo de dicho estudio era realizar clasificación sobre requisitos relacionados y no relacionados con asuntos de seguridad. Usando para ello las arquitecturas de\textit{ word embedding }\textit{word2vect desarrolladas} por Google [Referencia] se puede obtener una representación semántica muy acertada de las palabras. La arquitectura propuesta es por lo tanto muy similar a una red neuronal convolucional de procesamiento de imágenes.
 
   \begin{figure}[!h]
     \centering
@@ -108,7 +108,7 @@ Los resultados obtenidos por los autores demuestran que la inclusión de \textit
     En esta sección se describe el \textbf{conjunto de datos} utilizado en su forma original, así como todos los cambios que se hacen como parte del \textbf{preprocesado} junto con las razones que han llevado a su realización.
 
     \subsection{Estructura original}
-    El conjunto de datos ha sido obtenido de \textbf{Kaggle} [INSERTAR], y dispone de un total de \textbf{54283 libros y 12 columna} con información sobre ellos. En la Figura X se puede apreciar visualmente la forma de las instancias de este conjunto de datos.
+    El conjunto de datos ha sido obtenido de \textbf{Kaggle} [https://www.kaggle.com/meetnaren/goodreads-best-books/activity], y dispone de un total de \textbf{54283 libros y 12 columna} con información sobre ellos. En la Figura X se puede apreciar visualmente la forma de las instancias de este conjunto de datos.
 
     \vspace{3mm}
 
@@ -139,7 +139,7 @@ Los resultados obtenidos por los autores demuestran que la inclusión de \textit
 
     \vspace{3mm}
 
-    En un primer momento se consideró usar el conjunto de datos \textbf{CMU Book Summary Dataset} [INSERTAR], pero la manera en la que estaban dispuestos los géneros, así como el resto de atributos, daba lugar a un \textbf{procesado más complejo} para obtener sus valores.
+    En un primer momento se consideró usar el conjunto de datos \textbf{CMU Book Summary Dataset} [https://www.cs.cmu.edu/~dbamman/booksummaries.html], pero la manera en la que estaban dispuestos los géneros, así como el resto de atributos, daba lugar a un \textbf{procesado más complejo} para obtener sus valores.
 
     \vspace{1mm}
 
@@ -235,7 +235,7 @@ Un \textit{embedding} es un vector denso de números reales, donde su longitud v
 
 \vspace{2mm}
 
-La dimensionalidad del \textit{embedding} debe ser proporcional a la cantidad de datos disponibles, ya que cuanto más grande sea el vector, más detalles podrá obtener de cada palabra, pero requiere de más datos para ser entrenado. La siguiente tabla muestra un ejemplo de la codificación con el pequeño set de palabras utilizado en la sección anterior.
+La dimensionalidad del \textit{embedding} debe ser proporcional a la cantidad de datos disponibles, ya que cuanto más grande sea el vector, más detalles podrá obtener de cada palabra, pero requiere de más datos para ser entrenado. La siguiente tabla muestra un ejemplo de la codificación con el pequeño conjunto de palabras utilizado en la sección anterior.
 
   \begin{table}[h]
         \centering
@@ -297,11 +297,11 @@ De forma gráfica se puede presentar la estructura como se muestra en la Figura 
 
 \subsection{Clasificación de 1 género}
 
-La idea de usar un sólo género a la hora de clasificar un libro es útil si este género es el principal del mismo, sin embargo, el \textit{dataset} original no hace una diferenciación sobre esto y establece todos los géneros de un libro con la misma importancia. Por ello, se ha decidido guardar el primer género de cada libro, aunque esto \textbf{podría suponer un sesgo }sobre el modelo, el cual se debe tener en cuenta.
+La idea de usar un sólo género a la hora de clasificar un libro es útil si este género es el principal del mismo, sin embargo, el \textit{conjunto de datos} original no hace una diferenciación sobre esto y establece todos los géneros de un libro con la misma importancia. Por ello, se ha decidido guardar el primer género de cada libro, aunque esto \textbf{podría suponer un sesgo }sobre el modelo, el cual se debe tener en cuenta.
 
 \vspace{2mm}
 
-Por ejemplo, si un libro pertenece a los géneros Ciencia ficción, Aventura y Fantasía, al entrenar únicamente con el primer género puede que la salida la red lo clasifique como Fantasía y lo trate como un error al desconocer que también pertenece a este género. Por ello, es de suma importancia realizar la ampliación multigénero.
+Por ejemplo, si un libro pertenece a los géneros Ciencia ficción, Aventura y Fantasía, al entrenar únicamente con el primer género puede que la salida la red lo clasifique como Fantasía y lo trate como un error al desconocer que también pertenece a este género. Por ello, es de suma importancia realizar la ampliación multi-género.
 
 \vspace{3mm}
 
@@ -327,9 +327,28 @@ La Figura X muestra un ejemplo de la codificación \textit{one-hot} en la vector
 
 \newpage
 
+\subsection{Clasificación multi-género}
+Por el sesgo comentado en el apartado anterior al elegir solo el primer género, se ha decidido implementar también la clasificación de todos los géneros. Sin embargo, esto \textbf{aumenta significativamente la dificultad} del problema, pues para un mismo texto hay diferentes géneros, además de que no todos los libros pertenecen a la misma cantidad de géneros.
+
+\vspace{3mm}
+
+Al separar todos géneros se obtienen \textbf{625 géneros diferentes}, que es una cantidad tres veces mayor que en el problema de un único género. Se trata de un problema \textit{multi-label}, ya que cada instancia puede pertenecer a una o más etiquetas.
+
+\vspace{3mm}
+
+La vectorización de la salida ocurre de la misma manera que en caso de un único género, salvo que ahora este vector tendrá una longitud de 625, y tendrá tantos unos como cantidad de géneros a los que el libro pertenezca. En la Figura X se muestra la codificación \textit{one-hot} en la vectorización de la salida para un libro que pertenece a los géneros: ficción, aventura y fantasía.
+
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=250px]{img/ej_one_hot_multi.png}
+    \caption{One-hot encoding multi-género}
+    \end{figure}
+
+Por último, esta vez como función de coste se utiliza \textbf{entropía cruzada binaria} (Binary Cross-Entropy), debido a que funciona de manera independiente para cada clase, o en este caso, género.
+
 \section{Experimentación y análisis}
 
-Con el objetivo de obtener los mejores resultados, es neceario realizar una experimentación que modifique los distintos hiperparámetros del modelo. Dado que la tecnología usada está ligada con las Redes de Neuronas, se ha probado excusivamente con este tipo de modelos. Los parámetros que se han decidido modificar son:
+Con el objetivo de obtener los mejores resultados, es necesario realizar una experimentación que modifique los distintos hiper-parámetros del modelo. Dado que la tecnología usada está ligada con las Redes de Neuronas, se ha probado exclusivamente con este tipo de modelos. Los parámetros que se han decidido modificar son:
 
 \begin{itemize}
   \item \textbf{Batch Size}: Hace referencia al tamaño de los lotes, es decir, cada cuantos individuos se actualizan los pesos de la red. Un tamaño mayor lleva a un menor tiempo de ejecución, y menos especificidad sobre los ejemplos.
@@ -340,7 +359,7 @@ Con el objetivo de obtener los mejores resultados, es neceario realizar una expe
   \item \textbf{Topology}: Topología de las capas densas de la red. En caso de que incluyan una capa de \textit{dropout}, se representa con una \textbf{D} acompañado de su valor.
 \end{itemize}
 
-Para los resultados obtenidos, el número de ciclos se calcula para que tenga el valor óptimo para cada uno de los experimentos para evitar el sobreaprendizaje.
+Para los resultados obtenidos, el número de ciclos se calcula para que tenga el valor óptimo para cada uno de los experimentos para evitar el sobre aprendizaje.
 
 \vspace{2mm}
 
@@ -353,7 +372,7 @@ Este primer acercamiento se hace exclusivamente con el primer género de cada li
 
 \vspace{2mm}
 
-Los experimentos que se han realizado para este acercamiento se han ido creando progresivamente según se buscaba mejorar los resultados. Se van modificando los hiperparámetros con el fin de conseguir el mayor \textit{accuracy} en test.
+Los experimentos que se han realizado para este acercamiento se han ido creando progresivamente según se buscaba mejorar los resultados. Se van modificando los hiper-parámetros con el fin de conseguir el mayor \textit{accuracy} en test.
 
 \vspace{1mm}
 
@@ -367,7 +386,7 @@ A continuación se muestra una tabla que resume esta experimentación y los resu
     \caption{Resumen experimentación y resultados del modelo 1 género}
 \end{figure}
 
-Como se puede apreciar en la tabla de la Figura X, los resultados son bastante aceptables, con valores de \textit{accuracy} en test que se encuentran entre el \textbf{47\%} y \textbf{48\%}, siendo el \textbf{Exp. 9} el que mejores resultados genera con un \textbf{48,82\%}. Aun así, se puede ver que los resultados obtenidos no varían demasiado según los hiperparámetros. Los análisis que se pueden realizar sobre estos hiperparámetros son:
+Como se puede apreciar en la tabla de la Figura X, los resultados son bastante aceptables, con valores de \textit{accuracy} en test que se encuentran entre el \textbf{47\%} y \textbf{48\%}, siendo el \textbf{Exp. 9} el que mejores resultados genera con un \textbf{48,82\%}. Aun así, se puede ver que los resultados obtenidos no varían demasiado según los hiper-parámetros. Los análisis que se pueden realizar sobre estos hiper-parámetros son:
 
 \begin{itemize}
   \item Aumentar la complejidad de la red genera mejores resultados.
@@ -386,13 +405,13 @@ Como se puede apreciar en la tabla de la Figura X, los resultados son bastante a
 
 
 
-\subsection{Modelo multigénero}
+\subsection{Modelo multi-género}
 
-La experimentación que se lleva a cabo para este segundo acercamiento se hace con todos los géneros que puede llegar a tener un libro. Con esto se pretende ampliar el problema, e intentar determinar todos los posibles géneros de un libro, acercándose más a un problema real. Pero hay que tener en cuenta que se tienen \textbf{625 clases} por lo que la última capa del modelo tiene \textbf{625 neuronas}, lo que aumenta la complejidad del acecamiento. Además como se trata de un problema multi-etiqueta, su dificultad es todavía mayor.
+La experimentación que se lleva a cabo para este segundo acercamiento se hace con todos los géneros que puede llegar a tener un libro. Con esto se pretende ampliar el problema, e intentar determinar todos los posibles géneros de un libro, acercándose más a un problema real. Pero hay que tener en cuenta que se tienen \textbf{625 clases} por lo que la última capa del modelo tiene \textbf{625 neuronas}, lo que aumenta la complejidad del acercamiento. Además como se trata de un problema multi-etiqueta, su dificultad es todavía mayor.
 
 \vspace{2mm}
 
-El proceso de creación de los experimentos se basa en ir modificando la configuración de los hiperparámetros ligeramente para encontrar aquella con la que se obtienen mejores resultados. Se van subiendo o bajando estos valores para intentar alcanzar un \textit{accuracy} en test lo más alto posible.
+El proceso de creación de los experimentos se basa en ir modificando la configuración de los hiper-parámetros ligeramente para encontrar aquella con la que se obtienen mejores resultados. Se van subiendo o bajando estos valores para intentar alcanzar un \textit{accuracy} en test lo más alto posible.
 
 \vspace{1mm}
 
@@ -402,7 +421,7 @@ En la Figura X se muestra una tabla resumen de todos los experimentos realizados
 \begin{figure}[!h]
     \centering
     \includegraphics[width=500px]{img/multi.png}
-    \caption{Resumen experimentación y resultados del modelo multigénero}
+    \caption{Resumen experimentación y resultados del modelo multi-género}
 \end{figure}
 
 Las conclusiones a las que se llegan son:
@@ -432,6 +451,19 @@ Por tanto se concluye con que el mejor experimento es el \textbf{Exp. 15}, con u
 
 
 \section{Conclusiones}
+Respecto a la asignatura en sí, este trabajo ha servido para observar en primera persona la realización de un \textbf{tarea \textit{real}}, donde ha habido que buscar diversos conjuntos de datos, analizarlos, y elegir el que mejor se adecuaba a las necesidades del problema. Después, ha sido necesario un \textbf{preprocesado importante}, donde se han encontrado problemas con una complejidad mayor que los que aparecen en el resto de prácticas de la asignatura (y en otras en general). 
+
+\vspace{3mm}
+
+Por último se comprende que \textbf{es posible no obtener datos muy buenos}, pues, de nuevo, es un problema complicado de resolver.  Todo lo comentado muestra lo diferente que son los problemas del \textbf{mundo académico} a los del \textbf{mundo real} o problemas que no están tan acotados.
+
+\vspace{3mm}
+
+Poniendo la atención sobre la rama de la Inteligencia Artificial utilizada, la \textbf{minería de datos}, comentar que es un ámbito, no solo \textbf{complejo}, si no además muy \textbf{variado}. Se ha optado por la aproximación realizada por el hecho de incluir variedad en la aproximaciones utilizadas en la asignatura, así como para usar una técnica que sea mas personalizable que las vistas en clase. 
+
+\vspace{3mm}
+
+Sin embargo, esto no quiere decir que algunas técnicas mas clásicas o simples funcionarán peor. Si el alcance de este trabajo fuera mayor y se dispusiera de mas tiempo, sería casi imperativo \textbf{probar otras técnicas} (vistas y no vistas en clase) y realizar una comparación entre ellas de manera exhaustiva.
 
 \clearpage
 
