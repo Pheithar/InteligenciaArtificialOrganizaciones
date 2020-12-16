@@ -82,11 +82,11 @@ A continuación se ofrece un \textbf{esquema del funcionamiento de la tarea prop
 \newpage
 
 \section{Contexto de la práctica}
-La minería de datos, y más en concreto, la Minería de Texto, tal y como se ha comentado en trabajos pasados, es un área que está sufriendo una gran revolución gracias a las redes neuronales. Esta revolución es similar a la que sufrieron las redes convolucionales desde la aparición de las arquitecturas de Deep Learning y permite enfoques novedosos como el desarrollado en esta práctica gracias a la técnica de \textit{embeddings}.
+La minería de datos, y más en concreto, la Minería de Texto, tal y como se ha comentado en trabajos pasados\cite{pr2}, es un área que está sufriendo una gran revolución gracias a las redes neuronales. Esta revolución es similar a la que sufrieron las redes convolucionales desde la aparición de las arquitecturas de Deep Learning y permite enfoques novedosos como el desarrollado en esta práctica gracias a la técnica de \textit{embeddings}.
 
 \vspace{3mm}
 
-La aplicación de \textit{embeddings} supone por lo tanto un punto de partida muy interesante para numerosas tareas de \textit{text-mining}, así, se encuentran \textit{paper} académicos que muestran las ventajas y mejora de resultados obtenidas por estas técnicas. En este contexto surge el estudio de Alex Dekhtyar y Vivian Fong sobre la catalogación de requisitos de software aplicando \textit{embeddings} y comparando los resultados con los obtenidos con otras técnicas como Naïve Bayes [Referencia]. El objetivo de dicho estudio era realizar clasificación sobre requisitos relacionados y no relacionados con asuntos de seguridad. Usando para ello las arquitecturas de\textit{ word embedding }\textit{word2vect desarrolladas} por Google [Referencia] se puede obtener una representación semántica muy acertada de las palabras. La arquitectura propuesta es por lo tanto muy similar a una red neuronal convolucional de procesamiento de imágenes.
+La aplicación de \textit{embeddings} supone por lo tanto un punto de partida muy interesante para numerosas tareas de \textit{text-mining}, así, se encuentran \textit{paper} académicos que muestran las ventajas y mejora de resultados obtenidas por estas técnicas. En este contexto surge el estudio de Alex Dekhtyar y Vivian Fong sobre la catalogación de requisitos de software aplicando \textit{embeddings} y comparando los resultados con los obtenidos con otras técnicas como Naïve Bayes\cite{naive}. El objetivo de dicho estudio era realizar clasificación sobre requisitos relacionados y no relacionados con asuntos de seguridad. Usando para ello las arquitecturas de \textit{word embedding} \textit{word2vect desarrolladas} por Google\cite{google} se puede obtener una representación semántica muy acertada de las palabras. La arquitectura propuesta es por lo tanto muy similar a una red neuronal convolucional de procesamiento de imágenes.
 
   \begin{figure}[!h]
     \centering
@@ -108,7 +108,7 @@ Los resultados obtenidos por los autores demuestran que la inclusión de \textit
     En esta sección se describe el \textbf{conjunto de datos} utilizado en su forma original, así como todos los cambios que se hacen como parte del \textbf{preprocesado} junto con las razones que han llevado a su realización.
 
     \subsection{Estructura original}
-    El conjunto de datos ha sido obtenido de \textbf{Kaggle} [https://www.kaggle.com/meetnaren/goodreads-best-books/activity], y dispone de un total de \textbf{54283 libros y 12 columna} con información sobre ellos. En la Figura X se puede apreciar visualmente la forma de las instancias de este conjunto de datos.
+    El conjunto de datos ha sido obtenido de \textbf{Kaggle}\cite{gbbe}, y dispone de un total de \textbf{54283 libros y 12 columna} con información sobre ellos. En la Figura X se puede apreciar visualmente la forma de las instancias de este conjunto de datos.
 
     \vspace{3mm}
 
@@ -139,7 +139,7 @@ Los resultados obtenidos por los autores demuestran que la inclusión de \textit
 
     \vspace{3mm}
 
-    En un primer momento se consideró usar el conjunto de datos \textbf{CMU Book Summary Dataset} [https://www.cs.cmu.edu/~dbamman/booksummaries.html], pero la manera en la que estaban dispuestos los géneros, así como el resto de atributos, daba lugar a un \textbf{procesado más complejo} para obtener sus valores.
+    En un primer momento se consideró usar el conjunto de datos \textbf{CMU Book Summary Dataset}\cite{cmu}, pero la manera en la que estaban dispuestos los géneros, así como el resto de atributos, daba lugar a un \textbf{procesado más complejo} para obtener sus valores.
 
     \vspace{1mm}
 
@@ -451,7 +451,7 @@ Por tanto se concluye con que el mejor experimento es el \textbf{Exp. 15}, con u
 
 
 \section{Conclusiones}
-Respecto a la asignatura en sí, este trabajo ha servido para observar en primera persona la realización de un \textbf{tarea \textit{real}}, donde ha habido que buscar diversos conjuntos de datos, analizarlos, y elegir el que mejor se adecuaba a las necesidades del problema. Después, ha sido necesario un \textbf{preprocesado importante}, donde se han encontrado problemas con una complejidad mayor que los que aparecen en el resto de prácticas de la asignatura (y en otras en general). 
+Respecto a la asignatura en sí, este trabajo ha servido para observar en primera persona la realización de un \textbf{tarea \textit{real}}, donde ha habido que buscar diversos conjuntos de datos, analizarlos, y elegir el que mejor se adecuaba a las necesidades del problema. Después, ha sido necesario un \textbf{preprocesado importante}, donde se han encontrado problemas con una complejidad mayor que los que aparecen en el resto de prácticas de la asignatura (y en otras en general).
 
 \vspace{3mm}
 
@@ -459,7 +459,7 @@ Por último se comprende que \textbf{es posible no obtener datos muy buenos}, pu
 
 \vspace{3mm}
 
-Poniendo la atención sobre la rama de la Inteligencia Artificial utilizada, la \textbf{minería de datos}, comentar que es un ámbito, no solo \textbf{complejo}, si no además muy \textbf{variado}. Se ha optado por la aproximación realizada por el hecho de incluir variedad en la aproximaciones utilizadas en la asignatura, así como para usar una técnica que sea mas personalizable que las vistas en clase. 
+Poniendo la atención sobre la rama de la Inteligencia Artificial utilizada, la \textbf{minería de datos}, comentar que es un ámbito, no solo \textbf{complejo}, si no además muy \textbf{variado}. Se ha optado por la aproximación realizada por el hecho de incluir variedad en la aproximaciones utilizadas en la asignatura, así como para usar una técnica que sea mas personalizable que las vistas en clase.
 
 \vspace{3mm}
 
