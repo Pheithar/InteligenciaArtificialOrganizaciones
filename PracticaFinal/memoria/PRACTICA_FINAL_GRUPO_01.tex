@@ -56,6 +56,10 @@
 
 \tableofcontents
 
+\listoffigures
+
+\listoftables
+
 \newpage
 
 \section{Introducción}
@@ -69,7 +73,7 @@ correos electrónicos, periódicos o redes sociales. Para ello, se hace una iden
 
 \vspace{3mm}
 
-A continuación se ofrece un \textbf{esquema del funcionamiento de la tarea propuesta} en donde un libro sin catalogación llega a alguna a de estas entidades que necesitan catalogar su género a partir de la información más reducida posible, generalmente título y argumento. Inicialmente se plantea la distinción de un único género, sin embargo, \textbf{es bien sabido que un escrito no tiene por qué adscribirse a un único género} y por lo tanto se debe considerar como futura \textbf{ampliación} catalogar tantos como sea posible.
+En la Figura ~\ref{fig:animalFarm} se ofrece un \textbf{esquema del funcionamiento de la tarea propuesta} en donde un libro sin catalogación llega a alguna a de estas entidades que necesitan catalogar su género a partir de la información más reducida posible, generalmente título y argumento. Inicialmente se plantea la distinción de un único género, sin embargo, \textbf{es bien sabido que un escrito no tiene por qué adscribirse a un único género} y por lo tanto se debe considerar como futura \textbf{ampliación} catalogar tantos como sea posible.
 
 \vspace{12mm}
 
@@ -77,26 +81,29 @@ A continuación se ofrece un \textbf{esquema del funcionamiento de la tarea prop
     \centering
     \includegraphics[width=450px]{img/Animal Farm.png}
     \caption{Esquema de la tarea}
-    \end{figure}
+    \label{fig:animalFarm}
+  \end{figure}
 
 \newpage
 
 \section{Contexto de la práctica}
-La minería de datos, y más en concreto, la Minería de Texto, tal y como se ha comentado en trabajos pasados, es un área que está sufriendo una gran revolución gracias a las redes neuronales. Esta revolución es similar a la que sufrieron las redes convolucionales desde la aparición de las arquitecturas de Deep Learning y permite enfoques novedosos como el desarrollado en esta práctica gracias a la técnica de \textit{embeddings}. 
+La minería de datos, y más en concreto, la Minería de Texto, tal y como se ha comentado en trabajos pasados\cite{pr2}, es un área que está sufriendo una gran revolución gracias a las redes neuronales. Esta revolución es similar a la que sufrieron las redes convolucionales desde la aparición de las arquitecturas de Deep Learning y permite enfoques novedosos como el desarrollado en esta práctica gracias a la técnica de \textit{embeddings}.
 
 \vspace{3mm}
 
-La aplicación de \textit{embeddings} supone por lo tanto un punto de partida muy interesante para numerosas tareas de \textit{text-mining}, así, se encuentran \textit{paper} académicos que muestran las ventajas y mejora de resultados obtenidas por estas técnicas. En este contexto surge el estudio de Alex Dekhtyar y Vivian Fong sobre la catalogación de requisitos de software aplicando \textit{embeddings} y comparando los resultados con los obtenidos con otras técnicas como Naïve Bayes [Referencia]. El objetivo de dicho estudio era realizar clasificación sobre requisitos relacionados y no relacionados con asuntos de seguridad. Usando para ello las arquitecturas de\textit{ word embedding }\textit{word2vect desarrolladas} por Google [Referencia] se puede obtener una representación semántica muy acertada de las palabras. La arquitectura propuesta es por lo tanto muy similar a una red neuronal convolucional de procesamiento de imágenes.
+La aplicación de \textit{embeddings} supone por lo tanto un punto de partida muy interesante para numerosas tareas de \textit{text-mining}, así, se encuentran \textit{paper} académicos que muestran las ventajas y mejora de resultados obtenidas por estas técnicas. En este contexto surge el estudio de Alex Dekhtyar y Vivian Fong sobre la catalogación de requisitos de software aplicando \textit{embeddings} y comparando los resultados con los obtenidos con otras técnicas como Naïve Bayes\cite{naive}. El objetivo de dicho estudio era realizar clasificación sobre requisitos relacionados y no relacionados con asuntos de seguridad. Usando para ello las arquitecturas de \textit{word embedding} \textit{word2vect desarrolladas} por Google\cite{google} se puede obtener una representación semántica muy acertada de las palabras. La arquitectura propuesta es por lo tanto muy similar a una red neuronal convolucional de procesamiento de imágenes.
 
   \begin{figure}[!h]
     \centering
     \includegraphics[width=450px]{img/CNN Word2vect.png}
     \caption{Esquema de la red utilizada}
-    \end{figure}
+    \label{fig:esquemaRed}
+
+  \end{figure}
 
 \vspace{3mm}
 
-La arquitectura propuesta muestra un conjunto de convoluciones que hace posible aplicar numerosos filtros de varios tamaños de forma que se representan así los distintos n-gramas de cualquier frase. Posteriormente se aplican mapas de características y se acaba con una clasificación binaria de los requisitos.
+La Figura ~\ref{fig:esquemaRed} muestra la arquitectura propuesta que está formada por un conjunto de convoluciones que hace posible aplicar numerosos filtros de varios tamaños de forma que se representan así los distintos n-gramas de cualquier frase. Posteriormente se aplican mapas de características y se acaba con una clasificación binaria de los requisitos.
 
 \vspace{3mm}
 
@@ -108,7 +115,7 @@ Los resultados obtenidos por los autores demuestran que la inclusión de \textit
     En esta sección se describe el \textbf{conjunto de datos} utilizado en su forma original, así como todos los cambios que se hacen como parte del \textbf{preprocesado} junto con las razones que han llevado a su realización.
 
     \subsection{Estructura original}
-    El conjunto de datos ha sido obtenido de \textbf{Kaggle} [https://www.kaggle.com/meetnaren/goodreads-best-books/activity], y dispone de un total de \textbf{54283 libros y 12 columna} con información sobre ellos. En la Figura X se puede apreciar visualmente la forma de las instancias de este conjunto de datos.
+    El conjunto de datos ha sido obtenido de \textbf{Kaggle}\cite{gbbe}, y dispone de un total de \textbf{54283 libros y 12 columnas} con información sobre ellos. En la Figura ~\ref{fig:original} se puede apreciar visualmente la forma de las instancias de este conjunto de datos.
 
     \vspace{3mm}
 
@@ -116,6 +123,8 @@ Los resultados obtenidos por los autores demuestran que la inclusión de \textit
         \centering
         \includegraphics[width=500px]{img/instancia_dataset_original.png}
         \caption{Instancia del conjunto de datos original}
+        \label{fig:original}
+
     \end{figure}
 
     \vspace{3mm}
@@ -139,7 +148,7 @@ Los resultados obtenidos por los autores demuestran que la inclusión de \textit
 
     \vspace{3mm}
 
-    En un primer momento se consideró usar el conjunto de datos \textbf{CMU Book Summary Dataset} [https://www.cs.cmu.edu/~dbamman/booksummaries.html], pero la manera en la que estaban dispuestos los géneros, así como el resto de atributos, daba lugar a un \textbf{procesado más complejo} para obtener sus valores.
+    En un primer momento se consideró usar el conjunto de datos \textbf{CMU Book Summary Dataset}\cite{cmu}, pero la manera en la que estaban dispuestos los géneros, así como el resto de atributos, daba lugar a un \textbf{procesado más complejo} para obtener sus valores.
 
     \vspace{1mm}
 
@@ -150,7 +159,7 @@ Los resultados obtenidos por los autores demuestran que la inclusión de \textit
 
         \begin{itemize}
             \item \textbf{Selección de las columnas útiles:} De las 12 columnas que tiene el conjunto de datos seleccionado, solo son necesarias dos, \textit{description} y \textit{genres}, que contenían, respectivamente, el resumen o descripción del libro y los géneros que se le atribuyen. Por ello, solo solo se mantendrán dichas columnas eliminando el resto.
-            \item \textbf{Eliminación de instancias con descripciones en un lenguaje diferente al ingles:} Los resúmenes del conjunto de datos se encuentran escritos no solo en inglés, si no también en árabe, italiano, chino, coreano, japonés, portugués...Se ha decidido por razones evidentes, mantener solo aquellos libros cuyos resúmenes estén en ingles. Para la detección del idioma se ha utilizado la librería \textit{\textbf{langdetect}} [https://pypi.org/project/langdetect/] de \textit{Python}, y aquellas instancias donde se detectaba un idioma diferente al inglés se han borrado. Gracias a la gran cantidad de instancias que hay, la eliminación de las instancias no afecta de manera significativa.
+            \item \textbf{Eliminación de instancias con descripciones en un lenguaje diferente al ingles:} Los resúmenes del conjunto de datos se encuentran escritos no solo en inglés, si no también en árabe, italiano, chino, coreano, japonés, portugués...Se ha decidido por razones evidentes, mantener solo aquellos libros cuyos resúmenes estén en ingles. Para la detección del idioma se ha utilizado la librería \textit{\textbf{langdetect}}\cite{langdetect} de \textit{Python}, y aquellas instancias donde se detectaba un idioma diferente al inglés se han borrado. Gracias a la gran cantidad de instancias que hay, la eliminación de las instancias no afecta de manera significativa.
             \item \textbf{Corrección de formatos incorrectos:} Algunos de los resúmenes del conjunto de datos contenían errores de formato como saltos de línea (de diferentes tipos), tabulaciones o espacios en medio de los resúmenes, así que se sustituyeron por un único espacio en blanco.
             \item \textbf{Eliminación de caracteres no útiles:} Se han eliminado de los resúmenes del conjunto de datos caracteres que no proporcionaban ningún tipo de información, como comillas, guiones, corchetes, paréntesis, puntos, exclamaciones, interrogaciones, etc.
             \item \textbf{Eliminación de términos no útiles:} Se han eliminado de los resúmenes del conjunto de datos términos que no proporcionaban ningún tipo de información útil. Para ello se ha utilizado una lista de \textit{\textbf{stopwords}}, reutilizada de la segunda práctica de la asignatura, pero a la cual se han añadido términos que se han ido encontrado al realizar pruebas. Evidentemente, no se han incluido todos los términos sin información útil posibles, pero dada la gran cantidad de términos que puede haber, creemos que la cantidad de \textit{\textbf{stopwords}} obtenida es suficiente.
@@ -165,14 +174,14 @@ Los resultados obtenidos por los autores demuestran que la inclusión de \textit
 \newpage
 
 \section{Conceptos teóricos}
-A la hora de elegir un método de Minería de Texto se consideran diversas opciones tales como utilizar la herramienta \textit{Weka} de la \textit{Universidad de Waitako}. Sin embargo, dado que esta herramienta ya ha sido utilizada a lo largo de la asignatura y, además, presenta ciertas limitaciones en cuanto a la flexibilidad y capacidad de toma de decisiones de diseño en los modelos, se decide aplicar \textbf{Word Embedding} en Redes de Neuronas con la \textbf{biblioteca de código abierto \textit{Tensorflow}}. De esta manera se usa un método diferente al usado en clase, lo cual permite experimentar y aprender tecnologías nuevas.
+A la hora de elegir un método de Minería de Texto se consideran diversas opciones tales como utilizar la herramienta \textit{Weka} de la \textit{Universidad de Waitako}. Sin embargo, dado que esta herramienta ya ha sido utilizada a lo largo de la asignatura y, además, presenta ciertas limitaciones en cuanto a la flexibilidad y capacidad de toma de decisiones de diseño en los modelos, se decide aplicar \textbf{Word Embedding} en Redes de Neuronas con la \textbf{biblioteca de código abierto \textit{Tensorflow}}\cite{tf}. De esta manera se usa un método diferente al usado en clase, lo cual permite experimentar y aprender tecnologías nuevas.
 
 \vspace{3mm}
 
 No obstante, antes de iniciar la codificación del modelo, dado que se trata de una técnica nueva, es necesario tener claros los conceptos teóricos involucrados. Una Red Neuronal únicamente procesa números, lo que implica que es necesario realizar una transformación. Representar las palabras como vectores es importante, ya que los modelos de IA no ‘entienden’ las palabras, y no pueden realizar cálculos ni aprendizaje sobre ellas. Por este motivo, es necesario realizar una \textbf{vectorización}, que no es más que transformar estas palabras en números, agrupados en forma de vector. A continuación se exponen las diferentes técnicas de vectorización consideradas.
 
 \subsection{Codificación con valor único}
-Una primera aproximación podría ser asignar un único número a cada una de las palabras consideradas en la vectorización. Por ejemplo, con la frase 'hace un espléndido día' se obtiene un vector como el que sigue:
+Una primera aproximación podría ser asignar un único número a cada una de las palabras consideradas en la vectorización. Por ejemplo, con la frase 'hace un espléndido día' se obtiene un vector como el que se observa en la Tabla ~\ref{table:unico}.
 
       \begin{table}[h]
         \centering
@@ -186,7 +195,7 @@ Una primera aproximación podría ser asignar un único número a cada una de la
         día                       & 4   \\ \hline
         \end{tabular}
         \caption{Codificación con un único valor}
-            \label{fig:graf_exp1}
+        \label{table:unico}
     \end{table}
 
 Este enfoque presenta una serie de consideraciones importantes:
@@ -203,7 +212,7 @@ La codificación \textit{one-hot} consiste en convertir cada palabra en un vecto
 
 \vspace{2mm}
 
-A continuación se muestra un ejemplo de la codificación con el pequeño set de palabras utilizado en la sección anterior.
+En la Tabla ~\ref{table:onehot} se muestra un ejemplo de la codificación con el pequeño set de palabras utilizado en la sección anterior.
 
 \newpage
 
@@ -218,7 +227,7 @@ A continuación se muestra un ejemplo de la codificación con el pequeño set de
         \textbf{día}                      & 0 & 0 & 0 & 1\\ \hline
         \end{tabular}
         \caption{One-hot encoding}
-            \label{fig:graf_exp1}
+            \label{table:onehot}
     \end{table}
 
 \vspace{2mm}
@@ -235,7 +244,7 @@ Un \textit{embedding} es un vector denso de números reales, donde su longitud v
 
 \vspace{2mm}
 
-La dimensionalidad del \textit{embedding} debe ser proporcional a la cantidad de datos disponibles, ya que cuanto más grande sea el vector, más detalles podrá obtener de cada palabra, pero requiere de más datos para ser entrenado. La siguiente tabla muestra un ejemplo de la codificación con el pequeño conjunto de palabras utilizado en la sección anterior.
+La dimensionalidad del \textit{embedding} debe ser proporcional a la cantidad de datos disponibles, ya que cuanto más grande sea el vector, más detalles podrá obtener de cada palabra, pero requiere de más datos para ser entrenado. La Tabla ~\ref{table:embedding} muestra un ejemplo de la codificación con el pequeño conjunto de palabras utilizado en la sección anterior.
 
   \begin{table}[h]
         \centering
@@ -247,7 +256,7 @@ La dimensionalidad del \textit{embedding} debe ser proporcional a la cantidad de
         \textbf{día}                      & 2.65 & 3.00 \\ \hline
         \end{tabular}
         \caption{Embedding}
-            \label{fig:graf_exp1}
+            \label{table:embedding}
     \end{table}
 
 Por lo tanto, esta técnica resulta de gran utilidad a la hora de conseguir representar la distancia semántica entre las palabras que forman un texto. Siendo este hecho fundamental para la tarea propuesta \textbf{se decide apostar por esta codificación para construir el modelo de \textit{Text Mining}}.
@@ -283,13 +292,14 @@ Una vez se cargan los datos preprocesados se realiza una aleatorización de los 
 
 \end{itemize}
 
-De forma gráfica se puede presentar la estructura como se muestra en la Figura X.
+De forma gráfica se puede presentar la estructura como se muestra en la Figura ~\ref{fig:arqui}.
 
   \begin{figure}[!h]
     \centering
     \includegraphics[width=150px]{img/Arquitectura.png}
     \caption{Arquitectura del modelo}
-    \end{figure}
+    \label{fig:arqui}
+  \end{figure}
 
 
 \newpage
@@ -317,13 +327,14 @@ Otro aspecto importante que hay que tener en cuenta al tratarse de un problema m
 
 \vspace{3mm}
 
-La Figura X muestra un ejemplo de la codificación \textit{one-hot} en la vectorización de los géneros de la novela '1984'.
+La Figura ~\ref{fig:unGenero} muestra un ejemplo de la codificación \textit{one-hot} en la vectorización de los géneros de la novela '1984'.
 
   \begin{figure}[!h]
     \centering
     \includegraphics[width=250px]{img/1984_Genres.png}
     \caption{One-hot encoding de 1 género}
-    \end{figure}
+    \label{fig:unGenero}
+  \end{figure}
 
 \newpage
 
@@ -336,15 +347,18 @@ Al separar todos géneros se obtienen \textbf{625 géneros diferentes}, que es u
 
 \vspace{3mm}
 
-La vectorización de la salida ocurre de la misma manera que en caso de un único género, salvo que ahora este vector tendrá una longitud de 625, y tendrá tantos unos como cantidad de géneros a los que el libro pertenezca. En la Figura X se muestra la codificación \textit{one-hot} en la vectorización de la salida para un libro que pertenece a los géneros: ficción, aventura y fantasía.
+La vectorización de la salida ocurre de la misma manera que en caso de un único género, salvo que ahora este vector tendrá una longitud de 625, y tendrá tantos unos como cantidad de géneros a los que el libro pertenezca. En la Figura ~\ref{fig:variosGeneros} se muestra la codificación \textit{one-hot} en la vectorización de la salida para un libro que pertenece a los géneros: ficción, aventura y fantasía.
 
   \begin{figure}[!h]
     \centering
     \includegraphics[width=250px]{img/ej_one_hot_multi.png}
     \caption{One-hot encoding multi-género}
-    \end{figure}
+    \label{fig:variosGeneros}
+  \end{figure}
 
 Por último, esta vez como función de coste se utiliza \textbf{entropía cruzada binaria} (Binary Cross-Entropy), debido a que funciona de manera independiente para cada clase, o en este caso, género.
+
+\newpage
 
 \section{Experimentación y análisis}
 
@@ -374,23 +388,20 @@ Este primer acercamiento se hace exclusivamente con el primer género de cada li
 
 Los experimentos que se han realizado para este acercamiento se han ido creando progresivamente según se buscaba mejorar los resultados. Se van modificando los hiper-parámetros con el fin de conseguir el mayor \textit{accuracy} en test.
 
-\vspace{1mm}
-
-A continuación se muestra una tabla que resume esta experimentación y los resultados obtenidos, Figura X:
-
-\newpage
+\vspace{2mm}
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=500px]{img/one.png}
     \caption{Resumen experimentación y resultados del modelo 1 género}
+    \label{fig:experimentos}
 \end{figure}
 
-Como se puede apreciar en la tabla de la Figura X, los resultados son bastante aceptables, con valores de \textit{accuracy} en test que se encuentran entre el \textbf{47\%} y \textbf{48\%}, siendo el \textbf{Exp. 9} el que mejores resultados genera con un \textbf{48,82\%}. Aun así, se puede ver que los resultados obtenidos no varían demasiado según los hiper-parámetros. Los análisis que se pueden realizar sobre estos hiper-parámetros son:
+Como se puede apreciar en la tabla de la Figura ~\ref{fig:experimentos}, los resultados son bastante aceptables, con valores de \textit{accuracy} en test que se encuentran entre el \textbf{47\%} y \textbf{48\%}, siendo el \textbf{Exp. 9} el que mejores resultados genera con un \textbf{48,82\%}. Aun así, se puede ver que los resultados obtenidos no varían demasiado según los hiper-parámetros. Los análisis que se pueden realizar sobre estos hiper-parámetros son:
 
 \begin{itemize}
   \item Aumentar la complejidad de la red genera mejores resultados.
-  \item Si se intenta disminuir el \textit{batch size}, el tiempo de computo crece exponencialmente, así que no se ha modificado. Se ha decidido no aumentarlo por encima de 32 porque, como dijo Yann LeCun, padre fundador de las redes convolucionales, \textit{'Training with large minibatches is bad for your health. More importantly, it's bad for your test error. Friends dont let friends use minibatches larger than 32'}(https://twitter.com/ylecun/status/989610208497360896?lang=es).
+  \item Si se intenta disminuir el \textit{batch size}, el tiempo de computo crece exponencialmente, así que no se ha modificado. Se ha decidido no aumentarlo por encima de 32 porque, como dijo Yann LeCun, padre fundador de las redes convolucionales, \textit{'Training with large minibatches is bad for your health. More importantly, it's bad for your test error. Friends dont let friends use minibatches larger than 32'}\cite{friends}.
   \item Usar \textit{ngrams} es útil. Se decide usar tamaño 5, aunque en la exploración del vocabulario, el tamaño máximo de \textit{ngram} es 4, y la gran mayoría de ellos mantiene el tamaño 1. Se usa para permitir \textit{ngrams} de cualquier tamaño.
   \item Se prueban diferentes valores de \textit{sequence length}, y los mejores resultados se encuentran con valores de 150.
   \item El tamaño del vocabulario que se ha probado que mejor funciona es 12000.
@@ -415,13 +426,14 @@ El proceso de creación de los experimentos se basa en ir modificando la configu
 
 \vspace{1mm}
 
-En la Figura X se muestra una tabla resumen de todos los experimentos realizados junto con sus resultados:
+En la Figura ~\ref{fig:experimentos} se muestra una tabla resumen de todos los experimentos realizados junto con sus resultados:
 
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=500px]{img/multi.png}
     \caption{Resumen experimentación y resultados del modelo multi-género}
+    \label{fig:experimentos2}
 \end{figure}
 
 Las conclusiones a las que se llegan son:
@@ -438,20 +450,31 @@ Las conclusiones a las que se llegan son:
 
 Por tanto se concluye con que el mejor experimento es el \textbf{Exp. 15}, con un \textit{accuracy} en test de \textbf{23,14\%}. Este valor no es especialmente alto pero, dada la complejidad del problema, se puede considerar como un éxito.
 
-
-
-
+\newpage
 
 \subsection{Caso de uso}
+En esta subsección se dispone un caso de uso real del sistema desarrollado con el objetivo de mostrar de una forma concreta la utilidad real del modelo que se de describe en este documento. Para ello, se seleccionarán dos libros de manera aleatoria obtenidos de internet y se le pasarán a la red implementada de tal manera que se simule la situación de un bibliotecario al cual le llegan estos dos escritos:
 
+\begin{itemize}
+\item Libro 1:
+\begin{itemize}
+\item \textbf{Título}: The Name of the Wind\cite{namewind}
+\item \textbf{Resumen}: \textit{The Kingkiller Chronicle takes place in the fictional world of Temerant, a large continent of which the known part, called the Four Corners of Civilization, is divided into several distinct nations and cultures. Much of the world follows a religion similar, though not identical, to medieval Christianity. Coexisting alongside the mortal world is the realm of The Fae, a parallel universe inhabited by supernatural creatures which can move between the two realms only when the moon is full. Magic exists in Temerant, too, but obeys a well-defined set of rules and principles that can only be exploited by those who have trained in its professional and scientific use.}\cite{summaryNameWind}
+\end{itemize}
+\item Libro 2:
+\begin{itemize}
+\item \textbf{Título}: Sapiens A Brief History of Humankind\cite{sapiens}
+\item \textbf{Resumen}: \textit{Our species, Homo sapiens, started out as just another, biologically insignificant, animal among countless others, but at some point made a very quick “jump” to domination over other species that has left man anxious, destructive, and often miserable despite all our efforts to be happy. Yuval Noah Harari’s book, ‘Sapiens,’ traces the origins, mechanisms, and effects of what we think of as “human progress” from small bands of hunter gatherers 100,000 years ago to the present-day global network through which our species has come to dominate the entire Earth. This bird’s-eye view of human history delves into the development of sapiens’ social organization and the structural features of human cultures through which our species has spread, replicated, and evolved, including the breakthroughs of human language with its infinite expressions, the use of the human imagination, and the rise of the concept of a better future that lies just beyond the horizon. Through these mechanisms, our species has evolved socially, rather than biologically, into a species that’s increasingly in control of our own destiny. This book considers not only how this evolution has occurred but questions of whether this “progress” has truly been beneficial and how we might, with our awareness of how we got here, decide where we want to go.}\cite{summarySapiens}
+\end{itemize}
+\end{itemize}
 
+Los géneros que mejor describen al libro número 1 son fantasía y aventura y el modelo ha predicho con el modelo de predicción de un solo género \textit{Science Fiction} mientras que en multigénero ha \textit{Classics, Fantasy Fiction}. Por su parte el libro número 2 presenta los géneros reales historia, ciencia, filosofía y el modelo obtiene \textit{Philosophy} en la clasificación de un solo género añadiendo \textit{Nonfiction} para el modelo multigénero. Estos pequeños ejemplos muestran la\textbf{ utilidad real de los modelos desarrollados en el contexto de uso en librerías y bibliotecas permitiendo una clasificación bastante certera de los escritos.
+}
 
-
-
-
+\newpage
 
 \section{Conclusiones}
-Respecto a la asignatura en sí, este trabajo ha servido para observar en primera persona la realización de un \textbf{tarea \textit{real}}, donde ha habido que buscar diversos conjuntos de datos, analizarlos, y elegir el que mejor se adecuaba a las necesidades del problema. Después, ha sido necesario un \textbf{preprocesado importante}, donde se han encontrado problemas con una complejidad mayor que los que aparecen en el resto de prácticas de la asignatura (y en otras en general). 
+Respecto a la asignatura en sí, este trabajo ha servido para observar en primera persona la realización de un \textbf{tarea \textit{real}}, donde ha habido que buscar diversos conjuntos de datos, analizarlos, y elegir el que mejor se adecuaba a las necesidades del problema. Después, ha sido necesario un \textbf{preprocesado importante}, donde se han encontrado problemas con una complejidad mayor que los que aparecen en el resto de prácticas de la asignatura (y en otras en general).
 
 \vspace{3mm}
 
@@ -459,7 +482,7 @@ Por último se comprende que \textbf{es posible no obtener datos muy buenos}, pu
 
 \vspace{3mm}
 
-Poniendo la atención sobre la rama de la Inteligencia Artificial utilizada, la \textbf{minería de datos}, comentar que es un ámbito, no solo \textbf{complejo}, si no además muy \textbf{variado}. Se ha optado por la aproximación realizada por el hecho de incluir variedad en la aproximaciones utilizadas en la asignatura, así como para usar una técnica que sea mas personalizable que las vistas en clase. 
+Poniendo la atención sobre la rama de la Inteligencia Artificial utilizada, la \textbf{minería de datos}, comentar que es un ámbito, no solo \textbf{complejo}, si no además muy \textbf{variado}. Se ha optado por la aproximación realizada por el hecho de incluir variedad en la aproximaciones utilizadas en la asignatura, así como para usar una técnica que sea mas personalizable que las vistas en clase.
 
 \vspace{3mm}
 
