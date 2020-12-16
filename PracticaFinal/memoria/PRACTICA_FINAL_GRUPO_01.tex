@@ -174,7 +174,7 @@ Los resultados obtenidos por los autores demuestran que la inclusión de \textit
 \newpage
 
 \section{Conceptos teóricos}
-A la hora de elegir un método de Minería de Texto se consideran diversas opciones tales como utilizar la herramienta \textit{Weka} de la \textit{Universidad de Waitako}. Sin embargo, dado que esta herramienta ya ha sido utilizada a lo largo de la asignatura y, además, presenta ciertas limitaciones en cuanto a la flexibilidad y capacidad de toma de decisiones de diseño en los modelos, se decide aplicar \textbf{Word Embedding} en Redes de Neuronas con la \textbf{biblioteca de código abierto \textit{Tensorflow}}. De esta manera se usa un método diferente al usado en clase, lo cual permite experimentar y aprender tecnologías nuevas.
+A la hora de elegir un método de Minería de Texto se consideran diversas opciones tales como utilizar la herramienta \textit{Weka} de la \textit{Universidad de Waitako}. Sin embargo, dado que esta herramienta ya ha sido utilizada a lo largo de la asignatura y, además, presenta ciertas limitaciones en cuanto a la flexibilidad y capacidad de toma de decisiones de diseño en los modelos, se decide aplicar \textbf{Word Embedding} en Redes de Neuronas con la \textbf{biblioteca de código abierto \textit{Tensorflow}}\cite{tf}. De esta manera se usa un método diferente al usado en clase, lo cual permite experimentar y aprender tecnologías nuevas.
 
 \vspace{3mm}
 
@@ -388,9 +388,7 @@ Este primer acercamiento se hace exclusivamente con el primer género de cada li
 
 Los experimentos que se han realizado para este acercamiento se han ido creando progresivamente según se buscaba mejorar los resultados. Se van modificando los hiper-parámetros con el fin de conseguir el mayor \textit{accuracy} en test.
 
-\vspace{1mm}
-
-A continuación se muestra una tabla que resume esta experimentación y los resultados obtenidos, Figura ~\ref{fig:experimentos}
+\vspace{2mm}
 
 \begin{figure}[!h]
     \centering
@@ -403,7 +401,7 @@ Como se puede apreciar en la tabla de la Figura ~\ref{fig:experimentos}, los res
 
 \begin{itemize}
   \item Aumentar la complejidad de la red genera mejores resultados.
-  \item Si se intenta disminuir el \textit{batch size}, el tiempo de computo crece exponencialmente, así que no se ha modificado. Se ha decidido no aumentarlo por encima de 32 porque, como dijo Yann LeCun, padre fundador de las redes convolucionales, \textit{'Training with large minibatches is bad for your health. More importantly, it's bad for your test error. Friends dont let friends use minibatches larger than 32'}(https://twitter.com/ylecun/status/989610208497360896?lang=es).
+  \item Si se intenta disminuir el \textit{batch size}, el tiempo de computo crece exponencialmente, así que no se ha modificado. Se ha decidido no aumentarlo por encima de 32 porque, como dijo Yann LeCun, padre fundador de las redes convolucionales, \textit{'Training with large minibatches is bad for your health. More importantly, it's bad for your test error. Friends dont let friends use minibatches larger than 32'}\cite{friends}.
   \item Usar \textit{ngrams} es útil. Se decide usar tamaño 5, aunque en la exploración del vocabulario, el tamaño máximo de \textit{ngram} es 4, y la gran mayoría de ellos mantiene el tamaño 1. Se usa para permitir \textit{ngrams} de cualquier tamaño.
   \item Se prueban diferentes valores de \textit{sequence length}, y los mejores resultados se encuentran con valores de 150.
   \item El tamaño del vocabulario que se ha probado que mejor funciona es 12000.
@@ -428,13 +426,14 @@ El proceso de creación de los experimentos se basa en ir modificando la configu
 
 \vspace{1mm}
 
-En la Figura X se muestra una tabla resumen de todos los experimentos realizados junto con sus resultados:
+En la Figura ~\ref{fig:experimentos} se muestra una tabla resumen de todos los experimentos realizados junto con sus resultados:
 
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=500px]{img/multi.png}
     \caption{Resumen experimentación y resultados del modelo multi-género}
+    \label{fig:experimentos2}
 \end{figure}
 
 Las conclusiones a las que se llegan son:
@@ -452,18 +451,18 @@ Las conclusiones a las que se llegan son:
 Por tanto se concluye con que el mejor experimento es el \textbf{Exp. 15}, con un \textit{accuracy} en test de \textbf{23,14\%}. Este valor no es especialmente alto pero, dada la complejidad del problema, se puede considerar como un éxito.
 
 \subsection{Caso de uso}
-En esta subsección se dispone un caso de uso real del sistema desarrollado con el objetivo de mostrar de una forma concreta la utilidad real del modelo que se de describe en este documento. Para ello, se seleccionarán dos libros de manera aleatoria obtenidos de internet y se le pasarán a la red implementada de tal manera que se simule la situación de un bibliotecario al cual le llegan estos dos escritos: 
+En esta subsección se dispone un caso de uso real del sistema desarrollado con el objetivo de mostrar de una forma concreta la utilidad real del modelo que se de describe en este documento. Para ello, se seleccionarán dos libros de manera aleatoria obtenidos de internet y se le pasarán a la red implementada de tal manera que se simule la situación de un bibliotecario al cual le llegan estos dos escritos:
 
 \begin{itemize}
 \item Libro 1:
 \begin{itemize}
-\item Título: The Name of the Wind
-\item Resumen: \textit{The Kingkiller Chronicle takes place in the fictional world of Temerant, a large continent of which the known part, called the Four Corners of Civilization, is divided into several distinct nations and cultures. Much of the world follows a religion similar, though not identical, to medieval Christianity. Coexisting alongside the mortal world is the realm of The Fae, a parallel universe inhabited by supernatural creatures which can move between the two realms only when the moon is full. Magic exists in Temerant, too, but obeys a well-defined set of rules and principles that can only be exploited by those who have trained in its professional and scientific use.}
+\item \textbf{Título}: The Name of the Wind\cite{namewind}
+\item \textbf{Resumen}: \textit{The Kingkiller Chronicle takes place in the fictional world of Temerant, a large continent of which the known part, called the Four Corners of Civilization, is divided into several distinct nations and cultures. Much of the world follows a religion similar, though not identical, to medieval Christianity. Coexisting alongside the mortal world is the realm of The Fae, a parallel universe inhabited by supernatural creatures which can move between the two realms only when the moon is full. Magic exists in Temerant, too, but obeys a well-defined set of rules and principles that can only be exploited by those who have trained in its professional and scientific use.}\cite{summaryNameWind}
 \end{itemize}
 \item Libro 2:
 \begin{itemize}
-\item Título: Sapiens A Brief History of Humankind
-\item Resumen: \textit{Our species, Homo sapiens, started out as just another, biologically insignificant, animal among countless others, but at some point made a very quick “jump” to domination over other species that has left man anxious, destructive, and often miserable despite all our efforts to be happy. Yuval Noah Harari’s book, ‘Sapiens,’ traces the origins, mechanisms, and effects of what we think of as “human progress” from small bands of hunter gatherers 100,000 years ago to the present-day global network through which our species has come to dominate the entire Earth. This bird’s-eye view of human history delves into the development of sapiens’ social organization and the structural features of human cultures through which our species has spread, replicated, and evolved, including the breakthroughs of human language with its infinite expressions, the use of the human imagination, and the rise of the concept of a better future that lies just beyond the horizon. Through these mechanisms, our species has evolved socially, rather than biologically, into a species that’s increasingly in control of our own destiny. This book considers not only how this evolution has occurred but questions of whether this “progress” has truly been beneficial and how we might, with our awareness of how we got here, decide where we want to go.}
+\item \textbf{Título}: Sapiens A Brief History of Humankind\cite{sapiens}
+\item \textbf{Resumen}: \textit{Our species, Homo sapiens, started out as just another, biologically insignificant, animal among countless others, but at some point made a very quick “jump” to domination over other species that has left man anxious, destructive, and often miserable despite all our efforts to be happy. Yuval Noah Harari’s book, ‘Sapiens,’ traces the origins, mechanisms, and effects of what we think of as “human progress” from small bands of hunter gatherers 100,000 years ago to the present-day global network through which our species has come to dominate the entire Earth. This bird’s-eye view of human history delves into the development of sapiens’ social organization and the structural features of human cultures through which our species has spread, replicated, and evolved, including the breakthroughs of human language with its infinite expressions, the use of the human imagination, and the rise of the concept of a better future that lies just beyond the horizon. Through these mechanisms, our species has evolved socially, rather than biologically, into a species that’s increasingly in control of our own destiny. This book considers not only how this evolution has occurred but questions of whether this “progress” has truly been beneficial and how we might, with our awareness of how we got here, decide where we want to go.}\cite{summarySapiens}
 \end{itemize}
 \end{itemize}
 
