@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  16 DEC 2020 22:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  16 DEC 2020 23:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -419,13 +419,6 @@ LaTeX Warning: Unused global option(s):
 (./PRACTICA_FINAL_GRUPO_01.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
-
-
-LaTeX Warning: Label `fig:graf_exp1' multiply defined.
-
-
-LaTeX Warning: Label `fig:graf_exp1' multiply defined.
-
 )
 \openout1 = `PRACTICA_FINAL_GRUPO_01.aux'.
 
@@ -445,7 +438,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count282
 \scratchdimen=\dimen169
@@ -549,109 +543,129 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write5
 \openout5 = `PRACTICA_FINAL_GRUPO_01.toc'.
 
+ (./PRACTICA_FINAL_GRUPO_01.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@lof=\write6
+\openout6 = `PRACTICA_FINAL_GRUPO_01.lof'.
+
+
+(./PRACTICA_FINAL_GRUPO_01.lot
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@lot=\write7
+\openout7 = `PRACTICA_FINAL_GRUPO_01.lot'.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.59 \newpage
+l.63 \newpage
               [1]
-<img/Animal Farm.png, id=111, 825.0825pt x 343.2825pt>
+<img/Animal Farm.png, id=136, 825.0825pt x 343.2825pt>
 File: img/Animal Farm.png Graphic file (type png)
 <use img/Animal Farm.png>
-Package pdftex.def Info: img/Animal Farm.png  used on input line 78.
+Package pdftex.def Info: img/Animal Farm.png  used on input line 82.
 (pdftex.def)             Requested size: 451.68915pt x 187.93118pt.
  [2 <./img/Animal Farm.png>]
-<img/CNN Word2vect.png, id=122, 1193.45876pt x 681.54625pt>
+<img/CNN Word2vect.png, id=146, 1193.45876pt x 681.54625pt>
 File: img/CNN Word2vect.png Graphic file (type png)
 <use img/CNN Word2vect.png>
-Package pdftex.def Info: img/CNN Word2vect.png  used on input line 93.
+Package pdftex.def Info: img/CNN Word2vect.png  used on input line 98.
 (pdftex.def)             Requested size: 451.68915pt x 257.93991pt.
  [3 <./img/CNN Word2vect.png>]
-<img/instancia_dataset_original.png, id=133, 1016.79875pt x 109.40875pt>
+<img/instancia_dataset_original.png, id=158, 1016.79875pt x 109.40875pt>
 File: img/instancia_dataset_original.png Graphic file (type png)
 <use img/instancia_dataset_original.png>
 Package pdftex.def Info: img/instancia_dataset_original.png  used on input line
- 117.
+ 124.
 (pdftex.def)             Requested size: 501.87683pt x 54.00305pt.
 
-Overfull \hbox (18.17996pt too wide) in paragraph at lines 117--118
+Overfull \hbox (18.17996pt too wide) in paragraph at lines 124--125
  [][] 
  []
 
 [4 <./img/instancia_dataset_original.png>] [5] [6] [7] [8]
-<img/Arquitectura.png, id=167, 451.6875pt x 565.11125pt>
+<img/Arquitectura.png, id=192, 451.6875pt x 565.11125pt>
 File: img/Arquitectura.png Graphic file (type png)
 <use img/Arquitectura.png>
-Package pdftex.def Info: img/Arquitectura.png  used on input line 290.
+Package pdftex.def Info: img/Arquitectura.png  used on input line 299.
 (pdftex.def)             Requested size: 150.56305pt x 188.3757pt.
  [9 <./img/Arquitectura.png>]
-<img/1984_Genres.png, id=175, 407.5225pt x 129.48375pt>
+<img/1984_Genres.png, id=200, 407.5225pt x 129.48375pt>
 File: img/1984_Genres.png Graphic file (type png)
 <use img/1984_Genres.png>
-Package pdftex.def Info: img/1984_Genres.png  used on input line 324.
+Package pdftex.def Info: img/1984_Genres.png  used on input line 334.
 (pdftex.def)             Requested size: 250.93842pt x 79.7318pt.
  [10 <./img/1984_Genres.png>]
-<img/ej_one_hot_multi.png, id=182, 329.23pt x 105.39375pt>
+<img/ej_one_hot_multi.png, id=207, 329.23pt x 105.39375pt>
 File: img/ej_one_hot_multi.png Graphic file (type png)
 <use img/ej_one_hot_multi.png>
-Package pdftex.def Info: img/ej_one_hot_multi.png  used on input line 343.
+Package pdftex.def Info: img/ej_one_hot_multi.png  used on input line 354.
 (pdftex.def)             Requested size: 250.93842pt x 80.33325pt.
  [11 <./img/ej_one_hot_multi.png>]
-[12]
-<img/one.png, id=194, 1280.785pt x 661.47125pt>
+<img/one.png, id=214, 1280.785pt x 661.47125pt>
 File: img/one.png Graphic file (type png)
 <use img/one.png>
-Package pdftex.def Info: img/one.png  used on input line 385.
+Package pdftex.def Info: img/one.png  used on input line 397.
 (pdftex.def)             Requested size: 501.87683pt x 259.19403pt.
 
-Overfull \hbox (18.17996pt too wide) in paragraph at lines 385--386
+Overfull \hbox (18.17996pt too wide) in paragraph at lines 397--398
  [][] 
  []
 
 
-Overfull \hbox (86.72604pt too wide) in paragraph at lines 393--394
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (86.72604pt too wide) in paragraph at lines 406--407
 \OT1/cmr/m/it/12 friends use mi-ni-bat-ches lar-ger than 32'\OT1/cmr/m/n/12 (ht
 tps://twitter.com/ylecun/status/989610208497360896?lang=es). 
  []
 
-[13 <./img/one.png>]
-<img/multi.png, id=201, 1329.96875pt x 664.4825pt>
+[12]
+<img/multi.png, id=221, 1329.96875pt x 664.4825pt>
 File: img/multi.png Graphic file (type png)
 <use img/multi.png>
-Package pdftex.def Info: img/multi.png  used on input line 423.
+Package pdftex.def Info: img/multi.png  used on input line 436.
 (pdftex.def)             Requested size: 501.87683pt x 250.75189pt.
 
-Overfull \hbox (18.17996pt too wide) in paragraph at lines 423--424
+Overfull \hbox (18.17996pt too wide) in paragraph at lines 436--437
  [][] 
  []
 
-[14 <./img/multi.png>] [15] (./PRACTICA_FINAL_GRUPO_01.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 474.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13 <./img/one.png>] [14 <./img/multi.png>] [15] (./PRACTICA_FINAL_GRUPO_01.bbl
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 487.
  [16
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 474.
-
-(./PRACTICA_FINAL_GRUPO_01.aux
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 487.
+ (./PRACTICA_FINAL_GRUPO_01.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 474.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 474.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 487.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 487.
 Package rerunfilecheck Info: File `PRACTICA_FINAL_GRUPO_01.out' has not changed
 .
 (rerunfilecheck)             Checksum: 2A9DC444A1DEB333F1E52DE1686B4AEC;1159.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 474.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 487.
  ) 
 Here is how much of TeX's memory you used:
- 9259 strings out of 481239
- 142236 string characters out of 5920377
- 433316 words of memory out of 5000000
- 24295 multiletter control sequences out of 15000+600000
+ 9281 strings out of 481239
+ 142599 string characters out of 5920377
+ 434836 words of memory out of 5000000
+ 24309 multiletter control sequences out of 15000+600000
  539718 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  50i,10n,77p,1003b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -664,10 +678,10 @@ pe1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on PRACTICA_FINAL_GRUPO_01.pdf (17 pages, 1332150 bytes).
+Output written on PRACTICA_FINAL_GRUPO_01.pdf (17 pages, 1333339 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
+ 295 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
  190 words of extra memory for PDF output out of 10000 (max. 10000000)
 

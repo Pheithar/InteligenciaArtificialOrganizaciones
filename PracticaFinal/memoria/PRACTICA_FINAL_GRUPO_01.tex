@@ -56,6 +56,10 @@
 
 \tableofcontents
 
+\listoffigures
+
+\listoftables
+
 \newpage
 
 \section{Introducción}
@@ -69,7 +73,7 @@ correos electrónicos, periódicos o redes sociales. Para ello, se hace una iden
 
 \vspace{3mm}
 
-A continuación se ofrece un \textbf{esquema del funcionamiento de la tarea propuesta} en donde un libro sin catalogación llega a alguna a de estas entidades que necesitan catalogar su género a partir de la información más reducida posible, generalmente título y argumento. Inicialmente se plantea la distinción de un único género, sin embargo, \textbf{es bien sabido que un escrito no tiene por qué adscribirse a un único género} y por lo tanto se debe considerar como futura \textbf{ampliación} catalogar tantos como sea posible.
+En la Figura ~\ref{fig:animalFarm} se ofrece un \textbf{esquema del funcionamiento de la tarea propuesta} en donde un libro sin catalogación llega a alguna a de estas entidades que necesitan catalogar su género a partir de la información más reducida posible, generalmente título y argumento. Inicialmente se plantea la distinción de un único género, sin embargo, \textbf{es bien sabido que un escrito no tiene por qué adscribirse a un único género} y por lo tanto se debe considerar como futura \textbf{ampliación} catalogar tantos como sea posible.
 
 \vspace{12mm}
 
@@ -77,7 +81,8 @@ A continuación se ofrece un \textbf{esquema del funcionamiento de la tarea prop
     \centering
     \includegraphics[width=450px]{img/Animal Farm.png}
     \caption{Esquema de la tarea}
-    \end{figure}
+    \label{fig:animalFarm}
+  \end{figure}
 
 \newpage
 
@@ -92,11 +97,13 @@ La aplicación de \textit{embeddings} supone por lo tanto un punto de partida mu
     \centering
     \includegraphics[width=450px]{img/CNN Word2vect.png}
     \caption{Esquema de la red utilizada}
-    \end{figure}
+    \label{fig:esquemaRed}
+
+  \end{figure}
 
 \vspace{3mm}
 
-La arquitectura propuesta muestra un conjunto de convoluciones que hace posible aplicar numerosos filtros de varios tamaños de forma que se representan así los distintos n-gramas de cualquier frase. Posteriormente se aplican mapas de características y se acaba con una clasificación binaria de los requisitos.
+La Figura ~\ref{fig:esquemaRed} muestra la arquitectura propuesta que está formada por un conjunto de convoluciones que hace posible aplicar numerosos filtros de varios tamaños de forma que se representan así los distintos n-gramas de cualquier frase. Posteriormente se aplican mapas de características y se acaba con una clasificación binaria de los requisitos.
 
 \vspace{3mm}
 
@@ -108,7 +115,7 @@ Los resultados obtenidos por los autores demuestran que la inclusión de \textit
     En esta sección se describe el \textbf{conjunto de datos} utilizado en su forma original, así como todos los cambios que se hacen como parte del \textbf{preprocesado} junto con las razones que han llevado a su realización.
 
     \subsection{Estructura original}
-    El conjunto de datos ha sido obtenido de \textbf{Kaggle}\cite{gbbe}, y dispone de un total de \textbf{54283 libros y 12 columna} con información sobre ellos. En la Figura X se puede apreciar visualmente la forma de las instancias de este conjunto de datos.
+    El conjunto de datos ha sido obtenido de \textbf{Kaggle}\cite{gbbe}, y dispone de un total de \textbf{54283 libros y 12 columna} con información sobre ellos. En la Figura ~\ref{fig:original} se puede apreciar visualmente la forma de las instancias de este conjunto de datos.
 
     \vspace{3mm}
 
@@ -116,6 +123,8 @@ Los resultados obtenidos por los autores demuestran que la inclusión de \textit
         \centering
         \includegraphics[width=500px]{img/instancia_dataset_original.png}
         \caption{Instancia del conjunto de datos original}
+        \label{fig:original}
+
     \end{figure}
 
     \vspace{3mm}
@@ -172,7 +181,7 @@ A la hora de elegir un método de Minería de Texto se consideran diversas opcio
 No obstante, antes de iniciar la codificación del modelo, dado que se trata de una técnica nueva, es necesario tener claros los conceptos teóricos involucrados. Una Red Neuronal únicamente procesa números, lo que implica que es necesario realizar una transformación. Representar las palabras como vectores es importante, ya que los modelos de IA no ‘entienden’ las palabras, y no pueden realizar cálculos ni aprendizaje sobre ellas. Por este motivo, es necesario realizar una \textbf{vectorización}, que no es más que transformar estas palabras en números, agrupados en forma de vector. A continuación se exponen las diferentes técnicas de vectorización consideradas.
 
 \subsection{Codificación con valor único}
-Una primera aproximación podría ser asignar un único número a cada una de las palabras consideradas en la vectorización. Por ejemplo, con la frase 'hace un espléndido día' se obtiene un vector como el que sigue:
+Una primera aproximación podría ser asignar un único número a cada una de las palabras consideradas en la vectorización. Por ejemplo, con la frase 'hace un espléndido día' se obtiene un vector como el que se observa en la Tabla ~\ref{table:unico}.
 
       \begin{table}[h]
         \centering
@@ -186,7 +195,7 @@ Una primera aproximación podría ser asignar un único número a cada una de la
         día                       & 4   \\ \hline
         \end{tabular}
         \caption{Codificación con un único valor}
-            \label{fig:graf_exp1}
+        \label{table:unico}
     \end{table}
 
 Este enfoque presenta una serie de consideraciones importantes:
@@ -203,7 +212,7 @@ La codificación \textit{one-hot} consiste en convertir cada palabra en un vecto
 
 \vspace{2mm}
 
-A continuación se muestra un ejemplo de la codificación con el pequeño set de palabras utilizado en la sección anterior.
+En la Tabla ~\ref{table:onehot} se muestra un ejemplo de la codificación con el pequeño set de palabras utilizado en la sección anterior.
 
 \newpage
 
@@ -218,7 +227,7 @@ A continuación se muestra un ejemplo de la codificación con el pequeño set de
         \textbf{día}                      & 0 & 0 & 0 & 1\\ \hline
         \end{tabular}
         \caption{One-hot encoding}
-            \label{fig:graf_exp1}
+            \label{table:onehot}
     \end{table}
 
 \vspace{2mm}
@@ -235,7 +244,7 @@ Un \textit{embedding} es un vector denso de números reales, donde su longitud v
 
 \vspace{2mm}
 
-La dimensionalidad del \textit{embedding} debe ser proporcional a la cantidad de datos disponibles, ya que cuanto más grande sea el vector, más detalles podrá obtener de cada palabra, pero requiere de más datos para ser entrenado. La siguiente tabla muestra un ejemplo de la codificación con el pequeño conjunto de palabras utilizado en la sección anterior.
+La dimensionalidad del \textit{embedding} debe ser proporcional a la cantidad de datos disponibles, ya que cuanto más grande sea el vector, más detalles podrá obtener de cada palabra, pero requiere de más datos para ser entrenado. La Tabla ~\ref{table:embedding} muestra un ejemplo de la codificación con el pequeño conjunto de palabras utilizado en la sección anterior.
 
   \begin{table}[h]
         \centering
@@ -247,7 +256,7 @@ La dimensionalidad del \textit{embedding} debe ser proporcional a la cantidad de
         \textbf{día}                      & 2.65 & 3.00 \\ \hline
         \end{tabular}
         \caption{Embedding}
-            \label{fig:graf_exp1}
+            \label{table:embedding}
     \end{table}
 
 Por lo tanto, esta técnica resulta de gran utilidad a la hora de conseguir representar la distancia semántica entre las palabras que forman un texto. Siendo este hecho fundamental para la tarea propuesta \textbf{se decide apostar por esta codificación para construir el modelo de \textit{Text Mining}}.
@@ -283,13 +292,14 @@ Una vez se cargan los datos preprocesados se realiza una aleatorización de los 
 
 \end{itemize}
 
-De forma gráfica se puede presentar la estructura como se muestra en la Figura X.
+De forma gráfica se puede presentar la estructura como se muestra en la Figura ~\ref{fig:arqui}.
 
   \begin{figure}[!h]
     \centering
     \includegraphics[width=150px]{img/Arquitectura.png}
     \caption{Arquitectura del modelo}
-    \end{figure}
+    \label{fig:arqui}
+  \end{figure}
 
 
 \newpage
@@ -317,13 +327,14 @@ Otro aspecto importante que hay que tener en cuenta al tratarse de un problema m
 
 \vspace{3mm}
 
-La Figura X muestra un ejemplo de la codificación \textit{one-hot} en la vectorización de los géneros de la novela '1984'.
+La Figura ~\ref{fig:unGenero} muestra un ejemplo de la codificación \textit{one-hot} en la vectorización de los géneros de la novela '1984'.
 
   \begin{figure}[!h]
     \centering
     \includegraphics[width=250px]{img/1984_Genres.png}
     \caption{One-hot encoding de 1 género}
-    \end{figure}
+    \label{fig:unGenero}
+  \end{figure}
 
 \newpage
 
@@ -336,15 +347,18 @@ Al separar todos géneros se obtienen \textbf{625 géneros diferentes}, que es u
 
 \vspace{3mm}
 
-La vectorización de la salida ocurre de la misma manera que en caso de un único género, salvo que ahora este vector tendrá una longitud de 625, y tendrá tantos unos como cantidad de géneros a los que el libro pertenezca. En la Figura X se muestra la codificación \textit{one-hot} en la vectorización de la salida para un libro que pertenece a los géneros: ficción, aventura y fantasía.
+La vectorización de la salida ocurre de la misma manera que en caso de un único género, salvo que ahora este vector tendrá una longitud de 625, y tendrá tantos unos como cantidad de géneros a los que el libro pertenezca. En la Figura ~\ref{fig:variosGeneros} se muestra la codificación \textit{one-hot} en la vectorización de la salida para un libro que pertenece a los géneros: ficción, aventura y fantasía.
 
   \begin{figure}[!h]
     \centering
     \includegraphics[width=250px]{img/ej_one_hot_multi.png}
     \caption{One-hot encoding multi-género}
-    \end{figure}
+    \label{fig:variosGeneros}
+  \end{figure}
 
 Por último, esta vez como función de coste se utiliza \textbf{entropía cruzada binaria} (Binary Cross-Entropy), debido a que funciona de manera independiente para cada clase, o en este caso, género.
+
+\newpage
 
 \section{Experimentación y análisis}
 
@@ -376,17 +390,16 @@ Los experimentos que se han realizado para este acercamiento se han ido creando 
 
 \vspace{1mm}
 
-A continuación se muestra una tabla que resume esta experimentación y los resultados obtenidos, Figura X:
-
-\newpage
+A continuación se muestra una tabla que resume esta experimentación y los resultados obtenidos, Figura ~\ref{fig:experimentos}
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=500px]{img/one.png}
     \caption{Resumen experimentación y resultados del modelo 1 género}
+    \label{fig:experimentos}
 \end{figure}
 
-Como se puede apreciar en la tabla de la Figura X, los resultados son bastante aceptables, con valores de \textit{accuracy} en test que se encuentran entre el \textbf{47\%} y \textbf{48\%}, siendo el \textbf{Exp. 9} el que mejores resultados genera con un \textbf{48,82\%}. Aun así, se puede ver que los resultados obtenidos no varían demasiado según los hiper-parámetros. Los análisis que se pueden realizar sobre estos hiper-parámetros son:
+Como se puede apreciar en la tabla de la Figura ~\ref{fig:experimentos}, los resultados son bastante aceptables, con valores de \textit{accuracy} en test que se encuentran entre el \textbf{47\%} y \textbf{48\%}, siendo el \textbf{Exp. 9} el que mejores resultados genera con un \textbf{48,82\%}. Aun así, se puede ver que los resultados obtenidos no varían demasiado según los hiper-parámetros. Los análisis que se pueden realizar sobre estos hiper-parámetros son:
 
 \begin{itemize}
   \item Aumentar la complejidad de la red genera mejores resultados.
