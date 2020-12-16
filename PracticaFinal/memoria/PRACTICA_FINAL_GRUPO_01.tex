@@ -451,17 +451,26 @@ Las conclusiones a las que se llegan son:
 
 Por tanto se concluye con que el mejor experimento es el \textbf{Exp. 15}, con un \textit{accuracy} en test de \textbf{23,14\%}. Este valor no es especialmente alto pero, dada la complejidad del problema, se puede considerar como un éxito.
 
-
-
-
-
 \subsection{Caso de uso}
+En esta subsección se dispone un caso de uso real del sistema desarrollado con el objetivo de mostrar de una forma concreta la utilidad real del modelo que se de describe en este documento. Para ello, se seleccionarán dos libros de manera aleatoria obtenidos de internet y se le pasarán a la red implementada de tal manera que se simule la situación de un bibliotecario al cual le llegan estos dos escritos: 
 
+\begin{itemize}
+\item Libro 1:
+\begin{itemize}
+\item Título: The Name of the Wind
+\item Resumen: \textit{The Kingkiller Chronicle takes place in the fictional world of Temerant, a large continent of which the known part, called the Four Corners of Civilization, is divided into several distinct nations and cultures. Much of the world follows a religion similar, though not identical, to medieval Christianity. Coexisting alongside the mortal world is the realm of The Fae, a parallel universe inhabited by supernatural creatures which can move between the two realms only when the moon is full. Magic exists in Temerant, too, but obeys a well-defined set of rules and principles that can only be exploited by those who have trained in its professional and scientific use.}
+\end{itemize}
+\item Libro 2:
+\begin{itemize}
+\item Título: Sapiens A Brief History of Humankind
+\item Resumen: \textit{Our species, Homo sapiens, started out as just another, biologically insignificant, animal among countless others, but at some point made a very quick “jump” to domination over other species that has left man anxious, destructive, and often miserable despite all our efforts to be happy. Yuval Noah Harari’s book, ‘Sapiens,’ traces the origins, mechanisms, and effects of what we think of as “human progress” from small bands of hunter gatherers 100,000 years ago to the present-day global network through which our species has come to dominate the entire Earth. This bird’s-eye view of human history delves into the development of sapiens’ social organization and the structural features of human cultures through which our species has spread, replicated, and evolved, including the breakthroughs of human language with its infinite expressions, the use of the human imagination, and the rise of the concept of a better future that lies just beyond the horizon. Through these mechanisms, our species has evolved socially, rather than biologically, into a species that’s increasingly in control of our own destiny. This book considers not only how this evolution has occurred but questions of whether this “progress” has truly been beneficial and how we might, with our awareness of how we got here, decide where we want to go.}
+\end{itemize}
+\end{itemize}
 
+Los géneros que mejor describen al libro número 1 son fantasía y aventura y el modelo ha predicho con el modelo de predicción de un solo género \textit{Science Fiction} mientras que en multigénero ha \textit{Classics, Fantasy Fiction}. Por su parte el libro número 2 presenta los géneros reales historia, ciencia, filosofía y el modelo obtiene \textit{Philosophy} en la clasificación de un solo género añadiendo \textit{Nonfiction} para el modelo multigénero. Estos pequeños ejemplos muestran la\textbf{ utilidad real de los modelos desarrollados en el contexto de uso en librerías y bibliotecas permitiendo una clasificación bastante certera de los escritos.
+}
 
-
-
-
+\newpage
 
 \section{Conclusiones}
 Respecto a la asignatura en sí, este trabajo ha servido para observar en primera persona la realización de un \textbf{tarea \textit{real}}, donde ha habido que buscar diversos conjuntos de datos, analizarlos, y elegir el que mejor se adecuaba a las necesidades del problema. Después, ha sido necesario un \textbf{preprocesado importante}, donde se han encontrado problemas con una complejidad mayor que los que aparecen en el resto de prácticas de la asignatura (y en otras en general).

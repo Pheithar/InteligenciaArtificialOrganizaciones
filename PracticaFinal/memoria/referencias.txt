@@ -14,4 +14,4 @@ Referencia en el contexto
 DEKHTYAR, Alex; FONG, Vivian. Re data challenge: Requirements identification with word2vec and tensorflow. En 2017 IEEE 25th International Requirements Engineering Conference (RE). IEEE, 2017. p. 484-489.
 
 
-REFERENCIA A GOOGLE word2vec https://code.google.com/archive/p/word2vec/
+REFERENCIA A GOOGLE word2vec 
